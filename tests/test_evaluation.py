@@ -9,11 +9,26 @@ from unittest.mock import patch
 
 from evals.run import boundary_summary, precision_recall_f1
 from scripts.scifact_pilot import make_index, metrics
+from scripts.replay import replay_equal
 from zero_index import JevScorer
 from zero_index.parse import parse_blocks, sentence_spans
 
 
 class EvaluationTests(unittest.TestCase):
+    def test_replay_allows_platform_roundoff_in_derived_probabilities(self):
+        self.assertTrue(replay_equal(
+            {"trace": [{"posterior_same": 0.41071428571428564, "cut": False}]},
+            {"trace": [{"posterior_same": 0.41071428571428575, "cut": False}]}))
+        for field in ("relevance", "posterior_same", "previous_probability", "drop"):
+            self.assertFalse(replay_equal({field: 0.4}, {field: 0.400001}))
+
+    def test_replay_keeps_decisions_model_scores_and_metrics_exact(self):
+        with patch("builtins.print"):
+            for field, actual, expected in (("cut", True, False), ("rank", 1, 2),
+                    ("text", "first", "second"), ("score", 0.4, 0.4 + 1e-15),
+                    ("f1", 0.8, 0.8 + 1e-15)):
+                self.assertFalse(replay_equal({field: actual}, {field: expected}))
+
     def test_public_data_preserves_declared_sentences_and_evidence_sets(self):
         papers = [{"doc_id": 8, "title": "Paper", "abstract": ["Value 1.5 is measured.", "Another sentence."]}]
         index, lookup = make_index(papers)
