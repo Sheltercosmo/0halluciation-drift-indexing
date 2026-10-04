@@ -30,15 +30,17 @@ def main():
     result = evaluate(transport)
     original = json.loads((archive / "results.json").read_text(encoding="utf-8"))
     # JSON converts span tuples to arrays. Normalize before structural equality.
-    def equal(actual, expected, field=""):
+    def equal(actual, expected, field="", path=""):
         if isinstance(actual, dict) and isinstance(expected, dict):
-            return actual.keys() == expected.keys() and all(equal(actual[k], expected[k], k) for k in actual)
+            return actual.keys() == expected.keys() and all(equal(actual[k], expected[k], k, path + "/" + k) for k in actual)
         if isinstance(actual, list) and isinstance(expected, list):
-            return len(actual) == len(expected) and all(equal(a, b, field) for a, b in zip(actual, expected))
+            return len(actual) == len(expected) and all(equal(a, b, field, path + "/" + str(i)) for i, (a, b) in enumerate(zip(actual, expected)))
         # Frozen v1 used set-order float addition in BM25. Permit roundoff only
         # in displayed relevance scores; ranks, evidence and metrics stay exact.
         if field == "relevance" and isinstance(actual, float) and isinstance(expected, float):
             return math.isclose(actual, expected, rel_tol=0, abs_tol=1e-12)
+        if actual != expected:
+            print(f"Replay mismatch at {path}: {actual!r} != {expected!r}")
         return actual == expected
     for key in ("documents", "summary"):
         if not equal(json.loads(json.dumps(result[key])), original[key]):

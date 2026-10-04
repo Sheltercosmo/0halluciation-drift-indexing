@@ -3,7 +3,7 @@
   <h1>0halluciation drift indexing</h1>
 </div>
 
-Our index is a pure decision model based method with **0 LLM and optional embedding intervention**
+Our index is a pure decision model based method with **0 LLM and optional embedding intervention**.
 
 <p align="center">
   <img src="https://img.shields.io/badge/indexing-0%20generative%20LLM-345847?style=flat-square" alt="Indexing uses zero generative LLM calls" />
@@ -64,12 +64,27 @@ python -m zero_index find output/jev-tree.json "visitor opening and closing time
 
 These commands send source text to [TypeSafe’s decision API](https://docs.typesafe.ai/api) and incur usage. The native adapter pins `jev-1.13.0`. OpenRouter is also supported: use `--provider openrouter` with `OPENROUTER_API_KEY`; its default model is `typesafe/jev-1.13`. Keys are never stored in the tree, and provider errors stop the operation.
 
-## How the tree is built
+## Methodology: how we create the content tree
 
-1. **Respect the document.** Parse ATX/Setext headings, source-aligned parser hints and contents links without model calls. Preserve exact original text and offsets.
-2. **Follow one anchor.** Compare `p0–p1`, `p0–p2`, `p0–p3` until the prior-adjusted same-topic probability becomes low and drops sharply. Cut before that paragraph and reset the anchor.
-3. **Search paragraphs together.** Evaluate the first and last sentence of every paragraph in a topic section in the same wave. Move inward together, batching independent section and paragraph judgments with shared context.
-4. **Keep the evidence.** Store `document → headings → topic sections → paragraphs → sentences`. Representatives are exact source sentences; full content remains available beneath them.
+The index is built from the document's existing structure and exact source text. Topic blocking is driven by Jev decisions and an explicit statistical prior.
+
+1. **Separate titles and contents.** Parse headings, heading levels and contents links without Jev or an LLM. Headings form the upper tree and act as hard boundaries. Recognized contents entries become navigation links to those headings.
+2. **Create paragraph blocks.** Split content on paragraph boundaries within each heading. Preserve original text, source offsets and line references; keep fenced code intact.
+3. **Compare against one anchor.** Start with `p0` and ask Jev whether `p0-p1`, `p0-p2`, `p0-p3`, and subsequent pairs belong to the same topic. Keep the anchor fixed until a boundary is found, avoiding all-pairs paragraph comparisons.
+4. **Apply the statistical prior and cut at a drop.** Adjust each same-topic probability using the configured Bayesian prior. Cut before a paragraph when its adjusted probability is low **and** falls sharply from the preceding comparison. Start the next topic block at that paragraph and make it the new anchor. Save the scores, prior, probability drop and cut decision for inspection.
+5. **Select central sentences in parallel waves.** For paragraph 1, paragraph 2, paragraph 3 and the other paragraphs in a topic block, evaluate each first and last sentence together. Then evaluate each second and second-last sentence, continuing toward the middle. Each candidate is judged against its paragraph and the whole topic block, so Jev can batch independent judgments for paragraph and section representatives. Representatives are copied source sentences.
+6. **Assemble the content tree.** Attach topic blocks below their headings, paragraphs below topic blocks, and sentences below paragraphs. Store each paragraph and topic block's representative sentence alongside its full source content and provenance.
+
+```text
+Document
+├── Contents → links to existing headings
+└── Heading (nested headings retain their source hierarchy)
+    └── Topic block + central source sentence
+        └── Paragraph + central source sentence
+            └── Source sentences with exact offsets
+```
+
+At retrieval time, an LLM proposes the content it needs. Lexical shortlisting finds candidate evidence; Jev reranks it against that request. The LLM can then read the selected sentence or paragraph and move upward through its topic block, heading and document for context. Embeddings are optional; the default retrieval path requires no vector database.
 
 Full sentence search is the default. `--sentence-budget 2` restricts each target to two candidates; `--sentence-budget 0` searches all. Any finite search can miss a better candidate. The pilot’s budget-two agreement was 23/36 versus 31/36 with full search.
 
