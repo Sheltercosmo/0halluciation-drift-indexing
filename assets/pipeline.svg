@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 332" role="img" aria-labelledby="title desc">
+  <title id="title">From source structure to bottom-up evidence</title>
+  <desc id="desc">Indexing builds headings without a model, uses Jev for topic boundaries and extractive representatives, and stores source spans. Retrieval uses an LLM content request, Jev reranking, and reads from sentences to ancestors.</desc>
+  <rect width="1120" height="332" rx="24" fill="#f7f3ea"/>
+  <g font-family="Segoe UI,Arial,sans-serif" fill="#263d33">
+    <text x="36" y="42" font-size="13" letter-spacing="2">INDEX ONCE · READ WITH EVIDENCE</text>
+    <g font-size="17" font-weight="600">
+      <rect x="36" y="65" width="238" height="108" rx="12" fill="#e6eadf"/>
+      <text x="54" y="97">1 · Declared structure</text>
+      <rect x="302" y="65" width="238" height="108" rx="12" fill="#e6eadf"/>
+      <text x="320" y="97">2 · Topic boundaries</text>
+      <rect x="568" y="65" width="238" height="108" rx="12" fill="#e6eadf"/>
+      <text x="586" y="97">3 · Central sentences</text>
+      <rect x="834" y="65" width="250" height="108" rx="12" fill="#263d33"/>
+      <text x="852" y="97" fill="#f7f3ea">4 · Source-backed tree</text>
+    </g>
+    <g font-size="14">
+      <text x="54" y="126">Titles, headings, contents</text><text x="54" y="150" fill="#53645b">No model calls</text>
+      <text x="320" y="126">Fixed anchor + Bayesian prior</text><text x="320" y="150" fill="#53645b">Jev · cut at probability drops</text>
+      <text x="586" y="126">Parallel outside-in waves</text><text x="586" y="150" fill="#53645b">Jev · exact source sentences</text>
+      <text x="852" y="126" fill="#f7f3ea">Sections → paragraphs → leaves</text><text x="852" y="150" fill="#d9e0d3">Original text, offsets, citations</text>
+    </g>
+    <g stroke="#ad8650" stroke-width="2" fill="none"><path d="M279 119h17m-6-5 6 5-6 5M545 119h17m-6-5 6 5-6 5M811 119h17m-6-5 6 5-6 5"/></g>
+    <path d="M36 201h1048" stroke="#d9d1c1"/>
+    <text x="36" y="234" font-size="13" letter-spacing="2">AT QUERY TIME</text>
+    <text x="36" y="270" font-size="19" font-weight="600">LLM content request</text>
+    <text x="298" y="270" font-size="19" font-weight="600">Jev reranking</text>
+    <text x="560" y="270" font-size="19" font-weight="600">Read leaf → expand upward</text>
+    <text x="36" y="303" font-size="13" fill="#53645b">Representatives guide navigation. Original source passages supply the evidence.</text>
+    <g fill="#ad8650" font-size="24"><text x="258" y="272">→</text><text x="518" y="272">→</text></g>
+  </g>
+</svg>

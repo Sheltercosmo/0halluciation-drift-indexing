@@ -1,0 +1,18 @@
+[
+  "decision-models",
+  "bayesian-statistics",
+  "statistical-priors",
+  "topic-segmentation",
+  "document-chunking",
+  "semantic-chunking",
+  "jev",
+  "document-indexing",
+  "rag",
+  "embedding-free",
+  "python",
+  "typesafe-ai",
+  "retrieval-augmented-generation",
+  "bayesian-inference",
+  "extractive-summarization",
+  "reranking"
+]

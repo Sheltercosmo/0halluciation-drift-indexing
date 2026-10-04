@@ -1,0 +1,153 @@
+{
+  "seed": 1729,
+  "data_hashes": {
+    "corpus.jsonl": "b8d6c89624cb2ed74dee8938effc4f5d8bd2086887880af8110d64be4ceade62",
+    "claims_dev.jsonl": "86f0435d08fdb65d1aa41d1472684f57e6e71930626497bdf4d7a9ec1a632217"
+  },
+  "claims": [
+    {
+      "claim_id": 921,
+      "label": "SUPPORT",
+      "gold_document": 1642727,
+      "candidate_documents": [
+        1642727,
+        2028532,
+        14079881,
+        21274919,
+        37156349
+      ]
+    },
+    {
+      "claim_id": 636,
+      "label": "SUPPORT",
+      "gold_document": 24294572,
+      "candidate_documents": [
+        11289247,
+        14328288,
+        22025252,
+        24294572,
+        42708716
+      ]
+    },
+    {
+      "claim_id": 784,
+      "label": "SUPPORT",
+      "gold_document": 2356950,
+      "candidate_documents": [
+        2356950,
+        16999023,
+        23535770,
+        25597580,
+        38727075
+      ]
+    },
+    {
+      "claim_id": 274,
+      "label": "CONTRADICT",
+      "gold_document": 11614737,
+      "candidate_documents": [
+        5114940,
+        5551138,
+        11614737,
+        24019260,
+        34369306
+      ]
+    },
+    {
+      "claim_id": 1216,
+      "label": "SUPPORT",
+      "gold_document": 24142891,
+      "candidate_documents": [
+        4407455,
+        8219248,
+        13779605,
+        20943272,
+        24142891
+      ]
+    },
+    {
+      "claim_id": 56,
+      "label": "SUPPORT",
+      "gold_document": 4709641,
+      "candidate_documents": [
+        4709641,
+        11659421,
+        13969173,
+        22185730,
+        35520219
+      ]
+    },
+    {
+      "claim_id": 1262,
+      "label": "SUPPORT",
+      "gold_document": 44172171,
+      "candidate_documents": [
+        5765455,
+        21561474,
+        27635177,
+        28904104,
+        44172171
+      ]
+    },
+    {
+      "claim_id": 142,
+      "label": "CONTRADICT",
+      "gold_document": 10582939,
+      "candidate_documents": [
+        3935126,
+        10582939,
+        24795767,
+        25985964,
+        40164383
+      ]
+    },
+    {
+      "claim_id": 338,
+      "label": "CONTRADICT",
+      "gold_document": 23349986,
+      "candidate_documents": [
+        15948830,
+        18872233,
+        23349986,
+        24211561,
+        36288526
+      ]
+    },
+    {
+      "claim_id": 48,
+      "label": "CONTRADICT",
+      "gold_document": 13734012,
+      "candidate_documents": [
+        13734012,
+        13959707,
+        18340282,
+        18617259,
+        26016929
+      ]
+    },
+    {
+      "claim_id": 171,
+      "label": "CONTRADICT",
+      "gold_document": 12670680,
+      "candidate_documents": [
+        5448119,
+        12670680,
+        14938990,
+        28015516,
+        28149602
+      ]
+    },
+    {
+      "claim_id": 718,
+      "label": "CONTRADICT",
+      "gold_document": 17587795,
+      "candidate_documents": [
+        4305576,
+        7808055,
+        17587795,
+        22038539,
+        23208167
+      ]
+    }
+  ]
+}

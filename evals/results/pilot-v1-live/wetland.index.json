@@ -1,0 +1,1198 @@
+{
+  "schema_version": 2,
+  "source": "# Estuary research log\n\nThe sampling boat leaves at 06:20. The team fills sterile bottles at three marked stations. Water sampling tracks conditions across the estuary.\n\nChilling collected water slows biological changes before laboratory analysis. The samples stay in a cooler below four degrees Celsius. The laboratory must receive them within six hours.\n\nThe counting hide faces the mudflat. Bird surveys estimate the number of feeding shorebirds at low tide. Observers count for twenty minutes.\n\nTwo observers carry matching notebooks. They record birds independently and reconcile their totals after the survey. Independent counts help identify errors in the shorebird survey.\n\nRaised boardwalks keep visitors away from sensitive marsh vegetation. The eastern route is 900 meters long. Bicycles are not permitted on the boardwalk.\n\nA warning lamp is fixed to the entrance gate. The boardwalk closes when the predicted tide exceeds the marked safety level. Rangers reopen it only after inspecting the surface.\n",
+  "source_name": "wetland.md",
+  "root": {
+    "node_id": "root",
+    "kind": "document",
+    "title": "Estuary research log",
+    "start": 0,
+    "end": 1013,
+    "central": null,
+    "children": [
+      {
+        "node_id": "n000001",
+        "kind": "heading",
+        "title": "Estuary research log",
+        "start": 0,
+        "end": 1013,
+        "central": null,
+        "children": [
+          {
+            "node_id": "n000002",
+            "kind": "section",
+            "title": "Water sampling tracks conditions across the estuary.",
+            "start": 24,
+            "end": 355,
+            "central": {
+              "text": "Water sampling tracks conditions across the estuary.",
+              "start": 116,
+              "end": 168,
+              "centrality": 0.57,
+              "candidate_indices": [
+                0,
+                2,
+                3,
+                5,
+                1,
+                4
+              ],
+              "candidate_count": 6,
+              "comparisons": 6,
+              "exhaustive": true,
+              "method": "context-representativeness"
+            },
+            "children": [
+              {
+                "node_id": "n000003",
+                "kind": "paragraph",
+                "title": "Paragraph 1",
+                "start": 24,
+                "end": 168,
+                "central": {
+                  "text": "Water sampling tracks conditions across the estuary.",
+                  "start": 116,
+                  "end": 168,
+                  "centrality": 0.76,
+                  "candidate_indices": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "candidate_count": 3,
+                  "comparisons": 3,
+                  "exhaustive": true,
+                  "method": "context-representativeness"
+                },
+                "children": [
+                  {
+                    "node_id": "n000004",
+                    "kind": "sentence",
+                    "title": "The sampling boat leaves at 06:20.",
+                    "start": 24,
+                    "end": 58,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000005",
+                    "kind": "sentence",
+                    "title": "The team fills sterile bottles at three marked stations.",
+                    "start": 59,
+                    "end": 115,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000006",
+                    "kind": "sentence",
+                    "title": "Water sampling tracks conditions across the estuary.",
+                    "start": 116,
+                    "end": 168,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {}
+              },
+              {
+                "node_id": "n000007",
+                "kind": "paragraph",
+                "title": "Paragraph 2",
+                "start": 170,
+                "end": 355,
+                "central": {
+                  "text": "Chilling collected water slows biological changes before laboratory analysis.",
+                  "start": 170,
+                  "end": 247,
+                  "centrality": 0.7,
+                  "candidate_indices": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "candidate_count": 3,
+                  "comparisons": 3,
+                  "exhaustive": true,
+                  "method": "context-representativeness"
+                },
+                "children": [
+                  {
+                    "node_id": "n000008",
+                    "kind": "sentence",
+                    "title": "Chilling collected water slows biological changes before laboratory analysis.",
+                    "start": 170,
+                    "end": 247,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000009",
+                    "kind": "sentence",
+                    "title": "The samples stay in a cooler below four degrees Celsius.",
+                    "start": 248,
+                    "end": 304,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000010",
+                    "kind": "sentence",
+                    "title": "The laboratory must receive them within six hours.",
+                    "start": 305,
+                    "end": 355,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {}
+              }
+            ],
+            "metadata": {}
+          },
+          {
+            "node_id": "n000011",
+            "kind": "section",
+            "title": "Bird surveys estimate the number of feeding shorebirds at low tide.",
+            "start": 357,
+            "end": 680,
+            "central": {
+              "text": "Bird surveys estimate the number of feeding shorebirds at low tide.",
+              "start": 394,
+              "end": 461,
+              "centrality": 0.71,
+              "candidate_indices": [
+                0,
+                2,
+                3,
+                5,
+                1,
+                4
+              ],
+              "candidate_count": 6,
+              "comparisons": 6,
+              "exhaustive": true,
+              "method": "context-representativeness"
+            },
+            "children": [
+              {
+                "node_id": "n000012",
+                "kind": "paragraph",
+                "title": "Paragraph 1",
+                "start": 357,
+                "end": 497,
+                "central": {
+                  "text": "Bird surveys estimate the number of feeding shorebirds at low tide.",
+                  "start": 394,
+                  "end": 461,
+                  "centrality": 0.89,
+                  "candidate_indices": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "candidate_count": 3,
+                  "comparisons": 3,
+                  "exhaustive": true,
+                  "method": "context-representativeness"
+                },
+                "children": [
+                  {
+                    "node_id": "n000013",
+                    "kind": "sentence",
+                    "title": "The counting hide faces the mudflat.",
+                    "start": 357,
+                    "end": 393,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000014",
+                    "kind": "sentence",
+                    "title": "Bird surveys estimate the number of feeding shorebirds at low tide.",
+                    "start": 394,
+                    "end": 461,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000015",
+                    "kind": "sentence",
+                    "title": "Observers count for twenty minutes.",
+                    "start": 462,
+                    "end": 497,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {}
+              },
+              {
+                "node_id": "n000016",
+                "kind": "paragraph",
+                "title": "Paragraph 2",
+                "start": 499,
+                "end": 680,
+                "central": {
+                  "text": "Independent counts help identify errors in the shorebird survey.",
+                  "start": 616,
+                  "end": 680,
+                  "centrality": 0.81,
+                  "candidate_indices": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "candidate_count": 3,
+                  "comparisons": 3,
+                  "exhaustive": true,
+                  "method": "context-representativeness"
+                },
+                "children": [
+                  {
+                    "node_id": "n000017",
+                    "kind": "sentence",
+                    "title": "Two observers carry matching notebooks.",
+                    "start": 499,
+                    "end": 538,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000018",
+                    "kind": "sentence",
+                    "title": "They record birds independently and reconcile their totals after the survey.",
+                    "start": 539,
+                    "end": 615,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000019",
+                    "kind": "sentence",
+                    "title": "Independent counts help identify errors in the shorebird survey.",
+                    "start": 616,
+                    "end": 680,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {}
+              }
+            ],
+            "metadata": {}
+          },
+          {
+            "node_id": "n000020",
+            "kind": "section",
+            "title": "Raised boardwalks keep visitors away from sensitive marsh vegetation.",
+            "start": 682,
+            "end": 1012,
+            "central": {
+              "text": "Raised boardwalks keep visitors away from sensitive marsh vegetation.",
+              "start": 682,
+              "end": 751,
+              "centrality": 0.64,
+              "candidate_indices": [
+                0,
+                2,
+                3,
+                5,
+                1,
+                4
+              ],
+              "candidate_count": 6,
+              "comparisons": 6,
+              "exhaustive": true,
+              "method": "context-representativeness"
+            },
+            "children": [
+              {
+                "node_id": "n000021",
+                "kind": "paragraph",
+                "title": "Paragraph 1",
+                "start": 682,
+                "end": 834,
+                "central": {
+                  "text": "Raised boardwalks keep visitors away from sensitive marsh vegetation.",
+                  "start": 682,
+                  "end": 751,
+                  "centrality": 0.81,
+                  "candidate_indices": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "candidate_count": 3,
+                  "comparisons": 3,
+                  "exhaustive": true,
+                  "method": "context-representativeness"
+                },
+                "children": [
+                  {
+                    "node_id": "n000022",
+                    "kind": "sentence",
+                    "title": "Raised boardwalks keep visitors away from sensitive marsh vegetation.",
+                    "start": 682,
+                    "end": 751,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000023",
+                    "kind": "sentence",
+                    "title": "The eastern route is 900 meters long.",
+                    "start": 752,
+                    "end": 789,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000024",
+                    "kind": "sentence",
+                    "title": "Bicycles are not permitted on the boardwalk.",
+                    "start": 790,
+                    "end": 834,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {}
+              },
+              {
+                "node_id": "n000025",
+                "kind": "paragraph",
+                "title": "Paragraph 2",
+                "start": 836,
+                "end": 1012,
+                "central": {
+                  "text": "The boardwalk closes when the predicted tide exceeds the marked safety level.",
+                  "start": 882,
+                  "end": 959,
+                  "centrality": 0.68,
+                  "candidate_indices": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "candidate_count": 3,
+                  "comparisons": 3,
+                  "exhaustive": true,
+                  "method": "context-representativeness"
+                },
+                "children": [
+                  {
+                    "node_id": "n000026",
+                    "kind": "sentence",
+                    "title": "A warning lamp is fixed to the entrance gate.",
+                    "start": 836,
+                    "end": 881,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000027",
+                    "kind": "sentence",
+                    "title": "The boardwalk closes when the predicted tide exceeds the marked safety level.",
+                    "start": 882,
+                    "end": 959,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000028",
+                    "kind": "sentence",
+                    "title": "Rangers reopen it only after inspecting the surface.",
+                    "start": 960,
+                    "end": 1012,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {}
+              }
+            ],
+            "metadata": {}
+          }
+        ],
+        "metadata": {
+          "origin": "markdown",
+          "heading_level": 1,
+          "heading_start": 0,
+          "heading_end": 23,
+          "anchor": "estuary-research-log"
+        }
+      }
+    ],
+    "metadata": {
+      "title_source_id": "n000001"
+    }
+  },
+  "metadata": {
+    "scorer": "typesafe-jev",
+    "config": {
+      "same_topic_prior": 0.7,
+      "posterior_cutoff": 0.5,
+      "minimum_drop": 0.2,
+      "same_alpha": 2.0,
+      "same_beta": 1.0,
+      "different_alpha": 1.0,
+      "different_beta": 2.0,
+      "probability_reference_prior": 0.5,
+      "sentence_budget": null
+    },
+    "source_sha256": "8fb6d5291c0f42cbc0edb6a6a0dd29988ab0c553a6a52b7db4cf4a95c2887c32",
+    "offset_unit": "unicode-code-point",
+    "end_exclusive": true,
+    "structure": {
+      "method": "declared-structure",
+      "model_calls": 0,
+      "contents_diagnostics": []
+    },
+    "provider": {
+      "requested_model": "jev-1.13.0",
+      "response_models": [
+        "jev-1.13.0"
+      ],
+      "calls": 93,
+      "questions_answered": 583,
+      "batch_size": 64,
+      "max_state_chars": 60000,
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "provider": "typesafe",
+      "request_metrics": [
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3688860999827739,
+          "input_tokens": 409,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.279564800002845,
+          "input_tokens": 412,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3004642000014428,
+          "input_tokens": 409,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.29831250000279397,
+          "input_tokens": 413,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.2999590999970678,
+          "input_tokens": 413,
+          "output_tokens": 21
+        },
+        {
+          "questions": 12,
+          "status": "ok",
+          "elapsed_seconds": 0.291057099995669,
+          "input_tokens": 1645,
+          "output_tokens": 210
+        },
+        {
+          "questions": 6,
+          "status": "ok",
+          "elapsed_seconds": 0.36965979999513365,
+          "input_tokens": 1079,
+          "output_tokens": 106
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.28342990000965074,
+          "input_tokens": 1190,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.2741723000071943,
+          "input_tokens": 817,
+          "output_tokens": 72
+        },
+        {
+          "questions": 2,
+          "status": "ok",
+          "elapsed_seconds": 0.2668427999888081,
+          "input_tokens": 528,
+          "output_tokens": 38
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.2889971999975387,
+          "input_tokens": 423,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3944177000084892,
+          "input_tokens": 411,
+          "output_tokens": 21
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.2969368000049144,
+          "input_tokens": 4492,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3430056000070181,
+          "input_tokens": 4502,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3035781000216957,
+          "input_tokens": 4496,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3371138999937102,
+          "input_tokens": 4502,
+          "output_tokens": 318
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.2712401000026148,
+          "input_tokens": 412,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.34082939999643713,
+          "input_tokens": 417,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3047663999896031,
+          "input_tokens": 409,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.2881178999959957,
+          "input_tokens": 418,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.28894579998450354,
+          "input_tokens": 417,
+          "output_tokens": 21
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.3944146999856457,
+          "input_tokens": 1187,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.29486379999434575,
+          "input_tokens": 815,
+          "output_tokens": 72
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.27948870000545867,
+          "input_tokens": 1186,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.3137027000193484,
+          "input_tokens": 811,
+          "output_tokens": 72
+        },
+        {
+          "questions": 2,
+          "status": "ok",
+          "elapsed_seconds": 0.2810322000004817,
+          "input_tokens": 524,
+          "output_tokens": 38
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.30057920000399463,
+          "input_tokens": 424,
+          "output_tokens": 21
+        },
+        {
+          "questions": 2,
+          "status": "ok",
+          "elapsed_seconds": 0.330811799998628,
+          "input_tokens": 526,
+          "output_tokens": 38
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.30940800000098534,
+          "input_tokens": 419,
+          "output_tokens": 21
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3099518000090029,
+          "input_tokens": 4463,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.30385699999169447,
+          "input_tokens": 4475,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3623111000051722,
+          "input_tokens": 4477,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3060066000034567,
+          "input_tokens": 4473,
+          "output_tokens": 318
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.265014800010249,
+          "input_tokens": 416,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.2753965000156313,
+          "input_tokens": 418,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.34372970002004877,
+          "input_tokens": 416,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.27178780001122504,
+          "input_tokens": 408,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.27804679999826476,
+          "input_tokens": 407,
+          "output_tokens": 21
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.2944621999922674,
+          "input_tokens": 1212,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.2940161000005901,
+          "input_tokens": 820,
+          "output_tokens": 72
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.33531540000694804,
+          "input_tokens": 1197,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.29728650001925416,
+          "input_tokens": 825,
+          "output_tokens": 72
+        },
+        {
+          "questions": 2,
+          "status": "ok",
+          "elapsed_seconds": 0.3442096000071615,
+          "input_tokens": 518,
+          "output_tokens": 38
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.29165510000893846,
+          "input_tokens": 409,
+          "output_tokens": 21
+        },
+        {
+          "questions": 2,
+          "status": "ok",
+          "elapsed_seconds": 0.3007616000249982,
+          "input_tokens": 518,
+          "output_tokens": 38
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3289218000136316,
+          "input_tokens": 418,
+          "output_tokens": 21
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3463577999791596,
+          "input_tokens": 4522,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.29759189998731017,
+          "input_tokens": 4522,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3217777000099886,
+          "input_tokens": 4528,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.33017000000108965,
+          "input_tokens": 4526,
+          "output_tokens": 318
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3200922000105493,
+          "input_tokens": 410,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.2882502000138629,
+          "input_tokens": 408,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3416080000170041,
+          "input_tokens": 408,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.32017720001749694,
+          "input_tokens": 407,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3113926000078209,
+          "input_tokens": 409,
+          "output_tokens": 21
+        },
+        {
+          "questions": 12,
+          "status": "ok",
+          "elapsed_seconds": 0.32959830001345836,
+          "input_tokens": 1636,
+          "output_tokens": 210
+        },
+        {
+          "questions": 6,
+          "status": "ok",
+          "elapsed_seconds": 0.26892870001029223,
+          "input_tokens": 1068,
+          "output_tokens": 106
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.41312979999929667,
+          "input_tokens": 1176,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.30491270002676174,
+          "input_tokens": 801,
+          "output_tokens": 72
+        },
+        {
+          "questions": 2,
+          "status": "ok",
+          "elapsed_seconds": 0.3379023000015877,
+          "input_tokens": 518,
+          "output_tokens": 38
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.2972328999894671,
+          "input_tokens": 418,
+          "output_tokens": 21
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3130687999946531,
+          "input_tokens": 4470,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3230028000252787,
+          "input_tokens": 4476,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.31865049997577444,
+          "input_tokens": 4478,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.36923969999770634,
+          "input_tokens": 4480,
+          "output_tokens": 318
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3309216999914497,
+          "input_tokens": 408,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.30878359999042004,
+          "input_tokens": 407,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.30146570000215434,
+          "input_tokens": 403,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3065360999898985,
+          "input_tokens": 413,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3869839000108186,
+          "input_tokens": 417,
+          "output_tokens": 21
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.31653859998914413,
+          "input_tokens": 1184,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.35419690000708215,
+          "input_tokens": 808,
+          "output_tokens": 72
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.3335259000014048,
+          "input_tokens": 1165,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.2941229999996722,
+          "input_tokens": 787,
+          "output_tokens": 72
+        },
+        {
+          "questions": 2,
+          "status": "ok",
+          "elapsed_seconds": 0.3021156000031624,
+          "input_tokens": 525,
+          "output_tokens": 38
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3059874000027776,
+          "input_tokens": 429,
+          "output_tokens": 21
+        },
+        {
+          "questions": 2,
+          "status": "ok",
+          "elapsed_seconds": 0.3303971000132151,
+          "input_tokens": 523,
+          "output_tokens": 38
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3545256999786943,
+          "input_tokens": 416,
+          "output_tokens": 21
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3215083999966737,
+          "input_tokens": 4478,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.37755450000986457,
+          "input_tokens": 4482,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3021356000099331,
+          "input_tokens": 4486,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3146429000189528,
+          "input_tokens": 4498,
+          "output_tokens": 318
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3604899999918416,
+          "input_tokens": 411,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.34484810000867583,
+          "input_tokens": 410,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3021745000150986,
+          "input_tokens": 409,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.30337650000001304,
+          "input_tokens": 415,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.43389319998095743,
+          "input_tokens": 420,
+          "output_tokens": 21
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.3090187000052538,
+          "input_tokens": 1191,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.2918329000240192,
+          "input_tokens": 806,
+          "output_tokens": 72
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.29256750000058673,
+          "input_tokens": 1174,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.3100025000167079,
+          "input_tokens": 803,
+          "output_tokens": 72
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.3735783000010997,
+          "input_tokens": 1216,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.3305137999996077,
+          "input_tokens": 831,
+          "output_tokens": 72
+        }
+      ]
+    }
+  },
+  "decisions": [
+    {
+      "parent_id": "n000001",
+      "anchor_start": 24,
+      "candidate_start": 170,
+      "score": 0.56,
+      "prior": 0.7,
+      "evidence_mode": "prior-odds-adjustment",
+      "posterior_same": 0.7480916030534351,
+      "previous_probability": 0.7,
+      "drop": -0.048091603053435183,
+      "cut": false
+    },
+    {
+      "parent_id": "n000001",
+      "anchor_start": 24,
+      "candidate_start": 357,
+      "score": 0.03,
+      "prior": 0.7,
+      "evidence_mode": "prior-odds-adjustment",
+      "posterior_same": 0.06730769230769229,
+      "previous_probability": 0.7480916030534351,
+      "drop": 0.6807839107457428,
+      "cut": true
+    },
+    {
+      "parent_id": "n000001",
+      "anchor_start": 357,
+      "candidate_start": 499,
+      "score": 0.83,
+      "prior": 0.7,
+      "evidence_mode": "prior-odds-adjustment",
+      "posterior_same": 0.9193037974683543,
+      "previous_probability": 0.7,
+      "drop": -0.21930379746835438,
+      "cut": false
+    },
+    {
+      "parent_id": "n000001",
+      "anchor_start": 357,
+      "candidate_start": 682,
+      "score": 0.08,
+      "prior": 0.7,
+      "evidence_mode": "prior-odds-adjustment",
+      "posterior_same": 0.16867469879518063,
+      "previous_probability": 0.9193037974683543,
+      "drop": 0.7506290986731737,
+      "cut": true
+    },
+    {
+      "parent_id": "n000001",
+      "anchor_start": 682,
+      "candidate_start": 836,
+      "score": 0.57,
+      "prior": 0.7,
+      "evidence_mode": "prior-odds-adjustment",
+      "posterior_same": 0.7556818181818181,
+      "previous_probability": 0.7,
+      "drop": -0.055681818181818166,
+      "cut": false
+    }
+  ]
+}

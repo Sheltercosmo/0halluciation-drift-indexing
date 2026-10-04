@@ -1,0 +1,4 @@
+* text=auto eol=lf
+*.png binary
+# Frozen byte hashes must survive checkout on every platform.
+evals/results/**/source/** -text

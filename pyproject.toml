@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "0halluciation-drift-indexing"
+version = "0.3.0"
+description = "Reliable decisions with a purely statistical prior for document topic blocking. Jev-based indexing with zero generative LLM calls and optional embeddings."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+keywords = ["decision-models", "bayesian-statistics", "statistical-priors", "topic-segmentation", "document-chunking", "semantic-chunking", "jev", "document-indexing", "rag", "embedding-free", "python", "typesafe-ai", "retrieval-augmented-generation", "bayesian-inference", "extractive-summarization", "reranking"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Topic :: Text Processing :: Indexing",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Repository = "https://github.com/Sheltercosmo/0halluciation-drift-indexing"
+Documentation = "https://github.com/Sheltercosmo/0halluciation-drift-indexing#readme"
+Issues = "https://github.com/Sheltercosmo/0halluciation-drift-indexing/issues"
+
+[project.scripts]
+zero-index = "zero_index.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["zero_index*"]

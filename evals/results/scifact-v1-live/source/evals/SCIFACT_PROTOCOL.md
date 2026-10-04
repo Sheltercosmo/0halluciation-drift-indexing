@@ -1,0 +1,15 @@
+# SciFact retrieval micro-pilot
+
+This second pilot uses existing evidence annotations from [SciFact](https://github.com/allenai/scifact), Wadden et al., EMNLP 2020. It evaluates **sentence reranking only**, not the official SciFact benchmark, claim verification, topic segmentation or an LLM agent.
+
+Before calls, sort the development claims by numeric ID, retain claims with exactly one evidence document and a single SUPPORT or CONTRADICT label, shuffle with seed 1729, and take six of each label with unique evidence documents. Do not filter by model performance. For each selected claim, the pool contains its annotated evidence abstract plus the four highest BM25-scoring other abstracts in the entire supplied corpus. The positive document is deliberately supplied: this is an **oracle-document-pool reranking test**, not open-corpus retrieval. Non-annotated distractors may contain additional relevant evidence; they are negatives only under this evaluation's gold labels.
+
+Index the dataset's declared titles and sentence boundaries directly, keeping each abstract as one paragraph and its first sentence as a routing representative. No Jev index construction or generated summary is used. Both methods receive the identical index and all sentence candidates. Compare repository BM25-style sentence ranking against the unchanged Jev relevance reranker. The claim text is used unchanged for both question and content need; relevance includes supporting and contradicting evidence. Gold labels and rationale sentence numbers are used only by the evaluator.
+
+Report hit@1, hit@3, reciprocal rank, and mean recall@3 over the union of annotated rationale sentences. Union recall is our diagnostic, not SciFact's official rationale-set metric. Break hit@1 down by SUPPORT/CONTRADICT and preserve every claim ID, candidate document ID, returned ranking, score and outcome. Do not interpret relevance as whether the scientific claim is true. Avoid clinical conclusions from this retrieval exercise.
+
+Pinned `jev-1.13.0`, TypeSafe native API, existing relevance prompt, batch size 64, at most 60 HTTP requests and 1,500 decision questions. Stop on error with partial results. No retries, threshold tuning or text generation. Freeze source, selection, protocol and downloaded-file hashes before calls. Record provider usage and latency; dollar cost remains unknown without billing evidence.
+
+The public dataset is downloaded from the authors' linked archive. Keep its text under ignored `output/`; archive only IDs, numeric scores, request-body hashes and source code, avoiding redistribution of abstracts. An offline decision replay requires those downloaded source files and verifies their hashes. The initial supplied dataset tarball SHA-256 is `11c621288d41ac144d29b13b0f8503b3820b7d6e8b1f6ff24dff335c196d76be`.
+
+This protocol was written after observing the synthetic pilot, but before any SciFact Jev calls. Prompts, model and retrieval parameters remain unchanged. SciFact is a public development set; model training exposure is unknown, and twelve selected claims cannot establish general performance.

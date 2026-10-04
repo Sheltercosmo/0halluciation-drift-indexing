@@ -1,0 +1,35 @@
+{
+  "created_at": "2026-10-04T19:15:32.556596+00:00",
+  "files": {
+    "evals/__init__.py": "ae8f0fe1d27ede28c1eea84856e0227424fbba7c8fcdb891b1dcfed1300cb04d",
+    "evals/pilot.json": "391b5ce0102f267e7b8f6567114d4f74188f23fbe38be548b0130be84e62bc0f",
+    "evals/PROTOCOL.md": "69b87dfa3f81da2cf9bbbe3a7fb625fcfb13d59fdaeb9242fcdf09bc45357d06",
+    "evals/run.py": "783aaec2f2740fe92c1b8a9409daec79a95ebfa9927436c3e929ec2a43b85de4",
+    "zero_index/__init__.py": "6dfeadbc6b0922ef9e82f8e4d2450aa3c6f63eaf60f3a2f5ac061164efe95506",
+    "zero_index/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "zero_index/cli.py": "6be5ef79b9a0e5dfbe7038fffa0bd517ce5d96f298650814733be4b008fd2b0f",
+    "zero_index/embeddings.py": "f233ec0bc84c08ecb48a7fb53c2aba3d7a3d41b2bda9beba33d27dc0a0705369",
+    "zero_index/index.py": "d5c229f20231b980dcb6b876c69f063371fd4e9d052a1bc4837b13c3a39dbab9",
+    "zero_index/jev.py": "e9a63628e7d072f5373c28f9742af667376f83301be71231b029db6e349dd32f",
+    "zero_index/model.py": "b4bda8ee4137444772fd0565a8830179b51a77a3860651f4b48823a329d4f4c7",
+    "zero_index/parse.py": "b2b09b61a377d2ba7736c7dd757db3c0b5af2c866dbd2851f658c177665e04ef",
+    "zero_index/ranking.py": "e7dce72d6085465dfa0bc3d75f5d923a95d6e59dc7ca7498b8bd9c3e381f4ac8",
+    "zero_index/retrieval.py": "6db3dee235c4ae06e8bc2433591016d6addcc127ca637525baef939909e7271a",
+    "zero_index/segment.py": "3931e16190b5b786ad989ebe33842f239b578c6efb7d6f2c644f2d15f89fab6c",
+    "zero_index/structure.py": "3f36f8fda4e3901385e0a9230057e19d96f1d3d20ccebbb16d18924cbe8724f8"
+  },
+  "mode": "live",
+  "config": {
+    "same_topic_prior": 0.7,
+    "posterior_cutoff": 0.5,
+    "minimum_drop": 0.2,
+    "same_alpha": 2.0,
+    "same_beta": 1.0,
+    "different_alpha": 1.0,
+    "different_beta": 2.0,
+    "probability_reference_prior": 0.5,
+    "sentence_budget": null
+  },
+  "provider": "typesafe",
+  "model": "jev-1.13.0"
+}

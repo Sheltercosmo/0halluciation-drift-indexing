@@ -1,0 +1,772 @@
+{
+  "schema_version": 2,
+  "source": "# Community garden notebook\n\nThe supply barrel stands near plot seven. Drip irrigation delivers water directly to the roots while limiting evaporation. The timer starts at 05:40.\n\nThe filter housing is green. A blocked emitter gives one seedling less moisture than its neighbors. Weekly emitter checks keep irrigation evenly distributed across the beds.\n\nCompost needs a mixture of fresh scraps and dry plant material. The recipe uses two buckets of leaves for each bucket of peelings. The buckets are stored under the bench.\n\nA thermometer hangs from the bin lid. Turning the compost restores airflow when the pile becomes compacted. Volunteers turn it every Saturday.\n\nA rain gauge is fixed to the fence. If overnight rainfall exceeds eight millimeters, the morning cycle is skipped. Rainfall measurements prevent unnecessary irrigation after wet nights.\n\nIrrigation must stop when a supply hose develops a leak. The red shutoff lever is beside the barrel. The repair kit contains three spare couplings.\n",
+  "source_name": "garden.md",
+  "root": {
+    "node_id": "root",
+    "kind": "document",
+    "title": "Community garden notebook",
+    "start": 0,
+    "end": 1006,
+    "central": null,
+    "children": [
+      {
+        "node_id": "n000001",
+        "kind": "heading",
+        "title": "Community garden notebook",
+        "start": 0,
+        "end": 1006,
+        "central": null,
+        "children": [
+          {
+            "node_id": "n000002",
+            "kind": "section",
+            "title": "Drip irrigation delivers water directly to the roots while limiting evaporation.",
+            "start": 29,
+            "end": 353,
+            "central": {
+              "text": "Drip irrigation delivers water directly to the roots while limiting evaporation.",
+              "start": 71,
+              "end": 151,
+              "centrality": 0.71,
+              "candidate_indices": [
+                0,
+                2,
+                3,
+                5,
+                1,
+                4
+              ],
+              "candidate_count": 6,
+              "comparisons": 6,
+              "exhaustive": true,
+              "method": "context-representativeness"
+            },
+            "children": [
+              {
+                "node_id": "n000003",
+                "kind": "paragraph",
+                "title": "Paragraph 1",
+                "start": 29,
+                "end": 178,
+                "central": {
+                  "text": "Drip irrigation delivers water directly to the roots while limiting evaporation.",
+                  "start": 71,
+                  "end": 151,
+                  "centrality": 0.78,
+                  "candidate_indices": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "candidate_count": 3,
+                  "comparisons": 3,
+                  "exhaustive": true,
+                  "method": "context-representativeness"
+                },
+                "children": [
+                  {
+                    "node_id": "n000004",
+                    "kind": "sentence",
+                    "title": "The supply barrel stands near plot seven.",
+                    "start": 29,
+                    "end": 70,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000005",
+                    "kind": "sentence",
+                    "title": "Drip irrigation delivers water directly to the roots while limiting evaporation.",
+                    "start": 71,
+                    "end": 151,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000006",
+                    "kind": "sentence",
+                    "title": "The timer starts at 05:40.",
+                    "start": 152,
+                    "end": 178,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {}
+              },
+              {
+                "node_id": "n000007",
+                "kind": "paragraph",
+                "title": "Paragraph 2",
+                "start": 180,
+                "end": 353,
+                "central": {
+                  "text": "Weekly emitter checks keep irrigation evenly distributed across the beds.",
+                  "start": 280,
+                  "end": 353,
+                  "centrality": 0.69,
+                  "candidate_indices": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "candidate_count": 3,
+                  "comparisons": 3,
+                  "exhaustive": true,
+                  "method": "context-representativeness"
+                },
+                "children": [
+                  {
+                    "node_id": "n000008",
+                    "kind": "sentence",
+                    "title": "The filter housing is green.",
+                    "start": 180,
+                    "end": 208,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000009",
+                    "kind": "sentence",
+                    "title": "A blocked emitter gives one seedling less moisture than its neighbors.",
+                    "start": 209,
+                    "end": 279,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000010",
+                    "kind": "sentence",
+                    "title": "Weekly emitter checks keep irrigation evenly distributed across the beds.",
+                    "start": 280,
+                    "end": 353,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {}
+              }
+            ],
+            "metadata": {}
+          },
+          {
+            "node_id": "n000011",
+            "kind": "section",
+            "title": "Compost needs a mixture of fresh scraps and dry plant material.",
+            "start": 355,
+            "end": 669,
+            "central": {
+              "text": "Compost needs a mixture of fresh scraps and dry plant material.",
+              "start": 355,
+              "end": 418,
+              "centrality": 0.73,
+              "candidate_indices": [
+                0,
+                2,
+                3,
+                5,
+                1,
+                4
+              ],
+              "candidate_count": 6,
+              "comparisons": 6,
+              "exhaustive": true,
+              "method": "context-representativeness"
+            },
+            "children": [
+              {
+                "node_id": "n000012",
+                "kind": "paragraph",
+                "title": "Paragraph 1",
+                "start": 355,
+                "end": 525,
+                "central": {
+                  "text": "Compost needs a mixture of fresh scraps and dry plant material.",
+                  "start": 355,
+                  "end": 418,
+                  "centrality": 0.82,
+                  "candidate_indices": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "candidate_count": 3,
+                  "comparisons": 3,
+                  "exhaustive": true,
+                  "method": "context-representativeness"
+                },
+                "children": [
+                  {
+                    "node_id": "n000013",
+                    "kind": "sentence",
+                    "title": "Compost needs a mixture of fresh scraps and dry plant material.",
+                    "start": 355,
+                    "end": 418,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000014",
+                    "kind": "sentence",
+                    "title": "The recipe uses two buckets of leaves for each bucket of peelings.",
+                    "start": 419,
+                    "end": 485,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000015",
+                    "kind": "sentence",
+                    "title": "The buckets are stored under the bench.",
+                    "start": 486,
+                    "end": 525,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {}
+              },
+              {
+                "node_id": "n000016",
+                "kind": "paragraph",
+                "title": "Paragraph 2",
+                "start": 527,
+                "end": 669,
+                "central": {
+                  "text": "Turning the compost restores airflow when the pile becomes compacted.",
+                  "start": 565,
+                  "end": 634,
+                  "centrality": 0.59,
+                  "candidate_indices": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "candidate_count": 3,
+                  "comparisons": 3,
+                  "exhaustive": true,
+                  "method": "context-representativeness"
+                },
+                "children": [
+                  {
+                    "node_id": "n000017",
+                    "kind": "sentence",
+                    "title": "A thermometer hangs from the bin lid.",
+                    "start": 527,
+                    "end": 564,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000018",
+                    "kind": "sentence",
+                    "title": "Turning the compost restores airflow when the pile becomes compacted.",
+                    "start": 565,
+                    "end": 634,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000019",
+                    "kind": "sentence",
+                    "title": "Volunteers turn it every Saturday.",
+                    "start": 635,
+                    "end": 669,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {}
+              }
+            ],
+            "metadata": {}
+          },
+          {
+            "node_id": "n000020",
+            "kind": "section",
+            "title": "Rainfall measurements prevent unnecessary irrigation after wet nights.",
+            "start": 671,
+            "end": 856,
+            "central": {
+              "text": "Rainfall measurements prevent unnecessary irrigation after wet nights.",
+              "start": 786,
+              "end": 856,
+              "centrality": 0.69,
+              "candidate_indices": [
+                0,
+                2,
+                1
+              ],
+              "candidate_count": 3,
+              "comparisons": 3,
+              "exhaustive": true,
+              "method": "context-representativeness"
+            },
+            "children": [
+              {
+                "node_id": "n000021",
+                "kind": "paragraph",
+                "title": "Paragraph 1",
+                "start": 671,
+                "end": 856,
+                "central": {
+                  "text": "Rainfall measurements prevent unnecessary irrigation after wet nights.",
+                  "start": 786,
+                  "end": 856,
+                  "centrality": 0.69,
+                  "candidate_indices": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "candidate_count": 3,
+                  "comparisons": 3,
+                  "exhaustive": true,
+                  "method": "context-representativeness"
+                },
+                "children": [
+                  {
+                    "node_id": "n000022",
+                    "kind": "sentence",
+                    "title": "A rain gauge is fixed to the fence.",
+                    "start": 671,
+                    "end": 706,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000023",
+                    "kind": "sentence",
+                    "title": "If overnight rainfall exceeds eight millimeters, the morning cycle is skipped.",
+                    "start": 707,
+                    "end": 785,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000024",
+                    "kind": "sentence",
+                    "title": "Rainfall measurements prevent unnecessary irrigation after wet nights.",
+                    "start": 786,
+                    "end": 856,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {}
+              }
+            ],
+            "metadata": {}
+          },
+          {
+            "node_id": "n000025",
+            "kind": "section",
+            "title": "Irrigation must stop when a supply hose develops a leak.",
+            "start": 858,
+            "end": 1005,
+            "central": {
+              "text": "Irrigation must stop when a supply hose develops a leak.",
+              "start": 858,
+              "end": 914,
+              "centrality": 0.9,
+              "candidate_indices": [
+                0,
+                2,
+                1
+              ],
+              "candidate_count": 3,
+              "comparisons": 3,
+              "exhaustive": true,
+              "method": "context-representativeness"
+            },
+            "children": [
+              {
+                "node_id": "n000026",
+                "kind": "paragraph",
+                "title": "Paragraph 1",
+                "start": 858,
+                "end": 1005,
+                "central": {
+                  "text": "Irrigation must stop when a supply hose develops a leak.",
+                  "start": 858,
+                  "end": 914,
+                  "centrality": 0.9,
+                  "candidate_indices": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "candidate_count": 3,
+                  "comparisons": 3,
+                  "exhaustive": true,
+                  "method": "context-representativeness"
+                },
+                "children": [
+                  {
+                    "node_id": "n000027",
+                    "kind": "sentence",
+                    "title": "Irrigation must stop when a supply hose develops a leak.",
+                    "start": 858,
+                    "end": 914,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000028",
+                    "kind": "sentence",
+                    "title": "The red shutoff lever is beside the barrel.",
+                    "start": 915,
+                    "end": 958,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000029",
+                    "kind": "sentence",
+                    "title": "The repair kit contains three spare couplings.",
+                    "start": 959,
+                    "end": 1005,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {}
+              }
+            ],
+            "metadata": {}
+          }
+        ],
+        "metadata": {
+          "origin": "markdown",
+          "heading_level": 1,
+          "heading_start": 0,
+          "heading_end": 28,
+          "anchor": "community-garden-notebook"
+        }
+      }
+    ],
+    "metadata": {
+      "title_source_id": "n000001"
+    }
+  },
+  "metadata": {
+    "scorer": "typesafe-jev",
+    "config": {
+      "same_topic_prior": 0.7,
+      "posterior_cutoff": 0.5,
+      "minimum_drop": 0.2,
+      "same_alpha": 2.0,
+      "same_beta": 1.0,
+      "different_alpha": 1.0,
+      "different_beta": 2.0,
+      "probability_reference_prior": 0.5,
+      "sentence_budget": null
+    },
+    "source_sha256": "4cea175828d98153b3f784ce2ab2f845a256b60ae933b7bb3b92af390930bffd",
+    "offset_unit": "unicode-code-point",
+    "end_exclusive": true,
+    "structure": {
+      "method": "declared-structure",
+      "model_calls": 0,
+      "contents_diagnostics": []
+    },
+    "provider": {
+      "requested_model": "jev-1.13.0",
+      "response_models": [
+        "jev-1.13.0"
+      ],
+      "calls": 29,
+      "questions_answered": 146,
+      "batch_size": 64,
+      "max_state_chars": 60000,
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "provider": "typesafe",
+      "request_metrics": [
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3688860999827739,
+          "input_tokens": 409,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.279564800002845,
+          "input_tokens": 412,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3004642000014428,
+          "input_tokens": 409,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.29831250000279397,
+          "input_tokens": 413,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.2999590999970678,
+          "input_tokens": 413,
+          "output_tokens": 21
+        },
+        {
+          "questions": 12,
+          "status": "ok",
+          "elapsed_seconds": 0.291057099995669,
+          "input_tokens": 1645,
+          "output_tokens": 210
+        },
+        {
+          "questions": 6,
+          "status": "ok",
+          "elapsed_seconds": 0.36965979999513365,
+          "input_tokens": 1079,
+          "output_tokens": 106
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.28342990000965074,
+          "input_tokens": 1190,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.2741723000071943,
+          "input_tokens": 817,
+          "output_tokens": 72
+        },
+        {
+          "questions": 2,
+          "status": "ok",
+          "elapsed_seconds": 0.2668427999888081,
+          "input_tokens": 528,
+          "output_tokens": 38
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.2889971999975387,
+          "input_tokens": 423,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3944177000084892,
+          "input_tokens": 411,
+          "output_tokens": 21
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.2969368000049144,
+          "input_tokens": 4492,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3430056000070181,
+          "input_tokens": 4502,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3035781000216957,
+          "input_tokens": 4496,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3371138999937102,
+          "input_tokens": 4502,
+          "output_tokens": 318
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.2712401000026148,
+          "input_tokens": 412,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.34082939999643713,
+          "input_tokens": 417,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3047663999896031,
+          "input_tokens": 409,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.2881178999959957,
+          "input_tokens": 418,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.28894579998450354,
+          "input_tokens": 417,
+          "output_tokens": 21
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.3944146999856457,
+          "input_tokens": 1187,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.29486379999434575,
+          "input_tokens": 815,
+          "output_tokens": 72
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.27948870000545867,
+          "input_tokens": 1186,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.3137027000193484,
+          "input_tokens": 811,
+          "output_tokens": 72
+        },
+        {
+          "questions": 2,
+          "status": "ok",
+          "elapsed_seconds": 0.2810322000004817,
+          "input_tokens": 524,
+          "output_tokens": 38
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.30057920000399463,
+          "input_tokens": 424,
+          "output_tokens": 21
+        },
+        {
+          "questions": 2,
+          "status": "ok",
+          "elapsed_seconds": 0.330811799998628,
+          "input_tokens": 526,
+          "output_tokens": 38
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.30940800000098534,
+          "input_tokens": 419,
+          "output_tokens": 21
+        }
+      ]
+    }
+  },
+  "decisions": [
+    {
+      "parent_id": "n000001",
+      "anchor_start": 29,
+      "candidate_start": 180,
+      "score": 0.71,
+      "prior": 0.7,
+      "evidence_mode": "prior-odds-adjustment",
+      "posterior_same": 0.8510273972602739,
+      "previous_probability": 0.7,
+      "drop": -0.15102739726027392,
+      "cut": false
+    },
+    {
+      "parent_id": "n000001",
+      "anchor_start": 29,
+      "candidate_start": 355,
+      "score": 0.03,
+      "prior": 0.7,
+      "evidence_mode": "prior-odds-adjustment",
+      "posterior_same": 0.06730769230769229,
+      "previous_probability": 0.8510273972602739,
+      "drop": 0.7837197049525816,
+      "cut": true
+    },
+    {
+      "parent_id": "n000001",
+      "anchor_start": 355,
+      "candidate_start": 527,
+      "score": 0.66,
+      "prior": 0.7,
+      "evidence_mode": "prior-odds-adjustment",
+      "posterior_same": 0.8191489361702128,
+      "previous_probability": 0.7,
+      "drop": -0.11914893617021283,
+      "cut": false
+    },
+    {
+      "parent_id": "n000001",
+      "anchor_start": 355,
+      "candidate_start": 671,
+      "score": 0.02,
+      "prior": 0.7,
+      "evidence_mode": "prior-odds-adjustment",
+      "posterior_same": 0.04545454545454547,
+      "previous_probability": 0.8191489361702128,
+      "drop": 0.7736943907156673,
+      "cut": true
+    },
+    {
+      "parent_id": "n000001",
+      "anchor_start": 671,
+      "candidate_start": 858,
+      "score": 0.13,
+      "prior": 0.7,
+      "evidence_mode": "prior-odds-adjustment",
+      "posterior_same": 0.25852272727272724,
+      "previous_probability": 0.7,
+      "drop": 0.4414772727272727,
+      "cut": true
+    }
+  ]
+}

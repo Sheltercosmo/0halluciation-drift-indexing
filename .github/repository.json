@@ -1,0 +1,7 @@
+{
+  "name": "0halluciation-drift-indexing",
+  "display_name": "0halluciation drift indexing",
+  "description": "Reliable decisions with a purely statistical prior for document topic blocking. Jev-based indexing with zero generative LLM calls and optional embeddings.",
+  "topics_file": ".github/topics.json",
+  "social_preview": "assets/github-social-preview.jpg"
+}

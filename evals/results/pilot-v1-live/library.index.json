@@ -1,0 +1,974 @@
+{
+  "schema_version": 2,
+  "source": "# Map library desk guide\n\nCirculating maps may be borrowed by registered members. The standard loan lasts fourteen days. The checkout desk closes at 17:45.\n\nThe renewal form is yellow. A map loan can be renewed once unless another reader has reserved the map. Renewal requests must arrive before the due date.\n\nReturned folders go into the shallow tray. The librarian checks each returned map for tears before clearing the loan. A condition check completes the map return process.\n\nFragile maps are stabilized before they can be handled safely. A conservator repairs torn margins with thin tissue. The repair paste dries overnight.\n\nThe storage drawer has a brass handle. Flat storage and acid-free sleeves slow further damage to delicate maps. Each sleeve carries a pencil inventory number.\n\nThe exhibition case has a light meter. Illumination must remain below fifty lux for colored historic sheets. Limiting light exposure protects vulnerable map pigments.\n",
+  "source_name": "library.md",
+  "root": {
+    "node_id": "root",
+    "kind": "document",
+    "title": "Map library desk guide",
+    "start": 0,
+    "end": 960,
+    "central": null,
+    "children": [
+      {
+        "node_id": "n000001",
+        "kind": "heading",
+        "title": "Map library desk guide",
+        "start": 0,
+        "end": 960,
+        "central": null,
+        "children": [
+          {
+            "node_id": "n000002",
+            "kind": "section",
+            "title": "Circulating maps may be borrowed by registered members.",
+            "start": 26,
+            "end": 480,
+            "central": {
+              "text": "Circulating maps may be borrowed by registered members.",
+              "start": 26,
+              "end": 81,
+              "centrality": 0.46,
+              "candidate_indices": [
+                0,
+                2,
+                3,
+                5,
+                6,
+                8,
+                1,
+                4,
+                7
+              ],
+              "candidate_count": 9,
+              "comparisons": 9,
+              "exhaustive": true,
+              "method": "context-representativeness"
+            },
+            "children": [
+              {
+                "node_id": "n000003",
+                "kind": "paragraph",
+                "title": "Paragraph 1",
+                "start": 26,
+                "end": 155,
+                "central": {
+                  "text": "Circulating maps may be borrowed by registered members.",
+                  "start": 26,
+                  "end": 81,
+                  "centrality": 0.73,
+                  "candidate_indices": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "candidate_count": 3,
+                  "comparisons": 3,
+                  "exhaustive": true,
+                  "method": "context-representativeness"
+                },
+                "children": [
+                  {
+                    "node_id": "n000004",
+                    "kind": "sentence",
+                    "title": "Circulating maps may be borrowed by registered members.",
+                    "start": 26,
+                    "end": 81,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000005",
+                    "kind": "sentence",
+                    "title": "The standard loan lasts fourteen days.",
+                    "start": 82,
+                    "end": 120,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000006",
+                    "kind": "sentence",
+                    "title": "The checkout desk closes at 17:45.",
+                    "start": 121,
+                    "end": 155,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {}
+              },
+              {
+                "node_id": "n000007",
+                "kind": "paragraph",
+                "title": "Paragraph 2",
+                "start": 157,
+                "end": 309,
+                "central": {
+                  "text": "A map loan can be renewed once unless another reader has reserved the map.",
+                  "start": 185,
+                  "end": 259,
+                  "centrality": 0.78,
+                  "candidate_indices": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "candidate_count": 3,
+                  "comparisons": 3,
+                  "exhaustive": true,
+                  "method": "context-representativeness"
+                },
+                "children": [
+                  {
+                    "node_id": "n000008",
+                    "kind": "sentence",
+                    "title": "The renewal form is yellow.",
+                    "start": 157,
+                    "end": 184,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000009",
+                    "kind": "sentence",
+                    "title": "A map loan can be renewed once unless another reader has reserved the map.",
+                    "start": 185,
+                    "end": 259,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000010",
+                    "kind": "sentence",
+                    "title": "Renewal requests must arrive before the due date.",
+                    "start": 260,
+                    "end": 309,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {}
+              },
+              {
+                "node_id": "n000011",
+                "kind": "paragraph",
+                "title": "Paragraph 3",
+                "start": 311,
+                "end": 480,
+                "central": {
+                  "text": "The librarian checks each returned map for tears before clearing the loan.",
+                  "start": 354,
+                  "end": 428,
+                  "centrality": 0.52,
+                  "candidate_indices": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "candidate_count": 3,
+                  "comparisons": 3,
+                  "exhaustive": true,
+                  "method": "context-representativeness"
+                },
+                "children": [
+                  {
+                    "node_id": "n000012",
+                    "kind": "sentence",
+                    "title": "Returned folders go into the shallow tray.",
+                    "start": 311,
+                    "end": 353,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000013",
+                    "kind": "sentence",
+                    "title": "The librarian checks each returned map for tears before clearing the loan.",
+                    "start": 354,
+                    "end": 428,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000014",
+                    "kind": "sentence",
+                    "title": "A condition check completes the map return process.",
+                    "start": 429,
+                    "end": 480,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {}
+              }
+            ],
+            "metadata": {}
+          },
+          {
+            "node_id": "n000015",
+            "kind": "section",
+            "title": "Fragile maps are stabilized before they can be handled safely.",
+            "start": 482,
+            "end": 791,
+            "central": {
+              "text": "Fragile maps are stabilized before they can be handled safely.",
+              "start": 482,
+              "end": 544,
+              "centrality": 0.76,
+              "candidate_indices": [
+                0,
+                2,
+                3,
+                5,
+                1,
+                4
+              ],
+              "candidate_count": 6,
+              "comparisons": 6,
+              "exhaustive": true,
+              "method": "context-representativeness"
+            },
+            "children": [
+              {
+                "node_id": "n000016",
+                "kind": "paragraph",
+                "title": "Paragraph 1",
+                "start": 482,
+                "end": 631,
+                "central": {
+                  "text": "Fragile maps are stabilized before they can be handled safely.",
+                  "start": 482,
+                  "end": 544,
+                  "centrality": 0.76,
+                  "candidate_indices": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "candidate_count": 3,
+                  "comparisons": 3,
+                  "exhaustive": true,
+                  "method": "context-representativeness"
+                },
+                "children": [
+                  {
+                    "node_id": "n000017",
+                    "kind": "sentence",
+                    "title": "Fragile maps are stabilized before they can be handled safely.",
+                    "start": 482,
+                    "end": 544,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000018",
+                    "kind": "sentence",
+                    "title": "A conservator repairs torn margins with thin tissue.",
+                    "start": 545,
+                    "end": 597,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000019",
+                    "kind": "sentence",
+                    "title": "The repair paste dries overnight.",
+                    "start": 598,
+                    "end": 631,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {}
+              },
+              {
+                "node_id": "n000020",
+                "kind": "paragraph",
+                "title": "Paragraph 2",
+                "start": 633,
+                "end": 791,
+                "central": {
+                  "text": "Flat storage and acid-free sleeves slow further damage to delicate maps.",
+                  "start": 672,
+                  "end": 744,
+                  "centrality": 0.79,
+                  "candidate_indices": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "candidate_count": 3,
+                  "comparisons": 3,
+                  "exhaustive": true,
+                  "method": "context-representativeness"
+                },
+                "children": [
+                  {
+                    "node_id": "n000021",
+                    "kind": "sentence",
+                    "title": "The storage drawer has a brass handle.",
+                    "start": 633,
+                    "end": 671,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000022",
+                    "kind": "sentence",
+                    "title": "Flat storage and acid-free sleeves slow further damage to delicate maps.",
+                    "start": 672,
+                    "end": 744,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000023",
+                    "kind": "sentence",
+                    "title": "Each sleeve carries a pencil inventory number.",
+                    "start": 745,
+                    "end": 791,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {}
+              }
+            ],
+            "metadata": {}
+          },
+          {
+            "node_id": "n000024",
+            "kind": "section",
+            "title": "Illumination must remain below fifty lux for colored historic sheets.",
+            "start": 793,
+            "end": 959,
+            "central": {
+              "text": "Illumination must remain below fifty lux for colored historic sheets.",
+              "start": 832,
+              "end": 901,
+              "centrality": 0.84,
+              "candidate_indices": [
+                0,
+                2,
+                1
+              ],
+              "candidate_count": 3,
+              "comparisons": 3,
+              "exhaustive": true,
+              "method": "context-representativeness"
+            },
+            "children": [
+              {
+                "node_id": "n000025",
+                "kind": "paragraph",
+                "title": "Paragraph 1",
+                "start": 793,
+                "end": 959,
+                "central": {
+                  "text": "Illumination must remain below fifty lux for colored historic sheets.",
+                  "start": 832,
+                  "end": 901,
+                  "centrality": 0.84,
+                  "candidate_indices": [
+                    0,
+                    2,
+                    1
+                  ],
+                  "candidate_count": 3,
+                  "comparisons": 3,
+                  "exhaustive": true,
+                  "method": "context-representativeness"
+                },
+                "children": [
+                  {
+                    "node_id": "n000026",
+                    "kind": "sentence",
+                    "title": "The exhibition case has a light meter.",
+                    "start": 793,
+                    "end": 831,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000027",
+                    "kind": "sentence",
+                    "title": "Illumination must remain below fifty lux for colored historic sheets.",
+                    "start": 832,
+                    "end": 901,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  },
+                  {
+                    "node_id": "n000028",
+                    "kind": "sentence",
+                    "title": "Limiting light exposure protects vulnerable map pigments.",
+                    "start": 902,
+                    "end": 959,
+                    "central": null,
+                    "children": [],
+                    "metadata": {}
+                  }
+                ],
+                "metadata": {}
+              }
+            ],
+            "metadata": {}
+          }
+        ],
+        "metadata": {
+          "origin": "markdown",
+          "heading_level": 1,
+          "heading_start": 0,
+          "heading_end": 25,
+          "anchor": "map-library-desk-guide"
+        }
+      }
+    ],
+    "metadata": {
+      "title_source_id": "n000001"
+    }
+  },
+  "metadata": {
+    "scorer": "typesafe-jev",
+    "config": {
+      "same_topic_prior": 0.7,
+      "posterior_cutoff": 0.5,
+      "minimum_drop": 0.2,
+      "same_alpha": 2.0,
+      "same_beta": 1.0,
+      "different_alpha": 1.0,
+      "different_beta": 2.0,
+      "probability_reference_prior": 0.5,
+      "sentence_budget": null
+    },
+    "source_sha256": "9444a88237761fb4d4c2ce2c751a6b66abe600cef9548e0465163e36ac5a2d6b",
+    "offset_unit": "unicode-code-point",
+    "end_exclusive": true,
+    "structure": {
+      "method": "declared-structure",
+      "model_calls": 0,
+      "contents_diagnostics": []
+    },
+    "provider": {
+      "requested_model": "jev-1.13.0",
+      "response_models": [
+        "jev-1.13.0"
+      ],
+      "calls": 61,
+      "questions_answered": 363,
+      "batch_size": 64,
+      "max_state_chars": 60000,
+      "endpoint": "https://api.typesafe.ai/v1/systemone",
+      "provider": "typesafe",
+      "request_metrics": [
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3688860999827739,
+          "input_tokens": 409,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.279564800002845,
+          "input_tokens": 412,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3004642000014428,
+          "input_tokens": 409,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.29831250000279397,
+          "input_tokens": 413,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.2999590999970678,
+          "input_tokens": 413,
+          "output_tokens": 21
+        },
+        {
+          "questions": 12,
+          "status": "ok",
+          "elapsed_seconds": 0.291057099995669,
+          "input_tokens": 1645,
+          "output_tokens": 210
+        },
+        {
+          "questions": 6,
+          "status": "ok",
+          "elapsed_seconds": 0.36965979999513365,
+          "input_tokens": 1079,
+          "output_tokens": 106
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.28342990000965074,
+          "input_tokens": 1190,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.2741723000071943,
+          "input_tokens": 817,
+          "output_tokens": 72
+        },
+        {
+          "questions": 2,
+          "status": "ok",
+          "elapsed_seconds": 0.2668427999888081,
+          "input_tokens": 528,
+          "output_tokens": 38
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.2889971999975387,
+          "input_tokens": 423,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3944177000084892,
+          "input_tokens": 411,
+          "output_tokens": 21
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.2969368000049144,
+          "input_tokens": 4492,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3430056000070181,
+          "input_tokens": 4502,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3035781000216957,
+          "input_tokens": 4496,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3371138999937102,
+          "input_tokens": 4502,
+          "output_tokens": 318
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.2712401000026148,
+          "input_tokens": 412,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.34082939999643713,
+          "input_tokens": 417,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3047663999896031,
+          "input_tokens": 409,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.2881178999959957,
+          "input_tokens": 418,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.28894579998450354,
+          "input_tokens": 417,
+          "output_tokens": 21
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.3944146999856457,
+          "input_tokens": 1187,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.29486379999434575,
+          "input_tokens": 815,
+          "output_tokens": 72
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.27948870000545867,
+          "input_tokens": 1186,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.3137027000193484,
+          "input_tokens": 811,
+          "output_tokens": 72
+        },
+        {
+          "questions": 2,
+          "status": "ok",
+          "elapsed_seconds": 0.2810322000004817,
+          "input_tokens": 524,
+          "output_tokens": 38
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.30057920000399463,
+          "input_tokens": 424,
+          "output_tokens": 21
+        },
+        {
+          "questions": 2,
+          "status": "ok",
+          "elapsed_seconds": 0.330811799998628,
+          "input_tokens": 526,
+          "output_tokens": 38
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.30940800000098534,
+          "input_tokens": 419,
+          "output_tokens": 21
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3099518000090029,
+          "input_tokens": 4463,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.30385699999169447,
+          "input_tokens": 4475,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3623111000051722,
+          "input_tokens": 4477,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3060066000034567,
+          "input_tokens": 4473,
+          "output_tokens": 318
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.265014800010249,
+          "input_tokens": 416,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.2753965000156313,
+          "input_tokens": 418,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.34372970002004877,
+          "input_tokens": 416,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.27178780001122504,
+          "input_tokens": 408,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.27804679999826476,
+          "input_tokens": 407,
+          "output_tokens": 21
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.2944621999922674,
+          "input_tokens": 1212,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.2940161000005901,
+          "input_tokens": 820,
+          "output_tokens": 72
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.33531540000694804,
+          "input_tokens": 1197,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.29728650001925416,
+          "input_tokens": 825,
+          "output_tokens": 72
+        },
+        {
+          "questions": 2,
+          "status": "ok",
+          "elapsed_seconds": 0.3442096000071615,
+          "input_tokens": 518,
+          "output_tokens": 38
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.29165510000893846,
+          "input_tokens": 409,
+          "output_tokens": 21
+        },
+        {
+          "questions": 2,
+          "status": "ok",
+          "elapsed_seconds": 0.3007616000249982,
+          "input_tokens": 518,
+          "output_tokens": 38
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3289218000136316,
+          "input_tokens": 418,
+          "output_tokens": 21
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3463577999791596,
+          "input_tokens": 4522,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.29759189998731017,
+          "input_tokens": 4522,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.3217777000099886,
+          "input_tokens": 4528,
+          "output_tokens": 318
+        },
+        {
+          "questions": 18,
+          "status": "ok",
+          "elapsed_seconds": 0.33017000000108965,
+          "input_tokens": 4526,
+          "output_tokens": 318
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3200922000105493,
+          "input_tokens": 410,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.2882502000138629,
+          "input_tokens": 408,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3416080000170041,
+          "input_tokens": 408,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.32017720001749694,
+          "input_tokens": 407,
+          "output_tokens": 21
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.3113926000078209,
+          "input_tokens": 409,
+          "output_tokens": 21
+        },
+        {
+          "questions": 12,
+          "status": "ok",
+          "elapsed_seconds": 0.32959830001345836,
+          "input_tokens": 1636,
+          "output_tokens": 210
+        },
+        {
+          "questions": 6,
+          "status": "ok",
+          "elapsed_seconds": 0.26892870001029223,
+          "input_tokens": 1068,
+          "output_tokens": 106
+        },
+        {
+          "questions": 8,
+          "status": "ok",
+          "elapsed_seconds": 0.41312979999929667,
+          "input_tokens": 1176,
+          "output_tokens": 140
+        },
+        {
+          "questions": 4,
+          "status": "ok",
+          "elapsed_seconds": 0.30491270002676174,
+          "input_tokens": 801,
+          "output_tokens": 72
+        },
+        {
+          "questions": 2,
+          "status": "ok",
+          "elapsed_seconds": 0.3379023000015877,
+          "input_tokens": 518,
+          "output_tokens": 38
+        },
+        {
+          "questions": 1,
+          "status": "ok",
+          "elapsed_seconds": 0.2972328999894671,
+          "input_tokens": 418,
+          "output_tokens": 21
+        }
+      ]
+    }
+  },
+  "decisions": [
+    {
+      "parent_id": "n000001",
+      "anchor_start": 26,
+      "candidate_start": 157,
+      "score": 0.74,
+      "prior": 0.7,
+      "evidence_mode": "prior-odds-adjustment",
+      "posterior_same": 0.8691275167785235,
+      "previous_probability": 0.7,
+      "drop": -0.16912751677852356,
+      "cut": false
+    },
+    {
+      "parent_id": "n000001",
+      "anchor_start": 26,
+      "candidate_start": 311,
+      "score": 0.61,
+      "prior": 0.7,
+      "evidence_mode": "prior-odds-adjustment",
+      "posterior_same": 0.7849264705882353,
+      "previous_probability": 0.8691275167785235,
+      "drop": 0.08420104619028823,
+      "cut": false
+    },
+    {
+      "parent_id": "n000001",
+      "anchor_start": 26,
+      "candidate_start": 482,
+      "score": 0.22,
+      "prior": 0.7,
+      "evidence_mode": "prior-odds-adjustment",
+      "posterior_same": 0.39690721649484534,
+      "previous_probability": 0.7849264705882353,
+      "drop": 0.38801925409338994,
+      "cut": true
+    },
+    {
+      "parent_id": "n000001",
+      "anchor_start": 482,
+      "candidate_start": 633,
+      "score": 0.54,
+      "prior": 0.7,
+      "evidence_mode": "prior-odds-adjustment",
+      "posterior_same": 0.7325581395348837,
+      "previous_probability": 0.7,
+      "drop": -0.032558139534883734,
+      "cut": false
+    },
+    {
+      "parent_id": "n000001",
+      "anchor_start": 482,
+      "candidate_start": 793,
+      "score": 0.18,
+      "prior": 0.7,
+      "evidence_mode": "prior-odds-adjustment",
+      "posterior_same": 0.33870967741935476,
+      "previous_probability": 0.7325581395348837,
+      "drop": 0.39384846211552893,
+      "cut": true
+    }
+  ]
+}

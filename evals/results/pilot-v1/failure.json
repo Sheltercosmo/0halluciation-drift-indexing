@@ -1,0 +1,7 @@
+{
+  "type": "RuntimeError",
+  "message": "Jev request failed (URLError)",
+  "stage": "observatory:index",
+  "attempts": 1,
+  "questions": 1
+}
