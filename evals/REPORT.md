@@ -78,7 +78,7 @@ python -m evals.run --output output/my-new-live-run
 python scripts/plot_results.py
 ```
 
-The archive contains the exact hash-verified runtime, evaluator, corpus and protocol used for the measurements. Offline replay reproduced all ranks, evidence selections and aggregate metrics. Two replay issues were fixed after the live run: JSON span tuples needed normalization, and Python set iteration caused approximately `1e-16` differences in displayed lexical relevance scores. The replay verifier permits at most `1e-12` only in those displayed scores; rankings and aggregate metrics must match exactly. Current ranking code sorts query terms for stable summation. Original snapshots, scores and manifests were preserved; no live measurements were rerun or replaced after these fixes.
+The archive contains the exact hash-verified runtime, evaluator, corpus and protocol used for the measurements. Offline replay reproduced all ranks, evidence selections and aggregate metrics. Replay fixes normalized JSON span tuples and accounted for floating-point variation in lexical relevance and derived probabilities across platforms. The verifier permits an absolute difference of at most `1e-12` only for `relevance`, `posterior_same`, `previous_probability` and `drop`; raw model scores, cut decisions, rankings, evidence selections and aggregate metrics must match exactly. Current ranking code sorts query terms for stable summation. Original snapshots, scores and manifests were preserved; no live measurements were rerun or replaced after these fixes.
 
 ## What should be tested next
 

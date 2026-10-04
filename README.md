@@ -30,6 +30,8 @@ Headings and contents supply the upper structure without model calls. Jev then s
 
 ## Measured, with limits
 
+**Competitive performance has not yet been established.** The larger evaluation now has verified, complete releases totaling **4,779 questions** across QASPER, QuALITY, LongBench v2 and Bright-Pro, including Bright-Pro's 526,319-document corpus. These are prepared inputs, not new results. The [research-based evaluation design](evals/FRONTIER_EVALUATION.md) isolates decision-based blocking and the statistical prior, specifies stronger baselines, and reports evidence and answer quality under matched token budgets.
+
 A frozen live pilot on **six synthetic documents and 24 questions** produced these results:
 
 | Measurement | Baseline | Jev method |
@@ -140,6 +142,7 @@ The archive includes the exact runtime snapshot, source corpus, gold labels, req
 | Mascot and generation provenance | [Meet Folio](assets/README.md) |
 | GitHub description, topics and cover | [Repository metadata](docs/github-discovery.md) |
 | Public-data retrieval check | [SciFact micro-pilot](evals/SCIFACT_REPORT.md) |
+| Larger benchmarks, fair controls and complete dataset manifests | [Research-based evaluation](evals/FRONTIER_EVALUATION.md) |
 
 **Is it the same as PageIndex?** It shares hierarchical, embedding-free LLM retrieval. The specific indexing recipe differs: fixed-anchor Jev comparisons, prior-adjusted cuts, and extractive representatives evaluated in parallel waves. PageIndex Flash already derives structure from PDF layout before model-assisted summaries/refinement, so structural parsing without an LLM alone is not a sufficient distinction. See the [primary description](https://pageindex.ai/blog/pageindex-flash) and the comparison above. No performance advantage over PageIndex has been measured here.
 

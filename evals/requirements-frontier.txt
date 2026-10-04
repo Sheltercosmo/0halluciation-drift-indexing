@@ -1,0 +1,2 @@
+# Dataset auditing only; zero_index keeps its standard-library-only runtime.
+pyarrow==23.0.1

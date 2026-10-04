@@ -1,0 +1,102 @@
+{
+  "status": "data_verified_no_model_results",
+  "source_manifest_sha256": "db7461796c3648c626cf7ea7367f762b1bc672f8e41adb6e9adf1880455598d1",
+  "selection_sha256": "e64c0f557b9cc089d2e7212d9c506dcd14fab6e1aaaf01e9190397fc26d83f55",
+  "total_questions_across_separate_tasks": 4779,
+  "datasets": {
+    "qasper": {
+      "questions": 1451,
+      "documents": 416,
+      "paragraphs": 20221,
+      "body_characters": 9086381,
+      "answerability": {
+        "no_unanswerable_annotation": 1208,
+        "mixed_answerability_annotations": 164,
+        "all_annotations_unanswerable": 79
+      },
+      "split": "test-v0.3"
+    },
+    "quality": {
+      "questions": 2086,
+      "hard_questions": 1065,
+      "articles": 115,
+      "question_sets": 230,
+      "body_characters": 2795258,
+      "split": "v1.0.1-dev"
+    },
+    "longbench-v2": {
+      "questions": 503,
+      "exact_distinct_contexts": 462,
+      "body_characters": 397063202,
+      "split": "full release (upstream calls it train; no tuning on it)",
+      "domain": {
+        "Long In-context Learning": 81,
+        "Single-Document QA": 175,
+        "Multi-Document QA": 125,
+        "Long-dialogue History Understanding": 39,
+        "Code Repository Understanding": 50,
+        "Long Structured Data Understanding": 33
+      },
+      "difficulty": {
+        "hard": 311,
+        "easy": 192
+      },
+      "length": {
+        "long": 108,
+        "short": 180,
+        "medium": 215
+      }
+    },
+    "bright-pro": {
+      "questions": 739,
+      "domains": {
+        "biology": {
+          "queries": 103,
+          "documents": 59513,
+          "aspects": 406,
+          "body_characters": 31768947
+        },
+        "earth_science": {
+          "queries": 115,
+          "documents": 123575,
+          "aspects": 440,
+          "body_characters": 53870988
+        },
+        "economics": {
+          "queries": 99,
+          "documents": 52240,
+          "aspects": 367,
+          "body_characters": 31101930
+        },
+        "psychology": {
+          "queries": 100,
+          "documents": 54741,
+          "aspects": 384,
+          "body_characters": 31365653
+        },
+        "robotics": {
+          "queries": 101,
+          "documents": 63920,
+          "aspects": 375,
+          "body_characters": 27981636
+        },
+        "stackoverflow": {
+          "queries": 115,
+          "documents": 109188,
+          "aspects": 382,
+          "body_characters": 193938723
+        },
+        "sustainable_living": {
+          "queries": 106,
+          "documents": 63142,
+          "aspects": 409,
+          "body_characters": 33194760
+        }
+      },
+      "documents": 526319,
+      "aspects": 2763,
+      "body_characters": 403222637,
+      "split": "all seven domains; full corresponding corpus per query"
+    }
+  }
+}
