@@ -31,25 +31,25 @@ Headings and contents supply the upper structure without model calls. Jev then s
 
 ## Measured performance
 
-The [live component and system comparison](evals/LIVE_TREE_REPORT.md) is complete: **7,680 scored records across 20 configurations and 384 development questions** from 307 documents. It compares Jev and embedding splits, central sentences and root-to-leaf search in a full eight-arm factorial study, six direct retrieval/reranking pipelines, two independent-path hybrids, and four variants from two failure-driven iterations. QASPER and QuALITY-HARD each contribute 192 questions.
+The [exploratory component and system comparison](evals/LIVE_TREE_REPORT.md) contains **7,680 scored records across 20 configurations and 384 development questions** from 307 documents. It compares Jev and embedding splits, central sentences and root-to-leaf search in an eight-arm factorial study, six generic direct retrieval/reranking pipelines, two independent-path hybrids, and four context-expansion variants. It does not yet evaluate the intended top-3 confidence-pruned search, query-selected sentence output, or published competing retrieval systems. Evidence-paragraph recovery is the primary indexing measure; downstream answer scores are secondary diagnostics in the report.
 
-| Complete system | QASPER answer F1 | QuALITY-HARD accuracy |
-| --- | ---: | ---: |
-| Embedding tree | 33.37 | 43.75% |
-| Jev tree | 41.80 | 45.31% |
-| Embedding tree + retry and topic expansion | 38.35 | 52.08% |
-| **Jev tree + retry and topic expansion** | **48.14** | 54.17% |
-| Embedding tree + successive ancestor expansion | 45.46 | 61.98% |
-| Jev tree + successive ancestor expansion | 42.54 | 63.02% |
-| Jev tree + independent direct dense retrieval | 42.22 | 70.31% |
-| BM25 + dense retrieval, semantic chunks | 46.88 | 69.79% |
-| Generative reranking, recursive chunks | 44.99 | **73.44%** |
+| Complete system | QASPER evidence-paragraph recall |
+| --- | ---: |
+| Embedding tree | 33.55% |
+| Jev tree | 54.68% |
+| Embedding tree + retry and topic expansion | 51.11% |
+| Jev tree + retry and topic expansion | 70.90% |
+| Embedding tree + successive ancestor expansion | 76.04% |
+| Jev tree + successive ancestor expansion | 81.88% |
+| Jev tree + independent direct dense retrieval | 86.61% |
+| BM25 + dense retrieval, semantic chunks | 85.51% |
+| Generative reranking, recursive chunks | 89.98% |
 
-Every arm shares a Gemini 2.5 Flash planner and reader and a 2,048-token final context ceiling. Embedding components use Gemini Embedding 2; decision components use Jev 1.13.0. On the same Jev tree and central sentences, switching from embedding to Jev routing raises QASPER F1 by **7.36 points** (descriptive 95% paired interval: +3.03 to +11.88). Jev central sentences do **not** yet show a clear advantage over embedding centrality. The hybrid combines independent Jev and direct embedding retrieval paths.
+Recall is measured over 175 QASPER questions with annotated evidence and counts fully delivered source paragraphs. Every arm shares a Gemini 2.5 Flash planner and reader and a 2,048-token final context ceiling; actual context lengths differ. Embedding components use Gemini Embedding 2; decision components use Jev 1.13.0. On the same Jev tree and central sentences, switching from embedding to Jev routing raises evidence recall by **21.68 points** (descriptive 95% paired interval: +15.12 to +28.29). Jev central sentences do **not** yet show a clear advantage over embedding centrality. The hybrid combines independent Jev and direct embedding retrieval paths.
 
-The experiments exposed empty routes and underfilled contexts. Retrying exhausted routes and expanding through topic parents improves Jev QASPER F1 from **41.80 to 48.14**. Further ancestor expansion recovers more evidence but lowers that answer score, so more context is not uniformly better. **Overall superiority is not established:** the direct reranking baseline remains stronger on QuALITY, and the QASPER advantage over strong baselines is uncertain. No experimental setting replaces the default.
+The experiments exposed empty routes and underfilled contexts. Retrying exhausted routes and expanding through topic parents raises Jev evidence recall from **54.68% to 70.90%**; successive ancestor expansion reaches **81.88%**. These figures measure evidence coverage, not precision or answer correctness. **Overall superiority is not established:** direct retrieval pipelines still recover more annotated evidence in this experiment. No experimental setting replaces the default.
 
-All results, including regressions and the uniformly corrected multiple-choice reader contract, are documented in the [report](evals/LIVE_TREE_REPORT.md). [Predictions and source spans](evals/results/live-tree-complete-v2/scores.json), [90 paired comparisons](evals/results/live-tree-complete-v2/paired-intervals.json), [failure analysis](evals/results/live-tree-complete-v2/failure-comparisons.json), registrations and usage are public. Offline replay verified all 7,680 records. The cumulative Gemini reservation is **$22.95 of $30**, including prior work and conservative allowances. These are exposed development results; validation and test remain unopened. Scores below use a different reader and are not directly comparable.
+The [report](evals/LIVE_TREE_REPORT.md) documents the measured algorithms, controls and limitations. [Predictions and source spans](evals/results/live-tree-complete-v2/scores.json), [90 paired comparisons](evals/results/live-tree-complete-v2/paired-intervals.json) and reproducibility records are available. Offline replay verified all 7,680 records. These are exposed development results; validation and test remain unopened. Scores below use a different reader and are not directly comparable.
 
 ### Earlier blocking comparison
 
@@ -62,7 +62,7 @@ The completed [384-question comparison](evals/BOUNDED_REPORT.md) evaluates decis
 | Hybrid + Codex reranking | **90.63%** | **49.77** |
 | **Jev blocking + reranking** | **89.58%** | **49.63** |
 
-**This run does not establish superiority over the strongest baseline.** Jev's answer-score intervals against Codex reranking include zero, and its QASPER evidence recall was lower: 84.60% versus 88.71%. The [full report](evals/BOUNDED_REPORT.md) publishes all 1,536 predictions, paired intervals, failures and usage. Scores and source contexts replay without model calls. Gemini's conservative reservation was **$5.41 of the $30 cap**, including $4 reserved for earlier work; reading and generative reranking used Codex.
+**This run does not establish superiority over its comparison pipelines.** Jev's answer-score intervals against Codex reranking include zero, and its QASPER evidence recall was lower: 84.60% versus 88.71%. The [full report](evals/BOUNDED_REPORT.md) publishes all 1,536 predictions, paired intervals, failures and usage. Scores and source contexts replay without model calls; reading and generative reranking used Codex.
 
 Iterative improvement is tracked in the [development log](evals/iterations/v1/REPORT.md), including failed hypotheses and uncertainty. The [split protocol](evals/ITERATION_PROTOCOL.md) reserves **1,425 validation questions and 1,559 untouched test questions**, grouped by document. Development gains are not presented as held-out or frontier results.
 

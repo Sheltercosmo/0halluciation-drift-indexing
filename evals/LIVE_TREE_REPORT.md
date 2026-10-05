@@ -4,34 +4,36 @@
 
 All arms use the same Gemini 2.5 Flash planner and reader (temperature 0, thinking disabled), Gemini Embedding 2 at 768 dimensions where applicable, and Jev 1.13.0 for decision-based stages. One isolated answer is reused for identical reader inputs. Final source contexts are capped at 2,048 cl100k tokens. The original sixteen-arm study contributes 6,144 records; two frozen follow-ups add 768 records each, comparing both embedding and Jev systems at each iteration.
 
-This is development evidence, not a frontier or held-out superiority claim. The generative reranker also uses Gemini 2.5 Flash. RAPTOR, PageIndex and stronger independent rerankers are not measured in this run.
+These are exploratory development measurements of a restricted implementation. The baselines are generic dense, BM25+dense and generative-reranking pipelines, not reproductions of established competing systems. RAPTOR, ColBERTv2, BGE-M3 and Qwen3 retrieval/reranking were not evaluated. This run does not establish frontier performance or validate the intended top-3, confidence-pruned retrieval policy.
+
+Evidence-paragraph retrieval is the primary indexing outcome. QASPER answer F1 and QuALITY accuracy measure a separate downstream reader and are secondary diagnostics. The reader is Gemini 2.5 Flash, an older model; results do not establish performance with current readers.
 
 ## Complete systems and all factorial arms
 
 `E` means embedding and `J` means Jev. The three positions are **split / representative / router**. For example, `EJE` uses embedding splits, Jev central sentences and embedding tree search. Every tree arm uses the same native headings and source paragraph offsets.
 
-| Method | QASPER answer F1 | QASPER evidence recall | QuALITY-HARD accuracy |
+| Method | QASPER evidence recall | QASPER answer F1 (secondary) | QuALITY-HARD accuracy (secondary) |
 | --- | ---: | ---: | ---: |
-| EEE | 33.37 | 33.55% | 43.75% |
-| EEJ | 42.99 | 53.76% | 50.52% |
-| EJE | 34.36 | 34.69% | 43.75% |
-| EJJ | 43.43 | 54.12% | 52.08% |
-| JEE | 34.07 | 32.67% | 41.67% |
-| JEJ | 43.52 | 53.32% | 45.83% |
-| JJE | 34.44 | 33.00% | 43.23% |
-| JJJ | 41.80 | 54.68% | 45.31% |
-| Direct dense, recursive chunks | 42.60 | 86.03% | 70.83% |
-| BM25 + dense, recursive chunks | 44.72 | 83.82% | 70.83% |
-| Generative reranking, recursive chunks | 44.99 | 89.98% | 73.44% |
-| Direct dense, semantic chunks | 44.93 | 86.14% | 68.75% |
-| BM25 + dense, semantic chunks | 46.88 | 85.51% | 69.79% |
-| Generative reranking, semantic chunks | 44.31 | 89.95% | 72.92% |
-| Jev tree + direct dense, full budgets | 42.22 | 86.61% | 70.31% |
-| Jev tree + direct dense, divided budget | 42.56 | 86.32% | 70.83% |
-| Embedding tree, retry + bottom-up reading | 38.35 | 51.11% | 52.08% |
-| Jev tree, retry + bottom-up reading | 48.14 | 70.90% | 54.17% |
-| Embedding tree, successive ancestor expansion | 45.46 | 76.04% | 61.98% |
-| Jev tree, successive ancestor expansion | 42.54 | 81.88% | 63.02% |
+| EEE | 33.55% | 33.37 | 43.75% |
+| EEJ | 53.76% | 42.99 | 50.52% |
+| EJE | 34.69% | 34.36 | 43.75% |
+| EJJ | 54.12% | 43.43 | 52.08% |
+| JEE | 32.67% | 34.07 | 41.67% |
+| JEJ | 53.32% | 43.52 | 45.83% |
+| JJE | 33.00% | 34.44 | 43.23% |
+| JJJ | 54.68% | 41.80 | 45.31% |
+| Direct dense, recursive chunks | 86.03% | 42.60 | 70.83% |
+| BM25 + dense, recursive chunks | 83.82% | 44.72 | 70.83% |
+| Generative reranking, recursive chunks | 89.98% | 44.99 | 73.44% |
+| Direct dense, semantic chunks | 86.14% | 44.93 | 68.75% |
+| BM25 + dense, semantic chunks | 85.51% | 46.88 | 69.79% |
+| Generative reranking, semantic chunks | 89.95% | 44.31 | 72.92% |
+| Jev tree + direct dense, full budgets | 86.61% | 42.22 | 70.31% |
+| Jev tree + direct dense, divided budget | 86.32% | 42.56 | 70.83% |
+| Embedding tree, retry + bottom-up reading | 51.11% | 38.35 | 52.08% |
+| Jev tree, retry + bottom-up reading | 70.90% | 48.14 | 54.17% |
+| Embedding tree, successive ancestor expansion | 76.04% | 45.46 | 61.98% |
+| Jev tree, successive ancestor expansion | 81.88% | 42.54 | 63.02% |
 
 Evidence recall is averaged over 175 questions with annotated evidence and uses source paragraphs fully present in the final context. Representative sentences and unselected previews are not counted as retrieved evidence. No subjective central-sentence gold labels were invented.
 
@@ -99,26 +101,18 @@ The first repair still averaged only 678 Jev context tokens for QASPER. A second
 | EEE_ancestor | 2024.2 | 4 / 192 |
 | JJJ_ancestor | 2023.3 | 5 / 192 |
 
-### Inspected failures and recoveries
-
-These are illustrative exposed-development cases, not a representative subsample or a separate evaluation:
-
-- `qasper/f6346828c2f44529dc307abf04dd246bfeb4a9b2`: asked whether compression methods were compared. Topic expansion increased context from 470 to 901 tokens and changed an incorrect “Unanswerable” to the correct “Yes.” Both contexts already contained all annotated evidence, showing that evidence recall alone does not determine reader success.
-- `qasper/d5bce5da746a075421c80abe10c97ad11a96c6cd`: asked which baseline was used. The 182-token topic context yielded the correct “memorization baseline”; expansion to 2,045 tokens yielded “Unanswerable,” despite retaining full annotated evidence. This is a concrete regression from adding surrounding text.
-- `qasper/d9354c0bb32ec037ff2aacfed58d57887a713163`: asked which input language was used. Topic expansion still missed the annotated evidence and the reader abstained. The direct reranker recovered it and answered “English.” Expanding the chosen branch cannot reliably repair an incorrect branch choice.
-
 ## Retrieval and compute controls
 
 - Representatives search the same outside-in sequence, with at most eight candidates per node. The optional 0.9 early stop is disabled for this comparison.
-- Tree search starts at the root and visits headings, topic blocks, paragraphs and sentence leaves. Each shared need has beam width 2. Each query allows at most 256 node scores and 8,192 preview-payload tokens.
-- Reached sentence leaves expand to source paragraphs. All methods use the same source-union renderer and final token limit.
+- At topic and paragraph nodes, both routers see one fixed central sentence plus the heading path. The representative-selection method and router are independently varied. Headings supply titles; sentence leaves supply their own source text.
+- Tree search starts at the root and visits headings, topic blocks, paragraphs and sentence leaves. Each shared need keeps the best two candidates across each layer. Confidence pruning is disabled. Each query allows at most 256 node scores and 8,192 cumulative preview-payload tokens, including repeated request and metadata fields.
+- The cumulative allowance is an experiment guard, not a model context-window limit. A whole round that would exceed it is rejected; a search stopped before any sentence leaf returns no evidence. These constraints differ from top-3 confidence-pruned paragraph retrieval.
+- Sentence leaves are scored against the query, so their selection is query-dependent. The primary reader nevertheless receives their parent paragraphs. Returning only selected evidence sentences was not evaluated. All methods use the same source-union renderer and final token limit.
 - Flat methods search the whole document independently. Multiple shared needs combine through RRF with constant 60; the reranker receives at most 8,192 source tokens.
 - The full-budget hybrid combines 8,192 tree-preview tokens with 8,192 direct-passage tokens. The divided-budget hybrid gives each path 4,096 tokens. Both fuse whole-path outputs with equal-weight RRF; neither mixes routing scores.
-- Query-time previews and flat source pools contain different information even at equal token ceilings. Shared caches reduce experimental spending; summed API time is not end-to-end single-system latency.
+- Query-time previews and flat source pools contain different information even at equal token ceilings. The generative reranker sees full globally retrieved candidate passages; it is not a same-input comparison against Jev reranking. Summed cached API time is not standalone system latency.
 
-## Integrity, spending and limitations
-
-The cumulative Gemini reservation is **$22.9512 / $30**, including earlier work, conservative output allowances and failed/retried requests. This reservation is an upper bound, not a billing statement. Codex was not used for this run’s reader. Jev usage is recorded separately. The legacy Jev audit stage name “reranking” includes representative selection and tree routing; native input/output tokens and decision counts are preserved in usage totals.
+## Reproducibility and limitations
 
 All 614 native-to-topic topologies were checked against the original recursive packing of the cached Jev and embedding split groups. Metadata and transport repairs are recorded in the manifest amendments; no answer outcomes were inspected to choose those repairs. The provider input quota required paced embeddings.
 

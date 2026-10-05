@@ -34,17 +34,22 @@ def render():
         'One isolated answer is reused for identical reader inputs. Final source contexts are capped at 2,048 cl100k tokens. '
         'The original sixteen-arm study contributes 6,144 records; two frozen follow-ups add 768 records each, '
         'comparing both embedding and Jev systems at each iteration.', '',
-        'This is development evidence, not a frontier or held-out superiority claim. The generative reranker also uses '
-        'Gemini 2.5 Flash. RAPTOR, PageIndex and stronger independent rerankers are not measured in this run.', '',
+        'These are exploratory development measurements of a restricted implementation. The baselines are generic '
+        'dense, BM25+dense and generative-reranking pipelines, not reproductions of established competing systems. '
+        'RAPTOR, ColBERTv2, BGE-M3 and Qwen3 retrieval/reranking were not evaluated. This run does not establish '
+        'frontier performance or validate the intended top-3, confidence-pruned retrieval policy.', '',
+        'Evidence-paragraph retrieval is the primary indexing outcome. QASPER answer F1 and QuALITY accuracy '
+        'measure a separate downstream reader and are secondary diagnostics. The reader is Gemini 2.5 Flash, '
+        'an older model; results do not establish performance with current readers.', '',
         '## Complete systems and all factorial arms', '',
         '`E` means embedding and `J` means Jev. The three positions are **split / representative / router**. '
         'For example, `EJE` uses embedding splits, Jev central sentences and embedding tree search. '
         'Every tree arm uses the same native headings and source paragraph offsets.', '',
-        '| Method | QASPER answer F1 | QASPER evidence recall | QuALITY-HARD accuracy |',
+        '| Method | QASPER evidence recall | QASPER answer F1 (secondary) | QuALITY-HARD accuracy (secondary) |',
         '| --- | ---: | ---: | ---: |']
     for method in methods:
         q, h = summary['methods']['qasper'][method], summary['methods']['quality'][method]
-        lines.append(f"| {LABELS.get(method, method)} | {q['answer_score']*100:.2f} | {q['evidence_recall']*100:.2f}% | {h['answer_score']*100:.2f}% |")
+        lines.append(f"| {LABELS.get(method, method)} | {q['evidence_recall']*100:.2f}% | {q['answer_score']*100:.2f} | {h['answer_score']*100:.2f}% |")
     lines += ['', f'Evidence recall is averaged over {eligible} questions with annotated evidence and uses source paragraphs fully present in the final context. '
               'Representative sentences and unselected previews are not counted as retrieved evidence. '
               'No subjective central-sentence gold labels were invented.', '',
@@ -93,24 +98,16 @@ def render():
     for m in ['EEE', 'JJJ', 'EEE_bottom_up', 'JJJ_bottom_up', 'EEE_ancestor', 'JJJ_ancestor']:
         lines.append(f"| {m} | {summary['methods']['qasper'][m]['context_tokens']:.1f} | {summary['methods']['quality'][m]['empty_contexts']} / 192 |")
     lines += ['',
-              '### Inspected failures and recoveries', '',
-              'These are illustrative exposed-development cases, not a representative subsample or a separate evaluation:', '',
-              '- `qasper/f6346828c2f44529dc307abf04dd246bfeb4a9b2`: asked whether compression methods were compared. Topic expansion increased context from 470 to 901 tokens and changed an incorrect “Unanswerable” to the correct “Yes.” Both contexts already contained all annotated evidence, showing that evidence recall alone does not determine reader success.',
-              '- `qasper/d5bce5da746a075421c80abe10c97ad11a96c6cd`: asked which baseline was used. The 182-token topic context yielded the correct “memorization baseline”; expansion to 2,045 tokens yielded “Unanswerable,” despite retaining full annotated evidence. This is a concrete regression from adding surrounding text.',
-              '- `qasper/d9354c0bb32ec037ff2aacfed58d57887a713163`: asked which input language was used. Topic expansion still missed the annotated evidence and the reader abstained. The direct reranker recovered it and answered “English.” Expanding the chosen branch cannot reliably repair an incorrect branch choice.', '',
               '## Retrieval and compute controls', '',
               '- Representatives search the same outside-in sequence, with at most eight candidates per node. The optional 0.9 early stop is disabled for this comparison.',
-              '- Tree search starts at the root and visits headings, topic blocks, paragraphs and sentence leaves. Each shared need has beam width 2. Each query allows at most 256 node scores and 8,192 preview-payload tokens.',
-              '- Reached sentence leaves expand to source paragraphs. All methods use the same source-union renderer and final token limit.',
+              '- At topic and paragraph nodes, both routers see one fixed central sentence plus the heading path. The representative-selection method and router are independently varied. Headings supply titles; sentence leaves supply their own source text.',
+              '- Tree search starts at the root and visits headings, topic blocks, paragraphs and sentence leaves. Each shared need keeps the best two candidates across each layer. Confidence pruning is disabled. Each query allows at most 256 node scores and 8,192 cumulative preview-payload tokens, including repeated request and metadata fields.',
+              '- The cumulative allowance is an experiment guard, not a model context-window limit. A whole round that would exceed it is rejected; a search stopped before any sentence leaf returns no evidence. These constraints differ from top-3 confidence-pruned paragraph retrieval.',
+              '- Sentence leaves are scored against the query, so their selection is query-dependent. The primary reader nevertheless receives their parent paragraphs. Returning only selected evidence sentences was not evaluated. All methods use the same source-union renderer and final token limit.',
               '- Flat methods search the whole document independently. Multiple shared needs combine through RRF with constant 60; the reranker receives at most 8,192 source tokens.',
               '- The full-budget hybrid combines 8,192 tree-preview tokens with 8,192 direct-passage tokens. The divided-budget hybrid gives each path 4,096 tokens. Both fuse whole-path outputs with equal-weight RRF; neither mixes routing scores.',
-              '- Query-time previews and flat source pools contain different information even at equal token ceilings. Shared caches reduce experimental spending; summed API time is not end-to-end single-system latency.', '',
-              '## Integrity, spending and limitations', '',
-              f"The cumulative Gemini reservation is **${summary['budget']['gemini_reserved_upper_bound_usd']:.4f} / $30**, "
-              'including earlier work, conservative output allowances and failed/retried requests. '
-              'This reservation is an upper bound, not a billing statement. Codex was not used for this run’s reader. '
-              'Jev usage is recorded separately. The legacy Jev audit stage name “reranking” includes representative '
-              'selection and tree routing; native input/output tokens and decision counts are preserved in usage totals.', '',
+              '- Query-time previews and flat source pools contain different information even at equal token ceilings. The generative reranker sees full globally retrieved candidate passages; it is not a same-input comparison against Jev reranking. Summed cached API time is not standalone system latency.', '',
+              '## Reproducibility and limitations', '',
               'All 614 native-to-topic topologies were checked against the original recursive packing of the cached '
               'Jev and embedding split groups. Metadata and transport repairs are recorded in the manifest amendments; '
               'no answer outcomes were inspected to choose those repairs. The provider input quota required paced embeddings.', '',
