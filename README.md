@@ -55,8 +55,6 @@ The matched comparisons show validation gains from Jev search and reranking, but
 
 The independent hybrid is useful at a larger reading budget: its validation recall at **2,048 source tokens is 95.77%**, compared with 85.75% for JJJ and 95.29% for direct Gemini + Jev. These are secondary, whole-paragraph budget results.
 
-[Failure-case inspection](evals/RETRIEVAL_V3_FAILURE_ANALYSIS.md) found concrete engineering limits: a flattened native-heading hierarchy in the benchmark adapter, promising branches discarded by the beam, and previews that omit query-relevant middle sentences. An isolated hierarchy repair preserves every source paragraph and awaits a new retrieval evaluation; the reported scores remain from the frozen v3 implementation.
-
 The implementation and [registration](evals/registrations/tree-retrieval-v3.json) remain frozen, including the [pre-outcome amendment](evals/registrations/tree-retrieval-v3-jev-rerank-amendment.json). Validation selected JJJ over the hybrid under the registered rule. The separate **728-question test is incomplete**, so these validation results are not final test performance.
 
 This is a within-document QASPER study: every system receives the same paper. It does not establish full-corpus or frontier superiority. The small development pilot calibrates software and settings; its scores are not presented as held-out performance.

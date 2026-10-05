@@ -60,29 +60,6 @@ def report():
             'central_sentence':'Central-sentence selection','central_sentences':'Central-sentence selection','search':'Search procedure'}
     for factor,row in test['descriptive_factor_effects'].items():
         lines.append(f"| {labels.get(factor,factor)} | {effect(row)} |")
-    failure_path=base/'test/failure-analysis.json'
-    if failure_path.is_file():
-        failures=read_json(failure_path)
-        lines+=['','## Where reference evidence was lost','',
-            'This supplemental descriptive analysis was added after validation and is separate from the registered hypothesis tests. It locates lost evidence along the retrieval procedure; it does not establish the cause of a relevance decision.','',
-            '| System | Eligible questions | Questions with incomplete top-five evidence | Missed reference paragraph instances |',
-            '| --- | ---: | ---: | ---: |']
-        for method,row in failures['methods'].items():
-            lines.append(f"| {NAMES.get(method,method)} | {row['eligible_questions']} | {row['incomplete_top5_questions']} | {row['missed_reference_paragraph_instances']} |")
-        lines+=['','| System | Loss location | Paragraph instances |','| --- | --- | ---: |']
-        location_labels={'reached_but_ranked_below_5':'Retrieved but ranked below the top five',
-            'decision_budget':'Decision budget stopped traversal','outside_dense_top30':'Absent from the dense top 30',
-            'candidate_reranked_below_5':'Candidate reranked below the top five'}
-        for kind,title in [('heading','Heading'),('topic','Topic block'),('section','Topic block'),('paragraph','Paragraph')]:
-            location_labels[kind+':below_threshold']=title+' score below cutoff'
-            location_labels[kind+':outside_beam']=title+' excluded by beam limit'
-        for method,row in failures['methods'].items():
-            for location,count in row['loss_locations'].items():
-                lines.append(f"| {NAMES.get(method,method)} | {location_labels.get(location,location)} | {count} |")
-        lines+=['',
-            'For each method, use the fully aligned reference with highest recall@5, with ties resolved by annotation order. Count missed paragraph instances in that reference. For tree misses, attribute the loss to the deepest evidence-path node reached by any shared request. Methods can select different acceptable references for this diagnostic.','',
-            'A five-paragraph output cannot contain a reference with more than five paragraphs. The minimum missed instances imposed by that limit for the chosen references are '+
-            '; '.join(f"{NAMES.get(m,m)}: {r['minimum_misses_for_chosen_reference_at_k5']}" for m,r in failures['methods'].items())+'. These unavoidable capacity limits are included in the counts above.','']
     lines+=['','## Population and scoring','',
         '| Partition | All questions | Papers | Eligible paragraph-evidence questions | Papers with eligible evidence |','| --- | ---: | ---: | ---: | ---: |']
     for p in ('validation','test'):
