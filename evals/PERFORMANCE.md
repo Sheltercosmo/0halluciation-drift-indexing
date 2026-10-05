@@ -1,5 +1,7 @@
 # Best completed performance
 
+This page preserves the earlier flat-reranking development snapshot. It does not measure the new central-sentence, root-to-leaf search or independent-path hybrid design. The [current research protocol](TREE_SYSTEM_PROTOCOL.md) now directs the comparison; no new-system scores are claimed here.
+
 **Updated 2026-10-05.** The highest completed Jev QASPER answer score is **58.88 F1** on 64 development questions. The larger, separate study reached **89.58% QuALITY-HARD accuracy** on 192 questions. These are different configurations and samples. Neither is a full-benchmark or held-out result.
 
 The method combines decision-model topic blocking with a statistical probability-drop cut rule. Jev indexing uses zero generative LLM calls. These comparisons enable retrieval embeddings and use a query-time Codex reader.
@@ -63,6 +65,6 @@ The figure is generated directly from the published result JSON by `python scrip
 
 ## What remains to establish frontier performance
 
-The [document-disjoint protocol](ITERATION_PROTOCOL.md) reserves **1,425 validation questions and 1,559 test questions**. Both remain unopened. The next development experiment has a [preregistered shared evidence planner and matched Jev/Codex comparison](iterations/v1/PLANNED_EVIDENCE_PROTOCOL.md); it has no completed result in this snapshot. A published RAPTOR adapter has been verified offline, but a measured live comparison is still pending. No claim of superiority over RAPTOR or PageIndex is supported yet.
+The [document-disjoint protocol](ITERATION_PROTOCOL.md) reserves **1,425 validation questions and 1,559 test questions**. Both remain unopened. The earlier [shared-planner flat-reranking experiment](iterations/v1/PLANNED_EVIDENCE_PROTOCOL.md) stopped after a reader timeout with 128 plans, 128 retrievals and 28 of 256 reader outputs. It has no aggregate result and will not be resumed as the main direction. Its partial outputs are preserved. A published RAPTOR adapter has been verified offline, but a measured live comparison is still pending. No claim of superiority over RAPTOR or PageIndex is supported yet.
 
 The research goal remains active: broaden development comparisons, freeze candidates before validation, then evaluate the selected method once on the untouched test partition. The best development score is evidence for further work, not a substitute for that test.

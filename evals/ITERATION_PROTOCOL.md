@@ -2,6 +2,8 @@
 
 Started 2026-10-05. The objective is a statistically supported improvement over strong, reproducible RAG systems. No result currently establishes frontier performance. The prior and sudden-drop rule remain one blocking method; there is no separate prior ablation.
 
+**Research direction updated 2026-10-05:** the next study compares Jev and embeddings for central sentences on fixed partitions, root-to-leaf routing under shared LLM proposals, and complete systems. The hybrid combines Jev tree retrieval with independent direct embedding retrieval. See the [component and system protocol](TREE_SYSTEM_PROTOCOL.md). The earlier flat-reranking screen remains historical development evidence; it is no longer the central research comparison. The split and holdout safeguards below remain in force.
+
 ## Separate development, validation and test by document
 
 The published bounded-v1 questions and their entire documents are **exposed development data**. Their original benchmark split names do not make them held out after failure analysis. QASPER training papers are additional development material. All QuALITY development articles are also development material, including questions not selected in bounded-v1.

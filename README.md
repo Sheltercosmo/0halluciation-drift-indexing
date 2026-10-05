@@ -23,7 +23,7 @@ Our index is a pure decision model based method with **0 LLM and optional embedd
 
 **Reliable decisions with a purely statistical prior.** Jev scores whether paragraphs share a topic; an explicit Bayesian prior and a probability-drop rule determine where to cut. This makes document blocking a combination of learned decisions and transparent statistical rules, with no generative LLM calls during indexing and no required embedding model.
 
-Headings and contents supply the upper structure without model calls. Jev then selects representative sentences directly from each topic block and paragraph using parallel outside-in search. The resulting content tree supports retrieval-augmented generation (RAG): an LLM proposes the content it needs, Jev reranks source evidence, and the LLM reads upward for context. The contribution is how topic blocks are formed; the tree is how those blocks are organized for retrieval.
+Headings and contents supply the upper structure without model calls. Jev then selects representative sentences directly from each topic block and paragraph using parallel outside-in search. The resulting content tree supports retrieval-augmented generation (RAG): an LLM proposes the content it needs, Jev searches from the root to sentence leaves, and the reader opens the selected source passages. The contribution is how topic blocks are formed; the tree is how those blocks are organized for retrieval.
 
 “0 LLM” means no **generative LLM calls during indexing**. Jev is a learned decision model; the query-time LLM is separate. The project name expresses the aim of source-grounded retrieval, not a guarantee of error-free decisions or answers.
 
@@ -31,33 +31,16 @@ Headings and contents supply the upper structure without model calls. Jev then s
 
 ## Measured performance
 
-Our best completed results are summarized below. **All are development results**, with embeddings enabled and no generative LLM calls during Jev indexing. Each row identifies its configuration and sample; the scores do not describe one combined configuration.
+The completed comparison below evaluates Jev blocking with its statistical cut rule against recursive and embedding-based semantic chunking pipelines. It motivates a more direct component study: **central sentences, root-to-leaf tree search, and the complete retrieval system**.
 
-| Measurement | Best completed Jev result | Configuration and sample |
-| --- | ---: | --- |
-| QASPER answer F1 | **58.88** | Rank fusion; 64 questions, isolated reader |
-| QASPER evidence recall | **90.56%** | Expanded pool, fusion and parent expansion; 58 eligible questions |
-| QuALITY-HARD accuracy | **89.58%** | Original pipeline; separate 192-question study |
+| New comparison | Controlled change |
+| --- | --- |
+| Central sentences | Jev versus embedding centrality on the exact same tree |
+| Tree search | Jev versus embeddings, sharing the LLM proposals, representatives and traversal budgets |
+| Complete systems | Jev indexing and search versus strong direct embedding and reranked RAG pipelines |
+| Hybrid retrieval | Combine Jev tree results with independent direct embedding retrieval over all chunks |
 
-[Read the performance snapshot and reproduce the scores →](evals/PERFORMANCE.md)
-
-![Completed development comparison: Jev rank fusion scores 58.88 QASPER F1 and 85.94 percent QuALITY-HARD accuracy; expanded Codex reranking scores 55.49 and 85.94 on the same 64 questions per benchmark.](assets/development-results.svg)
-
-### Latest development results
-
-The completed isolated-reader comparison uses the same 64 questions per benchmark and a 2,048-token final source budget. Expanded configurations receive an 8,192-token candidate pool; the original Jev control keeps its 12-candidate cap. Codex reads one question per call, with one shared prediction for identical question/context inputs across methods. Embeddings are enabled, and Jev indexing uses no generative LLM calls. All 640 method/question predictions are complete.
-
-| Configuration | QASPER answer F1, 64 questions | Evidence recall, 58 questions | QuALITY-HARD accuracy, 64 questions |
-| --- | ---: | ---: | ---: |
-| Original Jev, 12 candidates | 51.08 | 82.18% | 87.50% |
-| Jev + expanded candidate pool | 58.55 | **90.56%** | 85.94% |
-| **Jev + rank fusion** | **58.88** | **90.56%** | 85.94% |
-| Jev + topic-parent expansion | 58.40 | **90.56%** | 85.94% |
-| Hybrid + Codex reranking, expanded pool | 55.49 | 91.35% | 85.94% |
-
-Expanding Jev's pool raised evidence recall from **82.18% to 90.56%** on this same sample: +8.37 points, with a descriptive 95% document-bootstrap interval of +3.08 to +14.78. QASPER answer F1 increased by 7.46 points (+1.79 to +14.18), while QuALITY accuracy fell by 1.56 points (−8.33 to +5.00). No experimental configuration has replaced the default.
-
-**These are development results, and superiority over the strongest baseline is not established.** Rank fusion's advantage over the expanded Codex reranker is 3.39 QASPER F1 points, with a descriptive 95% interval of −0.10 to +8.20; their QuALITY accuracy is tied. This [registered rerun](evals/iterations/v1/isolated-reader-manifest.json) replaces the earlier batched-reader comparison as the current development evidence. It removes cross-question batch coupling and identical-context resampling, but uses only one reader draw per distinct input. Historical results remain in the [development log](evals/iterations/v1/REPORT.md#isolated-reader-results). [All predictions](evals/results/isolated-reader-v1/scores.json) · [Summary](evals/results/isolated-reader-v1/summary.json) · [Paired intervals](evals/results/isolated-reader-v1/paired-intervals.json)
+The hybrid combines complete retrieval paths; the Jev route itself stays unchanged. Embeddings can recover passages in branches the tree did not visit. These component APIs are implemented and tested offline, but **live benchmark results for the new design are pending**. See the [evaluation protocol](evals/TREE_SYSTEM_PROTOCOL.md) and [API guide](docs/tree-system.md).
 
 ### Larger completed comparison
 
@@ -75,6 +58,39 @@ The completed [384-question comparison](evals/BOUNDED_REPORT.md) evaluates decis
 Iterative improvement is tracked in the [development log](evals/iterations/v1/REPORT.md), including failed hypotheses and uncertainty. The [split protocol](evals/ITERATION_PROTOCOL.md) reserves **1,425 validation questions and 1,559 untouched test questions**, grouped by document. Development gains are not presented as held-out or frontier results.
 
 The sample covers 307 documents and deliberately emphasizes hard and multi-evidence questions. It is not a full-benchmark result. The [research audit](evals/FRONTIER_EVALUATION.md) documents larger prepared datasets and possible follow-up comparisons.
+
+<details>
+<summary>Historical flat-reranking development results</summary>
+
+Our best completed results are summarized below. **All are development results**, with embeddings enabled and no generative LLM calls during Jev indexing. Each row identifies its configuration and sample; the scores do not describe one combined configuration.
+
+| Measurement | Best completed Jev result | Configuration and sample |
+| --- | ---: | --- |
+| QASPER answer F1 | **58.88** | Rank fusion; 64 questions, isolated reader |
+| QASPER evidence recall | **90.56%** | Expanded pool, fusion and parent expansion; 58 eligible questions |
+| QuALITY-HARD accuracy | **89.58%** | Original pipeline; separate 192-question study |
+
+[Read the performance snapshot and reproduce the scores →](evals/PERFORMANCE.md)
+
+![Completed development comparison: Jev rank fusion scores 58.88 QASPER F1 and 85.94 percent QuALITY-HARD accuracy; expanded Codex reranking scores 55.49 and 85.94 on the same 64 questions per benchmark.](assets/development-results.svg)
+
+### Historical reranking screen
+
+The completed isolated-reader comparison uses the same 64 questions per benchmark and a 2,048-token final source budget. Expanded configurations receive an 8,192-token candidate pool; the original Jev control keeps its 12-candidate cap. Codex reads one question per call, with one shared prediction for identical question/context inputs across methods. Embeddings are enabled, and Jev indexing uses no generative LLM calls. All 640 method/question predictions are complete.
+
+| Configuration | QASPER answer F1, 64 questions | Evidence recall, 58 questions | QuALITY-HARD accuracy, 64 questions |
+| --- | ---: | ---: | ---: |
+| Original Jev, 12 candidates | 51.08 | 82.18% | 87.50% |
+| Jev + expanded candidate pool | 58.55 | **90.56%** | 85.94% |
+| **Jev + rank fusion** | **58.88** | **90.56%** | 85.94% |
+| Jev + topic-parent expansion | 58.40 | **90.56%** | 85.94% |
+| Hybrid + Codex reranking, expanded pool | 55.49 | 91.35% | 85.94% |
+
+Expanding Jev's pool raised evidence recall from **82.18% to 90.56%** on this same sample: +8.37 points, with a descriptive 95% document-bootstrap interval of +3.08 to +14.78. QASPER answer F1 increased by 7.46 points (+1.79 to +14.18), while QuALITY accuracy fell by 1.56 points (−8.33 to +5.00). No experimental configuration has replaced the default.
+
+**These are development results, and superiority over the strongest baseline is not established.** Rank fusion's advantage over the expanded Codex reranker is 3.39 QASPER F1 points, with a descriptive 95% interval of −0.10 to +8.20; their QuALITY accuracy is tied. This [registered rerun](evals/iterations/v1/isolated-reader-manifest.json) replaces the earlier batched-reader comparison as the current development evidence. It removes cross-question batch coupling and identical-context resampling, but uses only one reader draw per distinct input. Historical results remain in the [development log](evals/iterations/v1/REPORT.md#isolated-reader-results). [All predictions](evals/results/isolated-reader-v1/scores.json) · [Summary](evals/results/isolated-reader-v1/summary.json) · [Paired intervals](evals/results/isolated-reader-v1/paired-intervals.json)
+
+</details>
 
 ### Earlier pilots
 
@@ -132,7 +148,7 @@ Document
             └── Source sentences with exact offsets
 ```
 
-At retrieval time, an LLM proposes the content it needs. Lexical shortlisting finds candidate evidence; Jev reranks it against that request. The LLM can then read the selected sentence or paragraph and move upward through its topic block, heading and document for context. Embeddings are optional; the default retrieval path requires no vector database.
+At retrieval time, an LLM proposes the content it needs. The new `search_tree()` path descends from the root through headings, topic blocks and paragraphs to sentence leaves, using representatives to route the search. The reader receives the selected source passages. The hybrid adds an independent direct embedding search across all chunks and combines both outputs under one reading budget. The earlier leaf-first `retrieve()` API remains available. [See the new retrieval APIs →](docs/tree-system.md)
 
 Full sentence search is the default. `--sentence-budget 2` restricts each target to two candidates; `--sentence-budget 0` searches all. Any finite search can miss a better candidate. The pilot’s budget-two agreement was 23/36 versus 31/36 with full search.
 
@@ -160,7 +176,7 @@ An **offline benchmark with a simulated 40 ms request delay** reduced requests f
 
 [Read the dependency model, controls, limits and benchmark →](docs/parallel-processing.md) · [Raw synthetic results](evals/results/parallel-synthetic-v1.json)
 
-## Ask for content, then read upward
+## Existing leaf-first retrieval API
 
 ```python
 from pathlib import Path
@@ -206,7 +222,9 @@ The archive includes the exact runtime snapshot, source corpus, gold labels, req
 | Bayesian cuts and outside-in waves | [Algorithm](docs/algorithm.md) |
 | Concurrent requests, independent heading runs and benchmark | [Parallel processing](docs/parallel-processing.md) |
 | Headings, contents and research precedents | [Structural design](docs/structure-and-retrieval-design.md) |
-| LLM proposals, Jev reranking and upward reads | [Retrieval](docs/retrieval.md) |
+| LLM proposals, root-to-leaf search and independent dense retrieval | [Tree system](docs/tree-system.md) |
+| Existing leaf-first reranking and upward reads | [Retrieval](docs/retrieval.md) |
+| Component controls and whole-system comparisons | [Evaluation protocol](evals/TREE_SYSTEM_PROTOCOL.md) |
 | Similarities and differences with PageIndex | [Comparison](docs/pageindex-comparison.md) |
 | Mascot and generation provenance | [Meet Folio](assets/README.md) |
 | GitHub description, topics and cover | [Repository metadata](docs/github-discovery.md) |

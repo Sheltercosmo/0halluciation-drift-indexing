@@ -131,8 +131,10 @@ def build_index(
     source: str, *, source_name: str = "document", scorer: Similarity | None = None,
     config: Config | None = None,
     heading_hints: list[HeadingHint] | None = None,
+    representative_scorer: Similarity | None = None,
 ) -> DocumentIndex:
     scorer = scorer if scorer is not None else LexicalJaccard()
+    representative_scorer = representative_scorer if representative_scorer is not None else scorer
     config = config if config is not None else Config()
     root = Node("root", "document", source_name, 0, len(source))
     stack: list[tuple[int, Node]] = [(0, root)]
@@ -151,7 +153,7 @@ def build_index(
     segmented = segment_runs(source, runs, scorer, config)
     spans_by_group = [[sentence_spans(source, block) for block in group]
                       for groups, _ in segmented for group in groups]
-    selected = iter(central_sentences_many(source, spans_by_group, scorer, config.sentence_budget))
+    selected = iter(central_sentences_many(source, spans_by_group, representative_scorer, config.sentence_budget))
     spans_by_group = iter(spans_by_group)
     segmented = iter(segmented)
 
@@ -203,6 +205,7 @@ def build_index(
         root.title = first_heading.title
         root.metadata["title_source_id"] = first_heading.node_id
     metadata = {"scorer": scorer.name, "config": asdict(config),
+                "representative_scorer": representative_scorer.name,
                 "source_sha256": hashlib.sha256(source.encode("utf-8")).hexdigest(),
                 "offset_unit": "unicode-code-point", "end_exclusive": True}
     metadata["structure"] = {"method": "declared-structure", "model_calls": 0,
@@ -210,4 +213,34 @@ def build_index(
     scorer_metadata = getattr(scorer, "metadata", None)
     if callable(scorer_metadata):
         metadata["provider"] = scorer_metadata()
+    representative_metadata = getattr(representative_scorer, "metadata", None)
+    if representative_scorer is not scorer and callable(representative_metadata):
+        metadata["representative_provider"] = representative_metadata()
     return DocumentIndex(source, source_name, root, metadata, decisions)
+
+
+def reselect_representatives(index: DocumentIndex, scorer: Similarity, *,
+                            sentence_budget: int | None = None) -> DocumentIndex:
+    """Copy a fixed tree and replace only extractive representatives.
+
+    Node IDs, splits, native headings, source offsets and cut traces stay fixed.
+    This allows representative methods to be compared without rebuilding cuts.
+    """
+    result = DocumentIndex.from_dict(index.to_dict())
+    sections = [node for node in result.root.walk() if node.kind == "section"]
+    groups = [[[(s.start, s.end) for s in p.children if s.kind == "sentence"]
+               for p in section.children if p.kind == "paragraph"] for section in sections]
+    selected = central_sentences_many(result.source, groups, scorer, sentence_budget)
+    for section, values in zip(sections, selected):
+        section.central = values[0]
+        section.title = values[0]["text"] if values[0] else "Section"
+        paragraphs = [p for p in section.children if p.kind == "paragraph"]
+        for paragraph, central in zip(paragraphs, values[1:]):
+            paragraph.central = central
+    result.metadata["representative_scorer"] = scorer.name
+    result.metadata["config"]["sentence_budget"] = sentence_budget
+    result.metadata.pop("representative_provider", None)
+    metadata = getattr(scorer, "metadata", None)
+    if callable(metadata):
+        result.metadata["representative_provider"] = metadata()
+    return result

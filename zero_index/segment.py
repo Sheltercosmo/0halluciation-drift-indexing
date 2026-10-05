@@ -121,11 +121,27 @@ def central_sentences_many(source, sections, scorer, budget=None, *, include_sec
     planned order, so completion timing cannot change ties or candidate limits.
     """
     plans = [_central_plan(source, groups, budget, include_section) for groups in sections]
+    grouped = getattr(scorer, "score_representative_groups", None)
     batch = getattr(scorer, "representatives", None)
     single = getattr(scorer, "representative", None)
-    semantic = callable(batch) or callable(single)
+    semantic = callable(grouped) or callable(batch) or callable(single)
     all_jobs = [(plan, target, candidate) for plan in plans for target, candidate in plan.jobs]
-    if semantic:
+    if callable(grouped):
+        targets = [(plan, t) for plan in plans for t, spans in enumerate(plan.targets) if len(spans) > 1]
+        group_scores = list(grouped(
+            [[source[a:b] for a, b in plan.targets[t]] for plan, t in targets],
+            [plan.visited[t] for plan, t in targets],
+        )) if targets else []
+        if len(group_scores) != len(targets):
+            raise ValueError("Representative groups returned the wrong number of targets")
+        mapped = {}
+        for (plan, t), scores in zip(targets, group_scores):
+            scores = list(scores)
+            if len(scores) != len(plan.visited[t]):
+                raise ValueError("Representative group returned the wrong number of scores")
+            mapped.update({(id(plan), t, c): value for c, value in zip(plan.visited[t], scores)})
+        values = [mapped[id(plan), t, c] for plan, t, c in all_jobs]
+    elif semantic:
         pairs = [(source[plan.targets[t][c][0]:plan.targets[t][c][1]], plan.contexts[t])
                  for plan, t, c in all_jobs]
         values = list(batch(pairs)) if callable(batch) and pairs else [single(*pair) for pair in pairs]
@@ -163,7 +179,8 @@ def central_sentences_many(source, sections, scorer, budget=None, *, include_sec
                 "candidate_count": count,
                 "comparisons": comparisons,
                 "exhaustive": len(plan.visited[target]) == count,
-                "method": "context-representativeness" if semantic else "mean-pairwise-similarity",
+                "method": getattr(scorer, "representative_method", "context-representativeness")
+                          if semantic else "mean-pairwise-similarity",
             })
         results.append(section_results)
     return results

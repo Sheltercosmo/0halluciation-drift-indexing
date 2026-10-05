@@ -1,4 +1,6 @@
-# Retrieval: propose, rerank, then read upward
+# Existing leaf-first retrieval API
+
+The new research direction uses [root-to-leaf tree search and an independent dense retrieval path](tree-system.md). This page documents the existing `retrieve()` API for compatibility.
 
 The retrieval LLM describes the content it needs. Jev scores candidate evidence for relevance. The LLM reads selected sentences, then requests their paragraphs and ancestors when it needs more context.
 
