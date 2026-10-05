@@ -42,6 +42,8 @@ The completed [384-question comparison](evals/BOUNDED_REPORT.md) evaluates decis
 
 **This run does not establish superiority over the strongest baseline.** Jev's answer-score intervals against Codex reranking include zero, and its QASPER evidence recall was lower: 84.60% versus 88.71%. The [full report](evals/BOUNDED_REPORT.md) publishes all 1,536 predictions, paired intervals, failures and usage. Scores and source contexts replay without model calls. Gemini's conservative reservation was **$5.41 of the $30 cap**, including $4 reserved for earlier work; reading and generative reranking used Codex.
 
+Iterative improvement is tracked in the [development log](evals/iterations/v1/REPORT.md), including failed hypotheses and uncertainty. The [split protocol](evals/ITERATION_PROTOCOL.md) reserves **1,425 validation questions and 1,559 untouched test questions**, grouped by document. Development gains are not presented as held-out or frontier results.
+
 The sample covers 307 documents and deliberately emphasizes hard and multi-evidence questions. It is not a full-benchmark result. The [research audit](evals/FRONTIER_EVALUATION.md) documents larger prepared datasets and possible follow-up comparisons.
 
 A frozen live pilot on **six synthetic documents and 24 questions** produced these results:
