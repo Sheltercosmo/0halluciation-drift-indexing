@@ -17,6 +17,17 @@ class LiveEmbeddings(Embeddings):
     def __init__(self, output, budget):
         super().__init__(output, budget)
         self.pool = ThreadPoolExecutor(max_workers=8)
+        self.rate_lock = threading.Lock()
+        self.next_batch_at = time.monotonic() + 40
+
+    def batch(self, texts, stage):
+        # The provider counts each input in a batch toward its 3,000 inputs/minute
+        # quota. Reserve launch slots at 2,400/minute, including an initial cooldown.
+        with self.rate_lock:
+            start = max(time.monotonic(), self.next_batch_at)
+            self.next_batch_at = start + len(texts) / 40
+        time.sleep(max(0, start - time.monotonic()))
+        return Embeddings.embed.__wrapped__(self, texts, stage)
 
     def embed(self, texts, stage):
         import numpy as np
@@ -27,7 +38,7 @@ class LiveEmbeddings(Embeddings):
             for path in sorted(set(paths.values())):
                 stack.enter_context(path_lock(path))
             missing = [s for s, path in paths.items() if not path.exists()]
-            jobs = [self.pool.submit(Embeddings.embed.__wrapped__, self, missing[i:i+64], stage)
+            jobs = [self.pool.submit(self.batch, missing[i:i+64], stage)
                     for i in range(0, len(missing), 64)]
             failures = []
             for job in jobs:

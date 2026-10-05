@@ -21,6 +21,9 @@ class LiveEvaluationTests(unittest.TestCase):
             root = Path(directory)
             budget = LiveBudget(root / 'budget.json')
             client = LiveEmbeddings(root, budget)
+            # The transport concurrency check bypasses the production quota pacer.
+            from scripts.bounded_clients import Embeddings
+            client.batch = lambda texts, stage: Embeddings.embed.__wrapped__(client, texts, stage)
             seen, active, peak = [], 0, 0
             lock = threading.Lock()
             def respond(request, timeout):

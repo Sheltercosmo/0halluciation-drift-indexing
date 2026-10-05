@@ -209,13 +209,18 @@ def run(output, stage, workers=8):
         needs = read_json(output / 'plans' / (signature(case['id']) + '.json'))['needs']
         question = query_text(case)
         indexes = {s+r: DocumentIndex.from_dict(read_json(output / 'indexes' / (key + '-' + s+r + '.json'))) for s in 'EJ' for r in 'EJ'}
-        texts = list(dict.fromkeys(routing_text(_card(index, n)) for index in indexes.values() for n in index.root.walk() if n.kind != 'document'))
-        vectors = embed.embed(texts, 'routing-previews')
-        lookup = dict(zip(texts, vectors))
+        lookup = {}
         queries = [f'Question: {question}\nEvidence need: {need}' for need in needs]
         qvectors = embed.embed(['task: question answering | query: ' + q for q in queries], 'planned-queries')
         qlookup = dict(zip(queries, qvectors))
-        router = EmbeddingTreeRouter(lambda s: lookup[s], model_name=embed.model, embed_query=lambda s: qlookup[s])
+        cosine_router = EmbeddingTreeRouter(lambda s: lookup[s], model_name=embed.model, embed_query=lambda s: qlookup[s])
+        class BatchedRouter:
+            name = cosine_router.name
+            def route(self, question, need, cards):
+                texts = list(dict.fromkeys(routing_text(c) for c in cards))
+                lookup.update(zip(texts, embed.embed(texts, 'routing-previews')))
+                return cosine_router.route(question, need, cards)
+        router = BatchedRouter()
         j = jev(); methods, searches, rankings = {}, {}, {}
         def pack(first, second=()):
             return fuse_retrieval_paths(doc['text'], first, list(second), token_count=count, title=doc['title'], budget=2048)
