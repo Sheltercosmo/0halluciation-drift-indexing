@@ -2,6 +2,7 @@ import tempfile
 import unittest
 import json
 import io
+import importlib.util
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -16,6 +17,7 @@ from zero_index.embeddings import CentroidRepresentatives
 
 
 class LiveEvaluationTests(unittest.TestCase):
+    @unittest.skipUnless(importlib.util.find_spec('numpy'), 'Optional live-evaluation NumPy dependency')
     def test_concurrent_embedding_requests_deduplicate_shared_texts(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
