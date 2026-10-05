@@ -16,6 +16,7 @@ Our index is a pure decision model based method with **0 LLM and optional embedd
   <a href="#quick-start">Quick start</a> ·
   <a href="evals/REPORT.md">Measured results</a> ·
   <a href="docs/algorithm.md">Algorithm</a> ·
+  <a href="#parallel-processing-optimization">Parallel processing</a> ·
   <a href="docs/retrieval.md">Retrieval</a> ·
   <a href="CONTRIBUTING.md">Contributing</a>
 </p>
@@ -30,7 +31,7 @@ Headings and contents supply the upper structure without model calls. Jev then s
 
 ## Measured, with limits
 
-**Competitive performance has not yet been established.** The larger evaluation now has verified, complete releases totaling **4,779 questions** across QASPER, QuALITY, LongBench v2 and Bright-Pro, including Bright-Pro's 526,319-document corpus. These are prepared inputs, not new results. The [research-based evaluation design](evals/FRONTIER_EVALUATION.md) isolates decision-based blocking and the statistical prior, specifies stronger baselines, and reports evidence and answer quality under matched token budgets.
+**Competitive performance has not yet been established.** Complete releases totaling **4,779 questions** are verified across QASPER, QuALITY, LongBench v2 and Bright-Pro, including Bright-Pro's 526,319-document corpus. These are prepared inputs, not new results. The [bounded evaluation](evals/BOUNDED_PROTOCOL.md) compares four retrieval pipelines on **384 hard or evidence-focused questions**, using Codex and a $30 Gemini cap. It evaluates the prior and probability-drop rule together as the blocking method. The [research audit](evals/FRONTIER_EVALUATION.md) explains the benchmark choices and possible larger comparisons.
 
 A frozen live pilot on **six synthetic documents and 24 questions** produced these results:
 
@@ -72,9 +73,9 @@ The index is built from the document's existing structure and exact source text.
 
 1. **Separate titles and contents.** Parse headings, heading levels and contents links without Jev or an LLM. Headings form the upper tree and act as hard boundaries. Recognized contents entries become navigation links to those headings.
 2. **Create paragraph blocks.** Split content on paragraph boundaries within each heading. Preserve original text, source offsets and line references; keep fenced code intact.
-3. **Compare against one anchor.** Start with `p0` and ask Jev whether `p0-p1`, `p0-p2`, `p0-p3`, and subsequent pairs belong to the same topic. Keep the anchor fixed until a boundary is found, avoiding all-pairs paragraph comparisons.
+3. **Compare against one anchor.** Start with `p0` and ask Jev whether `p0-p1`, `p0-p2`, `p0-p3`, and subsequent pairs belong to the same topic. Keep the anchor fixed until a boundary is found, avoiding all-pairs paragraph comparisons. Batch the next ready comparison from independent heading runs together.
 4. **Apply the statistical prior and cut at a drop.** Adjust each same-topic probability using the configured Bayesian prior. Cut before a paragraph when its adjusted probability is low **and** falls sharply from the preceding comparison. Start the next topic block at that paragraph and make it the new anchor. Save the scores, prior, probability drop and cut decision for inspection.
-5. **Select central sentences in parallel waves.** For paragraph 1, paragraph 2, paragraph 3 and the other paragraphs in a topic block, evaluate each first and last sentence together. Then evaluate each second and second-last sentence, continuing toward the middle. Each candidate is judged against its paragraph and the whole topic block, so Jev can batch independent judgments for paragraph and section representatives. Representatives are copied source sentences.
+5. **Plan outside-in candidates and score them together.** Visit each paragraph's first and last sentence, then its second and second-last sentence, continuing toward the middle. Each candidate is judged against its paragraph and the whole topic block. These judgments do not depend on earlier scores, so combine work across search depths and topic blocks, filling bounded Jev batches. Representatives are copied source sentences; ties retain outside-in priority regardless of response order.
 6. **Assemble the content tree.** Attach topic blocks below their headings, paragraphs below topic blocks, and sentences below paragraphs. Store each paragraph and topic block's representative sentence alongside its full source content and provenance.
 
 ```text
@@ -91,6 +92,28 @@ At retrieval time, an LLM proposes the content it needs. Lexical shortlisting fi
 Full sentence search is the default. `--sentence-budget 2` restricts each target to two candidates; `--sentence-budget 0` searches all. Any finite search can miss a better candidate. The pilot’s budget-two agreement was 23/36 versus 31/36 with full search.
 
 The default topic prior is `0.7`, cutoff `0.5`, drop `0.2`, and assumed reference prior `0.5`. These are explicit experimental choices, **not empirically calibrated probabilities**. [Read the equations and boundary policy →](docs/algorithm.md)
+
+## Parallel processing optimization
+
+**Expose independent work, fill requests, and overlap network waits.** The optimized method batches one ready anchor comparison from each independent heading run, combines representative judgments across outside-in waves and topic blocks, and dispatches multiple HTTP batches concurrently. Retrieval reranking uses the same dispatcher.
+
+| Layer | Optimization | Preserved constraint |
+| --- | --- | --- |
+| Topic boundaries | Independent heading runs share each comparison round | A cut must resolve before choosing that run's next anchor |
+| Representatives | Combine independent candidates across depths, paragraphs and sections | Same candidate budgets, full contexts and outside-in tie order |
+| HTTP requests | Keep up to `--max-concurrency` batches in flight; refill on completion | Shared call limit, size limits and complete-response validation |
+| Tree assembly | Restore source order after scoring | Stable node IDs, exact spans and citations for fixed scores |
+
+```sh
+python -m zero_index build examples/structured.md --scorer jev --provider typesafe --batch-size 64 --max-concurrency 4 --max-calls 100 -o output/parallel-tree.json
+python -m zero_index find output/parallel-tree.json "visitor opening and closing times" --reranker jev --provider typesafe --max-concurrency 4 --max-calls 20
+```
+
+`--batch-size` limits questions per request; `--max-concurrency` limits simultaneous HTTP requests. Concurrency defaults to **1**; the commands above explicitly enable **4**. The planner coalesces work even at concurrency 1. These are application settings, not provider capacity guarantees.
+
+An **offline benchmark with a simulated 40 ms request delay** reduced requests from **88 to 11** and median elapsed time from **3.592 s to 0.213 s** with four concurrent requests (**16.9×** in this simulation). All variants answered the same **536 decision questions** and produced exactly the same tree and boundary traces under fixed scores. This measures scheduling, not live Jev speed, token cost or accuracy. Remote scores can change with request composition.
+
+[Read the dependency model, controls, limits and benchmark →](docs/parallel-processing.md) · [Raw synthetic results](evals/results/parallel-synthetic-v1.json)
 
 ## Ask for content, then read upward
 
@@ -136,6 +159,7 @@ The archive includes the exact runtime snapshot, source corpus, gold labels, req
 | Topic | Where to read |
 | --- | --- |
 | Bayesian cuts and outside-in waves | [Algorithm](docs/algorithm.md) |
+| Concurrent requests, independent heading runs and benchmark | [Parallel processing](docs/parallel-processing.md) |
 | Headings, contents and research precedents | [Structural design](docs/structure-and-retrieval-design.md) |
 | LLM proposals, Jev reranking and upward reads | [Retrieval](docs/retrieval.md) |
 | Similarities and differences with PageIndex | [Comparison](docs/pageindex-comparison.md) |

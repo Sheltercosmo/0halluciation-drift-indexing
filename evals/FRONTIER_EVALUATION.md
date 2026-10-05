@@ -29,24 +29,23 @@ That is **4,779 questions across distinct evaluation tasks**, not one pooled acc
 
 The previous SciFact extension was stopped after 33 embedding requests covering 2,112 abstracts, before reranking or claim evaluation. It produced no comparative result. Its local cache and stop record are retained; it will not become the headline benchmark by increasing its sample slightly.
 
-## Experiment 1: isolate decision-based blocking
+## Experiment 1: compare decision-based blocking
 
 Use QASPER, QuALITY and LongBench v2. Every arm gets identical source parsing, titles, section paths, embedding model, retrieval algorithm, query, reader prompt and answer budget. The only changing component is the blocking method:
 
 1. Fixed 512-token chunks with 64-token overlap.
 2. Recursive paragraph/sentence packing targeting 512 tokens, with the same overlap cap.
 3. Embedding semantic splitting with a development-selected similarity threshold and common size limits.
-4. Jev raw same-topic probabilities, fixed anchors and development-selected cutoff/drop thresholds, without a prior-odds adjustment.
-5. Jev probabilities with the explicit prior adjustment and probability-drop rule.
-6. LumberChunker-style generative boundary decisions, adapted to the same source units and common Gemini provider. Label this adaptation rather than an exact reproduction of a paper's model configuration.
+4. Jev topic blocking, using the statistical prior and sudden probability-drop cut rule together as one method.
+5. LumberChunker-style generative boundary decisions, adapted to the same source units and common provider. Label this adaptation rather than an exact reproduction of a paper's model configuration.
 
 Use a common BM25+dense RRF retriever (constant 60) and Gemini Embedding 2 for this controlled comparison. Query-time generative reranking, query rewriting, representative-sentence selection and tree expansion are disabled here: these would change additional components. This experiment enables embeddings in retrieval; it does not measure the embedding-free deployment path. All arms receive native heading information equally. Fixed boundaries should also respect the shared heading partitions; report any forced size splits separately.
 
 The primary reader budget is **4,096 retrieved tokens**, with full-set sensitivity runs at **2,048 and 8,192**. Include title prefixes, repeated overlapping text, wrappers and any generated summaries in the budget. Pin a tokenizer and renderer before inference; archive both the nominal tokenizer count and provider-reported input tokens. Oversized blocks are split by the same deterministic source-preserving rule before ranking. Build each document once per configuration and reuse it for its questions. Never use a question, reference answer or evidence label to construct its index.
 
-Choose semantic and Jev thresholds using QASPER development and QuALITY training data, grouped by source document. Use equal search budgets: 12 parameter configurations for raw Jev and 12 for the prior arm. Include a neutral prior as a registered ablation; freeze the selected configuration before test predictions. Semantic splitting gets the same configuration-search limit. Report every development configuration, not just the winner. LongBench v2 and Bright-Pro receive no benchmark-specific tuning.
+If tuning is undertaken in a later full study, choose semantic and Jev thresholds using QASPER development and QuALITY training data, grouped by source document, with equal configuration-search budgets. Freeze configurations before test predictions and report all development configurations. LongBench v2 and Bright-Pro receive no benchmark-specific tuning. The bounded run uses fixed defaults and performs no such search.
 
-The explicit prior must beat a fairly tuned raw-score decision rule to support an incremental-benefit claim. With reference prior 0.5 and target prior 0.7, an adjusted probability cutoff of 0.5 equals a raw cutoff of 0.3. A constant prior changes neither pair-score ordering nor the information in those scores. The probability-drop transformation and sequential anchor resets can still alter cuts; those effects require measurement. No calibration, Brier-score or Bayesian-optimality claim follows merely from applying the formula.
+The prior is part of detecting a sudden drop and deciding where to split a block. Evaluate the complete blocking method through evidence retrieval and answer quality; a separate prior ablation is not required. No probability-calibration or Bayesian-optimality claim is made.
 
 ## Experiment 2: compare competitive retrieval systems
 
@@ -73,7 +72,7 @@ Predeclare QuALITY-HARD and LongBench v2's hard slice as primary difficulty anal
 
 ## Execution and reporting requirements
 
-The dataset audit is implemented; model adapters and the full evaluation runner remain to be completed. This document is a design specification, not a completed performance report. Freeze the final rendered prompts, tokenization, configuration grid, model versions, code hashes, source licenses and planned comparisons before inference. Keep a manifest entry for every expected question. A provider error counts as a failed prediction; never silently discard it, switch models for difficult cases, truncate a source without a recorded policy, or retry based on answer correctness.
+The complete dataset audit is implemented. The [bounded protocol](BOUNDED_PROTOCOL.md) specifies the currently authorized 384-question, four-pipeline study, using Codex calls and a $30 Gemini ceiling. The larger experiments above are research directions, not a requirement to run every downloaded dataset. This document is not a completed performance report. Freeze prompts, tokenization, model versions, code hashes, source licenses and planned comparisons before inference. Keep a manifest entry for every expected question. A provider error must not silently remove a question, switch models for difficult cases, or trigger a retry based on answer correctness.
 
 ```sh
 python -m pip install -r evals/requirements-frontier.txt
@@ -85,4 +84,4 @@ python scripts/frontier_data.py --dataset quality --check-predictions output/run
 
 Prediction JSONL rows require `id` from the committed selection and `status` equal to `ok` or `failed`. Coverage validation is necessary but does not score answers. The preparation script makes no inference calls. It validates every file hash, full question count, unique ID and Bright-Pro gold/aspect-to-corpus link.
 
-Complete large inference is materially different from a small pilot. The six-arm QA experiment alone entails 24,240 reader calls at one budget, or 72,720 across three, before indexing, reranking, controls or replication. A run needs an explicit total spend ceiling and per-provider token/call limits; a budget stop yields an incomplete result, not a smaller post-hoc benchmark. Complete predeclared datasets in stages if needed. Do not claim superiority until paired results, uncertainty, failures and cost have been published together.
+Complete large inference is materially different from a bounded study. Five arms across all 4,040 prepared QA questions would require 20,200 question-level reader evaluations at one budget, before indexing and reranking. A run needs an explicit spend ceiling and provider limits; a budget stop yields an incomplete result, not a smaller post-hoc benchmark. Do not claim superiority until paired results, uncertainty, failures and cost have been published together.
