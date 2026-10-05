@@ -10,13 +10,20 @@ from unittest.mock import patch
 from pathlib import Path
 
 from scripts.bounded_clients import save
-from scripts.live_tree_clients import LiveBudget, LiveEmbeddings
+from scripts.live_tree_clients import LiveBudget, LiveEmbeddings, normalize_rankings
 from scripts.live_tree_eval import tree
 from zero_index.index import reselect_representatives
 from zero_index.embeddings import CentroidRepresentatives
 
 
 class LiveEvaluationTests(unittest.TestCase):
+    def test_ranker_omissions_preserve_model_priorities_then_rrf_order(self):
+        value = {'rankings': [{'id': 'q', 'order': [3, 1, 3]}]}
+        normalize_rankings(value, {'q': 5})
+        self.assertEqual(value['rankings'][0]['order'], [3, 1, 0, 2, 4])
+        with self.assertRaises(ValueError):
+            normalize_rankings({'rankings': [{'id': 'q', 'order': [5]}]}, {'q': 5})
+
     @unittest.skipUnless(importlib.util.find_spec('numpy'), 'Optional live-evaluation NumPy dependency')
     def test_concurrent_embedding_requests_deduplicate_shared_texts(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -204,6 +204,18 @@ def run(output, stage, workers=8):
     def retrieve(case):
         path = output / 'retrieval' / (signature(case['id']) + '.json')
         if path.exists():
+            previous = read_json(path)
+            if previous.get('ranker_policy') != 'first-usable-normalized-permutation':
+                doc = docs[case['doc_id']]
+                for partition in ['recursive', 'semantic']:
+                    candidates = previous['flat_rankings']['rrf_' + partition]
+                    request = {'id': case['id'], 'question': query_text(case), 'needs': previous['needs'],
+                               'candidates': [{'id': i, 'heading': c['heading'], 'text': c['text']} for i, c in enumerate(candidates)]}
+                    order = llm.call([request], 'ranker')['rankings'][0]['order']
+                    previous['methods']['rerank_' + partition] = fuse_retrieval_paths(doc['text'],
+                        [candidates[i] for i in order], [], token_count=count, title=doc['title'], budget=2048)
+                previous['ranker_policy'] = 'first-usable-normalized-permutation'
+                save(path, previous)
             return
         started = time.perf_counter(); doc = docs[case['doc_id']]; key = signature(doc['id'])
         needs = read_json(output / 'plans' / (signature(case['id']) + '.json'))['needs']
@@ -262,7 +274,8 @@ def run(output, stage, workers=8):
         direct_matched = candidate_pool(flat_rankings['dense_recursive'], count, max_source_tokens=4096)['candidates']
         methods['hybrid_matched'] = pack(tree_passages(indexes['JJ'], matched_search), direct_matched)
         save(path, {'id': case['id'], 'needs': needs, 'methods': methods, 'searches': searches,
-                    'flat_rankings': flat_rankings, 'seconds': time.perf_counter() - started})
+                    'flat_rankings': flat_rankings, 'seconds': time.perf_counter() - started,
+                    'ranker_policy': 'first-usable-normalized-permutation'})
 
     def read(job):
         case, method = job

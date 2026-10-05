@@ -25,8 +25,8 @@
   "documents_sha256": "874f82d9eaf3d353a2fe5afffa287041358ad0a50b0af27ad862be5bc96af103",
   "registry_sha256": "b10aef13e1129db5453d2702d0970913a4d5333873702fb7c1db26942e6f65a9",
   "source_hashes": {
-    "scripts/live_tree_eval.py": "5253063725a8e915d585fe81ed676291f020fa3b5637d918a5e49fe36f479d25",
-    "scripts/live_tree_clients.py": "44fbb1150fef86fa3aac61aa67365e73bd07e12cc6117323a8940f629c727ec7",
+    "scripts/live_tree_eval.py": "3c7dc27181727ea6cf0da60fd44be8c96cafcf4a3e83885a59f2171932c4028e",
+    "scripts/live_tree_clients.py": "70acc157a45ccf03deb7e8186b17126d1c6dcb8394fdbd63cbfef269a2715eed",
     "scripts/bounded_clients.py": "169e72258a8d495bd5e7ddf514779bb6155f37c448a889f87f3bf3491225b3d5",
     "scripts/bounded_eval.py": "6bc9a4938a83fbc4b4915fd56fdb4667d499ed39cb2144471d2afff37f8ba981",
     "scripts/planned_evidence_trial.py": "28e0dd96eb0dbdc0eda6a6731a9562f069733eda6af28b0eef63989543628625",
@@ -748,6 +748,12 @@
       "reason": "Provider reports 3000 embedding inputs per minute, including each batch member. Pace at 2400/minute with cooldown. Embed routing cards only when visited, using exactly the same text and model; avoid unused whole-tree vectors. No query outcomes inspected.",
       "prior_registration_commit": "a0ba76c77e4fabdfca8445b836c1a0ed46b3c2df",
       "model_or_hyperparameter_changes": false
+    },
+    {
+      "reason": "Live reranker sometimes omitted IDs from otherwise valid JSON. Normalize complete permutations deterministically and uniformly; preserve raw responses. Earlier complete cases are refreshed from the earliest usable raw reply. No answer predictions have been generated or scored.",
+      "prior_registration_commit": "409088e99b5678681b972cf5f9ea8194186bdf17",
+      "model_or_hyperparameter_changes": false
     }
-  ]
+  ],
+  "ranker_output_policy": "Use earliest STOP response with known integer candidate IDs; preserve first-occurrence model order, append omitted candidates in original RRF order; reject unknown IDs. Apply uniformly, including already retrieved cases, before reader inference."
 }

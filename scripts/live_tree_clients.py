@@ -12,6 +12,21 @@ from urllib.request import Request, urlopen
 from scripts.bounded_clients import Audit, Budget, Codex, Embeddings, path_lock, save, signature, validate_answers, validate_rankings
 
 
+def normalize_rankings(value, expected):
+    """Keep returned priorities, then append omitted IDs in original RRF order."""
+    if not isinstance(value, dict) or not isinstance(value.get('rankings'), list):
+        raise ValueError('Expected rankings')
+    for row in value['rankings']:
+        if not isinstance(row, dict) or row.get('id') not in expected or not isinstance(row.get('order'), list):
+            raise ValueError('Unknown ranking identity')
+        count = expected[row['id']]
+        if any(type(i) is not int or not 0 <= i < count for i in row['order']):
+            raise ValueError('Unknown candidate index')
+        order = list(dict.fromkeys(row['order']))
+        row['order'] = order + [i for i in range(count) if i not in order]
+    validate_rankings(value, expected)
+
+
 class LiveEmbeddings(Embeddings):
     """Same ordered 64-input requests, with at most eight independent batches in flight."""
     def __init__(self, output, budget):
@@ -115,8 +130,16 @@ class Gemini(Codex):
 
     def _execute(self, cases, mode, schema, prompt, key, cached):
         validator = (lambda v: validate_answers(v, [c['id'] for c in cases])) if mode == 'reader' else (
-            lambda v: validate_rankings(v, {c['id']: len(c['candidates']) for c in cases}))
+            lambda v: normalize_rankings(v, {c['id']: len(c['candidates']) for c in cases}))
         return self.generate(prompt, schema, validator, mode)
+
+    def validate(self, value, validator, stage, key, attempt):
+        before = json.loads(json.dumps(value)) if stage == 'ranker' else None
+        validator(value)
+        if before is not None and before != value:
+            save(self.output / 'ranker-normalizations' / (key + '.json'), {
+                'request_sha256': key, 'selected_response_attempt': attempt,
+                'raw_rankings': before['rankings'], 'normalized_rankings': value['rankings']})
 
     def generate(self, prompt, schema, validator, stage):
         body = {'contents': [{'role': 'user', 'parts': [{'text': prompt}]}], 'generationConfig': {
@@ -125,6 +148,20 @@ class Gemini(Codex):
         key = signature({'model': self.model, 'body': body})
         path = self.cache / (key + '.json')
         with path_lock(path):
+            # Use the earliest structurally usable raw ranking for every case,
+            # including cases completed before the documented normalization repair.
+            if stage == 'ranker':
+                for raw_path in sorted(self.responses.glob(key + '-*.json')):
+                    try:
+                        raw = json.loads(raw_path.read_text(encoding='utf-8'))['candidates'][0]
+                        if raw.get('finishReason') != 'STOP':
+                            continue
+                        value = json.loads(''.join(p.get('text', '') for p in raw['content']['parts'] if not p.get('thought')))
+                        self.validate(value, validator, stage, key, int(raw_path.stem.rsplit('-', 1)[1]))
+                    except (ValueError, KeyError, IndexError):
+                        continue
+                    save(path, value)
+                    return value
             if path.exists():
                 value = json.loads(path.read_text(encoding='utf-8')); validator(value); return value
             # Include the schema plus a conservative wrapper allowance in the native token count.
@@ -150,7 +187,7 @@ class Gemini(Codex):
                         raise ValueError('Generation did not complete')
                     raw = ''.join(p.get('text', '') for p in candidate['content']['parts'] if not p.get('thought'))
                     value = json.loads(raw)
-                    validator(value)
+                    self.validate(value, validator, stage, key, attempt + 1)
                     row['status'] = 'ok'; save(path, value); return value
                 except HTTPError as error:
                     row['http_status'] = error.code
