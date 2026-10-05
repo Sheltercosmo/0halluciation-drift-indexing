@@ -52,6 +52,37 @@ def report():
         lines+=['',f'## {title}','',
             '| Comparison | Recall difference, percentage points [95% CI] | Holm-adjusted p |','| --- | ---: | ---: |']
         for r in test[key]:lines.append(f"| {r['comparison']} | {effect(r)} | {r['p_holm']:.4f} |")
+    lines+=['','## Average component effects','',
+        'These descriptive averages give equal weight to the four matched settings of the other two components. The conditional comparisons above show whether a component behaves differently across those settings.','',
+        '| Component changed from embeddings to Jev | Average recall difference, percentage points [95% CI] |',
+        '| --- | ---: |']
+    labels={'split':'Topic splitting','central':'Central-sentence selection','representative':'Central-sentence selection',
+            'central_sentence':'Central-sentence selection','central_sentences':'Central-sentence selection','search':'Search procedure'}
+    for factor,row in test['descriptive_factor_effects'].items():
+        lines.append(f"| {labels.get(factor,factor)} | {effect(row)} |")
+    failure_path=base/'test/failure-analysis.json'
+    if failure_path.is_file():
+        failures=read_json(failure_path)
+        lines+=['','## Where reference evidence was lost','',
+            'This supplemental descriptive analysis was added after validation and is separate from the registered hypothesis tests. It locates lost evidence along the retrieval procedure; it does not establish the cause of a relevance decision.','',
+            '| System | Eligible questions | Questions with incomplete top-five evidence | Missed reference paragraph instances |',
+            '| --- | ---: | ---: | ---: |']
+        for method,row in failures['methods'].items():
+            lines.append(f"| {NAMES.get(method,method)} | {row['eligible_questions']} | {row['incomplete_top5_questions']} | {row['missed_reference_paragraph_instances']} |")
+        lines+=['','| System | Loss location | Paragraph instances |','| --- | --- | ---: |']
+        location_labels={'reached_but_ranked_below_5':'Retrieved but ranked below the top five',
+            'decision_budget':'Decision budget stopped traversal','outside_dense_top30':'Absent from the dense top 30',
+            'candidate_reranked_below_5':'Candidate reranked below the top five'}
+        for kind,title in [('heading','Heading'),('topic','Topic block'),('paragraph','Paragraph')]:
+            location_labels[kind+':below_threshold']=title+' score below cutoff'
+            location_labels[kind+':outside_beam']=title+' excluded by beam limit'
+        for method,row in failures['methods'].items():
+            for location,count in row['loss_locations'].items():
+                lines.append(f"| {NAMES.get(method,method)} | {location_labels.get(location,location)} | {count} |")
+        lines+=['',
+            'For each method, use the fully aligned reference with highest recall@5, with ties resolved by annotation order. Count missed paragraph instances in that reference. For tree misses, attribute the loss to the deepest evidence-path node reached by any shared request. Methods can select different acceptable references for this diagnostic.','',
+            'A five-paragraph output cannot contain a reference with more than five paragraphs. The minimum missed instances imposed by that limit for the chosen references are '+
+            '; '.join(f"{NAMES.get(m,m)}: {r['minimum_misses_for_chosen_reference_at_k5']}" for m,r in failures['methods'].items())+'. These unavoidable capacity limits are included in the counts above.','']
     lines+=['','## Population and scoring','',
         '| Partition | All questions | Papers | Eligible paragraph-evidence questions | Papers with eligible evidence |','| --- | ---: | ---: | ---: | ---: |']
     for p in ('validation','test'):
@@ -77,6 +108,9 @@ def report():
         '[Protocol](TREE_SYSTEM_PROTOCOL.md) · [Original registration](registrations/tree-retrieval-v3.json) · [Pre-outcome amendment](registrations/tree-retrieval-v3-jev-rerank-amendment.json) · [Reproduction instructions](RETRIEVAL_V3_REPRODUCTION.md)','',
         '[Validation artifacts](results/tree-retrieval-v3/validation/catalog.json) · [Test artifacts](results/tree-retrieval-v3/test/catalog.json) · [Test statistics](results/tree-retrieval-v3/test/statistics.json)','',
         'Each partition includes compressed per-question rankings, whole-paragraph packs, traversal traces, reranker pools and scores, with file hashes. The task uses [QASPER](https://arxiv.org/abs/2105.03011); these results are not comparable to the historical answer-based studies.','']
+    if (ROOT/'assets/figures/tree-retrieval-v3-test.svg').is_file():
+        position=lines.index('## Complete systems and direct-retrieval controls')
+        lines[position:position]=['![Test evidence recall with document-cluster confidence intervals](../assets/figures/tree-retrieval-v3-test.svg)','']
     path=ROOT/'evals/RETRIEVAL_V3_REPORT.md';path.write_text('\n'.join(lines),encoding='utf-8',newline='\n')
     print(path)
 

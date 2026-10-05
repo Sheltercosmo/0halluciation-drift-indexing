@@ -38,13 +38,13 @@ def export(out,destination):
             for row in read_json(out/'aligned-scores.json'):
                 stream.write((json.dumps(row,ensure_ascii=False,separators=(',',':'))+'\n').encode())
     catalog={'partition':manifest['partition'],'questions':len(cases),'documents':len(docs),
-        'methods':reg['methods'],'prediction_records':len(cases)*len(reg['methods']),
+        'methods':reg['methods'],'question_records':len(cases),'method_predictions':len(cases)*len(reg['methods']),
         'registration_sha256':sha(RUN/'registration.json'),'amendment_sha256':sha(AMENDMENT),
         'files':{p.name:{'sha256':sha(p),'bytes':p.stat().st_size} for p in sorted(destination.iterdir()) if p.name!='catalog.json'},
         'scope':'whole original paragraphs inside the supplied QASPER paper',
         'source_inputs':'prepared document-disjoint allocation; input hashes and source code are in manifest.json'}
     save(destination/'catalog.json',catalog)
-    print(json.dumps({'output':str(destination),'questions':len(cases),'records':catalog['prediction_records'],
+    print(json.dumps({'output':str(destination),'questions':len(cases),'method_predictions':catalog['method_predictions'],
                       'files':catalog['files']}))
 
 
