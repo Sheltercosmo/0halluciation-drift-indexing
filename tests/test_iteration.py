@@ -6,9 +6,17 @@ import unittest
 
 from scripts.iteration_splits import load_jsonl, normalized, open_test, resolve_groups
 from zero_index.context import candidate_pool
+from scripts.repair_development_rankings import complete_order
 
 
 class IterationIntegrityTests(unittest.TestCase):
+    def test_ranking_repair_preserves_valid_prefix_and_deterministic_fallback(self):
+        self.assertEqual(complete_order([3, 0], 4, [2, 1, 0, 3]), [3, 0, 2, 1])
+        self.assertEqual(complete_order([3, 0, 2, 1], 4, [2, 1, 0, 3]), [3, 0, 2, 1])
+        for invalid in ([0, 0], [0, 4], [False, 1]):
+            with self.assertRaises(ValueError):
+                complete_order(invalid, 4, [0, 1, 2, 3])
+
     def test_json_lines_preserve_unicode_line_separators_inside_text(self):
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder) / 'data.jsonl'
