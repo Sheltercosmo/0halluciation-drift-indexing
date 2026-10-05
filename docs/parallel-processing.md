@@ -1,5 +1,7 @@
 # Parallel processing optimization
 
+Optional `--sentence-stop-threshold 0.90` changes representative scheduling: dispatch one outside-in depth across all active targets, retire targets that reach the threshold, then schedule the next depth. A target stopping does not stop its section/paragraph peers. Already dispatched work is counted. The default remains coalescing across all depths. Early stopping can reduce decisions while adding sequential rounds; [measure both quality and usage](../evals/THRESHOLD_SEARCH.md).
+
 The method now exposes independent decision work at three levels: heading runs, representative candidates, and HTTP batches. It retains the fixed-anchor boundary rule and exact source-backed tree. No new model, embedding service or runtime dependency is required.
 
 ## Dependency model

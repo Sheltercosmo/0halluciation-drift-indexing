@@ -153,7 +153,8 @@ def build_index(
     segmented = segment_runs(source, runs, scorer, config)
     spans_by_group = [[sentence_spans(source, block) for block in group]
                       for groups, _ in segmented for group in groups]
-    selected = iter(central_sentences_many(source, spans_by_group, representative_scorer, config.sentence_budget))
+    selected = iter(central_sentences_many(source, spans_by_group, representative_scorer, config.sentence_budget,
+                                          stop_threshold=config.sentence_stop_threshold))
     spans_by_group = iter(spans_by_group)
     segmented = iter(segmented)
 
@@ -220,7 +221,8 @@ def build_index(
 
 
 def reselect_representatives(index: DocumentIndex, scorer: Similarity, *,
-                            sentence_budget: int | None = None) -> DocumentIndex:
+                            sentence_budget: int | None = None,
+                            stop_threshold: float | None = None) -> DocumentIndex:
     """Copy a fixed tree and replace only extractive representatives.
 
     Node IDs, splits, native headings, source offsets and cut traces stay fixed.
@@ -230,7 +232,7 @@ def reselect_representatives(index: DocumentIndex, scorer: Similarity, *,
     sections = [node for node in result.root.walk() if node.kind == "section"]
     groups = [[[(s.start, s.end) for s in p.children if s.kind == "sentence"]
                for p in section.children if p.kind == "paragraph"] for section in sections]
-    selected = central_sentences_many(result.source, groups, scorer, sentence_budget)
+    selected = central_sentences_many(result.source, groups, scorer, sentence_budget, stop_threshold=stop_threshold)
     for section, values in zip(sections, selected):
         section.central = values[0]
         section.title = values[0]["text"] if values[0] else "Section"
@@ -239,6 +241,7 @@ def reselect_representatives(index: DocumentIndex, scorer: Similarity, *,
             paragraph.central = central
     result.metadata["representative_scorer"] = scorer.name
     result.metadata["config"]["sentence_budget"] = sentence_budget
+    result.metadata["config"]["sentence_stop_threshold"] = stop_threshold
     result.metadata.pop("representative_provider", None)
     metadata = getattr(scorer, "metadata", None)
     if callable(metadata):

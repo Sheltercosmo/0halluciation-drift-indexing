@@ -54,6 +54,7 @@ class Config:
     different_beta: float = 2.0
     probability_reference_prior: float = 0.5
     sentence_budget: int | None = None
+    sentence_stop_threshold: float | None = None
 
     def __post_init__(self) -> None:
         if not 0 < self.same_topic_prior < 1:
@@ -72,6 +73,12 @@ class Config:
             type(self.sentence_budget) is not int or self.sentence_budget < 2
         ):
             raise ValueError("sentence_budget must be an integer >= 2 or None")
+        if self.sentence_stop_threshold is not None and (
+            type(self.sentence_stop_threshold) not in (int, float)
+            or not math.isfinite(self.sentence_stop_threshold)
+            or not 0 <= self.sentence_stop_threshold <= 1
+        ):
+            raise ValueError("sentence_stop_threshold must be finite in [0, 1] or None")
 
 
 def _log_beta_density(score: float, alpha: float, beta: float) -> float:

@@ -19,6 +19,8 @@ The two copies have identical splits, node IDs, source offsets and native headin
 
 `build_index` also accepts `representative_scorer` separately from its splitting `scorer`. Embedding-based segmentation comparisons must specify their partition algorithm; changing representatives does not change boundaries.
 
+Use `reselect_representatives(..., stop_threshold=0.90)` or `Config(sentence_stop_threshold=0.90)` to stop a target after a parallel outside-in wave reaches 0.90. Later candidates for that target are omitted while other paragraphs and sections continue. Stopping is disabled by default; metadata records actual candidates and the stopping reason. See the [sample threshold search](../evals/THRESHOLD_SEARCH.md) for quality/cost controls.
+
 ## Share the LLM proposal and compare tree search
 
 ```python
@@ -39,6 +41,8 @@ dense_result = search_tree(jev_representatives, question, needs, dense_router,
 `call_your_planner(state)` returns one to three strings, at most 300 characters each. It sees the original question, document title and native headings, without gold labels or method-specific representatives. Include multiple-choice options in `question` when needed. `count_tokens(text)` must use the final reader's tokenizer and return a nonnegative integer.
 
 Each search begins at the root and ranks only children of selected nodes. Previews contain heading paths and extractive central sentences, or the exact leaf sentence. Full unvisited subtrees are not sent to the router. Whole rounds are checked against shared budgets before scoring; reaching a limit returns an explicit status. Traces include every candidate preview, score and selected branch. Jev routing is a dedicated decision task; it does not pretend a heading already contains an answer.
+
+`TreeSearchConfig(acceptance_threshold=0.50)` optionally rejects low-scoring branches before beam selection. The default is disabled. Rejecting every route returns `no_accepted_branches`, with rejected IDs retained in the trace. Tune per score type on development data; identical Jev and cosine-derived numbers need not mean the same thing.
 
 ## Combine Jev retrieval with direct embedding retrieval
 

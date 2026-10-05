@@ -90,17 +90,19 @@ def outside_in(size: int):
 
 
 def central_sentence(
-    source: str, spans: list[tuple[int, int]], scorer: Similarity, budget: int | None
+    source: str, spans: list[tuple[int, int]], scorer: Similarity, budget: int | None,
+    *, stop_threshold: float | None = None,
 ) -> dict | None:
-    return central_sentences(source, [spans], scorer, budget)[0]
+    return central_sentences(source, [spans], scorer, budget, stop_threshold=stop_threshold)[0]
 
 
 def central_sentences(
     source: str, groups: list[list[tuple[int, int]]], scorer: Similarity,
     budget: int | None = None, *, include_section: bool = False,
+    stop_threshold: float | None = None,
 ) -> list[dict | None]:
     return central_sentences_many(
-        source, [groups], scorer, budget, include_section=include_section,
+        source, [groups], scorer, budget, include_section=include_section, stop_threshold=stop_threshold,
     )[0]
 
 
@@ -110,58 +112,85 @@ class _CentralPlan:
     contexts: list[str]
     visited: list[list[int]]
     jobs: list[tuple[int, int]]
+    job_depths: list[int]
     best: list[tuple[int, float] | None]
 
 
-def central_sentences_many(source, sections, scorer, budget=None, *, include_section=True):
-    """Plan outside-in candidates, then score all independent sections together.
-
-    Waves define candidate order, not response dependencies. Flattening them
-    lets the scorer fill batches across depths and sections. Reduce results in
-    planned order, so completion timing cannot change ties or candidate limits.
-    """
-    plans = [_central_plan(source, groups, budget, include_section) for groups in sections]
+def _representative_scores(source, scorer, all_jobs):
+    """Score just the dispatched candidates against their full node contexts."""
     grouped = getattr(scorer, "score_representative_groups", None)
     batch = getattr(scorer, "representatives", None)
     single = getattr(scorer, "representative", None)
-    semantic = callable(grouped) or callable(batch) or callable(single)
-    all_jobs = [(plan, target, candidate) for plan in plans for target, candidate in plan.jobs]
     if callable(grouped):
-        targets = [(plan, t) for plan in plans for t, spans in enumerate(plan.targets) if len(spans) > 1]
+        targets = {}
+        for plan, t, c in all_jobs:
+            targets.setdefault((id(plan), t), (plan, []))[1].append(c)
         group_scores = list(grouped(
-            [[source[a:b] for a, b in plan.targets[t]] for plan, t in targets],
-            [plan.visited[t] for plan, t in targets],
+            [[source[a:b] for a,b in plan.targets[t]] for (_,t),(plan,_) in targets.items()],
+            [indices for _,indices in targets.values()],
         )) if targets else []
         if len(group_scores) != len(targets):
             raise ValueError("Representative groups returned the wrong number of targets")
         mapped = {}
-        for (plan, t), scores in zip(targets, group_scores):
+        for ((identity, t), (plan, indices)), scores in zip(targets.items(), group_scores):
             scores = list(scores)
-            if len(scores) != len(plan.visited[t]):
+            if len(scores) != len(indices):
                 raise ValueError("Representative group returned the wrong number of scores")
-            mapped.update({(id(plan), t, c): value for c, value in zip(plan.visited[t], scores)})
-        values = [mapped[id(plan), t, c] for plan, t, c in all_jobs]
-    elif semantic:
+            mapped.update({(identity, t, c): value for c,value in zip(indices,scores)})
+        return [mapped[id(plan), t, c] for plan,t,c in all_jobs]
+    if callable(batch) or callable(single):
         pairs = [(source[plan.targets[t][c][0]:plan.targets[t][c][1]], plan.contexts[t])
-                 for plan, t, c in all_jobs]
+                 for plan,t,c in all_jobs]
         values = list(batch(pairs)) if callable(batch) and pairs else [single(*pair) for pair in pairs]
         if len(values) != len(all_jobs):
             raise ValueError("Representative batch returned the wrong number of scores")
-    else:
-        values = []
-        for plan, target, candidate in all_jobs:
-            spans = plan.targets[target]
-            start, end = spans[candidate]
-            total = sum(checked_score(scorer, source[start:end], source[a:b])
-                        for other, (a, b) in enumerate(spans) if other != candidate)
-            values.append(total / (len(spans) - 1))
-    for (plan, target, candidate), value in zip(all_jobs, values):
-        value = float(value)
-        if not math.isfinite(value) or not 0 <= value <= 1:
-            raise ValueError("Representative scores must be finite and in [0, 1]")
-        best = plan.best
-        if best[target] is None or value > best[target][1]:
-            best[target] = (candidate, value)
+        return values
+    values = []
+    for plan,t,c in all_jobs:
+        start,end = plan.targets[t][c]
+        total = sum(checked_score(scorer, source[start:end], source[a:b])
+                    for other,(a,b) in enumerate(plan.targets[t]) if other != c)
+        values.append(total / (len(plan.targets[t])-1))
+    return values
+
+
+def central_sentences_many(source, sections, scorer, budget=None, *, include_section=True, stop_threshold=None):
+    """Plan outside-in candidates, then score all independent sections together.
+
+    With stopping disabled, coalesce all depths. With stopping enabled, dispatch
+    one outside-in depth across all active paragraphs and sections, then retire
+    targets whose best score reaches the threshold. Already dispatched work is
+    counted; a target's stop never retires its parent or sibling targets.
+    """
+    plans = [_central_plan(source, groups, budget, include_section) for groups in sections]
+    if stop_threshold is not None and (type(stop_threshold) not in (int,float)
+            or not math.isfinite(stop_threshold) or not 0 <= stop_threshold <= 1):
+        raise ValueError("stop_threshold must be finite in [0, 1] or None")
+    semantic = any(callable(getattr(scorer, name, None)) for name in
+                   ("score_representative_groups", "representatives", "representative"))
+    rounds = {}
+    planned = {(id(plan), t): list(indices) for plan in plans for t,indices in enumerate(plan.visited)}
+    for plan in plans:
+        for (target,candidate), depth in zip(plan.jobs, plan.job_depths):
+            rounds.setdefault(depth if stop_threshold is not None else 0, []).append((plan,target,candidate))
+        if stop_threshold is not None:
+            plan.visited = [indices if len(plan.targets[t]) == 1 else [] for t,indices in enumerate(plan.visited)]
+    stopped = set()
+    for depth in sorted(rounds):
+        jobs = [(plan,t,c) for plan,t,c in rounds[depth] if (id(plan),t) not in stopped]
+        if not jobs:
+            continue
+        values = _representative_scores(source, scorer, jobs)
+        for (plan,target,candidate), value in zip(jobs, values):
+            value = float(value)
+            if not math.isfinite(value) or not 0 <= value <= 1:
+                raise ValueError("Representative scores must be finite and in [0, 1]")
+            if stop_threshold is not None:
+                plan.visited[target].append(candidate)
+            if plan.best[target] is None or value > plan.best[target][1]:
+                plan.best[target] = (candidate,value)
+        if stop_threshold is not None:
+            stopped.update((id(plan),t) for plan,t,_ in jobs if plan.best[t][1] >= stop_threshold)
 
     results = []
     for plan in plans:
@@ -173,7 +202,7 @@ def central_sentences_many(source, sections, scorer, budget=None, *, include_sec
             start, end = plan.targets[target][winner[0]]
             count = len(plan.targets[target])
             comparisons = len(plan.visited[target]) * (1 if semantic else count - 1) if count > 1 else 0
-            section_results.append({
+            result = {
                 "text": source[start:end], "start": start, "end": end,
                 "centrality": winner[1], "candidate_indices": plan.visited[target],
                 "candidate_count": count,
@@ -181,7 +210,13 @@ def central_sentences_many(source, sections, scorer, budget=None, *, include_sec
                 "exhaustive": len(plan.visited[target]) == count,
                 "method": getattr(scorer, "representative_method", "context-representativeness")
                           if semantic else "mean-pairwise-similarity",
-            })
+            }
+            if stop_threshold is not None:
+                early = len(plan.visited[target]) < len(planned[id(plan),target])
+                result.update(stop_threshold=stop_threshold, threshold_reached=winner[1] >= stop_threshold,
+                              early_stopped=early, stop_reason=("threshold" if early else
+                              "exhausted" if result["exhaustive"] else "candidate_budget"))
+            section_results.append(result)
         results.append(section_results)
     return results
 
@@ -201,6 +236,7 @@ def _central_plan(source, groups, budget, include_section):
     visited: list[list[int]] = [[] for _ in targets]
     best: list[tuple[int, float] | None] = [None for _ in targets]
     jobs: list[tuple[int, int]] = []
+    job_depths: list[int] = []
     depth = 0
     while True:
         offset = 0
@@ -218,9 +254,10 @@ def _central_plan(source, groups, budget, include_section):
                                 best[target] = (position, 1.0)
                             else:
                                 jobs.append((target, position))
+                                job_depths.append(depth)
             offset += len(spans)
         if all(len(indices) == limit for indices, limit in zip(visited, limits)):
             break
         depth += 1
 
-    return _CentralPlan(targets, contexts, visited, jobs, best)
+    return _CentralPlan(targets, contexts, visited, jobs, job_depths, best)

@@ -152,6 +152,8 @@ At retrieval time, an LLM proposes the content it needs. The new `search_tree()`
 
 Full sentence search is the default. `--sentence-budget 2` restricts each target to two candidates; `--sentence-budget 0` searches all. Any finite search can miss a better candidate. The pilot’s budget-two agreement was 23/36 versus 31/36 with full search.
 
+You can also set `--sentence-stop-threshold 0.90` to stop a paragraph or topic section after an outside-in wave finds a sufficiently strong candidate. Other targets continue in parallel, and the index records evaluated candidates and its stopping reason. This option is disabled by default. The [sample hyperparameter search](evals/THRESHOLD_SEARCH.md) covers early stopping, branch acceptance and a lower-is-better split-separation score normalized by its parent reference; no best threshold has been established yet.
+
 The default topic prior is `0.7`, cutoff `0.5`, drop `0.2`, and assumed reference prior `0.5`. These are explicit experimental choices, **not empirically calibrated probabilities**. [Read the equations and boundary policy →](docs/algorithm.md)
 
 ## Parallel processing optimization

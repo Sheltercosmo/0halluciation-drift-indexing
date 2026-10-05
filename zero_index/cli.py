@@ -21,6 +21,8 @@ def main() -> None:
     build.add_argument("--cutoff", type=float, default=0.5)
     build.add_argument("--drop", type=float, default=0.2)
     build.add_argument("--sentence-budget", type=int, default=0, help="0 searches every sentence (default); otherwise >= 2 per node")
+    build.add_argument("--sentence-stop-threshold", type=float, default=None,
+                       help="Stop a target after an outside-in wave reaches this score, e.g. 0.9; disabled by default")
     build.add_argument("--batch-size", type=int, default=64, help="Maximum parallel Jev questions per request")
     build.add_argument("--max-concurrency", type=int, default=1, help="Maximum in-flight Jev HTTP requests")
     build.add_argument("--max-calls", type=int, default=1000)
@@ -52,7 +54,8 @@ def main() -> None:
                 raise ValueError("Output must differ from input")
             config = Config(same_topic_prior=args.prior, posterior_cutoff=args.cutoff,
                             minimum_drop=args.drop, probability_reference_prior=args.reference_prior,
-                            sentence_budget=None if args.sentence_budget == 0 else args.sentence_budget)
+                            sentence_budget=None if args.sentence_budget == 0 else args.sentence_budget,
+                            sentence_stop_threshold=args.sentence_stop_threshold)
             scorer = (JevScorer(model=args.model, max_calls=args.max_calls, batch_size=args.batch_size,
                                 provider=args.provider, max_concurrency=args.max_concurrency)
                       if args.scorer == "jev" else LexicalJaccard())

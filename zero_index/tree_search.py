@@ -13,9 +13,14 @@ class TreeSearchConfig:
     max_depth: int = 16
     max_node_scores: int = 256
     max_preview_tokens: int = 8192
+    acceptance_threshold: float | None = None
 
     def __post_init__(self):
         for name, value in asdict(self).items():
+            if name == "acceptance_threshold":
+                if value is not None and (type(value) not in (int,float) or not math.isfinite(value) or not 0 <= value <= 1):
+                    raise ValueError("acceptance_threshold must be finite in [0, 1] or None")
+                continue
             if type(value) is not int or value < 1:
                 raise ValueError(f"{name} must be a positive integer")
 
@@ -151,11 +156,14 @@ def search_tree(index, question, needs, router, *, token_count, config=None):
             components = {key: _scores(scores, len(cards))
                           for key, scores in result.get("components", {}).items()}
             order = sorted(range(len(cards)), key=lambda i: (-values[i], children[i].start, children[i].node_id))
-            chosen = order[:config.beam_width]
+            accepted = [i for i in order if config.acceptance_threshold is None
+                        or values[i] >= config.acceptance_threshold]
+            chosen = accepted[:config.beam_width]
             trace.append({"depth": depth, "need_index": need_id,
                           "parents": [n.node_id for n in frontiers[need_id]],
                           "candidates": cards, "scores": values, "component_scores": components,
-                          "selected_ids": [children[i].node_id for i in chosen], "preview_tokens": count})
+                          "selected_ids": [children[i].node_id for i in chosen], "preview_tokens": count,
+                          "below_threshold_ids": [children[i].node_id for i in order if i not in accepted]})
             next_frontier = []
             for i in chosen:
                 node = children[i]
@@ -172,6 +180,8 @@ def search_tree(index, question, needs, router, *, token_count, config=None):
     else:
         if any(frontiers):
             status = "depth_budget_exhausted"
+    if status == "complete" and not leaves and any(step["below_threshold_ids"] for step in trace):
+        status = "no_accepted_branches"
     return {"question": question, "needs": needs, "router": router.name, "status": status,
             "config": asdict(config), "node_scores": node_scores, "preview_tokens": preview_tokens,
             "leaves": list(leaves.values()), "trace": trace,
