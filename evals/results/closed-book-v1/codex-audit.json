@@ -1,0 +1,228 @@
+[
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "d96de62d15025bc13b3865300b291ff0f2859c4e44162f3fddfb145a4fd90da0",
+    "case_ids": [
+      "quality/20002_GO5OYJJA_4",
+      "quality/20020_TRPTAKN4_10",
+      "quality/20027_2RUIA5TI_1",
+      "quality/20031_0W08N5TX_10",
+      "quality/20041_E0WD00T4_4",
+      "quality/20055_VR0SZT3O_5",
+      "quality/20056_IMXXLOR8_8",
+      "quality/20068_RWLK60G7_6"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 16739,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 167,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 10.352611300011631
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "40ef301e880f49fc15bb1b6c5722bf480f68733084bbe3da58ddf92a57200f75",
+    "case_ids": [
+      "quality/20020_TRPTAKN4_4",
+      "quality/22073_KJM8YN1V_8",
+      "quality/22346_DOS3P3V1_8",
+      "quality/22590_L3MXZ6V8_3",
+      "quality/22876_RFMXOBNA_2",
+      "quality/22958_CIJCBUXL_9",
+      "quality/22967_23S4S1XW_7",
+      "quality/23104_4MQFQVNM_1"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 16630,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 168,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 10.961392999975942
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "0dbb90f260ac56bce767e94e3cef5dbf6a345d5f5d5b4716dfddf3af00de6d3f",
+    "case_ids": [
+      "quality/23160_I33FJB5C_5",
+      "quality/30035_C0HFCNPI_3",
+      "quality/31282_BQYW9TCH_4",
+      "quality/31736_9W69Z6VQ_5",
+      "quality/40965_ZUFZ7UG6_2",
+      "quality/50818_U50BKW97_5",
+      "quality/50948_U9YCQJBR_2",
+      "quality/51126_PGSZW543_1"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 16703,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 166,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 10.11921999999322
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "340bb1f33384a02e3df0729f330e77c2d174dd050d7bbb3ceca822a2be342888",
+    "case_ids": [
+      "quality/30035_SLGX7NNR_5",
+      "quality/31736_TV0CUXDH_10",
+      "quality/51126_PGSZW543_5",
+      "quality/51256_MZNDC998_8",
+      "quality/51274_8Q2YNHG5_3",
+      "quality/51295_JKASXZ9X_8",
+      "quality/51350_VLBM4QEI_2",
+      "quality/51395_2PILALCT_5"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 16655,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 164,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 10.948391299985815
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "4db87fdd5fc0d85014ed6563187965e41b10ae2d988d38d5c59f66d25d398ef8",
+    "case_ids": [
+      "quality/51350_VLBM4QEI_6",
+      "quality/51395_9PYVRG7M_1",
+      "quality/51461_YZX4JZ16_5",
+      "quality/51483_T4WIZ6A8_3",
+      "quality/51605_E8R4X4OP_5",
+      "quality/51650_B3KKWWD1_3",
+      "quality/51687_3JYPCVFP_6",
+      "quality/52845_91NAQ9LY_7"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 16607,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 171,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 10.135558200010564
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "dcb7b4184c1ca410937d0530a3bf67cfc6741575d164873de50fe95f8b6af883",
+    "case_ids": [
+      "quality/52855_MV65I88C_2",
+      "quality/59368_LBNEJQ7W_9",
+      "quality/60412_XM0T4STT_7",
+      "quality/60745_U9M4CL5M_4",
+      "quality/61146_76LHD3BB_3",
+      "quality/61434_C4DV5MOT_1",
+      "quality/61467_TASABS87_6",
+      "quality/62261_SJZYUNBJ_3"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 16792,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 167,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 12.283469500020146
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "a9e2879dc15c540f9dd63b4fe23abfe844deb2592db044f5ca96911cfb0f1555",
+    "case_ids": [
+      "quality/62261_SJZYUNBJ_7",
+      "quality/63130_PRY03TR7_6",
+      "quality/63150_2I9H6MLD_1",
+      "quality/63401_ZCP5ZDGL_7",
+      "quality/63473_1VIHQ8TY_3",
+      "quality/63812_DQG6TAWJ_10",
+      "quality/63833_NVJ3AK4J_8",
+      "quality/63855_OUVVRF81_3"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 16893,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 166,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 9.919113899988588
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "9aab84221c608d7a460235847f2bc38b2e9b9ba68caaaeb467d1130e249b0a6d",
+    "case_ids": [
+      "quality/63812_G3YOJRZD_9",
+      "quality/63862_ZK5EYM9W_8",
+      "quality/63936_1LRE5TR5_4",
+      "quality/99911_QGCJUM40_10",
+      "quality/99914_0Q5X8VEX_3",
+      "quality/99916_T5VD7GB9_6",
+      "quality/99919_N8V2WS3L_6"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 16593,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 151,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 10.557416900002863
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "a210bd98f8e48d7897ba35b56784794a51d56ab5bbcfb70cbdb94f895fa6715f",
+    "case_ids": [
+      "quality/63936_1LRE5TR5_6"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 16070,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 35,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 6.791927299986128
+  }
+]

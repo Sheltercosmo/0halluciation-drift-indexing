@@ -1,0 +1,2057 @@
+[
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "11a8bcb8a550de2e76d298875d1e5e464dcaa461326ed78cce56d726c22b69f2",
+    "questions": 19,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.35051290004048496,
+    "input_tokens": 7026,
+    "output_tokens": 336,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3520966999931261
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "c5511487442b2cce1b0d3153a82640a2290ebecb9f543ef11edf75cbc219b01b",
+    "questions": 25,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.37819140002829954,
+    "input_tokens": 8230,
+    "output_tokens": 444,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3795504999579862
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "54a29daa21cc48e6cd6010f5cadbf7654fc73f3e3421be6b5a73af3c9d62d6a3",
+    "questions": 44,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.42786649998743087,
+    "input_tokens": 13186,
+    "output_tokens": 786,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.4298378000385128
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "3e546e0989ddde8097900b74513d63cb062abe570f274e2317b044c24281ef71",
+    "questions": 17,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.5131364000262693,
+    "input_tokens": 6890,
+    "output_tokens": 300,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.5144179000053555
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "21332a00093835c20a6e0dfa6e5839dae942744eea259bd187125b5ec50d5a43",
+    "questions": 37,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3582711999770254,
+    "input_tokens": 13282,
+    "output_tokens": 660,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.35976650001248345
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "4344b3b574954dd54fb2c321afd9a028784e98be3da22523fbb7e05a4753bd79",
+    "questions": 20,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.38885889999801293,
+    "input_tokens": 8894,
+    "output_tokens": 354,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.39008579996880144
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "7b713d846d83629deb1c72f1775ed605f9504a792808932f01c8b629bac5efaa",
+    "questions": 36,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.35959659999934956,
+    "input_tokens": 13271,
+    "output_tokens": 642,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.360913599957712
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "7c8e7b024befcc50bc2bc104a9759eb69bffc37fe0cb1b73f4f0083c44a57096",
+    "questions": 37,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.38941279996652156,
+    "input_tokens": 14972,
+    "output_tokens": 660,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3910821999888867
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "91745de9c40e09ff4961ee5b3fc78be87e32e1c00fdf561e987397a7e9fe91cf",
+    "questions": 18,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3070995999732986,
+    "input_tokens": 6062,
+    "output_tokens": 318,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3095366000197828
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "93a85e5759f61d715610651091c64b19f65d05fd4d725da83574ee3937c3a0b1",
+    "questions": 20,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3758731000125408,
+    "input_tokens": 7651,
+    "output_tokens": 354,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3774533999967389
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "5f692531ef5b737733b7ba43898c95ec629189d0014fc950a884bb612ea7d455",
+    "questions": 31,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3618177999742329,
+    "input_tokens": 12347,
+    "output_tokens": 552,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.36325190000934526
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "4352ba6dbbaec4280625b51b9b5202a57ce18145f9af5775005d85bc5ae0d927",
+    "questions": 53,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.528541799983941,
+    "input_tokens": 18708,
+    "output_tokens": 948,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.5314006999833509
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "68e021a9b74c16fc517714e3419efac2bec7e2d16ad7aa78ff451d5b22e8a0ed",
+    "questions": 30,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.35148840001784265,
+    "input_tokens": 10367,
+    "output_tokens": 534,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3530894999857992
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "f137aaf91933bce136936b6cb3c005706070c39826a5b2a4aa1db7ababbe95ba",
+    "questions": 32,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.39384909998625517,
+    "input_tokens": 13694,
+    "output_tokens": 570,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3953911999706179
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "c6736fe8fda24fe4cd20868b0f947a500bbe000a3f344983784603e22a27d28b",
+    "questions": 42,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.4348482000059448,
+    "input_tokens": 15179,
+    "output_tokens": 750,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.436446999956388
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "3237285bde67e27a42e2a7840915c03205b459e6d1a5f071b7403d757d4c9223",
+    "questions": 19,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3311608000076376,
+    "input_tokens": 6933,
+    "output_tokens": 336,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.33239430002868176
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "161cd3f2c6193a796afa9e0c4c62a4802935f664f9ef827d4c164dd9778d23b3",
+    "questions": 49,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.4209281000075862,
+    "input_tokens": 18971,
+    "output_tokens": 876,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.42308649996994063
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "866de939a173726b96066feb45b7c6b83782f413bd8187d31d42b629627c8c99",
+    "questions": 28,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.35990049998508766,
+    "input_tokens": 11721,
+    "output_tokens": 498,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3612056000274606
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "78ab94f1f1b8c1fbba52f94b3cf155f412ef5f555f776219cc71c906397be0d5",
+    "questions": 32,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3341495000058785,
+    "input_tokens": 11225,
+    "output_tokens": 570,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.335384999983944
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "abadf96a4bc06be730fcd7916daa216ea123fc788ca6e72071363845ad453fca",
+    "questions": 35,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.37478259997442365,
+    "input_tokens": 12915,
+    "output_tokens": 624,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.37655240000458434
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "c9cb4efa9a7d9e655b21aefd1844ca0834a68da2aec22466e6ac722771ad4310",
+    "questions": 30,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.37114479998126626,
+    "input_tokens": 14495,
+    "output_tokens": 534,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3734952000086196
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "be46bb87781445f9d4cb9b3b86662bbeedc30f240cd4c963d50150fcb4a08922",
+    "questions": 24,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3491071999887936,
+    "input_tokens": 10320,
+    "output_tokens": 426,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.35091439995449036
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "543ffdd08f015e4e2fb1841d5a843a598530fe811bab47e97b73dd1a9a9d44a4",
+    "questions": 54,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.4218113999813795,
+    "input_tokens": 21010,
+    "output_tokens": 966,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.4234522999613546
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "c39955bb1e369f57355a0aaee3184bb505e621a918c8962b233ee0823b993cb8",
+    "questions": 31,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.35101609997218475,
+    "input_tokens": 11230,
+    "output_tokens": 552,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3525245999917388
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "83b5ce06969a3b2800111f9431c73dd5fd193bbd1bd576556a377fdb05558861",
+    "questions": 14,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.29735349997645244,
+    "input_tokens": 6135,
+    "output_tokens": 246,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.29988919995957986
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "c166be651a015fa3224000a294863ddc26661b5f493879c57a3e467bdf5af14d",
+    "questions": 34,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3495515999966301,
+    "input_tokens": 12548,
+    "output_tokens": 606,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3518430999829434
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "fd58d91e500d2ed2b63b0446945e1d8a63fe54f8a34aac6b1c480e36616d01a5",
+    "questions": 30,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.31590899999719113,
+    "input_tokens": 9724,
+    "output_tokens": 534,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3170021999976598
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "9f4e06649af1cf2d07a4574590aabd965b8c22c6ca14bc16122612d7bf87dd83",
+    "questions": 39,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3292617999832146,
+    "input_tokens": 11626,
+    "output_tokens": 696,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3311917000100948
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "3c4aa76fde615d1f95340a3768a7c379ca96c7f82ef842aad84cd1d419032715",
+    "questions": 49,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3459698999649845,
+    "input_tokens": 17108,
+    "output_tokens": 876,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.34783149999566376
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "ed648473f120ebc8be3463b57f925ea972c1aafde0504a577bc1ec2687810337",
+    "questions": 21,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3107832999667153,
+    "input_tokens": 7522,
+    "output_tokens": 372,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3122122000204399
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "11c30abc4e8ac91f38afdcd5e9eb95908c48e57fc89a45dd7fba6d8f371e42ff",
+    "questions": 60,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3774964000331238,
+    "input_tokens": 19190,
+    "output_tokens": 1074,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3791141000110656
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "87d7e77629c45163c7b33c289ec7f8f52fe08eacaa60276b42c65bf39221ea58",
+    "questions": 39,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.4216046999790706,
+    "input_tokens": 16364,
+    "output_tokens": 696,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.42283940000925213
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "f7e046810b66f257cc110c3cc45afb730956583bcaaff54962dc64fb5669f099",
+    "questions": 23,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.2966506999800913,
+    "input_tokens": 8522,
+    "output_tokens": 408,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.29883619997417554
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "7cc470e19e86703b744ab7278a9957893a1c8df33e897844df21b1d6158ec4d1",
+    "questions": 32,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3526063000317663,
+    "input_tokens": 11351,
+    "output_tokens": 570,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.35407760000089183
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "e7c48ba75b6e881262e33cf881ca8c0560d200cb32e3af75cb64eadce5949cf7",
+    "questions": 18,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3818471999838948,
+    "input_tokens": 7086,
+    "output_tokens": 318,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.38428270001895726
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "b5c04119674cc5afeb609b1758d0205d403226f666665ccad1d7d34072d689bb",
+    "questions": 38,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.39954880002187565,
+    "input_tokens": 12499,
+    "output_tokens": 678,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.40098350000334904
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "c13cdb14a331c9e54c664fb343efebade8bb910fc85bcc5beeee6a769a5f19a4",
+    "questions": 17,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3270149999880232,
+    "input_tokens": 5574,
+    "output_tokens": 300,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.32828939997125417
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "07112278ddfe2ac56b91b1c47c2e4606aef0c224cf29a725dba99bc2ad0cf26f",
+    "questions": 43,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3853330000420101,
+    "input_tokens": 16458,
+    "output_tokens": 768,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3882482000044547
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "398e248665dae0e36354c21d500cd9b455097ffff46998fd9dd7f612be6f1fd8",
+    "questions": 29,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3455894000362605,
+    "input_tokens": 10485,
+    "output_tokens": 516,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3469265999738127
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "4d0a1f00ed6fe01b72e68cfafcf13e4dfcd1921eb6461f412c149e8ca3c10b9f",
+    "questions": 26,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.34633029997348785,
+    "input_tokens": 9130,
+    "output_tokens": 462,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3479564000153914
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "f9b96d2c7aa992afb90545dc45af1ad39c24580f6a5e78384c4a671092fa0700",
+    "questions": 31,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.33957410004222766,
+    "input_tokens": 13028,
+    "output_tokens": 552,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3407436999841593
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "677b859e1f79e90a4a052d9bbe71a5f55f969fb09ac8cd56eb3fbfa169b45548",
+    "questions": 22,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3123022000072524,
+    "input_tokens": 7743,
+    "output_tokens": 390,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3134656000183895
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "58652ee813aa63cf6dd97c473c356aeed64903b7ff3c612afbd57cfbaa6da67c",
+    "questions": 24,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.33492549997754395,
+    "input_tokens": 8585,
+    "output_tokens": 426,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.336503200000152
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "ea2d6523c212292e82739a3fab25c52f0d3c4a5d9f2a8b3a9d5c6a1c5dfea647",
+    "questions": 24,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3265286000096239,
+    "input_tokens": 10757,
+    "output_tokens": 426,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.32906489999732
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "11827bb3d63d0e07a3587af377292384befd10b4822081216be4f9f698abecc6",
+    "questions": 37,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3864795999834314,
+    "input_tokens": 15712,
+    "output_tokens": 660,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.38813520001713187
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "88282ce767406fcb96b56fec6081f261ffa2ee9d75274b00dd916278f0d8458a",
+    "questions": 21,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.31983600003877655,
+    "input_tokens": 7984,
+    "output_tokens": 372,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.32092799997190014
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "1e98d4f9cf6a8b6c8284f8c270bc5a48b76651e37afb2978bd7643e71124c5f3",
+    "questions": 15,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3045546999783255,
+    "input_tokens": 7451,
+    "output_tokens": 264,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.30623669998021796
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "0805e8935996343e4d3b0bd4aa95416adba9efccd7366715d67b4587678fe765",
+    "questions": 45,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.396231800026726,
+    "input_tokens": 17309,
+    "output_tokens": 804,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.39796440000645816
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "60ad6e5640e079a8155ed15a11e3ccef087bd659b633df2899f6e1cefdce6544",
+    "questions": 39,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3540674999821931,
+    "input_tokens": 14279,
+    "output_tokens": 696,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.355416200007312
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "535cec75037bba115a23e810625dbdfe0ef551e742cdc7ac3de57bf2bd8185de",
+    "questions": 32,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3853914000210352,
+    "input_tokens": 14997,
+    "output_tokens": 570,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3869543999899179
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "a1c30944104d88f8fe90a9459d6870a62a6f571310f21ab0d9d8962dd6132885",
+    "questions": 36,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.37932080001337454,
+    "input_tokens": 11914,
+    "output_tokens": 642,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.38160889997379854
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "8cfb868279194acbce513724bd0d768a297daa7bd228fe8276d6fb5dba582759",
+    "questions": 37,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.34108220000052825,
+    "input_tokens": 13283,
+    "output_tokens": 660,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3436451000161469
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "3040009c553a3cb3f1a530450cecf379a59e7a192312851bdb1bfa24f5edd3c8",
+    "questions": 40,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3738875000271946,
+    "input_tokens": 16418,
+    "output_tokens": 714,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3756573999999091
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "d35f0c5bf265ecf07fd323008ad65dcf5ec9517927041ece4b2260dd95d5f489",
+    "questions": 20,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.31947990000480786,
+    "input_tokens": 7709,
+    "output_tokens": 354,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3206569000030868
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "6d7d37993d77d09385a5d4557a25b8e56abc753b29332f498d6f8d6c13a7ecc3",
+    "questions": 19,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.31197290000272915,
+    "input_tokens": 6702,
+    "output_tokens": 336,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.31350440002279356
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "6802be40497bc28d9801c21cf64244ae3dd7a5439ec114ab7ba42912680c3078",
+    "questions": 41,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.39374400000087917,
+    "input_tokens": 14397,
+    "output_tokens": 732,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.39643760002218187
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "9e73fdb60e106f4a4658f6930ec99b14b361e11bef39527b7f53b85f791a5976",
+    "questions": 29,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.32752910000272095,
+    "input_tokens": 10780,
+    "output_tokens": 516,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.32903490000171587
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "f441ce6dec60e840332a04518a60eb621d5714b44c824b7d21c7028d5642b283",
+    "questions": 25,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3582530000130646,
+    "input_tokens": 11626,
+    "output_tokens": 444,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3614668999798596
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "06888a5b479a54b56bc3a14a7bffb2008aef81e35c99c2e47c4c9a1355e149f2",
+    "questions": 25,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.5470283999457024,
+    "input_tokens": 11037,
+    "output_tokens": 444,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.5510982999694534
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "c442fa251494c3f04a9fc9849149aad5bf123c7037d793f8a3cd25fc2f7050b9",
+    "questions": 16,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3043427999946289,
+    "input_tokens": 6447,
+    "output_tokens": 282,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.30582510004751384
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "7daa5e1a6a2b52c473a3d49d906626226df7cc601c44dfb33eedc8c2cbbe027f",
+    "questions": 39,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3733137000235729,
+    "input_tokens": 14750,
+    "output_tokens": 696,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.37497020000591874
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "cf09e316def71f14e2d9373713c6513be7c5e65b4eccf2675dc075acfab96a50",
+    "questions": 28,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.34506469999905676,
+    "input_tokens": 11503,
+    "output_tokens": 498,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3463287999620661
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "135c45a58d17609b5615096c58d90a1b40bfb0898454d867689f256f8a236622",
+    "questions": 31,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3254346000030637,
+    "input_tokens": 13195,
+    "output_tokens": 552,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.32777690002694726
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "bf5ec8b700443a68932f03da4976afb522f96b181ce86d5af4bc9d45adcfc2e8",
+    "questions": 8,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.30299409996951,
+    "input_tokens": 4684,
+    "output_tokens": 140,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.304725399997551
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "a6308537e0b9ae037f4f9820ddf3c6647db9666e17516ee1b8a4ad3689467fd6",
+    "questions": 64,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.4086365000111982,
+    "input_tokens": 15913,
+    "output_tokens": 1146,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.4107124999864027
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "0221fcc44739c777264d52e07a9bc7db38637dfe3637601592263d8f46bf6d10",
+    "questions": 37,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.5794944000081159,
+    "input_tokens": 13805,
+    "output_tokens": 660,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.5822341999737546
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "24a1455fc8d48ee6baab9a0812cefed278f82e5dd5fbbf2b2ba6d5c7698ec58d",
+    "questions": 64,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3489127000211738,
+    "input_tokens": 15843,
+    "output_tokens": 1146,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.35086899995803833
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "d4dd8fe95e7efac1c4f18d62817c6c1eea30a692b5c6da53037a09f4671cb6dd",
+    "questions": 13,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.2997122000087984,
+    "input_tokens": 6081,
+    "output_tokens": 228,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.30079979996662587
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "6c40d6eaf9aca20b53e848ddbf5c6f832c067e057f5882bb3202a29b257ff4ec",
+    "questions": 24,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 2,
+    "elapsed_seconds": 0.3199542000074871,
+    "input_tokens": 5069,
+    "output_tokens": 426,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.32155300001613796
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "f5103fd8c6d331cd94bcd00d1bcbdcc97e7bf63fc04d17100f447ff2ae66adf0",
+    "questions": 16,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.337596700002905,
+    "input_tokens": 7072,
+    "output_tokens": 282,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3400003000278957
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "80a0a44f476e8f3738b8c997dd0b6071b0b24f19383a8da284ee7c74de59b550",
+    "questions": 24,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 2,
+    "elapsed_seconds": 0.29708920000121,
+    "input_tokens": 5103,
+    "output_tokens": 426,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.2984027999918908
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "292ab1897e51d9c3ae5c16b1d0980d48650a374d106e973c337a34cbea91c433",
+    "questions": 10,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.33705469995038584,
+    "input_tokens": 4516,
+    "output_tokens": 174,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.33803009998518974
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "f9e0879094dd0bef7f0c9f9e9b7c6c01c27d48e015258f932980703b4cc77118",
+    "questions": 16,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.31278959999326617,
+    "input_tokens": 5928,
+    "output_tokens": 282,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3147924999939278
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "34e9cd08d68072925aedb36108c54bd941a1d70f8b620fea6aaf30111e273027",
+    "questions": 8,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.32028829999035224,
+    "input_tokens": 4467,
+    "output_tokens": 140,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.32163580000633374
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "1d070175f6804932b3ae49397aa687ff3592ee1f9beb711a724db79ba448af86",
+    "questions": 7,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3130822000093758,
+    "input_tokens": 4206,
+    "output_tokens": 123,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3140475999680348
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "1b7f8e39d69744724d93f6eaf98e7ed5462d2f52df5c4a61a8d0b6b25270e461",
+    "questions": 27,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3701724000275135,
+    "input_tokens": 12650,
+    "output_tokens": 480,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.37210709997452796
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "b68a582f40e9fc351df079db997ff6284fd90fa465d15e95602d7e68d2105905",
+    "questions": 46,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.4041587000247091,
+    "input_tokens": 16238,
+    "output_tokens": 822,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.4068787000142038
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "b547f80fff2486c799b58d95b10af968f3f52ca5cef5cbb6dc583c6fcc190157",
+    "questions": 35,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.38548689999151975,
+    "input_tokens": 15163,
+    "output_tokens": 624,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3874138999963179
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "f1c2d92bbd1e505970e929ae24bf9ae8df8e86cccc00edea6350f7d99e7a024f",
+    "questions": 59,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.44923909998033196,
+    "input_tokens": 19656,
+    "output_tokens": 1056,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.4505854999879375
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "ee3cd0e59e9e024c286d0b4012257c266dc3ea76ae62affbbe8a7959b8a28e6a",
+    "questions": 30,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.35353640001267195,
+    "input_tokens": 13001,
+    "output_tokens": 534,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3548050000099465
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "389ae9eb9b2b01b45da5cc986be8a1113b3d7689b7b079d1c56713475b7994d0",
+    "questions": 27,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3809963999665342,
+    "input_tokens": 11706,
+    "output_tokens": 480,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.38332660001469776
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "49dcff8e7db470d87ebb00bd804be79e7e207108d7d558de1b468e3608547830",
+    "questions": 19,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3110368000343442,
+    "input_tokens": 8163,
+    "output_tokens": 336,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.31222219998016953
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "82d565a72bcd3ced7ba58e646286da5547313bc2646a3f1473c691cb1959b154",
+    "questions": 15,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3155671000131406,
+    "input_tokens": 8537,
+    "output_tokens": 264,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.31678319995990023
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "f48d4090daf858c1443c8b494f08295e928e658d665f097a294bac659f36aacb",
+    "questions": 43,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.38256679999176413,
+    "input_tokens": 15660,
+    "output_tokens": 768,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.38448750000679865
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "502facf7d177720d398db8cb5c6a6302ee7f16d5cabc1936c08ba49a887697c3",
+    "questions": 19,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3277152000227943,
+    "input_tokens": 8118,
+    "output_tokens": 336,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.32993650005664676
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "606ff4d2e9379bfbb77ef4a2a75d22a2a2f2c7014bb3b4692a4728cca22e9511",
+    "questions": 42,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3547174999839626,
+    "input_tokens": 15126,
+    "output_tokens": 750,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.35711699997773394
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "1d698eadc517927718866db3283e23876f51378650edcbd3031936d9adb7d6da",
+    "questions": 42,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.39084960002219304,
+    "input_tokens": 15059,
+    "output_tokens": 750,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3927014999790117
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "738b38ff03389425de2d542e8fcfa2fd7a1c3fe8f360e69c44786a9e840d1762",
+    "questions": 24,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.34849139995640144,
+    "input_tokens": 11593,
+    "output_tokens": 426,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.35071270004846156
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "c337775af9d7420aff7b60ba864a99d7f121c89ccbecb1eca7e833e7b2ee416a",
+    "questions": 52,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.7638524000067264,
+    "input_tokens": 18027,
+    "output_tokens": 930,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.7654885000083596
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "d05629095c1c1c282cc5b4810e9589ce3464676f3ae1025c7ef80c9f81373ad7",
+    "questions": 45,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3804562999866903,
+    "input_tokens": 16044,
+    "output_tokens": 804,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3824111000285484
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "3dfdb4b7dfcc2a18afca442aeeaadbc5d43c0dc9fcabc512ad63a27ccdc391d6",
+    "questions": 64,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.4148096999851987,
+    "input_tokens": 19213,
+    "output_tokens": 1146,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.4160395000362769
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "c270d0f521ef221304f62b592d6fcbdb2a4870aa3226f6ac1dcaf9a10be19704",
+    "questions": 51,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.36459610000019893,
+    "input_tokens": 17603,
+    "output_tokens": 912,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3657444999553263
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "e00d71aa5d2c3d00202971627047c319d75c3c1b100ad8189b6e90fda51a2435",
+    "questions": 51,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.39323599997442216,
+    "input_tokens": 17614,
+    "output_tokens": 912,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.39561599999433383
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "a802026160c70c269145523e95f50ccc6133672921d9c917db214a57b1e8e706",
+    "questions": 16,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 2,
+    "elapsed_seconds": 0.43141259998083115,
+    "input_tokens": 3740,
+    "output_tokens": 282,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.4326098999590613
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "3c448957d0923ff1fe8d27d296008f4bb115f2fce81fd23166ca47107017decd",
+    "questions": 64,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.4030612000497058,
+    "input_tokens": 18864,
+    "output_tokens": 1146,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.40457700000843033
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "fef1099c9cf0548885edd315f0ffb5ad0cc4db46811b8b5f1a22be9342a91eb3",
+    "questions": 48,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.4037708999821916,
+    "input_tokens": 16988,
+    "output_tokens": 858,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.40509979997295886
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "5121840471b5126cc65a4865b41b668f58b795fb24d10a118a97456b7df21b34",
+    "questions": 39,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.36025789997074753,
+    "input_tokens": 14847,
+    "output_tokens": 696,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3626236999989487
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "80f41f7558a9329c6c8612a49ece8a785916ac0b9825540e61886e7736633c0a",
+    "questions": 48,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 2,
+    "elapsed_seconds": 0.35503009997773916,
+    "input_tokens": 11061,
+    "output_tokens": 858,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.35660810000263155
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "d6eda1404fb4a31ea5d4d7bfb829f152328348e0efa72b3bc8eae2b965956d6b",
+    "questions": 64,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.4164195999619551,
+    "input_tokens": 20669,
+    "output_tokens": 1146,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.4185748000163585
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "99db351deae36e1c7b4d1c46e5a16ac1490995c322478268e372938ad5fdb7dd",
+    "questions": 64,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.43988989997887984,
+    "input_tokens": 20633,
+    "output_tokens": 1146,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.4426159000140615
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "beb729a7e38a515d65966d8a4075f53aa059f45d2aa9252ff05d80869da5b953",
+    "questions": 31,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3639385999995284,
+    "input_tokens": 13213,
+    "output_tokens": 552,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.36609790002694353
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "6045c4d462b434618e8e1c18c1c2b7b1179c5ed57ef0d780f0329a6e3ad198c5",
+    "questions": 8,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 2,
+    "elapsed_seconds": 0.2643289000261575,
+    "input_tokens": 1922,
+    "output_tokens": 140,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.2656810999615118
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "97a4f7a9538889bbc9bfcb9443e07d6eb55f33da3eb1ecc0cab5bfa8fcf0526b",
+    "questions": 8,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 2,
+    "elapsed_seconds": 0.3041811999864876,
+    "input_tokens": 1898,
+    "output_tokens": 140,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3061470999964513
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "61d170d4ee3759ae71d5674de5669347cab2941deea1f29093adf9edb47080f2",
+    "questions": 31,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.4565500000026077,
+    "input_tokens": 13253,
+    "output_tokens": 552,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.45812519994797185
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "de9aeb958d1771c6f1dfea3cd9e58f84c16356116a1bfeb12f9eb6f2472171bc",
+    "questions": 40,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.36767410003812984,
+    "input_tokens": 15329,
+    "output_tokens": 714,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3691489000339061
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "efa1d732d4320fc4b0cf0c0b1bb8157bb57de496d1a1ba2863f212ec93549b1c",
+    "questions": 56,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3973073000088334,
+    "input_tokens": 17704,
+    "output_tokens": 1002,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.39925429999129847
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "94842c1f1b773531cffe567512cb4a15cad400ca130685bcee34680ab6e20daa",
+    "questions": 48,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.41510899999411777,
+    "input_tokens": 16040,
+    "output_tokens": 858,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.4172392000327818
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "d020359c1dd17f198d7776c2894b5557b57a68d854875524ab5e7e622429e82e",
+    "questions": 64,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.42043649998959154,
+    "input_tokens": 19867,
+    "output_tokens": 1146,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.4220897000050172
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "df8f50a2f39434f369538f1c5088cc374b9ef7734d44380a150b136789df78a8",
+    "questions": 43,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.37557610002113506,
+    "input_tokens": 16159,
+    "output_tokens": 768,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.37759739998728037
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "5a467cca4eaf7365109642cb87c2e3ca4462c1bf0579dd885306399851f415bf",
+    "questions": 38,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3610377999721095,
+    "input_tokens": 14148,
+    "output_tokens": 678,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.36245819996111095
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "cb11578685181d8e9d6e83b41721421a47fffc4bffefc32646bf80bc48b3916e",
+    "questions": 11,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 2,
+    "elapsed_seconds": 0.29786250001052395,
+    "input_tokens": 2619,
+    "output_tokens": 192,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.29892510001081973
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "1de8b8b856afe6a4fd6230403e212b4a8522afe4c6b9bc4962802d4ad2e520d1",
+    "questions": 64,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.43891399999847636,
+    "input_tokens": 19637,
+    "output_tokens": 1146,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.44121780002024025
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "af31d79e0a2713a5af00ccf7b1c5396b39849b8f00685dc6ff6df01073d13dde",
+    "questions": 39,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.39442199998302385,
+    "input_tokens": 12101,
+    "output_tokens": 696,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3967679999768734
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "79bc3f734fd4211f7460f576d9e037c05c885fcb108603b54ec663c335da363b",
+    "questions": 29,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.35052630002610385,
+    "input_tokens": 12376,
+    "output_tokens": 516,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3522829000139609
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "aa4b40764b9d443bc69efe557516166bb60700c35336e4300b857d4a680ae411",
+    "questions": 8,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 2,
+    "elapsed_seconds": 0.29022809996968135,
+    "input_tokens": 2040,
+    "output_tokens": 140,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.2917888999800198
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "964ff287e29f5dd0f1b157c4458764022a72dc97a877afb8f0611f6273d8eb0d",
+    "questions": 23,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.4810905999620445,
+    "input_tokens": 8410,
+    "output_tokens": 408,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.4821335999877192
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "f241918cc6a477e9635185b245f576b45598aec949584e4650d160de1be9572a",
+    "questions": 45,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.4086511000059545,
+    "input_tokens": 16602,
+    "output_tokens": 804,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.41053729999111965
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "ea98d9086752d775a6a0f3ac3f3413c7d752ebd7105cf748e707e148a7e68ea1",
+    "questions": 55,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.5777924999711104,
+    "input_tokens": 19113,
+    "output_tokens": 984,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.5793804000131786
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "aeb6b8e57c29ad88092957f2bdee94c1400c17787edfe7beb81c6da7d8beeb32",
+    "questions": 46,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.38163930003065616,
+    "input_tokens": 15393,
+    "output_tokens": 822,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.38307679997524247
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "468912d69b9405eec1028dd5c66da7d9345bc031f5b65b56f884e6efd0f4dcda",
+    "questions": 53,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.39241390000097454,
+    "input_tokens": 17173,
+    "output_tokens": 948,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.39394740003626794
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "847fb3980624b1273c0f1a74f1e76ac1c73c5078b407fb53390fe35036eaed94",
+    "questions": 53,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3721633999957703,
+    "input_tokens": 17154,
+    "output_tokens": 948,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.37490340002113953
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "985689de0aed2e3c17b6191afb48f2fa09e9879116a4cf252c908314253a1842",
+    "questions": 17,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3203162000281736,
+    "input_tokens": 10158,
+    "output_tokens": 300,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.32345620001433417
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "c4c8f3256d77c096ef158ec3687b9bd98965d878945e5fd43d196cf883267a01",
+    "questions": 18,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.33031920000212267,
+    "input_tokens": 10579,
+    "output_tokens": 318,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.332021199981682
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "5386e4a436d835e8c5ab272468ccbaf76beac3e9811610caa0c97e5c74abe417",
+    "questions": 56,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3799237000057474,
+    "input_tokens": 17343,
+    "output_tokens": 1002,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.38125710003077984
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "e57e2fd23959ed069d0310f40a92c5f51c44fd9310c8e47ad9e81fa12bef18a5",
+    "questions": 64,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.4005874000140466,
+    "input_tokens": 19151,
+    "output_tokens": 1146,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.4032766000018455
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "732bd4a4e5aa545f7f8bbd647340500b384b405bb685724ef9c88a09dce7c436",
+    "questions": 45,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.35348599997814745,
+    "input_tokens": 15528,
+    "output_tokens": 804,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3554337000241503
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "65573cf88c0ee34ec1f287de37dbf22f397a3ade9fa512f6f3b7a3a8623a31cd",
+    "questions": 24,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 2,
+    "elapsed_seconds": 0.3980098000029102,
+    "input_tokens": 5376,
+    "output_tokens": 426,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.39933520002523437
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "b865ec11c5b5c2c9d0530ebe541af125947e64abe8e7d22ab21853d5b7fdd62a",
+    "questions": 45,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.630288099986501,
+    "input_tokens": 15549,
+    "output_tokens": 804,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.6322046000277624
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "eaf1af056cf2fe7b8b01d0423fb7c76ef54dd6cdbefe8de68595b3b444b643a2",
+    "questions": 38,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.588630500016734,
+    "input_tokens": 14084,
+    "output_tokens": 678,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.590182600019034
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "ceaaf941f2abedc777bdd6a6b4638755d7bafcaf5d8e4b8ae1908c6b29a35851",
+    "questions": 18,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3307992999907583,
+    "input_tokens": 11129,
+    "output_tokens": 318,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.33523730002343655
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "aee1f8277c2bf021451de32c855bf6f8bd3e9cbae19b8e6662a62ccc85545b9a",
+    "questions": 34,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.35388319997582585,
+    "input_tokens": 13795,
+    "output_tokens": 606,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.35614049999276176
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "308bab72d876c14edd2a977613e353523a025f4a0fc577d51b43e593181f899e",
+    "questions": 34,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.38578539999434724,
+    "input_tokens": 13755,
+    "output_tokens": 606,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3874950999743305
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "4656af0e55805e3591c6d2e881810ba39ea8dcb1b62b2f47ffa51851cce0db87",
+    "questions": 61,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.40754559997003525,
+    "input_tokens": 18815,
+    "output_tokens": 1092,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.409434599976521
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "50148f4159e42014039f9962fb78458babc1f435d5cf872cf310fb6f847f02e6",
+    "questions": 15,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.4074350000009872,
+    "input_tokens": 8289,
+    "output_tokens": 264,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.4087007999769412
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "1c1bccfe052a223736b31edf335e9699e5fc4a04060ad30c9e212e3c365e1f49",
+    "questions": 8,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3039808999747038,
+    "input_tokens": 5123,
+    "output_tokens": 140,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3054583000484854
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "51ead532729230c58cc123c32e3b41d08d008abf32322e8befa01b7e8ae4b8a1",
+    "questions": 10,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.3311721000354737,
+    "input_tokens": 5471,
+    "output_tokens": 174,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.33298219996504486
+  },
+  {
+    "model": "jev-1.13.0",
+    "request_sha256": "4becbb438273d514ac7c9260d04201ea33f1db3450eac36ed4570564f656df92",
+    "questions": 12,
+    "status": "ok",
+    "stage": "reranking",
+    "request_number": 1,
+    "elapsed_seconds": 0.37589020002633333,
+    "input_tokens": 6370,
+    "output_tokens": 210,
+    "response_models": [
+      "jev-1.13.0"
+    ],
+    "seconds": 0.3769225999712944
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "codex": {
+    "attempts": 99,
+    "status_counts": {
+      "ok": 97,
+      "failed": 2
+    },
+    "reported_input_tokens": 2876144,
+    "reported_output_tokens": 21340,
+    "usage_note": "Token totals cover successful calls; the two rejected formatting attempts were reserved but their token usage was not retained by the original client."
+  },
+  "jev": {
+    "attempts": 137,
+    "status_counts": {
+      "ok": 137
+    },
+    "reported_input_tokens": 1658833,
+    "reported_output_tokens": 81417,
+    "decisions": 4568
+  }
+}

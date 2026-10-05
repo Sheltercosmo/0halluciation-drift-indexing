@@ -1,0 +1,10 @@
+{
+  "codex": {
+    "attempts": 9,
+    "status_counts": {
+      "ok": 9
+    },
+    "reported_input_tokens": 149682,
+    "reported_output_tokens": 1355
+  }
+}

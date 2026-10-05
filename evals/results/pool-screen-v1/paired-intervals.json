@@ -1,0 +1,72 @@
+{
+  "qasper/jev_blocking_rerank": {
+    "answer_score": {
+      "difference": 0.03080114804268679,
+      "ci95": [
+        -0.03898555440314743,
+        0.10338143861047594
+      ],
+      "documents": 64,
+      "questions": 64,
+      "replicates": 10000
+    },
+    "evidence_recall": {
+      "difference": 0.08374384236453201,
+      "ci95": [
+        0.030788177339901475,
+        0.14778325123152708
+      ],
+      "documents": 58,
+      "questions": 58,
+      "replicates": 10000
+    }
+  },
+  "qasper/codex_pool_8192": {
+    "answer_score": {
+      "difference": 0.01939653692495401,
+      "ci95": [
+        -0.03186748005779755,
+        0.07655917706865246
+      ],
+      "documents": 64,
+      "questions": 64,
+      "replicates": 10000
+    },
+    "evidence_recall": {
+      "difference": -0.007902298850574713,
+      "ci95": [
+        -0.03304597701149426,
+        0.017241379310344827
+      ],
+      "documents": 58,
+      "questions": 58,
+      "replicates": 10000
+    }
+  },
+  "quality/jev_blocking_rerank": {
+    "answer_score": {
+      "difference": -0.015625,
+      "ci95": [
+        -0.08196721311475409,
+        0.04838709677419355
+      ],
+      "documents": 55,
+      "questions": 64,
+      "replicates": 10000
+    },
+    "evidence_recall": null
+  },
+  "quality/codex_pool_8192": {
+    "answer_score": {
+      "difference": -0.03125,
+      "ci95": [
+        -0.09375,
+        0.03076923076923077
+      ],
+      "documents": 55,
+      "questions": 64,
+      "replicates": 10000
+    },
+    "evidence_recall": null
+  }
+}

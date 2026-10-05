@@ -1,0 +1,114 @@
+{
+  "status": "development_only_not_confirmatory",
+  "questions": 128,
+  "methods": {
+    "codex_pool_8192": {
+      "qasper": {
+        "questions": 64,
+        "answer_score": 0.5378338545602273,
+        "evidence_recall": 0.9134852216748769,
+        "complete_evidence": 0.8275862068965517,
+        "retrieved_evidence_f1": 0.1719993347681026,
+        "context_tokens": 2008.671875
+      },
+      "quality": {
+        "questions": 64,
+        "answer_score": 0.90625,
+        "evidence_recall": null,
+        "complete_evidence": null,
+        "retrieved_evidence_f1": null,
+        "context_tokens": 1908.578125
+      }
+    },
+    "hybrid_codex_rerank": {
+      "qasper": {
+        "questions": 64,
+        "answer_score": 0.5381183893676643,
+        "evidence_recall": 0.896243842364532,
+        "complete_evidence": 0.7931034482758621,
+        "retrieved_evidence_f1": 0.17648265841420166,
+        "context_tokens": 1970.828125
+      },
+      "quality": {
+        "questions": 64,
+        "answer_score": 0.875,
+        "evidence_recall": null,
+        "complete_evidence": null,
+        "retrieved_evidence_f1": null,
+        "context_tokens": 1904.71875
+      }
+    },
+    "hybrid_recursive": {
+      "qasper": {
+        "questions": 64,
+        "answer_score": 0.4865716666450821,
+        "evidence_recall": 0.80936986863711,
+        "complete_evidence": 0.6896551724137931,
+        "retrieved_evidence_f1": 0.15410874644536263,
+        "context_tokens": 1994.875
+      },
+      "quality": {
+        "questions": 64,
+        "answer_score": 0.875,
+        "evidence_recall": null,
+        "complete_evidence": null,
+        "retrieved_evidence_f1": null,
+        "context_tokens": 1915.09375
+      }
+    },
+    "hybrid_semantic": {
+      "qasper": {
+        "questions": 64,
+        "answer_score": 0.5136337227666447,
+        "evidence_recall": 0.8376949917898193,
+        "complete_evidence": 0.7241379310344828,
+        "retrieved_evidence_f1": 0.1591325218603824,
+        "context_tokens": 2021.046875
+      },
+      "quality": {
+        "questions": 64,
+        "answer_score": 0.890625,
+        "evidence_recall": null,
+        "complete_evidence": null,
+        "retrieved_evidence_f1": null,
+        "context_tokens": 2028.8125
+      }
+    },
+    "jev_blocking_rerank": {
+      "qasper": {
+        "questions": 64,
+        "answer_score": 0.5264292434424945,
+        "evidence_recall": 0.8218390804597702,
+        "complete_evidence": 0.7241379310344828,
+        "retrieved_evidence_f1": 0.17303679454208654,
+        "context_tokens": 1919.171875
+      },
+      "quality": {
+        "questions": 64,
+        "answer_score": 0.890625,
+        "evidence_recall": null,
+        "complete_evidence": null,
+        "retrieved_evidence_f1": null,
+        "context_tokens": 1991.25
+      }
+    },
+    "jev_pool_8192": {
+      "qasper": {
+        "questions": 64,
+        "answer_score": 0.5572303914851813,
+        "evidence_recall": 0.9055829228243021,
+        "complete_evidence": 0.8275862068965517,
+        "retrieved_evidence_f1": 0.17394269289481668,
+        "context_tokens": 2032.703125
+      },
+      "quality": {
+        "questions": 64,
+        "answer_score": 0.875,
+        "evidence_recall": null,
+        "complete_evidence": null,
+        "retrieved_evidence_f1": null,
+        "context_tokens": 2037.375
+      }
+    }
+  }
+}

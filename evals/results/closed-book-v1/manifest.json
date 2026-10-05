@@ -1,0 +1,13 @@
+{
+  "status": "registered_before_inference",
+  "partition": "exposed_development",
+  "purpose": "Measure how informative this QuALITY screen is about retrieval.",
+  "questions": 64,
+  "source_context": "No document source has been supplied.",
+  "cases_sha256": "2fb5a6bed915b424d67bb8104832e8c7506acbc5c3d04fc8a70c1d15d1a3bdd6",
+  "source_hashes": {
+    "scripts/closed_book_probe.py": "5e902494c79f60da3d29fdb532c36a8ac1795eee7ac45c6a4d8519bfe7d28138",
+    "scripts/bounded_clients.py": "169e72258a8d495bd5e7ddf514779bb6155f37c448a889f87f3bf3491225b3d5",
+    "scripts/bounded_eval.py": "6bc9a4938a83fbc4b4915fd56fdb4667d499ed39cb2144471d2afff37f8ba981"
+  }
+}

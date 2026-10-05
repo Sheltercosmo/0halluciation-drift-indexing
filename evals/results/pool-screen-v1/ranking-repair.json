@@ -1,0 +1,82 @@
+{
+  "status": "development_amendment_before_reading",
+  "rule": "Preserve valid unique returned IDs; append omitted IDs in original hybrid retrieval order.",
+  "model_calls": 0,
+  "records": [
+    {
+      "id": "quality/62261_SJZYUNBJ_7",
+      "request_sha256": "5e641ddfcaf20f52520b01ed0d885059dd74c7e550970981aa50283ae138a9ea",
+      "raw_order": [
+        13,
+        2,
+        12,
+        5,
+        10,
+        6,
+        8,
+        4,
+        1,
+        3,
+        9,
+        0,
+        11
+      ],
+      "expected_candidates": 14,
+      "completed_order": [
+        13,
+        2,
+        12,
+        5,
+        10,
+        6,
+        8,
+        4,
+        1,
+        3,
+        9,
+        0,
+        11,
+        7
+      ],
+      "omitted_ids_appended": [
+        7
+      ]
+    },
+    {
+      "id": "quality/63130_PRY03TR7_6",
+      "request_sha256": "5e641ddfcaf20f52520b01ed0d885059dd74c7e550970981aa50283ae138a9ea",
+      "raw_order": [
+        5,
+        4,
+        3,
+        0,
+        2,
+        10,
+        8,
+        1,
+        6,
+        9,
+        7,
+        11,
+        12
+      ],
+      "expected_candidates": 13,
+      "completed_order": [
+        5,
+        4,
+        3,
+        0,
+        2,
+        10,
+        8,
+        1,
+        6,
+        9,
+        7,
+        11,
+        12
+      ],
+      "omitted_ids_appended": []
+    }
+  ]
+}
