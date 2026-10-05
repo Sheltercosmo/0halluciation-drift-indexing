@@ -1,0 +1,280 @@
+{
+  "version": "tree-retrieval-v3-confirmatory",
+  "status": "frozen_before_validation",
+  "registry_sha256": "e219668d9bdd49d6fc8981e1e6e0d60afbd6cfd9aaa4a40d385ffeade8d26964",
+  "sources": {
+    "scripts/retrieval_v3.py": "44dd9bffcc7b6c58d6eae0be821b2e3ad720e52d8e8955024651ad8062153ca5",
+    "scripts/retrieval_v3_clients.py": "99c7db74e01a1d81b488e7d51c83db0a4cc180eabae5ea0125a9c2750125e873",
+    "scripts/bounded_clients.py": "169e72258a8d495bd5e7ddf514779bb6155f37c448a889f87f3bf3491225b3d5",
+    "scripts/bounded_eval.py": "6bc9a4938a83fbc4b4915fd56fdb4667d499ed39cb2144471d2afff37f8ba981",
+    "scripts/live_tree_clients.py": "5782acd9809005bed4eb8035268aabc25e9e9d8f24d7898acba93b0cfde215e1",
+    "scripts/live_tree_eval.py": "6c4dfe70a333a9e4417fe883b2639e6efd67b17e3eb776c6d37631da6886b69c",
+    "scripts/retrieval_v3_planner.py": "5017e81d8a2159430906eac64f7fbf11be11fb112ca5120c8385e82396becc70",
+    "scripts/experiment_clients.py": "50ea2f44f62bf83becb6b0def95ac0ae8da445e44f5835224c1fe948eeb6af65",
+    "scripts/retrieval_v3_metrics.py": "df1ed0058d6177b2e8db51609a7cf869daf79cf6310d8e028af70b60a02103e7",
+    "scripts/analyze_retrieval_v3.py": "23dd08e577184db447a0b3d263ab25813a32342d1e723d1f1905d91200356cf3",
+    "scripts/retrieval_v3_bge.py": "275cb4a3c01c00231f5d440e0f293d7676d1ee1bdd02d3b56c2833be6c58cd1e",
+    "zero_index/cli.py": "1556c67ecee0c72967e3d68124e9b38d41e25fa52afa79890cf4f4c14895df1f",
+    "zero_index/context.py": "fb35635a3efcfc0ab7b3281ad4554c1ad9bf6277888aa087646d9dbd9faac53c",
+    "zero_index/context_merge.py": "dd4550a3410e029c57ff3e2ff0e8243e2dc5e22b1d5c4f9d1feff6f061990569",
+    "zero_index/embeddings.py": "52c03e43a79a483bf10fc6048ee179a0e48d00bad1fa57495103b28de2bab65d",
+    "zero_index/evidence.py": "48da420f87e0a9078b6ba9786673ed256e70b39623fdac714fa6d59f7119ee24",
+    "zero_index/evidence_search.py": "b28683e779c571d75f624f5386f6013774f1f26f421d3aee34facc5d84db3e8a",
+    "zero_index/hybrid_retrieval.py": "0e2633e9a3943e2064f1418a7906b84f220c8418d3c62c9143ddff0b8fd772aa",
+    "zero_index/index.py": "1535767762c6dc147c24ef5dfdbffdac0fea95b61991a3d791e26f06314dd612",
+    "zero_index/jev.py": "c6505f9db44a1cb6cb5ebd9f3528541a83e1b6d3ca869522318655dc74cbb376",
+    "zero_index/model.py": "3ba201218de33001ad6fd820e05928144bed0c6d5032a880a7ccfe627dd55f33",
+    "zero_index/parallel.py": "dc8e677f09625652d7012b178657bcf30afa05bf899118424b00e74972da3222",
+    "zero_index/parse.py": "b2b09b61a377d2ba7736c7dd757db3c0b5af2c866dbd2851f658c177665e04ef",
+    "zero_index/ranking.py": "2dddde2262f35ed762a57f9320129990debdfe1954569a4ef9788da792303a0d",
+    "zero_index/retrieval.py": "6db3dee235c4ae06e8bc2433591016d6addcc127ca637525baef939909e7271a",
+    "zero_index/segment.py": "44f7879a4ebe4e81ffc1c475a99b99db1abd7f0a7aa8714e3a627b1a68c8698e",
+    "zero_index/separation.py": "adc3a13056bff7c42d174342a8a9550d48b5821d86804813177d0dbc6fba09d0",
+    "zero_index/structure.py": "3f36f8fda4e3901385e0a9230057e19d96f1d3d20ccebbb16d18924cbe8724f8",
+    "zero_index/tree_search.py": "c1e998a3afe1222ccafa2859518a9cdb10e8bf1079af7ddc3c801ff125503173",
+    "zero_index/__init__.py": "e28629c3a2062cc41e5c13af0d9acb3a0928f36af7a3f2a3f0d73a6d1648f52a",
+    "zero_index/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "scripts/retrieval_v3_gate.py": "a73ce7d48bd624ca818292ecd44646a34c6e57acbe10bb9bc1b85b309750529f"
+  },
+  "config": {
+    "beam": 5,
+    "acceptance": 0.2,
+    "global_hits": 30,
+    "ancestor_paragraphs": 3,
+    "child_cues": 6,
+    "extra_sentences": 8,
+    "refine_below": 0.85,
+    "max_decisions": 4096
+  },
+  "methods": [
+    "EEE",
+    "EEJ",
+    "EJE",
+    "EJJ",
+    "JEE",
+    "JEJ",
+    "JJE",
+    "JJJ",
+    "gemini_dense",
+    "bm25_dense_rrf",
+    "hybrid",
+    "qwen_dense",
+    "qwen_rerank",
+    "bge_dense",
+    "bge_rerank"
+  ],
+  "system_candidates": [
+    "JJJ",
+    "hybrid"
+  ],
+  "primary": "aligned paragraph recall@5",
+  "secondary": [
+    "complete@5",
+    "f1@5",
+    "recall@tokens2048"
+  ],
+  "selection": "recall@5 then complete@5 then f1@5 then method id",
+  "output_unit": "whole_original_paragraph",
+  "pilot_manifest_sha256": "47cd3f4262f1e1f3df0ece57f4892ee9bdbed1d53387422f44648728f34f2dc6",
+  "pilot_summary_sha256": "64179d0e07197b24f0a4b88eb3ac1416a57aa51e51fe5f51418b70623ef5fa7a",
+  "annotation_policy": "exact or unambiguous whitespace-normalized source paragraph match; require one fully mapped nonempty reference; report excluded and raw official metric separately",
+  "baseline_models": {
+    "qwen_embedding": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+    "qwen_reranker": "e61197ed45024b0ed8a2d74b80b4d909f1255473",
+    "bge": {
+      "embedding": "5617a9f61b028005a4858fdac845db406aefb181",
+      "reranker": "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e"
+    }
+  },
+  "component_contrasts": [
+    [
+      "EEE",
+      "JEE"
+    ],
+    [
+      "EJE",
+      "JJE"
+    ],
+    [
+      "EEJ",
+      "JEJ"
+    ],
+    [
+      "EJJ",
+      "JJJ"
+    ],
+    [
+      "EEE",
+      "EJE"
+    ],
+    [
+      "EEJ",
+      "EJJ"
+    ],
+    [
+      "JEE",
+      "JJE"
+    ],
+    [
+      "JEJ",
+      "JJJ"
+    ],
+    [
+      "EEE",
+      "EEJ"
+    ],
+    [
+      "EJE",
+      "EJJ"
+    ],
+    [
+      "JEE",
+      "JEJ"
+    ],
+    [
+      "JJE",
+      "JJJ"
+    ]
+  ],
+  "final_system_contrasts": [
+    [
+      "selected",
+      "EEE"
+    ],
+    [
+      "selected",
+      "gemini_dense"
+    ],
+    [
+      "selected",
+      "bm25_dense_rrf"
+    ],
+    [
+      "selected",
+      "qwen_dense"
+    ],
+    [
+      "selected",
+      "qwen_rerank"
+    ],
+    [
+      "selected",
+      "bge_dense"
+    ],
+    [
+      "selected",
+      "bge_rerank"
+    ]
+  ],
+  "statistics_seed": 20261005,
+  "statistical_unit": "document cluster, question-weighted macro mean",
+  "statistics": "paired document bootstrap 10000 draws; paired document sign randomization; Holm across 12 component contrasts and separately all registered final-system contrasts",
+  "scope": "within-document QASPER paragraph retrieval; compact Qwen and BGE baselines, no corpus/frontier claim",
+  "pilot_model": "gpt-6.1-sol",
+  "pilot_settings_selection": "Gemini 3.8 sweep selected beam 5/acceptance .2/global hits 30; repeated on development with final shared Codex planner",
+  "practical_gain_target": 0.02,
+  "pilot_template": {
+    "version": "tree-retrieval-v3",
+    "status": "registered_before_inference",
+    "partition": "development",
+    "questions": 16,
+    "documents": 16,
+    "methods": [
+      "EEE",
+      "EEJ",
+      "EJE",
+      "EJJ",
+      "JEE",
+      "JEJ",
+      "JJE",
+      "JJJ",
+      "gemini_dense",
+      "bm25_dense_rrf",
+      "hybrid",
+      "qwen_dense",
+      "qwen_rerank"
+    ],
+    "config_name": "b5_a2",
+    "config": {
+      "beam": 5,
+      "acceptance": 0.2,
+      "global_hits": 30,
+      "ancestor_paragraphs": 3,
+      "child_cues": 6,
+      "extra_sentences": 8,
+      "refine_below": 0.85,
+      "max_decisions": 4096
+    },
+    "factor_order": [
+      "split",
+      "central_sentence",
+      "search"
+    ],
+    "output_unit": "whole_original_paragraph",
+    "primary": "maximum aligned-paragraph evidence recall over acceptable references, first five original paragraphs",
+    "secondary": [
+      "precision/recall/complete@1,3,5,10",
+      "whole paragraphs at 512/1024/2048 source tokens"
+    ],
+    "planner_model": "gpt-6.1-sol",
+    "embedding_model": "gemini-embedding-2",
+    "embedding_dimensions": 768,
+    "jev_model": "jev-1.13.0",
+    "representative_candidates": 8,
+    "representative_stop": null,
+    "split_settings": {
+      "embedding_adjacent_distance_quantile": 0.85,
+      "jev_prior": 0.7,
+      "cutoff": 0.5,
+      "drop": 0.2
+    },
+    "sources": {
+      "scripts/retrieval_v3.py": "44dd9bffcc7b6c58d6eae0be821b2e3ad720e52d8e8955024651ad8062153ca5",
+      "scripts/retrieval_v3_clients.py": "99c7db74e01a1d81b488e7d51c83db0a4cc180eabae5ea0125a9c2750125e873",
+      "scripts/bounded_clients.py": "169e72258a8d495bd5e7ddf514779bb6155f37c448a889f87f3bf3491225b3d5",
+      "scripts/bounded_eval.py": "6bc9a4938a83fbc4b4915fd56fdb4667d499ed39cb2144471d2afff37f8ba981",
+      "scripts/live_tree_clients.py": "5782acd9809005bed4eb8035268aabc25e9e9d8f24d7898acba93b0cfde215e1",
+      "scripts/live_tree_eval.py": "6c4dfe70a333a9e4417fe883b2639e6efd67b17e3eb776c6d37631da6886b69c",
+      "scripts/retrieval_v3_planner.py": "5017e81d8a2159430906eac64f7fbf11be11fb112ca5120c8385e82396becc70",
+      "scripts/experiment_clients.py": "50ea2f44f62bf83becb6b0def95ac0ae8da445e44f5835224c1fe948eeb6af65",
+      "scripts/retrieval_v3_metrics.py": "df1ed0058d6177b2e8db51609a7cf869daf79cf6310d8e028af70b60a02103e7",
+      "scripts/analyze_retrieval_v3.py": "23dd08e577184db447a0b3d263ab25813a32342d1e723d1f1905d91200356cf3",
+      "scripts/retrieval_v3_bge.py": "275cb4a3c01c00231f5d440e0f293d7676d1ee1bdd02d3b56c2833be6c58cd1e",
+      "zero_index/cli.py": "1556c67ecee0c72967e3d68124e9b38d41e25fa52afa79890cf4f4c14895df1f",
+      "zero_index/context.py": "fb35635a3efcfc0ab7b3281ad4554c1ad9bf6277888aa087646d9dbd9faac53c",
+      "zero_index/context_merge.py": "dd4550a3410e029c57ff3e2ff0e8243e2dc5e22b1d5c4f9d1feff6f061990569",
+      "zero_index/embeddings.py": "52c03e43a79a483bf10fc6048ee179a0e48d00bad1fa57495103b28de2bab65d",
+      "zero_index/evidence.py": "48da420f87e0a9078b6ba9786673ed256e70b39623fdac714fa6d59f7119ee24",
+      "zero_index/evidence_search.py": "b28683e779c571d75f624f5386f6013774f1f26f421d3aee34facc5d84db3e8a",
+      "zero_index/hybrid_retrieval.py": "0e2633e9a3943e2064f1418a7906b84f220c8418d3c62c9143ddff0b8fd772aa",
+      "zero_index/index.py": "1535767762c6dc147c24ef5dfdbffdac0fea95b61991a3d791e26f06314dd612",
+      "zero_index/jev.py": "c6505f9db44a1cb6cb5ebd9f3528541a83e1b6d3ca869522318655dc74cbb376",
+      "zero_index/model.py": "3ba201218de33001ad6fd820e05928144bed0c6d5032a880a7ccfe627dd55f33",
+      "zero_index/parallel.py": "dc8e677f09625652d7012b178657bcf30afa05bf899118424b00e74972da3222",
+      "zero_index/parse.py": "b2b09b61a377d2ba7736c7dd757db3c0b5af2c866dbd2851f658c177665e04ef",
+      "zero_index/ranking.py": "2dddde2262f35ed762a57f9320129990debdfe1954569a4ef9788da792303a0d",
+      "zero_index/retrieval.py": "6db3dee235c4ae06e8bc2433591016d6addcc127ca637525baef939909e7271a",
+      "zero_index/segment.py": "44f7879a4ebe4e81ffc1c475a99b99db1abd7f0a7aa8714e3a627b1a68c8698e",
+      "zero_index/separation.py": "adc3a13056bff7c42d174342a8a9550d48b5821d86804813177d0dbc6fba09d0",
+      "zero_index/structure.py": "3f36f8fda4e3901385e0a9230057e19d96f1d3d20ccebbb16d18924cbe8724f8",
+      "zero_index/tree_search.py": "c1e998a3afe1222ccafa2859518a9cdb10e8bf1079af7ddc3c801ff125503173",
+      "zero_index/__init__.py": "e28629c3a2062cc41e5c13af0d9acb3a0928f36af7a3f2a3f0d73a6d1648f52a",
+      "zero_index/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279"
+    },
+    "input_hashes": {
+      "cases.json": "ecdf95d3555e94b89cd50052bc2899eeca1a2a8a66ec149095f26b473c4cbc07",
+      "documents.json": "8baa1763e4acfe151e1224d0d11a051165422281a63be033ebdc03906f473686"
+    },
+    "split_registry_sha256": "b10aef13e1129db5453d2702d0970913a4d5333873702fb7c1db26942e6f65a9",
+    "baseline_models": {
+      "qwen_embedding": "97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3",
+      "qwen_reranker": "e61197ed45024b0ed8a2d74b80b4d909f1255473"
+    },
+    "limitations": [
+      "Within-document retrieval; paper is supplied equally to all systems.",
+      "Compact published Qwen 0.6B checkpoints; not the 8B models or a frontier claim.",
+      "Text evidence; figures/table pixels are not supplied.",
+      "Bounded additional source cues can still miss evidence during branch selection."
+    ]
+  }
+}
