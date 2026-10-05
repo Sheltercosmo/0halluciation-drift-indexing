@@ -1,0 +1,16 @@
+{
+  "attempts": 489,
+  "successful_attempts": 488,
+  "failed_attempts": 1,
+  "attempts_without_recorded_usage": 1,
+  "recorded_tokens": {
+    "input_tokens": 8819680,
+    "cached_input_tokens": 6948864,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 29570,
+    "reasoning_output_tokens": 2582
+  },
+  "new_gemini_calls": 0,
+  "new_jev_calls": 0,
+  "limitation": "Structurally rejected responses in the frozen client lack recorded usage; attempts remain reserved."
+}

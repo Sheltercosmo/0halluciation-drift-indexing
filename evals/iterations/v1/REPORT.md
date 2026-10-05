@@ -1,6 +1,6 @@
 # Improvement log: development screens, not held-out results
 
-The improvement goal is active. **Frontier performance has not been established.** Validation and test are still locked. The prior and sudden-drop rule have not been tested separately. The screens below exposed substantial reader variability for identical per-question contexts in different batches; answer deltas should not be attributed solely to retrieval. An isolated-reader rerun is registered to repair that comparison.
+The improvement goal is active. **Frontier performance has not been established.** Validation and test are still locked. The prior and sudden-drop rule have not been tested separately. Early screens exposed substantial reader variability for identical per-question contexts in different batches. The completed [isolated-reader comparison](#isolated-reader-results) supersedes those provisional answer deltas; historical results remain below for transparency.
 
 ## Data separation
 
@@ -77,3 +77,31 @@ Successful development screening still requires broader development testing, sel
 The holdout gate now requires a registration saved before validation, complete predictions for every registered method/question/reader replicate, and a winner recomputed from answers with the hashed evaluator. It rejects status-only claims, missing or duplicated predictions, changed registrations and changed frozen artifacts. Failed predictions count as zero. The expanded test suite passes 108 tests, including eight validation-gate checks; reconstructing the splits still reproduces every assignment and prepared data hash. The real validation and test opening commands have not been run.
 
 The [RAPTOR adapter](../../RAPTOR_BASELINE.md) now runs pinned upstream clustering, tree construction and collapsed retrieval with explicit model callbacks. Its offline integration check passes without model calls, including fixed-seed reproduction and the actual rendered context budget. Live model adapters and measured QA comparisons remain pending; this is implementation evidence, not a performance result.
+
+## Isolated-reader results
+
+The registered rerun completed all **488 distinct requests**, producing **640 method/question predictions** on the same exposed-development sample. One malformed answer-ID response was retained and retried unchanged; there were 489 attempts, 488 valid responses and no missing or failed final predictions. Every identical ID/query/context combination shares one answer across methods. Exact source spans, token limits, official scores and aggregate summaries replay without model calls.
+
+| Pipeline | QASPER answer F1, 64 questions | QASPER evidence recall, 58 eligible questions | QuALITY-HARD accuracy, 64 questions |
+| --- | ---: | ---: | ---: |
+| Original Jev, 12 candidates | 51.08 | 82.18 | 87.50 |
+| Jev, expanded pool | 58.55 | 90.56 | 85.94 |
+| Jev, rank fusion | **58.88** | 90.56 | 85.94 |
+| Jev, topic-parent expansion | 58.40 | 90.56 | 85.94 |
+| Codex reranker, expanded pool | 55.49 | 91.35 | 85.94 |
+
+Expanded Jev versus original Jev gains **7.46 QASPER F1 points**, with a descriptive 95% document-bootstrap interval **+1.79 to +14.18**. Evidence recall gains **8.37 points** (+3.08 to +14.78). QuALITY loses **1.56 points** (−8.33 to +5.00). These development intervals are not multiplicity-adjusted confirmatory tests.
+
+Against the expanded Codex reranker, Jev rank fusion leads by **3.39 QASPER F1 points**, with interval **−0.10 to +8.20**. QuALITY is tied at **55/64**, with a paired interval of −6.06 to +6.35 points. Neither a reliable cross-task advantage nor frontier performance is established. The slight QASPER differences among the expanded Jev policies do not justify selecting a new default yet.
+
+The completed audit finds **zero answer/score differences for identical contexts**, by construction through prediction reuse. This repairs batch coupling and matched-context resampling. Different contexts still receive a single stochastic answer, so reader uncertainty remains. The earlier 56.37 F1 and differing QuALITY policy scores are historical observations, not scores to mix with this run.
+
+### Failure cases and the next hypothesis
+
+Expanded Jev has 16 QASPER score losses against the expanded Codex reranker. In **13 of those 16**, both contexts contain complete annotated evidence; only **one** has lower evidence recall. Inspection shows several differences in verbosity or wording, such as returning “English tweets only” instead of the gold “English.” We retain the official metric and reader unchanged rather than crediting these losses entirely to retrieval.
+
+The genuine evidence-selection failure asks which models a paper compared. The DenseNet/HighwayLSTM passage was in Jev's candidate pool, scored **0.63**, and was omitted from the final context. Two QuALITY losses also contain relevant material in the pool but omit it during final selection: a passage establishing a character's presence scored **0.44**, and a story's final escape passage scored **0.69**. Candidate exposure alone cannot repair these cases.
+
+The next hypothesis is to use the query-time LLM to propose explicit evidence needs, then let Jev select complementary passages for those needs under the same final budget. This follows the intended retrieval design while keeping indexing free of generative LLM calls. Its added query cost must be recorded, and a matched planner/reranker control is needed. It is a development hypothesis, not a registered or measured improvement yet.
+
+Artifacts: [scores](../../results/isolated-reader-v1/scores.json), [summary](../../results/isolated-reader-v1/summary.json), [paired intervals](../../results/isolated-reader-v1/paired-intervals.json), [exact-context audit](../../results/isolated-reader-v1/analysis.json), [failure comparisons](../../results/isolated-reader-v1/failure-comparisons.json), [usage](../../results/isolated-reader-v1/usage.json), and [frozen source](../../results/isolated-reader-v1/source/scripts/isolated_reader_trial.py). Successful calls recorded 8,819,680 input tokens and 29,570 output tokens; the frozen client did not retain usage for the single rejected response. No new Gemini or Jev requests were needed. Gemini's cumulative conservative reservation remains **$5.410937 / $30**.

@@ -1,0 +1,95 @@
+{
+  "status": "complete_exposed_development_not_confirmatory",
+  "method_predictions": 640,
+  "unique_reader_requests": 488,
+  "failed_predictions": 0,
+  "reader_replicates": 1,
+  "interval_scope": "Descriptive paired document bootstrap, 10,000 replicates; no multiplicity correction.",
+  "identical_context_audit": {
+    "jev_blocking_rerank/jev_pool_8192/qasper": {
+      "same_context": 1,
+      "changed_answer_or_score": 0
+    },
+    "jev_blocking_rerank/jev_pool_8192/quality": {
+      "same_context": 11,
+      "changed_answer_or_score": 0
+    },
+    "jev_blocking_rerank/codex_pool_8192/qasper": {
+      "same_context": 0,
+      "changed_answer_or_score": 0
+    },
+    "jev_blocking_rerank/codex_pool_8192/quality": {
+      "same_context": 0,
+      "changed_answer_or_score": 0
+    },
+    "jev_blocking_rerank/jev_fusion_025/qasper": {
+      "same_context": 1,
+      "changed_answer_or_score": 0
+    },
+    "jev_blocking_rerank/jev_fusion_025/quality": {
+      "same_context": 12,
+      "changed_answer_or_score": 0
+    },
+    "jev_blocking_rerank/jev_topic_merge/qasper": {
+      "same_context": 0,
+      "changed_answer_or_score": 0
+    },
+    "jev_blocking_rerank/jev_topic_merge/quality": {
+      "same_context": 5,
+      "changed_answer_or_score": 0
+    },
+    "jev_pool_8192/codex_pool_8192/qasper": {
+      "same_context": 0,
+      "changed_answer_or_score": 0
+    },
+    "jev_pool_8192/codex_pool_8192/quality": {
+      "same_context": 0,
+      "changed_answer_or_score": 0
+    },
+    "jev_pool_8192/jev_fusion_025/qasper": {
+      "same_context": 27,
+      "changed_answer_or_score": 0
+    },
+    "jev_pool_8192/jev_fusion_025/quality": {
+      "same_context": 25,
+      "changed_answer_or_score": 0
+    },
+    "jev_pool_8192/jev_topic_merge/qasper": {
+      "same_context": 46,
+      "changed_answer_or_score": 0
+    },
+    "jev_pool_8192/jev_topic_merge/quality": {
+      "same_context": 39,
+      "changed_answer_or_score": 0
+    },
+    "codex_pool_8192/jev_fusion_025/qasper": {
+      "same_context": 0,
+      "changed_answer_or_score": 0
+    },
+    "codex_pool_8192/jev_fusion_025/quality": {
+      "same_context": 0,
+      "changed_answer_or_score": 0
+    },
+    "codex_pool_8192/jev_topic_merge/qasper": {
+      "same_context": 0,
+      "changed_answer_or_score": 0
+    },
+    "codex_pool_8192/jev_topic_merge/quality": {
+      "same_context": 0,
+      "changed_answer_or_score": 0
+    },
+    "jev_fusion_025/jev_topic_merge/qasper": {
+      "same_context": 19,
+      "changed_answer_or_score": 0
+    },
+    "jev_fusion_025/jev_topic_merge/quality": {
+      "same_context": 15,
+      "changed_answer_or_score": 0
+    }
+  },
+  "source_hashes": {
+    "scripts/analyze_isolated_reader.py": "2a62bff4122aea7d772b2b837fa1f499e50bb3d124763d8781137fcf901c105f",
+    "scripts/bounded_eval.py": "6bc9a4938a83fbc4b4915fd56fdb4667d499ed39cb2144471d2afff37f8ba981"
+  },
+  "scores_sha256": "f5816952fc66056e84af74cdf9b3e638f68c957f703a8e323b4957ce7d33468c"
+}

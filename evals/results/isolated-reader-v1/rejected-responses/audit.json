@@ -1,0 +1,14 @@
+[
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "8b7ada40c786037c55a78b4d48b4c0f43e59bcaf87e09d2ca68ef38917b4ba8e",
+    "case_ids": [
+      "qasper/91d4fd5796c13005fe306bcd895caaed7fa77030"
+    ],
+    "status": "failed",
+    "tool_items": 0,
+    "seconds": 10.209829600004014
+  }
+]

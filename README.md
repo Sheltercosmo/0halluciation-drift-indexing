@@ -31,22 +31,23 @@ Headings and contents supply the upper structure without model calls. Jev then s
 
 ## Measured performance
 
-Our highest observed **QASPER answer F1 is 56.37** with Jev rank fusion on 64 development questions. Expanded Jev retrieval reaches **90.56% evidence recall** on the 58 questions with reference evidence. In the larger completed study, the original Jev pipeline scores **89.58% QuALITY-HARD accuracy** on 192 questions. These results belong to the configurations and samples below; they are not a combined score for one configuration.
+Our highest observed **QASPER answer F1 is 58.88** with Jev rank fusion on 64 development questions. Expanded Jev retrieval reaches **90.56% evidence recall** on the 58 questions with reference evidence. In the larger completed study, the original Jev pipeline scores **89.58% QuALITY-HARD accuracy** on 192 questions. These results belong to the configurations and samples below; they are not a combined score for one configuration.
 
 ### Latest development results
 
-The following configurations use the same 64 questions per benchmark, an 8,192-token candidate pool and a 2,048-token final source budget. The reader is Codex; embeddings are enabled, and Jev indexing uses no generative LLM calls. All answer predictions are complete.
+The completed isolated-reader comparison uses the same 64 questions per benchmark and a 2,048-token final source budget. Expanded configurations receive an 8,192-token candidate pool; the original Jev control keeps its 12-candidate cap. Codex reads one question per call, with one shared prediction for identical question/context inputs across methods. Embeddings are enabled, and Jev indexing uses no generative LLM calls. All 640 method/question predictions are complete.
 
 | Configuration | QASPER answer F1, 64 questions | Evidence recall, 58 questions | QuALITY-HARD accuracy, 64 questions |
 | --- | ---: | ---: | ---: |
-| Jev + expanded candidate pool | 55.72 | **90.56%** | 87.50% |
-| **Jev + rank fusion** | **56.37** | **90.56%** | 84.38% |
-| Jev + topic-parent expansion | 53.09 | **90.56%** | **89.06%** |
-| Hybrid + Codex reranking, expanded pool | 53.78 | 91.35% | 90.63% |
+| Original Jev, 12 candidates | 51.08 | 82.18% | 87.50% |
+| Jev + expanded candidate pool | 58.55 | **90.56%** | 85.94% |
+| **Jev + rank fusion** | **58.88** | **90.56%** | 85.94% |
+| Jev + topic-parent expansion | 58.40 | **90.56%** | 85.94% |
+| Hybrid + Codex reranking, expanded pool | 55.49 | 91.35% | 85.94% |
 
-Expanding Jev's pool raised evidence recall from **82.18% to 90.56%** on this same sample: +8.37 points, with a descriptive 95% document-bootstrap interval of +3.08 to +14.78. The original 12-candidate Jev pipeline scored 52.64 answer F1 and 89.06% QuALITY-HARD accuracy. Rank fusion produced the highest QASPER answer score but reduced QuALITY accuracy, so no experimental configuration has replaced the default.
+Expanding Jev's pool raised evidence recall from **82.18% to 90.56%** on this same sample: +8.37 points, with a descriptive 95% document-bootstrap interval of +3.08 to +14.78. QASPER answer F1 increased by 7.46 points (+1.79 to +14.18), while QuALITY accuracy fell by 1.56 points (−8.33 to +5.00). No experimental configuration has replaced the default.
 
-**These are development results; answer-score comparisons are provisional.** The reader audit found different answer scores for identical individual contexts presented in different batches. Evidence recall is computed from source spans and is unaffected by that reader variability. A [registered rerun](evals/iterations/v1/isolated-reader-manifest.json) uses one question per reader call and reuses identical-context predictions across methods. It is still in progress. [Read the analysis and uncertainty](evals/iterations/v1/REPORT.md) · [Pool results](evals/results/pool-screen-v1/summary.json) · [Context results](evals/results/context-trial-v1/summary.json)
+**These are development results, and superiority over the strongest baseline is not established.** Rank fusion's advantage over the expanded Codex reranker is 3.39 QASPER F1 points, with a descriptive 95% interval of −0.10 to +8.20; their QuALITY accuracy is tied. This [registered rerun](evals/iterations/v1/isolated-reader-manifest.json) replaces the earlier batched-reader comparison as the current development evidence. It removes cross-question batch coupling and identical-context resampling, but uses only one reader draw per distinct input. Historical results remain in the [development log](evals/iterations/v1/REPORT.md#isolated-reader-results). [All predictions](evals/results/isolated-reader-v1/scores.json) · [Summary](evals/results/isolated-reader-v1/summary.json) · [Paired intervals](evals/results/isolated-reader-v1/paired-intervals.json)
 
 ### Larger completed comparison
 

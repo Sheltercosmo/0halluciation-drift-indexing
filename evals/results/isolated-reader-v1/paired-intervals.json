@@ -1,0 +1,240 @@
+{
+  "jev_blocking_rerank/codex_pool_8192/qasper": {
+    "answer_score": {
+      "difference": -0.04405853347978208,
+      "ci95": [
+        -0.11124340609107587,
+        0.015862226800233276
+      ],
+      "documents": 64,
+      "questions": 64,
+      "replicates": 10000
+    },
+    "evidence_recall": {
+      "difference": -0.09164614121510672,
+      "ci95": [
+        -0.15999589490968802,
+        -0.03037253694581288
+      ],
+      "documents": 58,
+      "questions": 58,
+      "replicates": 10000
+    }
+  },
+  "jev_blocking_rerank/codex_pool_8192/quality": {
+    "answer_score": {
+      "difference": 0.015625,
+      "ci95": [
+        -0.0625,
+        0.09836065573770492
+      ],
+      "documents": 55,
+      "questions": 64,
+      "replicates": 10000
+    }
+  },
+  "jev_pool_8192/jev_blocking_rerank/qasper": {
+    "answer_score": {
+      "difference": 0.07464045572269906,
+      "ci95": [
+        0.017949404049970138,
+        0.14179288633896314
+      ],
+      "documents": 64,
+      "questions": 64,
+      "replicates": 10000
+    },
+    "evidence_recall": {
+      "difference": 0.08374384236453201,
+      "ci95": [
+        0.030788177339901475,
+        0.14778325123152708
+      ],
+      "documents": 58,
+      "questions": 58,
+      "replicates": 10000
+    }
+  },
+  "jev_pool_8192/jev_blocking_rerank/quality": {
+    "answer_score": {
+      "difference": -0.015625,
+      "ci95": [
+        -0.08333333333333333,
+        0.05
+      ],
+      "documents": 55,
+      "questions": 64,
+      "replicates": 10000
+    }
+  },
+  "jev_pool_8192/codex_pool_8192/qasper": {
+    "answer_score": {
+      "difference": 0.030581922242916983,
+      "ci95": [
+        -0.004551908506192961,
+        0.07914672435801295
+      ],
+      "documents": 64,
+      "questions": 64,
+      "replicates": 10000
+    },
+    "evidence_recall": {
+      "difference": -0.007902298850574713,
+      "ci95": [
+        -0.03304597701149426,
+        0.017241379310344827
+      ],
+      "documents": 58,
+      "questions": 58,
+      "replicates": 10000
+    }
+  },
+  "jev_pool_8192/codex_pool_8192/quality": {
+    "answer_score": {
+      "difference": 0.0,
+      "ci95": [
+        -0.06060606060606061,
+        0.06349206349206349
+      ],
+      "documents": 55,
+      "questions": 64,
+      "replicates": 10000
+    }
+  },
+  "jev_fusion_025/jev_blocking_rerank/qasper": {
+    "answer_score": {
+      "difference": 0.0779873741435253,
+      "ci95": [
+        0.020396575135701357,
+        0.1464859655228073
+      ],
+      "documents": 64,
+      "questions": 64,
+      "replicates": 10000
+    },
+    "evidence_recall": {
+      "difference": 0.08374384236453201,
+      "ci95": [
+        0.030788177339901475,
+        0.14778325123152708
+      ],
+      "documents": 58,
+      "questions": 58,
+      "replicates": 10000
+    }
+  },
+  "jev_fusion_025/jev_blocking_rerank/quality": {
+    "answer_score": {
+      "difference": -0.015625,
+      "ci95": [
+        -0.08333333333333333,
+        0.05
+      ],
+      "documents": 55,
+      "questions": 64,
+      "replicates": 10000
+    }
+  },
+  "jev_fusion_025/codex_pool_8192/qasper": {
+    "answer_score": {
+      "difference": 0.03392884066374322,
+      "ci95": [
+        -0.0010066293943957062,
+        0.08200227638302078
+      ],
+      "documents": 64,
+      "questions": 64,
+      "replicates": 10000
+    },
+    "evidence_recall": {
+      "difference": -0.007902298850574713,
+      "ci95": [
+        -0.03304597701149426,
+        0.017241379310344827
+      ],
+      "documents": 58,
+      "questions": 58,
+      "replicates": 10000
+    }
+  },
+  "jev_fusion_025/codex_pool_8192/quality": {
+    "answer_score": {
+      "difference": 0.0,
+      "ci95": [
+        -0.06060606060606061,
+        0.06349206349206349
+      ],
+      "documents": 55,
+      "questions": 64,
+      "replicates": 10000
+    }
+  },
+  "jev_topic_merge/jev_blocking_rerank/qasper": {
+    "answer_score": {
+      "difference": 0.0732279841136245,
+      "ci95": [
+        0.01621112482786595,
+        0.14041194250542322
+      ],
+      "documents": 64,
+      "questions": 64,
+      "replicates": 10000
+    },
+    "evidence_recall": {
+      "difference": 0.08374384236453201,
+      "ci95": [
+        0.030788177339901475,
+        0.14778325123152708
+      ],
+      "documents": 58,
+      "questions": 58,
+      "replicates": 10000
+    }
+  },
+  "jev_topic_merge/jev_blocking_rerank/quality": {
+    "answer_score": {
+      "difference": -0.015625,
+      "ci95": [
+        -0.08333333333333333,
+        0.05
+      ],
+      "documents": 55,
+      "questions": 64,
+      "replicates": 10000
+    }
+  },
+  "jev_topic_merge/codex_pool_8192/qasper": {
+    "answer_score": {
+      "difference": 0.029169450633842423,
+      "ci95": [
+        -0.006232594714335794,
+        0.07775677787055844
+      ],
+      "documents": 64,
+      "questions": 64,
+      "replicates": 10000
+    },
+    "evidence_recall": {
+      "difference": -0.007902298850574713,
+      "ci95": [
+        -0.03304597701149426,
+        0.017241379310344827
+      ],
+      "documents": 58,
+      "questions": 58,
+      "replicates": 10000
+    }
+  },
+  "jev_topic_merge/codex_pool_8192/quality": {
+    "answer_score": {
+      "difference": 0.0,
+      "ci95": [
+        -0.06060606060606061,
+        0.06349206349206349
+      ],
+      "documents": 55,
+      "questions": 64,
+      "replicates": 10000
+    }
+  }
+}

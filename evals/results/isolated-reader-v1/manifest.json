@@ -1,0 +1,30 @@
+{
+  "status": "registered_before_inference",
+  "partition": "exposed_development",
+  "methods": [
+    "jev_blocking_rerank",
+    "jev_pool_8192",
+    "codex_pool_8192",
+    "jev_fusion_025",
+    "jev_topic_merge"
+  ],
+  "questions": 128,
+  "expected_predictions": 640,
+  "unique_reader_requests": 488,
+  "cases_per_reader_call": 1,
+  "context_token_limit": 2048,
+  "reader_model": "gpt-6.1-sol",
+  "reader_prompt": "Unchanged bounded_clients.Codex reader instruction.",
+  "replicates": 1,
+  "identical_input_policy": "One shared prediction per exact case ID, query and context across methods.",
+  "data_hashes": {
+    "cases.json": "96c632100006c0357066bae54b2fef5762007be41bb89ece802dc62af5c05104",
+    "requests.json": "19252290fc0891b561ff7d51ddc8efd8cd8ba81736dad70f198d17cb23a917c6",
+    "contexts.json": "339141517e02d4f8c6b51843bebdc5bb4dc00b32b3837928766c90a76527f185"
+  },
+  "source_hashes": {
+    "scripts/isolated_reader_trial.py": "d0c255e181f08377d6be8c2fd0ad27d002c0a2cc00699a00a4ae1b08026358e6",
+    "scripts/bounded_clients.py": "169e72258a8d495bd5e7ddf514779bb6155f37c448a889f87f3bf3491225b3d5",
+    "scripts/bounded_eval.py": "6bc9a4938a83fbc4b4915fd56fdb4667d499ed39cb2144471d2afff37f8ba981"
+  }
+}
