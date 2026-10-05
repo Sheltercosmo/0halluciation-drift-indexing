@@ -37,6 +37,14 @@ The implementation and [registration](evals/registrations/tree-retrieval-v3.json
 
 This is a within-document QASPER study: every system receives the same paper. It does not establish full-corpus or frontier superiority. The small development pilot calibrates software and settings; its scores are not presented as held-out performance.
 
+| Comparison | What it tests |
+| --- | --- |
+| Eight Gemini/Jev crossed configurations | The contribution of splitting, central sentences and search |
+| Gemini retrieval + Jev reranking versus Jev tree search | Direct candidate retrieval versus branch exploration, using the same planner and decision model |
+| Qwen/BGE native pipelines and their Jev reranker replacements | External embedding baselines, plus a reranker comparison on identical candidate paragraphs |
+
+Qwen's embedding and dedicated reranking checkpoints serve the external comparison. The main crossed experiment uses Gemini embeddings and Jev; indexing with Jev does not require Qwen.
+
 Earlier studies remain available in the [historical tree report](evals/LIVE_TREE_REPORT.md), [blocking comparison](evals/BOUNDED_REPORT.md) and [development log](evals/iterations/v1/REPORT.md). They used different search procedures or answer metrics and cannot be substituted for the current comparison.
 
 ## Quick start
