@@ -49,10 +49,11 @@ def analyze(out,public_dir=None):
     from scripts.retrieval_v3_metrics import align_references
     from zero_index.index import DocumentIndex
     reg,_=checked();manifest,cases,docs=load_run(out)
-    if manifest['partition']!='test':raise ValueError('Use only the completed frozen test')
+    partition=manifest['partition']
+    if partition not in ('validation','test'):raise ValueError('Use a completed validation or test partition')
     if not (out/'statistics.json').exists():raise ValueError('Complete primary analysis first')
     validate_predictions(out,reg['methods']);verify_pools(out)
-    gold=read_json(ROOT/'output/improvement-v1/test/gold.json')
+    gold=read_json(ROOT/'output/improvement-v1'/partition/'gold.json')
     models=('JJJ','gemini_jev_rerank');counts={m:Counter() for m in models}
     questions={m:Counter() for m in models};details=[];indexes={}
     for case in cases:
@@ -83,7 +84,7 @@ def analyze(out,public_dir=None):
         expected_incomplete=round(n*(1-statistics['metrics']['complete@5']['methods'][model]['mean']))
         assert questions[model]['incomplete_top5_questions']==expected_incomplete
     report={'analysis':'supplemental descriptive analysis added after validation; separate from registered hypothesis tests',
-        'partition':'test','questions':len(cases),'statistics_sha256':sha(out/'statistics.json'),
+        'partition':partition,'questions':len(cases),'statistics_sha256':sha(out/'statistics.json'),
         'analysis_source_sha256':sha(Path(__file__)),
         'reference_policy':'Per method, choose the fully aligned reference with highest recall@5; ties keep annotation order. Count missed paragraph instances in that reference.',
         'tree_attribution':'For a paragraph never retrieved, use the deepest evidence-path node reached by any shared search need. This locates the loss; it does not establish its cause.',

@@ -1,0 +1,38 @@
+{
+  "analysis": "supplemental descriptive analysis added after validation; separate from registered hypothesis tests",
+  "partition": "validation",
+  "questions": 1005,
+  "statistics_sha256": "11e88af0b4138c685ebceef5fffa413c81a21b57a32688e9078be4b8755e641e",
+  "analysis_source_sha256": "59c96c59ad0f0aac93b03256a2baaf79a9076cd7c0577dec66acfebac141b910",
+  "reference_policy": "Per method, choose the fully aligned reference with highest recall@5; ties keep annotation order. Count missed paragraph instances in that reference.",
+  "tree_attribution": "For a paragraph never retrieved, use the deepest evidence-path node reached by any shared search need. This locates the loss; it does not establish its cause.",
+  "methods": {
+    "JJJ": {
+      "eligible_questions": 864,
+      "incomplete_top5_questions": 203,
+      "chosen_references_larger_than_5": 19,
+      "minimum_misses_for_chosen_reference_at_k5": 46,
+      "missed_reference_paragraph_instances": 310,
+      "loss_locations": {
+        "heading:below_threshold": 14,
+        "heading:outside_beam": 73,
+        "paragraph:below_threshold": 12,
+        "paragraph:outside_beam": 110,
+        "reached_but_ranked_below_5": 70,
+        "section:below_threshold": 5,
+        "section:outside_beam": 26
+      }
+    },
+    "gemini_jev_rerank": {
+      "eligible_questions": 864,
+      "incomplete_top5_questions": 197,
+      "chosen_references_larger_than_5": 18,
+      "minimum_misses_for_chosen_reference_at_k5": 43,
+      "missed_reference_paragraph_instances": 327,
+      "loss_locations": {
+        "candidate_reranked_below_5": 267,
+        "outside_dense_top30": 60
+      }
+    }
+  }
+}

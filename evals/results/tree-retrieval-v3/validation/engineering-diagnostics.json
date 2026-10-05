@@ -1,0 +1,96 @@
+{
+  "partition": "validation",
+  "analysis": "post-outcome offline engineering diagnostics; no API calls or test access",
+  "source_sha256": "e37fdbafd3f35620ee71639cf8d2e22774cd4bf2599deb4195e76e739bdcd91f",
+  "statistics_sha256": "11e88af0b4138c685ebceef5fffa413c81a21b57a32688e9078be4b8755e641e",
+  "reference_policy": "JJJ best recall@5 reference; ties use annotation order. Every recovery refers to the same missed original paragraph.",
+  "counts": {
+    "eligible_questions": 864,
+    "incomplete_top5_questions": 203,
+    "missed_reference_paragraph_instances": 310,
+    "internal_barrier_instances": 118,
+    "internal_barrier_without_evidence_paragraph_excerpt": 1,
+    "internal_barrier_empty_excerpts": 0,
+    "beam_barrier_instances": 209,
+    "beam_barrier_tied_with_selected": 7,
+    "threshold_score_zero": 0,
+    "threshold_score_below_005": 0,
+    "threshold_score_005_to_02": 31
+  },
+  "loss_locations": {
+    "heading:outside_beam": 73,
+    "paragraph:below_threshold": 12,
+    "paragraph:outside_beam": 110,
+    "reached_but_ranked_below_5": 70,
+    "section:outside_beam": 26,
+    "section:below_threshold": 5,
+    "heading:below_threshold": 14
+  },
+  "native_heading_structure": {
+    "papers": 281,
+    "papers_with_nested_heading_paths": 91,
+    "nested_heading_paths_attached_to_root": 1061,
+    "root_children_median": 15,
+    "root_children_max": 40
+  },
+  "same_paragraph_recovered_at5": {
+    "heading:outside_beam": {
+      "EJJ": 6,
+      "JEJ": 11,
+      "JJE": 30,
+      "gemini_jev_rerank": 29,
+      "hybrid": 0
+    },
+    "paragraph:below_threshold": {
+      "EJJ": 0,
+      "JEJ": 1,
+      "JJE": 5,
+      "gemini_jev_rerank": 2,
+      "hybrid": 1
+    },
+    "paragraph:outside_beam": {
+      "EJJ": 1,
+      "JEJ": 11,
+      "JJE": 37,
+      "gemini_jev_rerank": 20,
+      "hybrid": 0
+    },
+    "reached_but_ranked_below_5": {
+      "EJJ": 11,
+      "JEJ": 17,
+      "JJE": 29,
+      "gemini_jev_rerank": 23,
+      "hybrid": 31
+    },
+    "section:outside_beam": {
+      "EJJ": 5,
+      "JEJ": 3,
+      "JJE": 8,
+      "gemini_jev_rerank": 5,
+      "hybrid": 0
+    },
+    "section:below_threshold": {
+      "EJJ": 1,
+      "JEJ": 0,
+      "JJE": 0,
+      "gemini_jev_rerank": 0,
+      "hybrid": 0
+    },
+    "heading:below_threshold": {
+      "EJJ": 0,
+      "JEJ": 1,
+      "JJE": 2,
+      "gemini_jev_rerank": 2,
+      "hybrid": 1
+    }
+  },
+  "terminal_filter_replay": {
+    "policy": "Remove only terminal acceptance/beam filtering for already scored paragraphs, retain observed internal traversal and RRF. Offline diagnostic, not a new live-system result.",
+    "original_recall5": 0.8221020973625139,
+    "replay_recall5": 0.8003690175565176,
+    "original_recall10": 0.8569111251402918,
+    "replay_recall10": 0.8824583466944579,
+    "questions_improved_at5": 24,
+    "questions_worsened_at5": 47
+  }
+}

@@ -73,7 +73,7 @@ def report():
         location_labels={'reached_but_ranked_below_5':'Retrieved but ranked below the top five',
             'decision_budget':'Decision budget stopped traversal','outside_dense_top30':'Absent from the dense top 30',
             'candidate_reranked_below_5':'Candidate reranked below the top five'}
-        for kind,title in [('heading','Heading'),('topic','Topic block'),('paragraph','Paragraph')]:
+        for kind,title in [('heading','Heading'),('topic','Topic block'),('section','Topic block'),('paragraph','Paragraph')]:
             location_labels[kind+':below_threshold']=title+' score below cutoff'
             location_labels[kind+':outside_beam']=title+' excluded by beam limit'
         for method,row in failures['methods'].items():

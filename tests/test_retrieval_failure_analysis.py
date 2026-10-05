@@ -1,5 +1,7 @@
 import unittest
+from types import SimpleNamespace
 from scripts.retrieval_v3_failure_analysis import best_reference,tree_loss
+from scripts.diagnose_retrieval_v3_validation import scored_paragraph_replay
 
 
 class FailureLocations(unittest.TestCase):
@@ -32,6 +34,14 @@ class FailureLocations(unittest.TestCase):
         self.assertEqual(tree_loss('p',{'p':'r'},{'p':'paragraph'},'r',result),'decision_budget')
         result['status']='complete'
         with self.assertRaises(ValueError):tree_loss('p',{'p':'r'},{'p':'paragraph'},'r',result)
+
+    def test_replay_can_keep_scored_terminal_but_never_invent_unvisited_leaf(self):
+        index=SimpleNamespace(_node=lambda n:SimpleNamespace(kind='paragraph' if n.startswith('p') else 'heading'))
+        result={'need_rankings':[['p1'],[]],'trace':[
+            {'need_index':0,'candidates':['h1','h2'],'scores':[.9,.7],'selected':['h1']},
+            {'need_index':0,'candidates':['p1','p2'],'scores':[.9,.8],'selected':['p1']},
+            {'need_index':1,'candidates':['h3'],'scores':[.1],'selected':[]}]}
+        self.assertEqual(scored_paragraph_replay(index,result),['p1','p2'])
 
 
 if __name__=='__main__':unittest.main()

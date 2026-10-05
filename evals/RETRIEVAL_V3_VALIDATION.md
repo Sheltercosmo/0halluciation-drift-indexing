@@ -116,6 +116,8 @@ Qwen uses compact checkpoints and BGE-M3 uses dense mode. ColBERTv2, RTriever an
 
 ## Reproduction and artifacts
 
+[Engineering failure-case inspection](RETRIEVAL_V3_FAILURE_ANALYSIS.md) separates beam, cutoff, cue and native-hierarchy issues. Its isolated hierarchy repair has passed source-preservation checks but has no measured retrieval result.
+
 [Protocol](TREE_SYSTEM_PROTOCOL.md) · [Registration](registrations/tree-retrieval-v3.json) · [Pre-outcome amendment](registrations/tree-retrieval-v3-jev-rerank-amendment.json) · [Reproduction](RETRIEVAL_V3_REPRODUCTION.md)
 
 [Validation catalog and file hashes](results/tree-retrieval-v3/validation/catalog.json) · [Statistics](results/tree-retrieval-v3/validation/statistics.json) · [Metric summary](results/tree-retrieval-v3/validation/aligned-summary.json)

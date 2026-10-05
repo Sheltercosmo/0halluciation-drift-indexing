@@ -46,8 +46,21 @@
     "statistics.json": {
       "sha256": "11e88af0b4138c685ebceef5fffa413c81a21b57a32688e9078be4b8755e641e",
       "bytes": 36805
+    },
+    "failure-analysis.json": {
+      "sha256": "81f42c288374aaf8cdab4fa6bc3812130d2d7ac228112409f358d605a9046410",
+      "bytes": 1652
+    },
+    "engineering-diagnostics.json": {
+      "sha256": "2f96d63eb95d319a755d4f9f495e49281a089b8b56f690af7affa67e37d13a85",
+      "bytes": 2849
+    },
+    "structure-repair.json": {
+      "sha256": "a61188c8f7949c96a921933145bfc840349febad6f7faff8b40c6d6a2530325a",
+      "bytes": 725
     }
   },
   "scope": "whole original paragraphs inside the supplied QASPER paper",
-  "source_inputs": "prepared document-disjoint allocation; input hashes and source code are in manifest.json"
+  "source_inputs": "prepared document-disjoint allocation; input hashes and source code are in manifest.json",
+  "supplemental_analysis": "Post-outcome validation engineering diagnostics and source-only heading repair audit; no test outcomes or additional confirmatory claims."
 }
