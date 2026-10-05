@@ -1,0 +1,20 @@
+name: Verify improvement splits
+on:
+  push:
+    paths:
+      - "evals/iterations/v1/**"
+      - "scripts/iteration_splits.py"
+      - "scripts/verify_iteration_splits.py"
+      - ".github/workflows/verify-splits.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  splits:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/verify_iteration_splits.py --download
