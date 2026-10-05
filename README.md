@@ -31,7 +31,17 @@ Headings and contents supply the upper structure without model calls. Jev then s
 
 ## Measured performance
 
-Our highest observed **QASPER answer F1 is 58.88** with Jev rank fusion on 64 development questions. Expanded Jev retrieval reaches **90.56% evidence recall** on the 58 questions with reference evidence. In the larger completed study, the original Jev pipeline scores **89.58% QuALITY-HARD accuracy** on 192 questions. These results belong to the configurations and samples below; they are not a combined score for one configuration.
+Our best completed results are summarized below. **All are development results**, with embeddings enabled and no generative LLM calls during Jev indexing. Each row identifies its configuration and sample; the scores do not describe one combined configuration.
+
+| Measurement | Best completed Jev result | Configuration and sample |
+| --- | ---: | --- |
+| QASPER answer F1 | **58.88** | Rank fusion; 64 questions, isolated reader |
+| QASPER evidence recall | **90.56%** | Expanded pool, fusion and parent expansion; 58 eligible questions |
+| QuALITY-HARD accuracy | **89.58%** | Original pipeline; separate 192-question study |
+
+[Read the performance snapshot and reproduce the scores →](evals/PERFORMANCE.md)
+
+![Completed development comparison: Jev rank fusion scores 58.88 QASPER F1 and 85.94 percent QuALITY-HARD accuracy; expanded Codex reranking scores 55.49 and 85.94 on the same 64 questions per benchmark.](assets/development-results.svg)
 
 ### Latest development results
 
