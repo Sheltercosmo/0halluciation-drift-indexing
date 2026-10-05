@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from scripts.bounded_clients import Embeddings, save, signature
 from scripts.bounded_eval import Jev, bm25, covered_paragraphs, query_text, read_json, sections, sha, tokenizer
-from scripts.live_tree_clients import Gemini, LiveBudget, LiveEmbeddings
+from scripts.live_tree_clients import Gemini, LiveBudget, LiveEmbeddings, GenerationBlocked
 from scripts.planned_evidence_trial import PLAN_INSTRUCTION, PLAN_SCHEMA, validate_plan
 from zero_index.context import candidate_pool
 from zero_index.embeddings import CentroidRepresentatives
@@ -280,13 +280,21 @@ def run(output, stage, workers=8):
     def read(job):
         case, method = job
         path = output / 'predictions' / method / (signature(case['id']) + '.json')
-        if path.exists() and read_json(path).get('reader_policy') == 'isolated-input-id-first-usable':
+        if path.exists() and read_json(path).get('reader_policy') == 'isolated-input-id-first-usable-stop-on-block':
             return
         retrieval = read_json(output / 'retrieval' / (signature(case['id']) + '.json'))['methods'][method]
         request = {'id': case['id'], 'question': case['question'], 'options': case['options'], 'context': retrieval['context']}
-        value = llm.call([request], 'reader')['answers'][0]
-        save(path, {'id': case['id'], 'method': method, 'status': 'ok', 'answer': value['answer'],
-                    'reader_policy': 'isolated-input-id-first-usable'})
+        try:
+            value = llm.call([request], 'reader')['answers'][0]
+            prediction = {'status': 'ok', 'answer': value['answer']}
+        except GenerationBlocked as exc:
+            prediction = {'status': 'blocked_by_reader', 'answer': '', 'failure': str(exc)}
+        except RuntimeError as exc:
+            if 'generation retry limit exhausted' not in str(exc) and 'Gemini structural/transient retry limit exhausted' not in str(exc):
+                raise
+            prediction = {'status': 'failed', 'answer': '', 'failure': str(exc)}
+        save(path, {'id': case['id'], 'method': method, **prediction,
+                    'reader_policy': 'isolated-input-id-first-usable-stop-on-block'})
 
     for name, function, items in [('plan', plan, cases), ('index', index_doc, sorted(docs)),
                                   ('retrieve', retrieve, cases), ('read', read, [(c, m) for c in cases for m in METHODS])]:
@@ -315,9 +323,9 @@ def score(output):
                    'routing_status': retrieved['searches'].get(method, {}).get('status'),
                    'preview_tokens': retrieved['searches'].get(method, {}).get('preview_tokens')}
             if case['dataset'] == 'quality':
-                row['answer_score'] = int(prediction['answer'] == gold[case['id']]['label'])
+                row['answer_score'] = int(prediction['status'] == 'ok' and prediction['answer'] == gold[case['id']]['label'])
             else:
-                row['answer_score'] = max(official.token_f1_score(prediction['answer'], r['answer']) for r in refs[case['id']])
+                row['answer_score'] = max(official.token_f1_score(prediction['answer'], r['answer']) for r in refs[case['id']]) if prediction['status'] == 'ok' else 0
                 evidence = set(covered_paragraphs(docs[case['doc_id']], context['spans']))
                 eligible = [r for r in refs[case['id']] if r['evidence']]
                 if eligible:

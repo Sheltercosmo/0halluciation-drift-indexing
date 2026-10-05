@@ -10,13 +10,20 @@ from unittest.mock import patch
 from pathlib import Path
 
 from scripts.bounded_clients import save
-from scripts.live_tree_clients import LiveBudget, LiveEmbeddings, normalize_rankings, normalize_answer_identity
+from scripts.live_tree_clients import LiveBudget, LiveEmbeddings, normalize_rankings, normalize_answer_identity, reject_blocked, GenerationBlocked
 from scripts.live_tree_eval import tree
 from zero_index.index import reselect_representatives
 from zero_index.embeddings import CentroidRepresentatives
 
 
 class LiveEvaluationTests(unittest.TestCase):
+    def test_provider_blocks_are_terminal(self):
+        with self.assertRaises(GenerationBlocked):
+            reject_blocked({'promptFeedback': {'blockReason': 'PROHIBITED_CONTENT'}})
+        with self.assertRaises(GenerationBlocked):
+            reject_blocked({'candidates': [{'finishReason': 'SAFETY'}]})
+        reject_blocked({'candidates': [{'finishReason': 'STOP'}]})
+
     def test_isolated_reader_identity_repair_never_edits_answer(self):
         value = {'answers': [{'id': 'copied-with-typo', 'answer': 'Exact unchanged answer.'}]}
         normalize_answer_identity(value, ['canonical-input-id'])

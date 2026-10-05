@@ -25,8 +25,8 @@
   "documents_sha256": "874f82d9eaf3d353a2fe5afffa287041358ad0a50b0af27ad862be5bc96af103",
   "registry_sha256": "b10aef13e1129db5453d2702d0970913a4d5333873702fb7c1db26942e6f65a9",
   "source_hashes": {
-    "scripts/live_tree_eval.py": "bc3b2cda206b99ae9aa92c2630b70b9a470005b438df9544497f3c8a725dda87",
-    "scripts/live_tree_clients.py": "e7d537678b54eadee3a870acba2781a8963b5fb3f5e3f5386181816daddbb4fc",
+    "scripts/live_tree_eval.py": "6c4dfe70a333a9e4417fe883b2639e6efd67b17e3eb776c6d37631da6886b69c",
+    "scripts/live_tree_clients.py": "5782acd9809005bed4eb8035268aabc25e9e9d8f24d7898acba93b0cfde215e1",
     "scripts/bounded_clients.py": "169e72258a8d495bd5e7ddf514779bb6155f37c448a889f87f3bf3491225b3d5",
     "scripts/bounded_eval.py": "6bc9a4938a83fbc4b4915fd56fdb4667d499ed39cb2144471d2afff37f8ba981",
     "scripts/planned_evidence_trial.py": "28e0dd96eb0dbdc0eda6a6731a9562f069733eda6af28b0eef63989543628625",
@@ -759,8 +759,14 @@
       "prior_registration_commit": "623e2041637d8842dc04e0982257bd0ec30b78b9",
       "existing_prediction_files": 2421,
       "model_or_hyperparameter_changes": false
+    },
+    {
+      "reason": "Provider promptFeedback rejected a few literary contexts. Once identified, stop retries on blocked inputs and represent these as explicit zero-score failure rows. Also report common-unblocked sensitivity; do not remove failures from primary results.",
+      "prior_registration_commit": "e0588031f5f3fd66547e8733e0a4bad380f39db8",
+      "existing_prediction_files": 5882,
+      "model_or_hyperparameter_changes": false
     }
   ],
   "ranker_output_policy": "Use earliest STOP response with known integer candidate IDs; preserve first-occurrence model order, append omitted candidates in original RRF order; reject unknown IDs. Apply uniformly, including already retrieved cases, before reader inference.",
-  "reader_output_policy": "One isolated input determines the canonical case ID. Use earliest STOP reply containing exactly one string answer; attach input ID without editing answer text. Refresh all earlier predictions uniformly; preserve raw responses and identity-repair audit."
+  "reader_output_policy": "One isolated input determines canonical identity. Preserve earliest usable answer unchanged; a provider block is terminal, with no retry or bypass. Explicit failed/blocked rows receive zero answer score and remain in all primary denominators. Refresh all previous outputs uniformly from original responses."
 }

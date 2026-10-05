@@ -12,6 +12,18 @@ from urllib.request import Request, urlopen
 from scripts.bounded_clients import Audit, Budget, Codex, Embeddings, path_lock, save, signature, validate_answers, validate_rankings
 
 
+class GenerationBlocked(RuntimeError):
+    """A provider safeguard rejected this input; never retry or bypass it."""
+
+
+def reject_blocked(result):
+    reason = result.get('promptFeedback', {}).get('blockReason')
+    candidates = result.get('candidates', [])
+    finish = candidates[0].get('finishReason') if candidates else None
+    if reason or finish in ('SAFETY', 'PROHIBITED_CONTENT', 'RECITATION', 'BLOCKLIST', 'SPII'):
+        raise GenerationBlocked('Provider blocked generation: ' + str(reason or finish))
+
+
 def normalize_answer_identity(value, expected):
     """One isolated request defines identity; never edit the model's answer text."""
     if len(expected) != 1 or not isinstance(value, dict) or not isinstance(value.get('answers'), list) or len(value['answers']) != 1:
@@ -169,7 +181,9 @@ class Gemini(Codex):
             if stage in ('ranker', 'reader'):
                 for raw_path in sorted(self.responses.glob(key + '-*.json')):
                     try:
-                        raw = json.loads(raw_path.read_text(encoding='utf-8'))['candidates'][0]
+                        response = json.loads(raw_path.read_text(encoding='utf-8'))
+                        reject_blocked(response)
+                        raw = response['candidates'][0]
                         if raw.get('finishReason') != 'STOP':
                             continue
                         value = json.loads(''.join(p.get('text', '') for p in raw['content']['parts'] if not p.get('thought')))
@@ -196,6 +210,7 @@ class Gemini(Codex):
                     save(response_path, result)
                     row['usage'] = result.get('usageMetadata', {})
                     row['response_model'] = result.get('modelVersion')
+                    reject_blocked(result)
                     if row['usage'].get('promptTokenCount', 0) > count or row['usage'].get('candidatesTokenCount', 0) + row['usage'].get('thoughtsTokenCount', 0) > 512:
                         raise RuntimeError('Provider exceeded reserved token allowance')
                     candidate = result['candidates'][0]
