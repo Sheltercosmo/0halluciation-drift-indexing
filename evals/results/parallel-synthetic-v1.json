@@ -1,0 +1,106 @@
+{
+  "mode": "offline-synthetic-transport",
+  "network_calls": 0,
+  "fixed_score_tree_and_decisions_equal": true,
+  "python": "3.12.14",
+  "platform": "Windows",
+  "parameters": {
+    "delay_seconds": 0.04,
+    "repeats": 3,
+    "headings": 8,
+    "paragraphs_per_heading": 4,
+    "sentences_per_paragraph": 8,
+    "batch_size": 64,
+    "max_concurrency": 4
+  },
+  "runtime_sha256": {
+    "scripts/benchmark_parallel.py": "20a89a30445ec9c77e214a0ed66e503df2a3d7f6c4f4a122d67a0ef0efe3f7b8",
+    "zero_index/__init__.py": "6dfeadbc6b0922ef9e82f8e4d2450aa3c6f63eaf60f3a2f5ac061164efe95506",
+    "zero_index/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279",
+    "zero_index/cli.py": "eb04a51ea617f14fe8508044f6e2e02af4ce1f5a2b7e9614cc6d4512d2520543",
+    "zero_index/embeddings.py": "f233ec0bc84c08ecb48a7fb53c2aba3d7a3d41b2bda9beba33d27dc0a0705369",
+    "zero_index/index.py": "44e2bdf725bc9b3dc5988cc39ea9fe7022a37f45411fbe05f13034323a28f7c7",
+    "zero_index/jev.py": "7b186e40d21de57c5412ffbdd8b1bd0ac292f7a822a778b43a6e9568154b790b",
+    "zero_index/model.py": "b4bda8ee4137444772fd0565a8830179b51a77a3860651f4b48823a329d4f4c7",
+    "zero_index/parallel.py": "dc8e677f09625652d7012b178657bcf30afa05bf899118424b00e74972da3222",
+    "zero_index/parse.py": "b2b09b61a377d2ba7736c7dd757db3c0b5af2c866dbd2851f658c177665e04ef",
+    "zero_index/ranking.py": "2dddde2262f35ed762a57f9320129990debdfe1954569a4ef9788da792303a0d",
+    "zero_index/retrieval.py": "6db3dee235c4ae06e8bc2433591016d6addcc127ca637525baef939909e7271a",
+    "zero_index/segment.py": "5b253a1b9339a0c909c0b10cf3f78e4d1a083706fb7fdb7d46c365aa2aed06b5",
+    "zero_index/structure.py": "3f36f8fda4e3901385e0a9230057e19d96f1d3d20ccebbb16d18924cbe8724f8"
+  },
+  "results": {
+    "legacy_waves_serial": {
+      "median_seconds": 3.5918841999955475,
+      "runs": [
+        {
+          "elapsed_seconds": 3.5918841999955475,
+          "requests": 88,
+          "questions": 536,
+          "peak_in_flight": 1
+        },
+        {
+          "elapsed_seconds": 3.595055899990257,
+          "requests": 88,
+          "questions": 536,
+          "peak_in_flight": 1
+        },
+        {
+          "elapsed_seconds": 3.591040100029204,
+          "requests": 88,
+          "questions": 536,
+          "peak_in_flight": 1
+        }
+      ],
+      "speedup_vs_legacy": 1.0
+    },
+    "coalesced_serial": {
+      "median_seconds": 0.4555777999921702,
+      "runs": [
+        {
+          "elapsed_seconds": 0.4549692999571562,
+          "requests": 11,
+          "questions": 536,
+          "peak_in_flight": 1
+        },
+        {
+          "elapsed_seconds": 0.4555777999921702,
+          "requests": 11,
+          "questions": 536,
+          "peak_in_flight": 1
+        },
+        {
+          "elapsed_seconds": 0.45776680001290515,
+          "requests": 11,
+          "questions": 536,
+          "peak_in_flight": 1
+        }
+      ],
+      "speedup_vs_legacy": 7.8842388721690995
+    },
+    "coalesced_concurrent": {
+      "median_seconds": 0.2129597999737598,
+      "runs": [
+        {
+          "elapsed_seconds": 0.21260400000028312,
+          "requests": 11,
+          "questions": 536,
+          "peak_in_flight": 4
+        },
+        {
+          "elapsed_seconds": 0.2129597999737598,
+          "requests": 11,
+          "questions": 536,
+          "peak_in_flight": 4
+        },
+        {
+          "elapsed_seconds": 0.21766760002356023,
+          "requests": 11,
+          "questions": 536,
+          "peak_in_flight": 4
+        }
+      ],
+      "speedup_vs_legacy": 16.86648935826446
+    }
+  }
+}

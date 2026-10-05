@@ -14,7 +14,7 @@ Source offsets are zero-based Unicode code-point indices with exclusive ends, no
 
 For a group starting at paragraph `a`, compare `(a, a+1)`, `(a, a+2)`, and so on. Never advance `a` until a cut. Never compare all paragraph pairs. At a cut before paragraph `i`, create a new group anchored at `i`.
 
-The Jev adapter asks a binary `noul` question: do the anchor and candidate discuss the same specific topic? It reads the returned `noul` probability, not a separate confidence value. Headings are not submitted as paragraph text. Each request is evaluated separately and successful identical requests are cached within the scorer instance.
+The Jev adapter asks a binary `noul` question: do the anchor and candidate discuss the same specific topic? It reads the returned `noul` probability, not a separate confidence value. Headings are not submitted as paragraph text. One ready pair from each independent heading run can share a batched request. A run advances only after its previous pair resolves. Successful identical judgments are cached within the scorer instance.
 
 ## Bayesian prior: probability versus likelihood
 
@@ -59,9 +59,9 @@ This deliberately implements the proposed sharp-drop rule, not full Bayesian onl
 
 ## Central sentences
 
-After segmentation, select the section representative and its paragraph representatives. Only existing source sentences are eligible. Their scores are independent, so section and paragraph judgments can share a Jev request without waiting for one another.
+After segmentation, select the section representative and its paragraph representatives. Only existing source sentences are eligible. Their scores are independent, so judgments across sections, paragraphs and search depths can share Jev requests without waiting for one another.
 
-Search proceeds in waves across every paragraph in the same topic section:
+Candidate planning proceeds in waves across every paragraph in the same topic section:
 
 | Wave | Paragraph 1 | Paragraph 2 | Paragraph 3 |
 | --- | --- | --- | --- |
@@ -69,7 +69,7 @@ Search proceeds in waves across every paragraph in the same topic section:
 | 2 | Second + second-last | Second + second-last | Second + second-last |
 | 3 onward | Continue inward | Continue inward | Continue inward |
 
-Odd-length paragraphs evaluate the middle sentence once; finished paragraphs leave subsequent waves. For each candidate, one question uses the whole section as context and another uses its own paragraph. Jev's multi-question API evaluates the independent judgments in parallel. A one-sentence target represents itself without a model question. Ties favor the earlier evaluated candidate.
+Odd-length paragraphs evaluate the middle sentence once; finished paragraphs leave subsequent waves. For each candidate, one question uses the whole section as context and another uses its own paragraph. Waves determine candidate order, not network barriers: the planner combines independent work across waves and sections into bounded requests. A one-sentence target represents itself without a model question. Ties favor the earlier planned candidate regardless of response completion order.
 
 **The default is exhaustive**: every sentence is visited. An optional budget `B` caps candidates per target node (section or paragraph). A capped section can exhaust its budget before every paragraph contributes a candidate; use exhaustive mode when that coverage is required. The selected sentence, visited indices, and exhaustive flag remain inspectable.
 
@@ -79,17 +79,17 @@ No automatic confidence-based early stopping is claimed. Finite `B` gives an app
 
 ## Cost and determinism
 
-Paragraph grouping needs at most `n-1` model decisions within each heading run. These anchor comparisons remain sequential because a cut changes the anchor. Representative selection visits up to `min(B,m)` candidates per target node, or all `m` in exhaustive mode. Questions for all active paragraphs and the section are combined per wave; repeated contexts and sentence strings occur once in each request. Identical judgments use the in-memory cache.
+Paragraph grouping needs at most `n-1` model decisions within each heading run. These anchor comparisons remain sequential within a run because a cut changes the anchor; independent runs advance in batched frontiers. Representative selection visits up to `min(B,m)` candidates per target node, or all `m` in exhaustive mode. Questions across all sections are coalesced; repeated contexts and sentence strings occur once in each request. Identical judgments use the in-memory cache.
 
-For a wave of `Q` distinct uncached questions and batch size `K`, the question-count limit alone needs `ceil(Q/K)` requests; context-size splitting may require more. The default `K=64` is an application batching setting, not a claimed provider maximum. Batches within a wave are sent sequentially, while questions within each request use Jev's parallel evaluation. With no splitting, the number of wave round trips follows the longest paragraph's half-length rather than the sum of paragraph lengths. Parallelism reduces round trips and repeated context transmission; it does not by itself reduce the number of candidate judgments or prove a latency/token-cost improvement.
+For `Q` distinct uncached questions and batch size `K`, the question-count limit alone needs `ceil(Q/K)` requests; context-size splitting may require more. The default `K=64` is an application batching setting, not a claimed provider maximum. `max_concurrency` (CLI: `--max-concurrency`, default 1) allows multiple requests in flight; completed requests free slots without waiting for earlier requests. Parallelism does not by itself reduce candidate judgments or prove a live latency/token-cost improvement. See [parallel processing](parallel-processing.md) for the dependency model, measured synthetic comparison and remaining barriers.
 
 Lexical pairwise centrality needs at most `min(B,m) × (m-1)` comparisons per target; exhaustive selection is quadratic. The lexical fallback runs locally and does not claim Jev-style parallel execution.
 
-Jev HTTP requests are bounded by `max_calls`; the limit counts requests, not questions. Exceeding it aborts the build rather than silently returning an incomplete exhaustive result. Reusing a scorer shares its cache and call budget. Response model identifiers, request counts, and answered-question counts are recorded.
+Jev HTTP attempts are bounded by `max_calls`; the limit counts requests, not questions, and is reserved under a lock. Exceeding it aborts the build rather than silently returning an incomplete exhaustive result. Reusing a scorer sequentially shares its cache and call budget. Response model identifiers, request counts, answered-question counts and observed peak in-flight requests are recorded.
 
 A configurable `max_state_chars` guard (default 60,000) splits batches when their combined contexts are too large. A single oversized context raises an error without truncation. This is a character guard, not a tokenizer or a guarantee of fitting the provider's token limit. Persisted caching, automatic retries, and splitting an individual section context are not implemented. The code is deterministic for fixed scores, but repeated remote model runs are not promised identical.
 
-The parallel-question request design follows [TypeSafe's building guide](https://docs.typesafe.ai/concepts/how-to-build-with-system-one) and the [OpenRouter Decisions API](https://openrouter.ai/docs/api/api-reference/alphadecisions/submit-a-decisions-request). Tests simulate responses, including out-of-order answers and partial failures; the [live pilot](../evals/REPORT.md) records a small batching comparison, with broader provider benchmarking still needed.
+The parallel-question request design follows the [TypeSafe API reference](https://docs.typesafe.ai/api) and the [OpenRouter Decisions API](https://openrouter.ai/docs/api/api-reference/alphadecisions/submit-a-decisions-request). Tests simulate responses, including out-of-order answers, concurrent request completion, call-budget races and partial failures; the [live pilot](../evals/REPORT.md) records a small batching comparison, with broader provider benchmarking still needed.
 
 An index build is only written after successful completion. Failures raise explicit errors. Source hashes detect accidental source changes in saved indexes; they are not authentication signatures.
 

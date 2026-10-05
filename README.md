@@ -14,7 +14,7 @@ Our index is a pure decision model based method with **0 LLM and optional embedd
 
 <p align="center">
   <a href="#quick-start">Quick start</a> ·
-  <a href="evals/REPORT.md">Measured results</a> ·
+  <a href="evals/BOUNDED_REPORT.md">Measured results</a> ·
   <a href="docs/algorithm.md">Algorithm</a> ·
   <a href="#parallel-processing-optimization">Parallel processing</a> ·
   <a href="docs/retrieval.md">Retrieval</a> ·
@@ -31,7 +31,18 @@ Headings and contents supply the upper structure without model calls. Jev then s
 
 ## Measured, with limits
 
-**Competitive performance has not yet been established.** Complete releases totaling **4,779 questions** are verified across QASPER, QuALITY, LongBench v2 and Bright-Pro, including Bright-Pro's 526,319-document corpus. These are prepared inputs, not new results. The [bounded evaluation](evals/BOUNDED_PROTOCOL.md) compares four retrieval pipelines on **384 hard or evidence-focused questions**, using Codex and a $30 Gemini cap. It evaluates the prior and probability-drop rule together as the blocking method. The [research audit](evals/FRONTIER_EVALUATION.md) explains the benchmark choices and possible larger comparisons.
+The completed [384-question comparison](evals/BOUNDED_REPORT.md) evaluates decision-based blocking and its statistical cut rule together, against hybrid retrieval, semantic chunking, and Codex reranking. All methods use the same reader and a 2,048-token source budget.
+
+| Pipeline | QuALITY-HARD accuracy, 192 questions | QASPER answer F1, 192 questions |
+| --- | ---: | ---: |
+| Hybrid + paragraph packing | 86.98% | 46.42 |
+| Hybrid + semantic chunking | 90.10% | 47.83 |
+| Hybrid + Codex reranking | **90.63%** | **49.77** |
+| **Jev blocking + reranking** | **89.58%** | **49.63** |
+
+**This run does not establish superiority over the strongest baseline.** Jev's answer-score intervals against Codex reranking include zero, and its QASPER evidence recall was lower: 84.60% versus 88.71%. The [full report](evals/BOUNDED_REPORT.md) publishes all 1,536 predictions, paired intervals, failures and usage. Scores and source contexts replay without model calls. Gemini's conservative reservation was **$5.41 of the $30 cap**, including $4 reserved for earlier work; reading and generative reranking used Codex.
+
+The sample covers 307 documents and deliberately emphasizes hard and multi-evidence questions. It is not a full-benchmark result. The [research audit](evals/FRONTIER_EVALUATION.md) documents larger prepared datasets and possible follow-up comparisons.
 
 A frozen live pilot on **six synthetic documents and 24 questions** produced these results:
 

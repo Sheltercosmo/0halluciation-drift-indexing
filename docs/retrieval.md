@@ -51,7 +51,7 @@ Each candidate contains exact sentence text, its heading path, its paragraph rep
 
 A BM25-style first pass combines the original question and proposed need, scoring sentence text plus heading and paragraph context. It scans scoped leaves and keeps up to `candidate_limit`; it uses no embeddings and is not yet a persisted inverted index.
 
-Jev then asks a separate `noul` relevance question for every candidate. This differs from same-topic and representativeness judgments. Independent questions share query context and run in parallel inside a request. Responses are mapped by question ID; incomplete responses fail without caching partial results.
+Jev then asks a separate `noul` relevance question for every candidate. This differs from same-topic and representativeness judgments. Independent questions share query context and run in parallel inside a request. Multiple requests can overlap with `JevScorer(max_concurrency=4)` or `find --max-concurrency 4`; the default is 1. Responses are mapped by question ID and restored to candidate order; incomplete responses fail without caching partial results. See [parallel processing](parallel-processing.md) for shared budgets and failure handling.
 
 Jev scores set the final order; lexical scores and source order break ties. Retrieval relevance does not use the topic-segmentation prior. The offline baseline's scores are relative lexical scores, not probabilities.
 

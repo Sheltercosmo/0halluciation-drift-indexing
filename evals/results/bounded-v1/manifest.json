@@ -1,0 +1,44 @@
+{
+  "seed": 20261005,
+  "status": "prepared_before_model_inference",
+  "methods": [
+    "hybrid_recursive",
+    "hybrid_semantic",
+    "hybrid_codex_rerank",
+    "jev_blocking_rerank"
+  ],
+  "questions": 384,
+  "documents": 307,
+  "max_questions_per_document": 2,
+  "strata": {
+    "multi_evidence": 160,
+    "unanswerable": 16,
+    "single_evidence": 16,
+    "hard": 192
+  },
+  "source_hashes": {
+    "scripts/bounded_eval.py": "6bc9a4938a83fbc4b4915fd56fdb4667d499ed39cb2144471d2afff37f8ba981",
+    "scripts/bounded_clients.py": "169e72258a8d495bd5e7ddf514779bb6155f37c448a889f87f3bf3491225b3d5",
+    "evals/BOUNDED_PROTOCOL.md": "3782eebc2f19cf1249de077bcafd4d9bfbd941519e1574bc9f5febf29e70d6d2",
+    "zero_index/cli.py": "eb04a51ea617f14fe8508044f6e2e02af4ce1f5a2b7e9614cc6d4512d2520543",
+    "zero_index/embeddings.py": "f233ec0bc84c08ecb48a7fb53c2aba3d7a3d41b2bda9beba33d27dc0a0705369",
+    "zero_index/index.py": "44e2bdf725bc9b3dc5988cc39ea9fe7022a37f45411fbe05f13034323a28f7c7",
+    "zero_index/jev.py": "7b186e40d21de57c5412ffbdd8b1bd0ac292f7a822a778b43a6e9568154b790b",
+    "zero_index/model.py": "b4bda8ee4137444772fd0565a8830179b51a77a3860651f4b48823a329d4f4c7",
+    "zero_index/parallel.py": "dc8e677f09625652d7012b178657bcf30afa05bf899118424b00e74972da3222",
+    "zero_index/parse.py": "b2b09b61a377d2ba7736c7dd757db3c0b5af2c866dbd2851f658c177665e04ef",
+    "zero_index/ranking.py": "2dddde2262f35ed762a57f9320129990debdfe1954569a4ef9788da792303a0d",
+    "zero_index/retrieval.py": "6db3dee235c4ae06e8bc2433591016d6addcc127ca637525baef939909e7271a",
+    "zero_index/segment.py": "5b253a1b9339a0c909c0b10cf3f78e4d1a083706fb7fdb7d46c365aa2aed06b5",
+    "zero_index/structure.py": "3f36f8fda4e3901385e0a9230057e19d96f1d3d20ccebbb16d18924cbe8724f8",
+    "zero_index/__init__.py": "6dfeadbc6b0922ef9e82f8e4d2450aa3c6f63eaf60f3a2f5ac061164efe95506",
+    "zero_index/__main__.py": "6d8b7d7846a845059d7a3107143f11131f63c5511d669b44085b15ec5e3d2279"
+  },
+  "data_hashes": {
+    "cases.json": "53b15b1c48640132307ae437dbf2f3175577ced477b3cb18373457caca914ba5",
+    "documents.json": "874f82d9eaf3d353a2fe5afffa287041358ad0a50b0af27ad862be5bc96af103",
+    "gold.json": "520fcc77295269af523f93c8a1c8a216178ebac125a6702ca86d91b525a94455",
+    "selection.json": "dede306240633c158abdce569399a1b02f502da80d3e52ed3c261c1c65b1654d",
+    "qasper_evaluator.py": "781aba7cd8e524bef4f0a1b4bf3504e5b02cb1d8d5bf32a8f0a89dfa83e86bfe"
+  }
+}

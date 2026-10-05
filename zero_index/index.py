@@ -7,7 +7,7 @@ from typing import Iterator
 
 from .model import Config, LexicalJaccard, Similarity
 from .parse import Block, sentence_spans
-from .segment import central_sentences, segment
+from .segment import central_sentences_many, segment_runs
 from .structure import HeadingHint, prepare_structure, resolve_contents
 
 
@@ -136,9 +136,24 @@ def build_index(
     config = config if config is not None else Config()
     root = Node("root", "document", source_name, 0, len(source))
     stack: list[tuple[int, Node]] = [(0, root)]
-    pending: list[Block] = []
     decisions: list[dict] = []
     sequence = 0
+
+    # Discover hard boundaries first. Only one comparison per run is ready at
+    # a time, but independent runs can share a request and concurrent batches.
+    blocks = list(prepare_structure(source, heading_hints))
+    runs: list[list[Block]] = [[]]
+    for block in blocks:
+        if block.kind in ("heading", "toc"):
+            runs.append([])
+        else:
+            runs[-1].append(block)
+    segmented = segment_runs(source, runs, scorer, config)
+    spans_by_group = [[sentence_spans(source, block) for block in group]
+                      for groups, _ in segmented for group in groups]
+    selected = iter(central_sentences_many(source, spans_by_group, scorer, config.sentence_budget))
+    spans_by_group = iter(spans_by_group)
+    segmented = iter(segmented)
 
     def create(kind: str, title: str, start: int, end: int, central=None, metadata=None) -> Node:
         nonlocal sequence
@@ -146,13 +161,11 @@ def build_index(
         return Node(f"n{sequence:06d}", kind, title, start, end, central, metadata=metadata or {})
 
     def flush() -> None:
-        groups, trace = segment(source, pending, scorer, config)
+        groups, trace = next(segmented)
         decisions.extend({"parent_id": stack[-1][1].node_id, **entry} for entry in trace)
         for group in groups:
-            paragraph_spans = [sentence_spans(source, block) for block in group]
-            representatives = central_sentences(
-                source, paragraph_spans, scorer, config.sentence_budget, include_section=True,
-            )
+            paragraph_spans = next(spans_by_group)
+            representatives = next(selected)
             central = representatives[0]
             section = create("section", central["text"] if central else "Section",
                              group[0].start, group[-1].end, central)
@@ -163,9 +176,8 @@ def build_index(
                 section.children.append(paragraph)
                 for start, end in spans:
                     paragraph.children.append(create("sentence", source[start:end], start, end))
-        pending.clear()
 
-    for block in prepare_structure(source, heading_hints):
+    for block in blocks:
         if block.kind == "heading":
             flush()
             while stack[-1][0] >= block.level:
@@ -183,8 +195,6 @@ def build_index(
                 contents.children.append(create("toc_entry", entry["title"], entry["start"], entry["end"],
                                                 metadata={"anchor": entry["anchor"],
                                                           "printed_page": entry["printed_page"]}))
-        else:
-            pending.append(block)
     flush()
     diagnostics = resolve_contents(root)
     first_heading = next((node for node in root.walk() if node.kind == "heading"

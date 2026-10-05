@@ -1,0 +1,9 @@
+{
+  "validated_predictions": 1536,
+  "questions": 384,
+  "source_and_data_hashes": "passed",
+  "source_contexts": "passed",
+  "official_answer_and_evidence_scores": "passed",
+  "paired_bootstrap": "passed",
+  "model_calls": 0
+}

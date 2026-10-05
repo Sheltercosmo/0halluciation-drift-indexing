@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "documents": 307,
+  "paragraphs": 24176,
+  "chunk_counts": {
+    "recursive": 5237,
+    "semantic": 7932,
+    "jev": 10555
+  },
+  "checks": [
+    "exact source spans",
+    "512-token maximum",
+    "complete paragraph coverage in each index"
+  ]
+}

@@ -1,6 +1,6 @@
 # Evaluation grounded in current research
 
-Research and dataset audit: 2026-10-05. **Status: complete datasets verified; model comparisons not yet run.** This replaces the proposed 60-claim SciFact extension as the main evaluation plan. The existing synthetic and 12-claim SciFact results remain smoke tests, not evidence of competitive RAG performance.
+Research and dataset audit: 2026-10-05. **Status: complete datasets verified; the bounded 384-question comparison is complete.** Read its [results and uncertainty](BOUNDED_REPORT.md). The full-release experiments below remain research directions. The existing synthetic and 12-claim SciFact results remain smoke tests, not evidence of competitive RAG performance.
 
 ## What the papers actually evaluate
 

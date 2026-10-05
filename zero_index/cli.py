@@ -22,6 +22,7 @@ def main() -> None:
     build.add_argument("--drop", type=float, default=0.2)
     build.add_argument("--sentence-budget", type=int, default=0, help="0 searches every sentence (default); otherwise >= 2 per node")
     build.add_argument("--batch-size", type=int, default=64, help="Maximum parallel Jev questions per request")
+    build.add_argument("--max-concurrency", type=int, default=1, help="Maximum in-flight Jev HTTP requests")
     build.add_argument("--max-calls", type=int, default=1000)
     build.add_argument("--model", help="Defaults to the pinned model for the selected provider")
     build.add_argument("--provider", choices=("typesafe", "openrouter"), default="openrouter")
@@ -35,6 +36,7 @@ def main() -> None:
     search.add_argument("--candidates", type=int, default=64, help="0 sends all scoped leaves to the reranker")
     search.add_argument("--top-k", type=int, default=5)
     search.add_argument("--batch-size", type=int, default=64)
+    search.add_argument("--max-concurrency", type=int, default=1, help="Maximum in-flight Jev HTTP requests")
     search.add_argument("--provider", choices=("typesafe", "openrouter"), default="openrouter")
     search.add_argument("--model")
     search.add_argument("--max-calls", type=int, default=1000)
@@ -51,7 +53,8 @@ def main() -> None:
             config = Config(same_topic_prior=args.prior, posterior_cutoff=args.cutoff,
                             minimum_drop=args.drop, probability_reference_prior=args.reference_prior,
                             sentence_budget=None if args.sentence_budget == 0 else args.sentence_budget)
-            scorer = (JevScorer(model=args.model, max_calls=args.max_calls, batch_size=args.batch_size, provider=args.provider)
+            scorer = (JevScorer(model=args.model, max_calls=args.max_calls, batch_size=args.batch_size,
+                                provider=args.provider, max_concurrency=args.max_concurrency)
                       if args.scorer == "jev" else LexicalJaccard())
             hints = None
             if args.headings_json:
@@ -67,7 +70,8 @@ def main() -> None:
         index = DocumentIndex.from_dict(json.loads(args.index.read_text(encoding="utf-8")))
         if args.command == "find":
             reranker = (JevScorer(batch_size=args.batch_size, provider=args.provider, model=args.model,
-                                 max_calls=args.max_calls) if args.reranker == "jev" else None)
+                                 max_calls=args.max_calls, max_concurrency=args.max_concurrency)
+                        if args.reranker == "jev" else None)
             result = find(index, args.question or args.need, args.need, reranker=reranker, scope_id=args.scope,
                           candidate_limit=None if args.candidates == 0 else args.candidates, top_k=args.top_k)
         elif args.command == "outline":

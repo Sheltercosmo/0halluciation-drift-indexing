@@ -1,0 +1,12 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows",
+  "architecture": "AMD64",
+  "numpy": "2.3.5",
+  "tiktoken": "0.12.0",
+  "codex_cli": "codex-cli 0.159.0-alpha.12.1",
+  "codex_binary_sha256": "1722907aa64401bcc9b34467ef5c2af43f6aef9a5045ef04d11d19dfae4589fb",
+  "requested_reader_model": "gpt-6.1-sol",
+  "requested_jev_model": "jev-1.13.0",
+  "requested_embedding_model": "gemini-embedding-2"
+}

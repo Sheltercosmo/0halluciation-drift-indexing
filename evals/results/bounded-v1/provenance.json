@@ -1,0 +1,96 @@
+{
+  "manifest_sha256": "a144b194bd2741b56b7db47b1dd02a808a392cc02eab4dbf470d8460d88dc727",
+  "stages": {
+    "embedding/retrieval-chunks": {
+      "requests": 925,
+      "questions": 0,
+      "inputs": 17464,
+      "provider_counted_tokens": 3878599,
+      "tokens": {
+        "promptTokenCount": 3862422
+      },
+      "summed_request_seconds": 850.7787363000098
+    },
+    "embedding/retrieval-queries": {
+      "requests": 382,
+      "questions": 0,
+      "inputs": 382,
+      "provider_counted_tokens": 16241,
+      "tokens": {
+        "promptTokenCount": 16241
+      },
+      "summed_request_seconds": 192.26983149978332
+    },
+    "embedding/semantic-paragraphs": {
+      "requests": 529,
+      "questions": 0,
+      "inputs": 23931,
+      "provider_counted_tokens": 1822981,
+      "tokens": {
+        "promptTokenCount": 1814059
+      },
+      "summed_request_seconds": 777.6906947005773
+    },
+    "jev/blocking": {
+      "requests": 8456,
+      "questions": 49537,
+      "inputs": 0,
+      "provider_counted_tokens": 0,
+      "tokens": {
+        "input_tokens": 9890705,
+        "output_tokens": 875953
+      },
+      "summed_request_seconds": 2563.5761169973994
+    },
+    "jev/reranking": {
+      "requests": 384,
+      "questions": 4465,
+      "inputs": 0,
+      "provider_counted_tokens": 0,
+      "tokens": {
+        "input_tokens": 2104691,
+        "output_tokens": 78137
+      },
+      "summed_request_seconds": 123.94026409933576
+    },
+    "codex/reader": {
+      "requests": 194,
+      "questions": 0,
+      "inputs": 0,
+      "provider_counted_tokens": 0,
+      "tokens": {
+        "input_tokens": 6311799,
+        "cached_input_tokens": 1989632,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 70137,
+        "reasoning_output_tokens": 5352
+      },
+      "summed_request_seconds": 3187.499617599882
+    },
+    "codex/reranker": {
+      "requests": 96,
+      "questions": 0,
+      "inputs": 0,
+      "provider_counted_tokens": 0,
+      "tokens": {
+        "input_tokens": 3262506,
+        "cached_input_tokens": 786944,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 22533,
+        "reasoning_output_tokens": 2900
+      },
+      "summed_request_seconds": 1176.5824434999377
+    }
+  },
+  "indexes": {
+    "documents": 307,
+    "comparisons_consumed": 21032,
+    "topic_cuts": 6538,
+    "chunks": {
+      "recursive": 5237,
+      "semantic": 7932,
+      "jev": 10555
+    },
+    "mean_document_index_seconds": 14.985457202281419
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "created": "2026-10-05",
+  "purpose": "Complete releases for benchmark preparation; no model predictions.",
+  "revisions": {
+    "qasper": "v0.3",
+    "quality": "f84977c40dbfef70c9cab48037b7becfc8e45f73",
+    "longbench-v2": "2b48e494f2c7a2f0af81aae178e05c7e1dde0fe9",
+    "bright-pro": "dbdc22babbef310210e267b99249e7cec86d5edf"
+  },
+  "files": [
+    {
+      "name": "qasper-test.tgz",
+      "url": "https://qasper-dataset.s3.us-west-2.amazonaws.com/qasper-test-and-evaluator-v0.3.tgz",
+      "bytes": 3865061,
+      "sha256": "72a52a41193e2838b8074f80ac074b94f956b84886c36a61c58a7df4171bdd72"
+    },
+    {
+      "name": "quality-dev.jsonl",
+      "url": "https://raw.githubusercontent.com/nyu-mll/quality/f84977c40dbfef70c9cab48037b7becfc8e45f73/data/v1.0.1/QuALITY.v1.0.1.htmlstripped.dev",
+      "bytes": 8804985,
+      "sha256": "99852d874994078e4b4112b71ceca4dd35aa3a24ff6d3a35c051be25295b4fef"
+    },
+    {
+      "name": "longbench-v2.json",
+      "url": "https://huggingface.co/datasets/THUDM/LongBench-v2/resolve/2b48e494f2c7a2f0af81aae178e05c7e1dde0fe9/data.json",
+      "bytes": 465490535,
+      "sha256": "15d61c22d92c96900b3c4948b6aeea218d3214b676a65df48e7b8555604c7fe2"
+    },
+    {
+      "name": "bright-pro-readme.md",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/README.md",
+      "bytes": 7750,
+      "sha256": "f59f4da6fec95fb054a7516c4900a58d8c081db8709ac18d96d9ed24371417c9"
+    },
+    {
+      "name": "bright-pro/examples/biology.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/examples/biology.parquet",
+      "bytes": 124390,
+      "sha256": "e8a091dd9d8ed1a777e3c58fc4718c7ea2317cced45581494ea53615f376960e"
+    },
+    {
+      "name": "bright-pro/examples/earth_science.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/examples/earth_science.parquet",
+      "bytes": 134665,
+      "sha256": "9cba0424295223a6e1b6cc4d8526bfd48a39c480fe53e3a52d21f768fb1d1301"
+    },
+    {
+      "name": "bright-pro/examples/economics.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/examples/economics.parquet",
+      "bytes": 139089,
+      "sha256": "b28147d184bf785501e64104618e7805f1ac1f2c2af4e68f87ef2942910373ef"
+    },
+    {
+      "name": "bright-pro/examples/psychology.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/examples/psychology.parquet",
+      "bytes": 138454,
+      "sha256": "548972c16d9f2b4bba2153a72e06abbe5adad157dbded7263a659c326592f295"
+    },
+    {
+      "name": "bright-pro/examples/robotics.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/examples/robotics.parquet",
+      "bytes": 149169,
+      "sha256": "3d430a438fae5b60d7b7d74764ac137f8cd109e51cb355b0514789d86e65c6a1"
+    },
+    {
+      "name": "bright-pro/examples/stackoverflow.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/examples/stackoverflow.parquet",
+      "bytes": 147842,
+      "sha256": "fd6c1a2fdcd9fc24298f51fda9d3ff674954ebd5e4c73bf428895ed8a4eb1c2b"
+    },
+    {
+      "name": "bright-pro/examples/sustainable_living.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/examples/sustainable_living.parquet",
+      "bytes": 154662,
+      "sha256": "b046d5257e71f3783c7a137a3c5ee1ff82334359695421a8ffa87a046ef64b8e"
+    },
+    {
+      "name": "bright-pro/aspects/biology.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/aspects/biology.parquet",
+      "bytes": 36340,
+      "sha256": "b40522cb4842931282b9be23e2ec53d8632696f103c4261a9e8989e6855b371e"
+    },
+    {
+      "name": "bright-pro/aspects/earth_science.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/aspects/earth_science.parquet",
+      "bytes": 38972,
+      "sha256": "d35d2194ae53aba158080f0f518e7315626c9f8eceb8cd4d7509eca07574d1a3"
+    },
+    {
+      "name": "bright-pro/aspects/economics.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/aspects/economics.parquet",
+      "bytes": 32992,
+      "sha256": "795552457c1e5ba7dc573f748ad0ce5ec52f3e54f35c6d2a53849fddb5a7ec34"
+    },
+    {
+      "name": "bright-pro/aspects/psychology.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/aspects/psychology.parquet",
+      "bytes": 33718,
+      "sha256": "8ef6e8e38013ea73697153ad3aee1fc8ad7a90cebb2964daea2fa54939f55a2b"
+    },
+    {
+      "name": "bright-pro/aspects/robotics.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/aspects/robotics.parquet",
+      "bytes": 30355,
+      "sha256": "a1f47cd5922b7a9c1938098e171b3abe1a53542bee0b0c4a2bbc682e9c32e7e1"
+    },
+    {
+      "name": "bright-pro/aspects/stackoverflow.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/aspects/stackoverflow.parquet",
+      "bytes": 30732,
+      "sha256": "345352a89387d8376c2d56177352b26ea0abd6bb744dd2631a87cf5c35789475"
+    },
+    {
+      "name": "bright-pro/aspects/sustainable_living.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/aspects/sustainable_living.parquet",
+      "bytes": 37406,
+      "sha256": "9ad531ea970597069007afe49166dfd5bcdab5e95592b859cbaf50e4668b8724"
+    },
+    {
+      "name": "bright-pro/documents/biology.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/documents/biology.parquet",
+      "bytes": 11182439,
+      "sha256": "9d532904d7bc2480ba5655f53f1a8427f7755992fb53e5c10e5a475f314764fd"
+    },
+    {
+      "name": "bright-pro/documents/earth_science.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/documents/earth_science.parquet",
+      "bytes": 19451064,
+      "sha256": "c38d5f6765595edf806c30f0f0d776bd26d96842b90d3ea648799bdadb65c666"
+    },
+    {
+      "name": "bright-pro/documents/economics.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/documents/economics.parquet",
+      "bytes": 11542562,
+      "sha256": "11c59064b305142f871f71a5d722209bce2c465f891c95b52c905f286db8f3af"
+    },
+    {
+      "name": "bright-pro/documents/psychology.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/documents/psychology.parquet",
+      "bytes": 11806925,
+      "sha256": "3e76eff1579c6a57c3439b7dc72280c4a9d5a097415be33de8f9c9b7ec9bd964"
+    },
+    {
+      "name": "bright-pro/documents/robotics.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/documents/robotics.parquet",
+      "bytes": 8675305,
+      "sha256": "aa6447c8d602054528432887d347ddd46660a2dea5cb62eba047a4db0612d25e"
+    },
+    {
+      "name": "bright-pro/documents/stackoverflow.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/documents/stackoverflow.parquet",
+      "bytes": 25186370,
+      "sha256": "228d4e1ba911f3e6dece9d21998ecca64400f3654a9a9edd2ec226dbbd34a80d"
+    },
+    {
+      "name": "bright-pro/documents/sustainable_living.parquet",
+      "url": "https://huggingface.co/datasets/yale-nlp/Bright-Pro/resolve/dbdc22babbef310210e267b99249e7cec86d5edf/documents/sustainable_living.parquet",
+      "bytes": 12540715,
+      "sha256": "0650f317189c60fd514c90ca22bf5c76a3329ad387f7cbe0c4f31b5a0ddab05f"
+    }
+  ]
+}

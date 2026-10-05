@@ -1,6 +1,7 @@
 """One-way anchor comparisons and outside-in representative selection."""
 
 import math
+from dataclasses import dataclass
 
 from .model import Config, Similarity, adjust_probability, checked_score, posterior_same
 from .parse import Block
@@ -9,6 +10,44 @@ from .parse import Block
 def segment(
     source: str, blocks: list[Block], scorer: Similarity, config: Config
 ) -> tuple[list[list[Block]], list[dict]]:
+    return segment_runs(source, [blocks], scorer, config)[0]
+
+
+def segment_runs(source: str, runs: list[list[Block]], scorer: Similarity, config: Config):
+    """Advance independent heading runs together, with no speculative pairs."""
+    runners = [_segment_steps(source, blocks, scorer, config) for blocks in runs]
+    results = [None] * len(runs)
+    ready = {}
+
+    def advance(number, value=None):
+        try:
+            ready[number] = runners[number].send(value)
+        except StopIteration as done:
+            results[number] = done.value
+            ready.pop(number, None)
+
+    batch = getattr(scorer, "score_many", None)
+    if not callable(batch):
+        # Stateful third-party scalar scorers retain source-order invocation.
+        for number in range(len(runs)):
+            advance(number)
+            while number in ready:
+                advance(number, checked_score(scorer, *ready[number]))
+        return results
+
+    for number in range(len(runs)):
+        advance(number)
+    while ready:
+        numbers = list(ready)
+        values = list(batch([ready[number] for number in numbers]))
+        if len(values) != len(numbers):
+            raise ValueError("Topic batch returned the wrong number of scores")
+        for number, value in zip(numbers, values):
+            advance(number, float(value))
+    return results
+
+
+def _segment_steps(source, blocks, scorer, config):
     if not blocks:
         return [], []
     groups = [[blocks[0]]]
@@ -16,7 +55,9 @@ def segment(
     previous = config.same_topic_prior
     trace: list[dict] = []
     for block in blocks[1:]:
-        score = checked_score(scorer, source[anchor.start:anchor.end], source[block.start:block.end])
+        score = yield source[anchor.start:anchor.end], source[block.start:block.end]
+        if not math.isfinite(score) or not 0 <= score <= 1:
+            raise ValueError("Similarity scores must be finite and in [0, 1]")
         is_probability = getattr(scorer, "score_kind", "similarity") == "probability"
         probability = adjust_probability(score, config) if is_probability else posterior_same(score, config)
         drop = previous - probability
@@ -58,6 +99,77 @@ def central_sentences(
     source: str, groups: list[list[tuple[int, int]]], scorer: Similarity,
     budget: int | None = None, *, include_section: bool = False,
 ) -> list[dict | None]:
+    return central_sentences_many(
+        source, [groups], scorer, budget, include_section=include_section,
+    )[0]
+
+
+@dataclass
+class _CentralPlan:
+    targets: list[list[tuple[int, int]]]
+    contexts: list[str]
+    visited: list[list[int]]
+    jobs: list[tuple[int, int]]
+    best: list[tuple[int, float] | None]
+
+
+def central_sentences_many(source, sections, scorer, budget=None, *, include_section=True):
+    """Plan outside-in candidates, then score all independent sections together.
+
+    Waves define candidate order, not response dependencies. Flattening them
+    lets the scorer fill batches across depths and sections. Reduce results in
+    planned order, so completion timing cannot change ties or candidate limits.
+    """
+    plans = [_central_plan(source, groups, budget, include_section) for groups in sections]
+    batch = getattr(scorer, "representatives", None)
+    single = getattr(scorer, "representative", None)
+    semantic = callable(batch) or callable(single)
+    all_jobs = [(plan, target, candidate) for plan in plans for target, candidate in plan.jobs]
+    if semantic:
+        pairs = [(source[plan.targets[t][c][0]:plan.targets[t][c][1]], plan.contexts[t])
+                 for plan, t, c in all_jobs]
+        values = list(batch(pairs)) if callable(batch) and pairs else [single(*pair) for pair in pairs]
+        if len(values) != len(all_jobs):
+            raise ValueError("Representative batch returned the wrong number of scores")
+    else:
+        values = []
+        for plan, target, candidate in all_jobs:
+            spans = plan.targets[target]
+            start, end = spans[candidate]
+            total = sum(checked_score(scorer, source[start:end], source[a:b])
+                        for other, (a, b) in enumerate(spans) if other != candidate)
+            values.append(total / (len(spans) - 1))
+    for (plan, target, candidate), value in zip(all_jobs, values):
+        value = float(value)
+        if not math.isfinite(value) or not 0 <= value <= 1:
+            raise ValueError("Representative scores must be finite and in [0, 1]")
+        best = plan.best
+        if best[target] is None or value > best[target][1]:
+            best[target] = (candidate, value)
+
+    results = []
+    for plan in plans:
+        section_results = []
+        for target, winner in enumerate(plan.best):
+            if winner is None:
+                section_results.append(None)
+                continue
+            start, end = plan.targets[target][winner[0]]
+            count = len(plan.targets[target])
+            comparisons = len(plan.visited[target]) * (1 if semantic else count - 1) if count > 1 else 0
+            section_results.append({
+                "text": source[start:end], "start": start, "end": end,
+                "centrality": winner[1], "candidate_indices": plan.visited[target],
+                "candidate_count": count,
+                "comparisons": comparisons,
+                "exhaustive": len(plan.visited[target]) == count,
+                "method": "context-representativeness" if semantic else "mean-pairwise-similarity",
+            })
+        results.append(section_results)
+    return results
+
+
+def _central_plan(source, groups, budget, include_section):
     """Visit every paragraph's outer pair together, then move inward in waves.
 
     If requested, score each candidate against both its section and paragraph
@@ -71,20 +183,9 @@ def central_sentences(
     limits = [len(spans) if budget is None else min(budget, len(spans)) for spans in targets]
     visited: list[list[int]] = [[] for _ in targets]
     best: list[tuple[int, float] | None] = [None for _ in targets]
-    comparisons = [0 for _ in targets]
-    batch = getattr(scorer, "representatives", None)
-    single = getattr(scorer, "representative", None)
-    semantic = callable(batch) or callable(single)
-
-    def record(target: int, candidate: int, value: float) -> None:
-        if not math.isfinite(value) or not 0 <= value <= 1:
-            raise ValueError("Representative scores must be finite and in [0, 1]")
-        if best[target] is None or value > best[target][1]:
-            best[target] = (candidate, value)
-
+    jobs: list[tuple[int, int]] = []
     depth = 0
     while True:
-        jobs: list[tuple[int, int]] = []
         offset = 0
         for paragraph, spans in enumerate(groups):
             left, right = depth, len(spans) - 1 - depth
@@ -97,42 +198,12 @@ def central_sentences(
                         if len(visited[target]) < limits[target]:
                             visited[target].append(position)
                             if len(targets[target]) == 1:
-                                record(target, position, 1.0)
+                                best[target] = (position, 1.0)
                             else:
                                 jobs.append((target, position))
             offset += len(spans)
-        if jobs:
-            if semantic:
-                pairs = [(source[targets[t][c][0]:targets[t][c][1]], contexts[t]) for t, c in jobs]
-                values = list(batch(pairs)) if callable(batch) else [single(*pair) for pair in pairs]
-                if len(values) != len(jobs):
-                    raise ValueError("Representative batch returned the wrong number of scores")
-                for (target, candidate), value in zip(jobs, values):
-                    comparisons[target] += 1
-                    record(target, candidate, float(value))
-            else:
-                for target, candidate in jobs:
-                    spans = targets[target]
-                    start, end = spans[candidate]
-                    total = sum(checked_score(scorer, source[start:end], source[a:b])
-                                for other, (a, b) in enumerate(spans) if other != candidate)
-                    comparisons[target] += len(spans) - 1
-                    record(target, candidate, total / (len(spans) - 1))
         if all(len(indices) == limit for indices, limit in zip(visited, limits)):
             break
         depth += 1
 
-    results = []
-    for target, winner in enumerate(best):
-        if winner is None:
-            results.append(None)
-            continue
-        start, end = targets[target][winner[0]]
-        results.append({
-            "text": source[start:end], "start": start, "end": end,
-            "centrality": winner[1], "candidate_indices": visited[target],
-            "candidate_count": len(targets[target]), "comparisons": comparisons[target],
-            "exhaustive": len(visited[target]) == len(targets[target]),
-            "method": "context-representativeness" if semantic else "mean-pairwise-similarity",
-        })
-    return results
+    return _CentralPlan(targets, contexts, visited, jobs, best)
