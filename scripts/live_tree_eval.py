@@ -280,12 +280,13 @@ def run(output, stage, workers=8):
     def read(job):
         case, method = job
         path = output / 'predictions' / method / (signature(case['id']) + '.json')
-        if path.exists():
+        if path.exists() and read_json(path).get('reader_policy') == 'isolated-input-id-first-usable':
             return
         retrieval = read_json(output / 'retrieval' / (signature(case['id']) + '.json'))['methods'][method]
         request = {'id': case['id'], 'question': case['question'], 'options': case['options'], 'context': retrieval['context']}
         value = llm.call([request], 'reader')['answers'][0]
-        save(path, {'id': case['id'], 'method': method, 'status': 'ok', 'answer': value['answer']})
+        save(path, {'id': case['id'], 'method': method, 'status': 'ok', 'answer': value['answer'],
+                    'reader_policy': 'isolated-input-id-first-usable'})
 
     for name, function, items in [('plan', plan, cases), ('index', index_doc, sorted(docs)),
                                   ('retrieve', retrieve, cases), ('read', read, [(c, m) for c in cases for m in METHODS])]:

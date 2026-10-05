@@ -12,6 +12,17 @@ from urllib.request import Request, urlopen
 from scripts.bounded_clients import Audit, Budget, Codex, Embeddings, path_lock, save, signature, validate_answers, validate_rankings
 
 
+def normalize_answer_identity(value, expected):
+    """One isolated request defines identity; never edit the model's answer text."""
+    if len(expected) != 1 or not isinstance(value, dict) or not isinstance(value.get('answers'), list) or len(value['answers']) != 1:
+        raise ValueError('Reader requires one isolated answer')
+    row = value['answers'][0]
+    if not isinstance(row, dict) or not isinstance(row.get('id'), str) or not isinstance(row.get('answer'), str):
+        raise ValueError('Malformed isolated answer')
+    row['id'] = expected[0]
+    validate_answers(value, expected)
+
+
 def normalize_rankings(value, expected):
     """Keep returned priorities, then append omitted IDs in original RRF order."""
     if not isinstance(value, dict) or not isinstance(value.get('rankings'), list):
@@ -129,17 +140,22 @@ class Gemini(Codex):
         return self.generate(prompt, schema, validator, stage)
 
     def _execute(self, cases, mode, schema, prompt, key, cached):
-        validator = (lambda v: validate_answers(v, [c['id'] for c in cases])) if mode == 'reader' else (
+        validator = (lambda v: normalize_answer_identity(v, [c['id'] for c in cases])) if mode == 'reader' else (
             lambda v: normalize_rankings(v, {c['id']: len(c['candidates']) for c in cases}))
         return self.generate(prompt, schema, validator, mode)
 
     def validate(self, value, validator, stage, key, attempt):
-        before = json.loads(json.dumps(value)) if stage == 'ranker' else None
+        before = json.loads(json.dumps(value)) if stage in ('ranker', 'reader') else None
         validator(value)
-        if before is not None and before != value:
+        if stage == 'ranker' and before != value:
             save(self.output / 'ranker-normalizations' / (key + '.json'), {
                 'request_sha256': key, 'selected_response_attempt': attempt,
                 'raw_rankings': before['rankings'], 'normalized_rankings': value['rankings']})
+        elif stage == 'reader' and before != value:
+            save(self.output / 'reader-identity-normalizations' / (key + '.json'), {
+                'request_sha256': key, 'selected_response_attempt': attempt,
+                'raw_id': before['answers'][0]['id'], 'input_id': value['answers'][0]['id'],
+                'unchanged_answer_sha256': signature(value['answers'][0]['answer'])})
 
     def generate(self, prompt, schema, validator, stage):
         body = {'contents': [{'role': 'user', 'parts': [{'text': prompt}]}], 'generationConfig': {
@@ -150,7 +166,7 @@ class Gemini(Codex):
         with path_lock(path):
             # Use the earliest structurally usable raw ranking for every case,
             # including cases completed before the documented normalization repair.
-            if stage == 'ranker':
+            if stage in ('ranker', 'reader'):
                 for raw_path in sorted(self.responses.glob(key + '-*.json')):
                     try:
                         raw = json.loads(raw_path.read_text(encoding='utf-8'))['candidates'][0]

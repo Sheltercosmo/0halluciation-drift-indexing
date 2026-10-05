@@ -10,13 +10,20 @@ from unittest.mock import patch
 from pathlib import Path
 
 from scripts.bounded_clients import save
-from scripts.live_tree_clients import LiveBudget, LiveEmbeddings, normalize_rankings
+from scripts.live_tree_clients import LiveBudget, LiveEmbeddings, normalize_rankings, normalize_answer_identity
 from scripts.live_tree_eval import tree
 from zero_index.index import reselect_representatives
 from zero_index.embeddings import CentroidRepresentatives
 
 
 class LiveEvaluationTests(unittest.TestCase):
+    def test_isolated_reader_identity_repair_never_edits_answer(self):
+        value = {'answers': [{'id': 'copied-with-typo', 'answer': 'Exact unchanged answer.'}]}
+        normalize_answer_identity(value, ['canonical-input-id'])
+        self.assertEqual(value, {'answers': [{'id': 'canonical-input-id', 'answer': 'Exact unchanged answer.'}]})
+        with self.assertRaises(ValueError):
+            normalize_answer_identity(value, ['one', 'two'])
+
     def test_ranker_omissions_preserve_model_priorities_then_rrf_order(self):
         value = {'rankings': [{'id': 'q', 'order': [3, 1, 3]}]}
         normalize_rankings(value, {'q': 5})
