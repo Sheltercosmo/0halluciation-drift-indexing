@@ -52,6 +52,9 @@ def plot(partition='test'):
     for extension in ('svg','png'):
         path=destination/('tree-retrieval-v3-'+partition+'.'+extension)
         fig.savefig(path,dpi=220,facecolor='white',metadata={'Creator':'0halluciation drift indexing'})
+        if extension=='svg':
+            text='\n'.join(line.rstrip() for line in path.read_text(encoding='utf-8').splitlines())+'\n'
+            path.write_text(text,encoding='utf-8',newline='\n')
         print(path)
     plt.close(fig)
 
