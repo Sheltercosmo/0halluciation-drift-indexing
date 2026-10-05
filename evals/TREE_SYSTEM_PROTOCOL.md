@@ -2,7 +2,7 @@
 
 Updated 2026-10-05. This is the new research direction. The existing split/pipeline comparison remains useful; the 64-question flat-reranking screen is historical development evidence. It does not establish the value of central sentences or hierarchical search.
 
-**Status:** component APIs and offline control tests are implemented. This document defines the experiment design, not a completed result or a frozen live-run registration. Before live inference, save and publish the exact data IDs, source/model hashes, settings, cost preflight and complete method list. No validation or test outcomes have been opened.
+**Status:** live evaluation is complete. The [report](LIVE_TREE_REPORT.md) includes 7,680 records across 20 configurations on 384 exposed development questions: the sixteen-arm primary study and two successive, two-arm retrieval improvements. [Exact registrations](results/live-tree-complete-v2/registrations), frozen source hashes, predictions, source spans, failure analysis and 90 paired comparisons are available. The original mixed-task reader's QuALITY format failures were preserved and corrected by a uniformly rerun labelled-options reader. No validation or test outcomes have been opened. This document remains the general design; the frozen registrations identify the actual settings and deviations.
 
 ## Questions and controlled comparisons
 

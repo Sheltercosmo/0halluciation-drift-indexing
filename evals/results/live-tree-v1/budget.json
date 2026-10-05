@@ -1,0 +1,17 @@
+{
+  "gemini_cap_usd": 30,
+  "previous_work_reserved_usd": 5.4109370000000006,
+  "embedding_inputs_reserved": 113056,
+  "embedding_inputs_limit": 300000,
+  "embedding_tokens_reserved": 6255195,
+  "embedding_usd_per_million": 0.2,
+  "codex_calls_reserved": 908,
+  "codex_calls_limit": 1300,
+  "jev_calls_reserved": 12417,
+  "jev_calls_limit": 30000,
+  "jev_questions_reserved": 212948,
+  "jev_questions_limit": 500000,
+  "gemini_reserved_upper_bound_usd": 16.844815399999995,
+  "generation_reserved_usd": 10.182839399999992,
+  "generation_calls_reserved": 4995
+}

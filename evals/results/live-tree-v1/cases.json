@@ -1,0 +1,3650 @@
+[
+  {
+    "id": "qasper/058b6e3fdbb607fa7dbfc688628b3e13e130c35a",
+    "doc_id": "qasper/1912.00239",
+    "dataset": "qasper",
+    "question": "Does the paper list other heuristic biases in the LSTMs?",
+    "options": []
+  },
+  {
+    "id": "qasper/06d5de706348dbe8c29bfacb68ce65a2c55d0391",
+    "doc_id": "qasper/1604.05559",
+    "dataset": "qasper",
+    "question": "What is the computational complexity of old method",
+    "options": []
+  },
+  {
+    "id": "qasper/0a5fd0e5f4ab12be57be20416a5ea7c3db5fb662",
+    "doc_id": "qasper/1912.10162",
+    "dataset": "qasper",
+    "question": "What are the issues identified for out-of-vocabulary words?",
+    "options": []
+  },
+  {
+    "id": "qasper/0b1b8e1b583242e5be9b7be73160630a0d4a96b2",
+    "doc_id": "qasper/1911.09753",
+    "dataset": "qasper",
+    "question": "What image caption datasets were used in this work?",
+    "options": []
+  },
+  {
+    "id": "qasper/0b5a505c1fca92258b9e83f53bb8cfeb81cb655a",
+    "doc_id": "qasper/1906.06349",
+    "dataset": "qasper",
+    "question": "What are edge weights?",
+    "options": []
+  },
+  {
+    "id": "qasper/0b5a7ccf09810ff5a86162d502697d16b3536249",
+    "doc_id": "qasper/1911.03353",
+    "dataset": "qasper",
+    "question": "What simplification of the architecture is performed that resulted in same performance?",
+    "options": []
+  },
+  {
+    "id": "qasper/0c7cb3010ed92b8d46583a67e72946a6c0115f1f",
+    "doc_id": "qasper/1708.00549",
+    "dataset": "qasper",
+    "question": "What do they mean by intrinsic geometry of spaces of learned representations?",
+    "options": []
+  },
+  {
+    "id": "qasper/0f1f81b6d4aa0da38b4cc8b060926e7df61bb646",
+    "doc_id": "qasper/1909.05190",
+    "dataset": "qasper",
+    "question": "What is the machine learning method used to make the predictions?",
+    "options": []
+  },
+  {
+    "id": "qasper/0f9678e11079ee9ea1a1ce693f017177dd495ee5",
+    "doc_id": "qasper/1706.08568",
+    "dataset": "qasper",
+    "question": "How much is the gap between pretraining on SQuAD and not pretraining on SQuAD?",
+    "options": []
+  },
+  {
+    "id": "qasper/0fe49431db5ffaa24372919daf24d8f84117bfda",
+    "doc_id": "qasper/1603.07252",
+    "dataset": "qasper",
+    "question": "What dataset do they use?",
+    "options": []
+  },
+  {
+    "id": "qasper/1002bd01372eba0f3078fb4a951505278ed45f2e",
+    "doc_id": "qasper/1906.01076",
+    "dataset": "qasper",
+    "question": "Do they compare against other models?",
+    "options": []
+  },
+  {
+    "id": "qasper/101d7a355e8bf6d1860917876ee0b9971eae7a2f",
+    "doc_id": "qasper/1611.04887",
+    "dataset": "qasper",
+    "question": "Do they report results only for English data?",
+    "options": []
+  },
+  {
+    "id": "qasper/11360385dff0a9d7b8f4b106ba2b7fe15ca90d7c",
+    "doc_id": "qasper/1912.11585",
+    "dataset": "qasper",
+    "question": "What was the baseline?",
+    "options": []
+  },
+  {
+    "id": "qasper/1237b6fcc64b43901415f3ded17cc210a54ab698",
+    "doc_id": "qasper/1709.09749",
+    "dataset": "qasper",
+    "question": "what dataset was used?",
+    "options": []
+  },
+  {
+    "id": "qasper/134a66580c363287ec079f353ead8f770ac6d17b",
+    "doc_id": "qasper/1804.08000",
+    "dataset": "qasper",
+    "question": "What fine-grained semantic types are considered?",
+    "options": []
+  },
+  {
+    "id": "qasper/143409d16125790c8db9ed38590a0796e0b2b2e2",
+    "doc_id": "qasper/1805.06648",
+    "dataset": "qasper",
+    "question": "What dimensions do the considered embeddings have?",
+    "options": []
+  },
+  {
+    "id": "qasper/157284acedf13377cbc6d58c8f3648d3a62f5db5",
+    "doc_id": "qasper/1905.05644",
+    "dataset": "qasper",
+    "question": "what other training procedures were explored?",
+    "options": []
+  },
+  {
+    "id": "qasper/15aeda407ae3912419fd89211cdb98989d9cde58",
+    "doc_id": "qasper/1908.08788",
+    "dataset": "qasper",
+    "question": "What pretrained language representations are used?",
+    "options": []
+  },
+  {
+    "id": "qasper/17fd6deb9e10707f9d1b70165dedb045e1889aac",
+    "doc_id": "qasper/1908.11053",
+    "dataset": "qasper",
+    "question": "What are their evaluation metrics?",
+    "options": []
+  },
+  {
+    "id": "qasper/18fbfb1f88c5487f739aceffd23210a7d4057145",
+    "doc_id": "qasper/1907.05338",
+    "dataset": "qasper",
+    "question": "what models did they compare with?",
+    "options": []
+  },
+  {
+    "id": "qasper/1c0a575e289eb486d3e6375d6f783cc2bf18adf9",
+    "doc_id": "qasper/1706.04206",
+    "dataset": "qasper",
+    "question": "How large is the released data set?",
+    "options": []
+  },
+  {
+    "id": "qasper/1c8958ec50976a9b1088c51e8f73a767fb3973fa",
+    "doc_id": "qasper/1801.04433",
+    "dataset": "qasper",
+    "question": "what rnn classifiers were used?",
+    "options": []
+  },
+  {
+    "id": "qasper/1d9d7c96c5e826ac06741eb40e89fca6b4b022bd",
+    "doc_id": "qasper/1603.00957",
+    "dataset": "qasper",
+    "question": "What additional evidence they use?",
+    "options": []
+  },
+  {
+    "id": "qasper/1dcfcfa46dbcffc2fc7be92dd57df9620258097b",
+    "doc_id": "qasper/1908.11046",
+    "dataset": "qasper",
+    "question": "How is \"complexity\" and \"confusability\" of entity mentions defined in this work?",
+    "options": []
+  },
+  {
+    "id": "qasper/1ef6471cc3e1eb10d2e92656c77020ca1612f08e",
+    "doc_id": "qasper/1911.01770",
+    "dataset": "qasper",
+    "question": "How does model compare to the baselines?",
+    "options": []
+  },
+  {
+    "id": "qasper/211c242c028b35bb9cbd5e303bb6c750f859fd34",
+    "doc_id": "qasper/1803.08614",
+    "dataset": "qasper",
+    "question": "Do any of their reviews contain translations for both Catalan and Basque?",
+    "options": []
+  },
+  {
+    "id": "qasper/230f127e83ac62dd65fccf6b1a4960cf0f7316c7",
+    "doc_id": "qasper/2004.02401",
+    "dataset": "qasper",
+    "question": "How are experiments designed to measure impact on performance by different choices?",
+    "options": []
+  },
+  {
+    "id": "qasper/252599e53f52b3375b26d4e8e8b66322a42d2563",
+    "doc_id": "qasper/1709.06365",
+    "dataset": "qasper",
+    "question": "Which data augmentation techniques do they use?",
+    "options": []
+  },
+  {
+    "id": "qasper/256dfa501a71d7784520a527f43aec0549b1afea",
+    "doc_id": "qasper/1909.11232",
+    "dataset": "qasper",
+    "question": "What is the performance of the best model in the sign language recognition task?",
+    "options": []
+  },
+  {
+    "id": "qasper/267d70d9f3339c56831ea150d2213643fbc5129b",
+    "doc_id": "qasper/1805.11850",
+    "dataset": "qasper",
+    "question": "What is the performance of NJM?",
+    "options": []
+  },
+  {
+    "id": "qasper/272defe245d1c5c091d3bc51399181da2da5e5f0",
+    "doc_id": "qasper/1702.02367",
+    "dataset": "qasper",
+    "question": "Which knowledge base do they use to retrieve facts?",
+    "options": []
+  },
+  {
+    "id": "qasper/2749fb1725a2c4bdba5848e2fc424a43e7c4be51",
+    "doc_id": "qasper/2004.04498",
+    "dataset": "qasper",
+    "question": "How is the set of trusted, gender-balanced examples selected?",
+    "options": []
+  },
+  {
+    "id": "qasper/28e50459da60ceda49fe1578c12f3f805b288bd0",
+    "doc_id": "qasper/1908.09919",
+    "dataset": "qasper",
+    "question": "What is the performance of the model on English, Spanish and Arabic?",
+    "options": []
+  },
+  {
+    "id": "qasper/29794bda61665a1fbe736111e107fd181eacba1b",
+    "doc_id": "qasper/1911.01214",
+    "dataset": "qasper",
+    "question": "where does their data come from?",
+    "options": []
+  },
+  {
+    "id": "qasper/2b75df325c98b761faf2fecf6e71ac7366eb15ea",
+    "doc_id": "qasper/1606.02601",
+    "dataset": "qasper",
+    "question": "Is there a difference between the model's performance for morphologically impoverished and morphologically complex languages?",
+    "options": []
+  },
+  {
+    "id": "qasper/2ca3ca39d59f448e30be6798514709be7e3c62d8",
+    "doc_id": "qasper/1603.01547",
+    "dataset": "qasper",
+    "question": "Which datasets did they use to train the model?",
+    "options": []
+  },
+  {
+    "id": "qasper/2ddfb40a9e73f382a2eb641c8e22bbb80cef017b",
+    "doc_id": "qasper/1906.01502",
+    "dataset": "qasper",
+    "question": "What datasets did they use?",
+    "options": []
+  },
+  {
+    "id": "qasper/2f01d3e5120d1fef4b01028536cb5fe0abad1968",
+    "doc_id": "qasper/1905.10039",
+    "dataset": "qasper",
+    "question": "what state of the art models did they compare with?",
+    "options": []
+  },
+  {
+    "id": "qasper/2fec84a62b4028bbe6500754d9c058eefbc24d9a",
+    "doc_id": "qasper/2004.04060",
+    "dataset": "qasper",
+    "question": "What is the performance of large state-of-the-art models on these datasets?",
+    "options": []
+  },
+  {
+    "id": "qasper/3138f916e253abed643d3399aa8a4555b2bd8c0f",
+    "doc_id": "qasper/1909.00871",
+    "dataset": "qasper",
+    "question": "What empirical comparison methods are used?",
+    "options": []
+  },
+  {
+    "id": "qasper/31e6062ba45d8956791e1b86bad7efcb6d1b191a",
+    "doc_id": "qasper/1703.10152",
+    "dataset": "qasper",
+    "question": "What word embeddings are used?",
+    "options": []
+  },
+  {
+    "id": "qasper/338a3758dccfa438a52d173fbe23a165ef74a0f0",
+    "doc_id": "qasper/1909.12016",
+    "dataset": "qasper",
+    "question": "What domain is their test set?",
+    "options": []
+  },
+  {
+    "id": "qasper/3499d5feeb3a45411d8e893516adbdc14e72002a",
+    "doc_id": "qasper/1901.01590",
+    "dataset": "qasper",
+    "question": "What is reordering in the context of the paper?",
+    "options": []
+  },
+  {
+    "id": "qasper/35c01dc0b50b73ee5ca7491d7d373f6e853933d2",
+    "doc_id": "qasper/1912.06203",
+    "dataset": "qasper",
+    "question": "Which dataset do they use for text altering attributes matching to image parts?",
+    "options": []
+  },
+  {
+    "id": "qasper/3a01dc85ac983002fd631f1c28fc1cbe16094c24",
+    "doc_id": "qasper/1709.05453",
+    "dataset": "qasper",
+    "question": "How you incorporate commonsense into an LSTM?",
+    "options": []
+  },
+  {
+    "id": "qasper/3a25f82512d56d9e1ffba72f977f515ae3ba3cca",
+    "doc_id": "qasper/2003.09244",
+    "dataset": "qasper",
+    "question": "Does programme plans gathering and open sourcing some large dataset for Icelandic language?",
+    "options": []
+  },
+  {
+    "id": "qasper/3cc0d773085dc175b85955e95911a2cfaab2cdc4",
+    "doc_id": "qasper/1707.06519",
+    "dataset": "qasper",
+    "question": "Which pairs of languages do they consider similar enough to capture phonetic structure?",
+    "options": []
+  },
+  {
+    "id": "qasper/3d1ad8a4aaa2653d0095bafba74738bd20795acf",
+    "doc_id": "qasper/1909.07158",
+    "dataset": "qasper",
+    "question": "what dataset were used?",
+    "options": []
+  },
+  {
+    "id": "qasper/3d2b5359259cd3518f361d760bacc49d84c40d82",
+    "doc_id": "qasper/1909.12208",
+    "dataset": "qasper",
+    "question": "How does this single-system compares to system combination ones?",
+    "options": []
+  },
+  {
+    "id": "qasper/3d662fb442d5fc332194770aac835f401c2148d9",
+    "doc_id": "qasper/1911.09247",
+    "dataset": "qasper",
+    "question": "Do they report results only on English data?",
+    "options": []
+  },
+  {
+    "id": "qasper/3eb107f35f4f5f5f527a93ffb487aa2e3fe51efd",
+    "doc_id": "qasper/1805.07882",
+    "dataset": "qasper",
+    "question": "which pretrained embeddings were experimented with?",
+    "options": []
+  },
+  {
+    "id": "qasper/415014a5bcd83df52c9307ad16fab1f03d80f705",
+    "doc_id": "qasper/1605.05156",
+    "dataset": "qasper",
+    "question": "What syntactic and semantic features are proposed?",
+    "options": []
+  },
+  {
+    "id": "qasper/430ad71a0fd715a038f3c0fe8d7510e9730fba23",
+    "doc_id": "qasper/1805.09960",
+    "dataset": "qasper",
+    "question": "which attention based nmt method did they compare with?",
+    "options": []
+  },
+  {
+    "id": "qasper/43729be0effb5defc62bae930ceacf7219934f1e",
+    "doc_id": "qasper/2003.07568",
+    "dataset": "qasper",
+    "question": "Which languages does their newly created dataset contain?",
+    "options": []
+  },
+  {
+    "id": "qasper/441be93e2830cc0fc65afad6959db92754c9f5a8",
+    "doc_id": "qasper/1911.03090",
+    "dataset": "qasper",
+    "question": "Do they test against the large version of RoBERTa?",
+    "options": []
+  },
+  {
+    "id": "qasper/4830459e3d1d204e431025ce7e596ef3f8d757d2",
+    "doc_id": "qasper/1702.02584",
+    "dataset": "qasper",
+    "question": "How many speakers are included in the dataset?",
+    "options": []
+  },
+  {
+    "id": "qasper/48ff9645a506aa2c17810d2654d1f0f0d9e609ee",
+    "doc_id": "qasper/1910.01108",
+    "dataset": "qasper",
+    "question": "What downstream tasks are analyzed?",
+    "options": []
+  },
+  {
+    "id": "qasper/4a093a9af4903a59057a4372ac1b01603467ca58",
+    "doc_id": "qasper/1602.07563",
+    "dataset": "qasper",
+    "question": "What size of dataset is sufficiently large for the model performance to approach the inter-annotator agreement?",
+    "options": []
+  },
+  {
+    "id": "qasper/4dadde7c61230553ef14065edd8c1c7e41b9c329",
+    "doc_id": "qasper/1910.03177",
+    "dataset": "qasper",
+    "question": "What was previous state of the art on factored dataset?",
+    "options": []
+  },
+  {
+    "id": "qasper/4e1293592e41646a6f5f0cb00c75ee8de14eb668",
+    "doc_id": "qasper/1909.01860",
+    "dataset": "qasper",
+    "question": "What is an example of a common sense question?",
+    "options": []
+  },
+  {
+    "id": "qasper/50c441a9cc7345a0fa408d1ce2e13f194c1e82a8",
+    "doc_id": "qasper/1911.11161",
+    "dataset": "qasper",
+    "question": "What is the state-of-the-art approach?",
+    "options": []
+  },
+  {
+    "id": "qasper/5154f63c50729b8ac04939588c2f5ffeb916e3df",
+    "doc_id": "qasper/1801.05617",
+    "dataset": "qasper",
+    "question": "How long is the test dataset for Dutch?",
+    "options": []
+  },
+  {
+    "id": "qasper/521a3e7300567f6e8e4c531f223dbc9fc306c393",
+    "doc_id": "qasper/1911.00202",
+    "dataset": "qasper",
+    "question": "Does regularization of the fine-tuning process hurt performance in the target domain?",
+    "options": []
+  },
+  {
+    "id": "qasper/5364fe5f256f1263a939e0a199c3708727ad856a",
+    "doc_id": "qasper/1906.04236",
+    "dataset": "qasper",
+    "question": "How long are the videos?",
+    "options": []
+  },
+  {
+    "id": "qasper/53a8c3cf22d6bf6477bc576a85a83d8447ee0484",
+    "doc_id": "qasper/1910.07973",
+    "dataset": "qasper",
+    "question": "Which NLI data was used to improve the quality of the embeddings?",
+    "options": []
+  },
+  {
+    "id": "qasper/57ee20f494d8ce3fae46028c3f3551d180dba3e0",
+    "doc_id": "qasper/1611.06322",
+    "dataset": "qasper",
+    "question": "What languages do they evaluate their methods on?",
+    "options": []
+  },
+  {
+    "id": "qasper/58259f2e22363aab20c448e5dd7b6f432556b32d",
+    "doc_id": "qasper/2003.04707",
+    "dataset": "qasper",
+    "question": "How do they interpret the model?",
+    "options": []
+  },
+  {
+    "id": "qasper/58a3cfbbf209174fcffe44ce99840c758b448364",
+    "doc_id": "qasper/1707.05589",
+    "dataset": "qasper",
+    "question": "what are the recent models they compare with?",
+    "options": []
+  },
+  {
+    "id": "qasper/58df55002fbcba76b9aeb2181d78378b8c01a827",
+    "doc_id": "qasper/1910.09942",
+    "dataset": "qasper",
+    "question": "Which part of their architecture provides the most speedup in comparison to existing approaches?",
+    "options": []
+  },
+  {
+    "id": "qasper/592df9831692b8fde213257ed1894344da3e0594",
+    "doc_id": "qasper/1812.00382",
+    "dataset": "qasper",
+    "question": "Which setup shows proves to be the hardest: cross-topic, cross-domain, cross-temporal, or across annotators?",
+    "options": []
+  },
+  {
+    "id": "qasper/597d3fc9b8c0c036f58cea5b757d0109d5211b2f",
+    "doc_id": "qasper/1610.03807",
+    "dataset": "qasper",
+    "question": "How was the fluency measured?",
+    "options": []
+  },
+  {
+    "id": "qasper/59f41306383dd6e201bded0f1c7c959ec4f61c5a",
+    "doc_id": "qasper/1808.07733",
+    "dataset": "qasper",
+    "question": "What logic rules can be learned using ELMo?",
+    "options": []
+  },
+  {
+    "id": "qasper/5a473f86052cf7781dfe40943ddf99bc9fe8a4e4",
+    "doc_id": "qasper/2004.01820",
+    "dataset": "qasper",
+    "question": "What social-network features are used?",
+    "options": []
+  },
+  {
+    "id": "qasper/5b2839bef513e5d441f0bb8352807f673f4b2070",
+    "doc_id": "qasper/1803.06745",
+    "dataset": "qasper",
+    "question": "what metrics did they use for evaluation?",
+    "options": []
+  },
+  {
+    "id": "qasper/5d5c25d68988fa5effe546507c66997785070573",
+    "doc_id": "qasper/2002.03056",
+    "dataset": "qasper",
+    "question": "What is the similarity of manually selected features across related applications in different domains?",
+    "options": []
+  },
+  {
+    "id": "qasper/5f25b57a1765682331e90a46c592a4cea9e3a336",
+    "doc_id": "qasper/1912.04979",
+    "dataset": "qasper",
+    "question": "Are face tracking, identification, localization etc multimodal inputs in some ML model or system is programmed by hand?",
+    "options": []
+  },
+  {
+    "id": "qasper/6295951fda0cfa2eb4259d544b00bc7dade7c01e",
+    "doc_id": "qasper/1909.12079",
+    "dataset": "qasper",
+    "question": "Which model architecture do they use?",
+    "options": []
+  },
+  {
+    "id": "qasper/63cdac43a643fc1e06da44910458e89b2c7cd921",
+    "doc_id": "qasper/1904.03670",
+    "dataset": "qasper",
+    "question": "How was the dataset collected?",
+    "options": []
+  },
+  {
+    "id": "qasper/65e26b15e087bedb6e8782d91596b35e7454b16b",
+    "doc_id": "qasper/1611.01116",
+    "dataset": "qasper",
+    "question": "Do they evaluate binary paragraph vectors on a downstream task?",
+    "options": []
+  },
+  {
+    "id": "qasper/6a20a3220c4edad758b912e2d3e5b99b0b295d96",
+    "doc_id": "qasper/1805.04579",
+    "dataset": "qasper",
+    "question": "How exactly do they weigh between different statistical models?",
+    "options": []
+  },
+  {
+    "id": "qasper/6df57a21ca875e63fb39adece6a9ace5bb2b2cfa",
+    "doc_id": "qasper/2003.11687",
+    "dataset": "qasper",
+    "question": "How does labeling scheme look like?",
+    "options": []
+  },
+  {
+    "id": "qasper/6e040e80f2da69d50386a90a38ed6d2fa4f77bbd",
+    "doc_id": "qasper/1911.04474",
+    "dataset": "qasper",
+    "question": "Which NER dataset do they use?",
+    "options": []
+  },
+  {
+    "id": "qasper/70abb108c3170e81f8725ddc1a3f2357be5a4959",
+    "doc_id": "qasper/1708.09025",
+    "dataset": "qasper",
+    "question": "How do they measure the usefulness of obtained ontologies compared to domain expert ones?",
+    "options": []
+  },
+  {
+    "id": "qasper/71b07d08fb6ac8732aa4060ae94ec7c0657bb1db",
+    "doc_id": "qasper/1910.01160",
+    "dataset": "qasper",
+    "question": "What is the baseline?",
+    "options": []
+  },
+  {
+    "id": "qasper/7239c02a0dcc0c3c9d9cddb5e895bcf9cfcefee6",
+    "doc_id": "qasper/1602.03483",
+    "dataset": "qasper",
+    "question": "Which data sources do they use?",
+    "options": []
+  },
+  {
+    "id": "qasper/72c04eb3fc323c720f7f8da75c70f09a35abf3e6",
+    "doc_id": "qasper/1806.06571",
+    "dataset": "qasper",
+    "question": "How much were the gains they obtained?",
+    "options": []
+  },
+  {
+    "id": "qasper/72dbdd11b655b25b2b254e39689a7d912f334b71",
+    "doc_id": "qasper/1909.03553",
+    "dataset": "qasper",
+    "question": "How are properties being compared annotated?",
+    "options": []
+  },
+  {
+    "id": "qasper/7380e62edcb11f728f6d617ee332dc8b5752b185",
+    "doc_id": "qasper/1612.07486",
+    "dataset": "qasper",
+    "question": "Which neural language model architecture do they use?",
+    "options": []
+  },
+  {
+    "id": "qasper/73a5783cad4ed468a8dbb31b5de2c618ce351ad1",
+    "doc_id": "qasper/1901.05415",
+    "dataset": "qasper",
+    "question": "by how much did performance improve?",
+    "options": []
+  },
+  {
+    "id": "qasper/74fcb741d29892918903702dbb145fef372d1de3",
+    "doc_id": "qasper/1909.02322",
+    "dataset": "qasper",
+    "question": "What is the model trained?",
+    "options": []
+  },
+  {
+    "id": "qasper/77a331d4d909d92fab9552b429adde5379b2ae69",
+    "doc_id": "qasper/1706.02222",
+    "dataset": "qasper",
+    "question": "How significant is the performance compared to LSTM model?",
+    "options": []
+  },
+  {
+    "id": "qasper/78c7318b2218b906a67d8854f3e511034075f79a",
+    "doc_id": "qasper/1909.03087",
+    "dataset": "qasper",
+    "question": "Which dialogue data do they use to evaluate on?",
+    "options": []
+  },
+  {
+    "id": "qasper/79885526713cc16eb734c88ff1169ae802cad589",
+    "doc_id": "qasper/2002.00175",
+    "dataset": "qasper",
+    "question": "How authors evaluate datasets using models trained on different datasets?",
+    "options": []
+  },
+  {
+    "id": "qasper/7d539258b948cd5b5ad1230a15e4b739f29ed947",
+    "doc_id": "qasper/2003.08437",
+    "dataset": "qasper",
+    "question": "What inter-annotator agreement did they obtain?",
+    "options": []
+  },
+  {
+    "id": "qasper/7ef34b4996ada33a4965f164a8f96e20af7470c0",
+    "doc_id": "qasper/1910.12203",
+    "dataset": "qasper",
+    "question": "What was their state of the art accuracy score?",
+    "options": []
+  },
+  {
+    "id": "qasper/7fba61426737394304e307cdc7537225f6253150",
+    "doc_id": "qasper/1809.08935",
+    "dataset": "qasper",
+    "question": "what was the baseline?",
+    "options": []
+  },
+  {
+    "id": "qasper/806fefe0e331ddb3c17245d6a9fa7433798e367f",
+    "doc_id": "qasper/1910.14589",
+    "dataset": "qasper",
+    "question": "what are the existing online systems?",
+    "options": []
+  },
+  {
+    "id": "qasper/8246d1eee1482555d075127ac84f2e1d0781a446",
+    "doc_id": "qasper/1805.11598",
+    "dataset": "qasper",
+    "question": "what datasets were used?",
+    "options": []
+  },
+  {
+    "id": "qasper/833d3ae7613500f2867ed8b33d233d71781014e7",
+    "doc_id": "qasper/1803.08419",
+    "dataset": "qasper",
+    "question": "What GAN and RL approaches are used?",
+    "options": []
+  },
+  {
+    "id": "qasper/863b3f29f8c59f224b4cbdb5f1097b45a25f1d88",
+    "doc_id": "qasper/2001.04346",
+    "dataset": "qasper",
+    "question": "What kind of baseline model do they compare against?",
+    "options": []
+  },
+  {
+    "id": "qasper/8641156c4d67e143ebbabbd79860349242a11451",
+    "doc_id": "qasper/1803.05160",
+    "dataset": "qasper",
+    "question": "Which European languages are targeted?",
+    "options": []
+  },
+  {
+    "id": "qasper/864295caceb1e15144c1746ab5671d085d7ff7a1",
+    "doc_id": "qasper/1808.04122",
+    "dataset": "qasper",
+    "question": "By how much do they outperform state-of-the-art models on knowledge graph completion?",
+    "options": []
+  },
+  {
+    "id": "qasper/8701ec7345ccc2c35eca4e132a8e16d58585cd63",
+    "doc_id": "qasper/1908.05731",
+    "dataset": "qasper",
+    "question": "Which language pairs do they evaluate on?",
+    "options": []
+  },
+  {
+    "id": "qasper/87523fb927354ddc8ad1357a81f766b7ea95f53c",
+    "doc_id": "qasper/1910.09387",
+    "dataset": "qasper",
+    "question": "How many annotators did they have?",
+    "options": []
+  },
+  {
+    "id": "qasper/887d7f3edf37ccc6bf2e755dae418b04d2309686",
+    "doc_id": "qasper/1805.11937",
+    "dataset": "qasper",
+    "question": "What type of morphological features are used?",
+    "options": []
+  },
+  {
+    "id": "qasper/8b8adb1d5a1824c8995b3eba668745c44f61c9c6",
+    "doc_id": "qasper/1903.04329",
+    "dataset": "qasper",
+    "question": "Is this analysis performed only on English data?",
+    "options": []
+  },
+  {
+    "id": "qasper/8cf5abf0126f19253930478b02f0839af28e4093",
+    "doc_id": "qasper/1805.04558",
+    "dataset": "qasper",
+    "question": "what are the sentiment features used?",
+    "options": []
+  },
+  {
+    "id": "qasper/8faec509406d33444bd620afc829adc9eae97644",
+    "doc_id": "qasper/1912.07940",
+    "dataset": "qasper",
+    "question": "What categories do they look at?",
+    "options": []
+  },
+  {
+    "id": "qasper/90829d5fde4f5f0ffc184c5e8fc64c8ac5ece521",
+    "doc_id": "qasper/1709.04491",
+    "dataset": "qasper",
+    "question": "what was the baseline?",
+    "options": []
+  },
+  {
+    "id": "qasper/9186b2c5b7000ab7f15a46a47da73ea45544bace",
+    "doc_id": "qasper/2003.03131",
+    "dataset": "qasper",
+    "question": "How is the model evaluated against the original recursive training algorithm?",
+    "options": []
+  },
+  {
+    "id": "qasper/91d4fd5796c13005fe306bcd895caaed7fa77030",
+    "doc_id": "qasper/1707.02892",
+    "dataset": "qasper",
+    "question": "What tasks are the models trained on?",
+    "options": []
+  },
+  {
+    "id": "qasper/940a16e9db8be5b5f4e67d9c7622b3df99ac10a5",
+    "doc_id": "qasper/1908.11664",
+    "dataset": "qasper",
+    "question": "what domains are explored in this paper?",
+    "options": []
+  },
+  {
+    "id": "qasper/95af7aaea3ce9dab4cf64e2229ce9b98381dd050",
+    "doc_id": "qasper/1612.03762",
+    "dataset": "qasper",
+    "question": "Did they test the idea that the system reduces the time needed to encode ADR reports on real pharmacologists? ",
+    "options": []
+  },
+  {
+    "id": "qasper/9686f3ff011bc6e3913c329c6a5671932c27e63e",
+    "doc_id": "qasper/1906.08584",
+    "dataset": "qasper",
+    "question": "What architecture is used in the encoder?",
+    "options": []
+  },
+  {
+    "id": "qasper/9863f5765ba70f7ff336a580346ef70205abbbd8",
+    "doc_id": "qasper/1708.05482",
+    "dataset": "qasper",
+    "question": "what were the baselines?",
+    "options": []
+  },
+  {
+    "id": "qasper/9887ca3d25e2109f41d1da80eeea05c465053fbc",
+    "doc_id": "qasper/1911.12722",
+    "dataset": "qasper",
+    "question": "How big is the dataset?",
+    "options": []
+  },
+  {
+    "id": "qasper/98c8ed9019e43839ffb53a714bc37fbb1c28fe2c",
+    "doc_id": "qasper/1905.08392",
+    "dataset": "qasper",
+    "question": "How do the speakers' reputations bias the dataset?",
+    "options": []
+  },
+  {
+    "id": "qasper/99f898eb91538cb82bc9a00892d54ae2a740961e",
+    "doc_id": "qasper/1710.10380",
+    "dataset": "qasper",
+    "question": "Which downstream tasks are considered?",
+    "options": []
+  },
+  {
+    "id": "qasper/9b536f4428206ef7afabc4ff0a2ebcbabd68b985",
+    "doc_id": "qasper/2001.11316",
+    "dataset": "qasper",
+    "question": "How are adversarial examples generated?",
+    "options": []
+  },
+  {
+    "id": "qasper/9d98975ab0b75640b2c83e29e1438c76a959fbde",
+    "doc_id": "qasper/1809.03695",
+    "dataset": "qasper",
+    "question": "What is the average length of the captions?",
+    "options": []
+  },
+  {
+    "id": "qasper/9ec0527bda2c302f4e82949cc0ae7f7769b7bfb8",
+    "doc_id": "qasper/2003.00864",
+    "dataset": "qasper",
+    "question": "What is meant by domain missmatch occuring?",
+    "options": []
+  },
+  {
+    "id": "qasper/a064337bafca8cf01e222950ea97ebc184c47bc0",
+    "doc_id": "qasper/1609.02075",
+    "dataset": "qasper",
+    "question": "What sociolinguistic variables (phonetic spellings) did they analyze? ",
+    "options": []
+  },
+  {
+    "id": "qasper/a11b5eb928a6db9a0e3bb290ace468ff1685d253",
+    "doc_id": "qasper/1901.10619",
+    "dataset": "qasper",
+    "question": "What type of annotation is performed?",
+    "options": []
+  },
+  {
+    "id": "qasper/a3705b53c6710b41154c65327b7bbec175bdfae7",
+    "doc_id": "qasper/1910.03355",
+    "dataset": "qasper",
+    "question": "What kind of data is used to train the model?",
+    "options": []
+  },
+  {
+    "id": "qasper/a3e7d7389228a197c8c44e0c504a791b60f2c80d",
+    "doc_id": "qasper/1909.00091",
+    "dataset": "qasper",
+    "question": "How do they decide what is the semantic concept label of particular cluster?",
+    "options": []
+  },
+  {
+    "id": "qasper/a57e266c936e438aeeab5e8d20d9edd1c15a32ee",
+    "doc_id": "qasper/1912.02866",
+    "dataset": "qasper",
+    "question": "Are annotators familiar with the science topics annotated?",
+    "options": []
+  },
+  {
+    "id": "qasper/a786cceba4372f6041187c426432853eda03dca6",
+    "doc_id": "qasper/1910.02001",
+    "dataset": "qasper",
+    "question": "What is the state-of-the-art?",
+    "options": []
+  },
+  {
+    "id": "qasper/a86758696926f2db71f982dc1a4fa4404988544e",
+    "doc_id": "qasper/1909.06708",
+    "dataset": "qasper",
+    "question": "Are the results applicable to other language pairs than German-English?",
+    "options": []
+  },
+  {
+    "id": "qasper/a913aa14d4e05cc9d658bf6697fe5b2652589b1b",
+    "doc_id": "qasper/1907.01339",
+    "dataset": "qasper",
+    "question": "Which labeling scheme do they use?",
+    "options": []
+  },
+  {
+    "id": "qasper/aaf2445e78348dba66d7208b7430d25364e11e46",
+    "doc_id": "qasper/1709.04005",
+    "dataset": "qasper",
+    "question": "by how much is accuracy improved?",
+    "options": []
+  },
+  {
+    "id": "qasper/ae7c5cf9c2c121097eb00d389cfd7cc2a5a7d577",
+    "doc_id": "qasper/2004.02143",
+    "dataset": "qasper",
+    "question": "What language is in the dataset?",
+    "options": []
+  },
+  {
+    "id": "qasper/b3b9d7c8722e8ec41cbbae40e68458485a5ba25c",
+    "doc_id": "qasper/1910.07924",
+    "dataset": "qasper",
+    "question": "How is the speech alignment quality evaluated?",
+    "options": []
+  },
+  {
+    "id": "qasper/b8bbdc3987bb456739544426c6037c78ede01b77",
+    "doc_id": "qasper/1909.11980",
+    "dataset": "qasper",
+    "question": "Is the proposed system compared to existing systems?",
+    "options": []
+  },
+  {
+    "id": "qasper/b968bd264995cd03d7aaad1baba1838c585ec909",
+    "doc_id": "qasper/1804.09692",
+    "dataset": "qasper",
+    "question": "What factors contribute to the stability of the word embeddings?",
+    "options": []
+  },
+  {
+    "id": "qasper/baad4b6f834d5944f61bd12f30908e3cf3739dcd",
+    "doc_id": "qasper/1911.06815",
+    "dataset": "qasper",
+    "question": "Which BERT-based baselines do they compare to?",
+    "options": []
+  },
+  {
+    "id": "qasper/bab4e8881f4d75e266bce6fbfa4c3bcd3eacf30f",
+    "doc_id": "qasper/1708.03312",
+    "dataset": "qasper",
+    "question": "what are the state of the art models?",
+    "options": []
+  },
+  {
+    "id": "qasper/bc8526d4805e2554adb2e9c01736d3f3a3b19895",
+    "doc_id": "qasper/1604.02038",
+    "dataset": "qasper",
+    "question": "What baselines did they compare with?",
+    "options": []
+  },
+  {
+    "id": "qasper/bd3562d2b3c162e9d27404d56b77e15f707d8b0f",
+    "doc_id": "qasper/1705.00571",
+    "dataset": "qasper",
+    "question": "Which evaluation metrics do they use?",
+    "options": []
+  },
+  {
+    "id": "qasper/be632f0246c2e5f049d12e796812f496e083c33e",
+    "doc_id": "qasper/1908.10001",
+    "dataset": "qasper",
+    "question": "Do they use pretrained word embeddings such as BERT?",
+    "options": []
+  },
+  {
+    "id": "qasper/c463136ba9a312a096034c872b5c74b9d58cef95",
+    "doc_id": "qasper/1905.07894",
+    "dataset": "qasper",
+    "question": "What graph-based features are considered?",
+    "options": []
+  },
+  {
+    "id": "qasper/c4c06f36454fbfdc5d218fb84ce74eaf7f78fc98",
+    "doc_id": "qasper/1908.10461",
+    "dataset": "qasper",
+    "question": "What is the performance for the three languages tested?",
+    "options": []
+  },
+  {
+    "id": "qasper/c5221bb28e58a4f13cf2eccce0e1b1bec7dd3c13",
+    "doc_id": "qasper/1909.09070",
+    "dataset": "qasper",
+    "question": "Is the data specific to a domain?",
+    "options": []
+  },
+  {
+    "id": "qasper/c58ef13abe5fa91a761362ca962d7290312c74e4",
+    "doc_id": "qasper/1908.11049",
+    "dataset": "qasper",
+    "question": "What aspects are considered?",
+    "options": []
+  },
+  {
+    "id": "qasper/c626637ed14dee3049b87171ddf326115e59d9ee",
+    "doc_id": "qasper/2003.03728",
+    "dataset": "qasper",
+    "question": "How does their approach work for domains with few overlapping utterances? ",
+    "options": []
+  },
+  {
+    "id": "qasper/c635295c2b77aaab28faecca3b5767b0c4ab3728",
+    "doc_id": "qasper/1809.00129",
+    "dataset": "qasper",
+    "question": "How did their model rank in three CMU WMT2018 tracks it didn't rank first?",
+    "options": []
+  },
+  {
+    "id": "qasper/c72e05dd41ed5a85335ffeca5a03e71514e60e84",
+    "doc_id": "qasper/1911.12559",
+    "dataset": "qasper",
+    "question": "Where do the news texts come from?",
+    "options": []
+  },
+  {
+    "id": "qasper/c79f168503a60d1b08bb2c9aac124199d210b06d",
+    "doc_id": "qasper/1904.02954",
+    "dataset": "qasper",
+    "question": "Which downstream tasks are used for evaluation in this paper?",
+    "options": []
+  },
+  {
+    "id": "qasper/c7d3bccee59ab683e6bf047579bc6eab9de9d973",
+    "doc_id": "qasper/1705.10272",
+    "dataset": "qasper",
+    "question": "What deep learning models do they plan to use?",
+    "options": []
+  },
+  {
+    "id": "qasper/cbb3c1c1e6e1818b6480f929f1c299eaa5ffd07a",
+    "doc_id": "qasper/1907.10676",
+    "dataset": "qasper",
+    "question": "What are the opportunities presented by the use of Semantic Web technologies in Machine Translation?",
+    "options": []
+  },
+  {
+    "id": "qasper/cc8b4ed3985f9bfbe1b5d7761b31d9bd6a965444",
+    "doc_id": "qasper/1911.10742",
+    "dataset": "qasper",
+    "question": "How is intent annotated?",
+    "options": []
+  },
+  {
+    "id": "qasper/cef3a26d8b46cd057bcc2abd3d648dc15336a2bf",
+    "doc_id": "qasper/1910.03943",
+    "dataset": "qasper",
+    "question": "what is the cold-start problem?",
+    "options": []
+  },
+  {
+    "id": "qasper/cfc73e0c82cf1630b923681c450a541a964688b9",
+    "doc_id": "qasper/1804.01155",
+    "dataset": "qasper",
+    "question": "How do they operationalize socioeconomic status from twitter user data?",
+    "options": []
+  },
+  {
+    "id": "qasper/cfcf94b81589e7da215b4f743a3f8de92a6dda7a",
+    "doc_id": "qasper/1712.00733",
+    "dataset": "qasper",
+    "question": "What VQA datasets are used for evaluating this task? ",
+    "options": []
+  },
+  {
+    "id": "qasper/d207f78beb6cd754268881bf575c8f98000667ea",
+    "doc_id": "qasper/1705.02023",
+    "dataset": "qasper",
+    "question": "how many sentiment labels do they explore?",
+    "options": []
+  },
+  {
+    "id": "qasper/d20fd6330cb9d03734e2632166d6c8f780359a94",
+    "doc_id": "qasper/1808.10059",
+    "dataset": "qasper",
+    "question": "How large the improvement margin is?",
+    "options": []
+  },
+  {
+    "id": "qasper/d2451d32c5a11a0eb8356a5e9d94a9231b59f198",
+    "doc_id": "qasper/1911.12893",
+    "dataset": "qasper",
+    "question": "Is the distribution of the edits uniform across all languages?",
+    "options": []
+  },
+  {
+    "id": "qasper/d2f91303cec132750a416192f67c8ac1d3cf6fc0",
+    "doc_id": "qasper/1708.07252",
+    "dataset": "qasper",
+    "question": "What is the caching mechanism?",
+    "options": []
+  },
+  {
+    "id": "qasper/d323f0d65b57b30ae85fb9f24298927a3d1216e9",
+    "doc_id": "qasper/1810.12897",
+    "dataset": "qasper",
+    "question": "Which widely used dataset did the authors use?",
+    "options": []
+  },
+  {
+    "id": "qasper/d5bce5da746a075421c80abe10c97ad11a96c6cd",
+    "doc_id": "qasper/1603.09381",
+    "dataset": "qasper",
+    "question": "Which baselines did they compare against?",
+    "options": []
+  },
+  {
+    "id": "qasper/d9354c0bb32ec037ff2aacfed58d57887a713163",
+    "doc_id": "qasper/1707.07212",
+    "dataset": "qasper",
+    "question": "What languages are used as input?",
+    "options": []
+  },
+  {
+    "id": "qasper/da0a2195bbf6736119ff32493898d2aadffcbcb8",
+    "doc_id": "qasper/1605.05166",
+    "dataset": "qasper",
+    "question": "Does this paper discuss the potential these techniques have for invading user privacy?",
+    "options": []
+  },
+  {
+    "id": "qasper/da2350395867b5fd4dbf968b5a1cd6921ab6dd37",
+    "doc_id": "qasper/1602.04341",
+    "dataset": "qasper",
+    "question": "what prior approaches did they compare to?",
+    "options": []
+  },
+  {
+    "id": "qasper/da4d07645edaf7494a8cb5216150a00690da01f7",
+    "doc_id": "qasper/1910.10670",
+    "dataset": "qasper",
+    "question": "What does the cache consist of?",
+    "options": []
+  },
+  {
+    "id": "qasper/de313b5061fc22e8ffef1706445728de298eae31",
+    "doc_id": "qasper/1811.01183",
+    "dataset": "qasper",
+    "question": "What is the source of their data?",
+    "options": []
+  },
+  {
+    "id": "qasper/de346decb1fbca8746b72c78ea9d1208902f5e0a",
+    "doc_id": "qasper/1908.08917",
+    "dataset": "qasper",
+    "question": "What language was this research published in?",
+    "options": []
+  },
+  {
+    "id": "qasper/de84972c5d1bbf664d0f8b702fce5f161449ec23",
+    "doc_id": "qasper/1912.06905",
+    "dataset": "qasper",
+    "question": "How is the text segmented?",
+    "options": []
+  },
+  {
+    "id": "qasper/dfaeb8faf04505a4178945c933ba217e472979d8",
+    "doc_id": "qasper/1708.01065",
+    "dataset": "qasper",
+    "question": "what is the source of their dataset?",
+    "options": []
+  },
+  {
+    "id": "qasper/e25b73f700e8c958b64951f14a71bc60d225125c",
+    "doc_id": "qasper/2004.02105",
+    "dataset": "qasper",
+    "question": "How much improvement is there in the BLEU score?",
+    "options": []
+  },
+  {
+    "id": "qasper/e2a507749a4a3201edd6413c77ad0d4c23e9c6ce",
+    "doc_id": "qasper/1701.03578",
+    "dataset": "qasper",
+    "question": "Is their data open sourced?",
+    "options": []
+  },
+  {
+    "id": "qasper/e459760879f662b2205cbdc0f5396dbfe41323ae",
+    "doc_id": "qasper/1908.09590",
+    "dataset": "qasper",
+    "question": "Which other tasks are evaluated?",
+    "options": []
+  },
+  {
+    "id": "qasper/e5be900e70ea86c019efb06438ba200e11773a7c",
+    "doc_id": "qasper/1909.13466",
+    "dataset": "qasper",
+    "question": "What training set sizes do they use?",
+    "options": []
+  },
+  {
+    "id": "qasper/e66a88eecf8d5d093caec1f487603534f88dd7e7",
+    "doc_id": "qasper/1807.08089",
+    "dataset": "qasper",
+    "question": "What speaker characteristics are used?",
+    "options": []
+  },
+  {
+    "id": "qasper/e7ce612f53e9be705cdb8daa775eae51778825ef",
+    "doc_id": "qasper/1804.03839",
+    "dataset": "qasper",
+    "question": "Can their approach be extended to eliminate racial or ethnic biases?",
+    "options": []
+  },
+  {
+    "id": "qasper/e831ce6c406bf5d1c493162732e1b320abb71b6f",
+    "doc_id": "qasper/1908.07491",
+    "dataset": "qasper",
+    "question": "where does their dataset come from?",
+    "options": []
+  },
+  {
+    "id": "qasper/e862ebfdb1b3425af65fec81c8984edca6f89a76",
+    "doc_id": "qasper/1911.04873",
+    "dataset": "qasper",
+    "question": "What is symbolic rewriting?",
+    "options": []
+  },
+  {
+    "id": "qasper/e8c3f59313df20db0cdd49b84a37c44da849fe17",
+    "doc_id": "qasper/2003.07459",
+    "dataset": "qasper",
+    "question": "What are the models tested on the dataset?",
+    "options": []
+  },
+  {
+    "id": "qasper/ecaa10a2d9927fa6ab6a954488f12aa6b42ddc1a",
+    "doc_id": "qasper/1909.04242",
+    "dataset": "qasper",
+    "question": "How does the proposed training framework mitigate the bias pattern?",
+    "options": []
+  },
+  {
+    "id": "qasper/ee2c2fb01d67f4c58855bf23186cbd45cecbfa56",
+    "doc_id": "qasper/1606.07947",
+    "dataset": "qasper",
+    "question": "What type of weight pruning do they use?",
+    "options": []
+  },
+  {
+    "id": "qasper/f1d61b44105e651925d02a51e6d7ea10ea28ebd8",
+    "doc_id": "qasper/1909.00437",
+    "dataset": "qasper",
+    "question": "How did they select the 50 languages they test?",
+    "options": []
+  },
+  {
+    "id": "qasper/f1f7a040545c9501215d3391e267c7874f9a6004",
+    "doc_id": "qasper/1612.09535",
+    "dataset": "qasper",
+    "question": "what dataset was used?",
+    "options": []
+  },
+  {
+    "id": "qasper/f2b1e87f61c65aaa99bcf9825de11ae237260270",
+    "doc_id": "qasper/1909.00786",
+    "dataset": "qasper",
+    "question": "What are state-of-the-art baselines?",
+    "options": []
+  },
+  {
+    "id": "qasper/f3b4e52ba962a0004064132d123fd9b78d9e12e2",
+    "doc_id": "qasper/1907.12984",
+    "dataset": "qasper",
+    "question": "Which datasets do they evaluate on?",
+    "options": []
+  },
+  {
+    "id": "qasper/f54e19f7ecece1bb0ef3171403ae322ad572ff00",
+    "doc_id": "qasper/1708.05521",
+    "dataset": "qasper",
+    "question": "did they experiment with lexicons?",
+    "options": []
+  },
+  {
+    "id": "qasper/f6346828c2f44529dc307abf04dd246bfeb4a9b2",
+    "doc_id": "qasper/2004.04124",
+    "dataset": "qasper",
+    "question": "Do they evaluate which compression method yields the most gains?",
+    "options": []
+  },
+  {
+    "id": "qasper/f6ba0a5cfd5b35219efe5e52b0a5b86ae85c5abd",
+    "doc_id": "qasper/1610.00479",
+    "dataset": "qasper",
+    "question": "By how much do they outpeform existing text denoising models?",
+    "options": []
+  },
+  {
+    "id": "qasper/f7a27de3eb6447377eb48ef6d2201205ff943751",
+    "doc_id": "qasper/2004.02214",
+    "dataset": "qasper",
+    "question": "Is there a metric that also rewards good stylistic response?",
+    "options": []
+  },
+  {
+    "id": "qasper/f88f45ef563ea9e40c5767ab2eaa77f4700f95f8",
+    "doc_id": "qasper/2002.09616",
+    "dataset": "qasper",
+    "question": "Which models did they compare with?",
+    "options": []
+  },
+  {
+    "id": "qasper/f8edc911f9e16559506f3f4a6bda74cde5301a9a",
+    "doc_id": "qasper/1802.06053",
+    "dataset": "qasper",
+    "question": "By how much they outperform the baseline?",
+    "options": []
+  },
+  {
+    "id": "qasper/f8fe4049bea86d0518d1881f32049e60526d0f34",
+    "doc_id": "qasper/1709.05700",
+    "dataset": "qasper",
+    "question": "What existing techniques do the authors compare against?",
+    "options": []
+  },
+  {
+    "id": "qasper/f94cea545f745994800c1fb4654d64d1384f2c26",
+    "doc_id": "qasper/2003.08769",
+    "dataset": "qasper",
+    "question": "Is this done in form of unsupervised (clustering) or suppervised learning?",
+    "options": []
+  },
+  {
+    "id": "qasper/fac273ecb3e72f2dc94cdbc797582d7225a8e070",
+    "doc_id": "qasper/1703.05320",
+    "dataset": "qasper",
+    "question": "What contribute to improve the accuracy on legal question answering task?",
+    "options": []
+  },
+  {
+    "id": "qasper/fe52b093735bb456d7e699aa9a2b806d2b498ba0",
+    "doc_id": "qasper/1905.00840",
+    "dataset": "qasper",
+    "question": "What are the state-of-the-art systems?",
+    "options": []
+  },
+  {
+    "id": "quality/20002_GO5OYJJA_4",
+    "doc_id": "quality/20002",
+    "dataset": "quality",
+    "question": "What is the author’s thesis?",
+    "options": [
+      "Limiting love to those you are directly genetically related to is nonsensical from both ethical and genetic selection perspectives",
+      "Human evolution depended on naturalistic fallacy",
+      "Limiting love to those you a genetically related to is important to modern humans",
+      "Humans would evolve faster if kinship was universal"
+    ]
+  },
+  {
+    "id": "quality/20002_V4XXHZGB_6",
+    "doc_id": "quality/20002",
+    "dataset": "quality",
+    "question": "Why is it that loving family members like siblings can lead to individual biological success?",
+    "options": [
+      "We want to see them succeed, so we experience chemical shifts when we see that they're happy.",
+      "If we help them survive tough experiences, we'll learn to not make those mistakes (increasing our biological odds of procreating and being evolutionarily successful).",
+      "If we help them succeed biologically, when they have kids they pass on DNA that matches some of our own.",
+      "Biologically speaking, we share in the successes the exact same way that our siblings do because of genetic similarity."
+    ]
+  },
+  {
+    "id": "quality/20006_RQF3XP3W_2",
+    "doc_id": "quality/20006",
+    "dataset": "quality",
+    "question": "How does Slate morally consider the implications of being loyal or unloyal to Clinton in the scandal?",
+    "options": [
+      "It's consistently seen as a bad thing.",
+      "It's consistently seen as a good thing.",
+      "Loyalty or lack thereof isn't referenced enough within the article to make any generalizations.",
+      "Loyalty or lack thereof can be seen as a plus or minus depending on the context."
+    ]
+  },
+  {
+    "id": "quality/20007_RZDMZJYW_10",
+    "doc_id": "quality/20007",
+    "dataset": "quality",
+    "question": "Which president had staffers find and bring in women for him?",
+    "options": [
+      "Kennedy and Clinton",
+      "Kennedy",
+      "Clinton",
+      "Harding"
+    ]
+  },
+  {
+    "id": "quality/20007_RZDMZJYW_4",
+    "doc_id": "quality/20007",
+    "dataset": "quality",
+    "question": "Where in the White House is it feasible for the president to meet a woman?",
+    "options": [
+      "Only the East Wing",
+      "Only the private quarters",
+      "Only the oval office, bowling alley, or East Wing",
+      "Only the private quarters or the office restroom"
+    ]
+  },
+  {
+    "id": "quality/20008_5QQ88LP2_6",
+    "doc_id": "quality/20008",
+    "dataset": "quality",
+    "question": "Which factor is not listed as being related to the large pool of good athletes?",
+    "options": [
+      "The large population of the earth",
+      "The post-colonial era",
+      "The population as a whole is more literate",
+      "The expanding middle class worldwide"
+    ]
+  },
+  {
+    "id": "quality/20008_5QQ88LP2_8",
+    "doc_id": "quality/20008",
+    "dataset": "quality",
+    "question": "The author believes that athletic ability changes over time mainly due to:",
+    "options": [
+      "Top athletes having fewer children",
+      "Innate factors",
+      "Environment",
+      "Natural selection and genetics"
+    ]
+  },
+  {
+    "id": "quality/20020_TRPTAKN4_10",
+    "doc_id": "quality/20020",
+    "dataset": "quality",
+    "question": "What is the nature of Monica and Bill’s interactions in the musical?",
+    "options": [
+      "Bill sends Monica letters and asks her to be his intern",
+      "Monica brings Bill desserts and visits at busy, stressful times",
+      "Monica shows up at less busy times and brings presents",
+      "Bill avoids Monica but she is persistent in he pursuit"
+    ]
+  },
+  {
+    "id": "quality/20020_TRPTAKN4_4",
+    "doc_id": "quality/20020",
+    "dataset": "quality",
+    "question": "Who are the parties in the story that think it’s time to move Monica to another office?",
+    "options": [
+      "Betty and Starr",
+      "Evelyn and Betty",
+      "Starr and Newt",
+      "Newt and Evelyn"
+    ]
+  },
+  {
+    "id": "quality/20027_2RUIA5TI_1",
+    "doc_id": "quality/20027",
+    "dataset": "quality",
+    "question": "What type of joke does the author make about his coworkers?",
+    "options": [
+      "A joke about writing skills",
+      "A joke about gender stereotypes",
+      "A joke about laziness",
+      "A joke about alcoholics"
+    ]
+  },
+  {
+    "id": "quality/20027_2RUIA5TI_4",
+    "doc_id": "quality/20027",
+    "dataset": "quality",
+    "question": "What did not happen during the experiment?",
+    "options": [
+      "All tasters had the same amount of each beer",
+      "All tasters spent the same amount of time tasting",
+      "All tasters tried the beers in the same order",
+      "All tasters ranked the beers"
+    ]
+  },
+  {
+    "id": "quality/20029_8FG4YEDB_2",
+    "doc_id": "quality/20029",
+    "dataset": "quality",
+    "question": "Why did Edward decide to tell the truth about his childhood?",
+    "options": [
+      "To create the impression he was Palestinian",
+      "To gain sympathy for living in exile",
+      "To get it out there in his own words before someone else could",
+      "To make a lot of money"
+    ]
+  },
+  {
+    "id": "quality/20029_XWDXOW34_9",
+    "doc_id": "quality/20029",
+    "dataset": "quality",
+    "question": "What is the outcome of the criticism that Said embellished his upbringing?",
+    "options": [
+      "It boosts his level of fame",
+      "It causes controversy, but is overcome",
+      "It was never fully explained as the story went on to other subjects",
+      "It ruins his career"
+    ]
+  },
+  {
+    "id": "quality/20031_0W08N5TX_10",
+    "doc_id": "quality/20031",
+    "dataset": "quality",
+    "question": "What personal feelings did the author have about the estate tax on his father’s estate?",
+    "options": [
+      "He believed that people who invest in land like his father should be able to pass property on without tax",
+      "His parents lived cheaply and the author feels they deserve to have their savings passed on",
+      "His parents passed a lot of money on while they were alive, and he feels like he has received plenty and doesn’t need to worry about estate tax",
+      "He believes it is important that his father’s estate does go in part to the IRS to support the public services his father was a part of creating"
+    ]
+  },
+  {
+    "id": "quality/20031_HFEBGS1A_2",
+    "doc_id": "quality/20031",
+    "dataset": "quality",
+    "question": "Why does the author feel like crying?",
+    "options": [
+      "He hasn't been frugal and needs the money",
+      "The IRS taxes the rich so steeply",
+      "His father carefully saved and now it is going to someone else",
+      "He misses his father"
+    ]
+  },
+  {
+    "id": "quality/20041_E0WD00T4_4",
+    "doc_id": "quality/20041",
+    "dataset": "quality",
+    "question": "Why does the Federal Reserve Board want to control the unemployment rate?",
+    "options": [
+      "To impact the amount people save",
+      "To impact inflation",
+      "To impact the gold reserves",
+      "To impact interest rates"
+    ]
+  },
+  {
+    "id": "quality/20041_L1MZ3RS4_7",
+    "doc_id": "quality/20041",
+    "dataset": "quality",
+    "question": "What did Keynes posit was an influence on the rate of interest in the economy?",
+    "options": [
+      "Desire to hold cash unless incentivized otherwise",
+      "Full employment",
+      "Balance between savings and investment",
+      "Number of crashes per decade"
+    ]
+  },
+  {
+    "id": "quality/20044_EBV68EUZ_2",
+    "doc_id": "quality/20044",
+    "dataset": "quality",
+    "question": "How did the golden age parks compare to the older parks?",
+    "options": [
+      "The older ones were larger",
+      "The newer ones were less hazardous",
+      "The older ones were more intimate",
+      "The newer ones had more character"
+    ]
+  },
+  {
+    "id": "quality/20044_JOO9J86N_5",
+    "doc_id": "quality/20044",
+    "dataset": "quality",
+    "question": "How many baseball teams in the article are not playing in new stadiums or presently remodeling old ones at the time of the article?",
+    "options": [
+      "26",
+      "0",
+      "1",
+      "6"
+    ]
+  },
+  {
+    "id": "quality/20048_2UKOUEKS_3",
+    "doc_id": "quality/20048",
+    "dataset": "quality",
+    "question": "What does the author wish to have?",
+    "options": [
+      "Honest government",
+      "Baked goods",
+      "A drink",
+      "Clean air "
+    ]
+  },
+  {
+    "id": "quality/20048_2UKOUEKS_5",
+    "doc_id": "quality/20048",
+    "dataset": "quality",
+    "question": "What is not true about Belgians?",
+    "options": [
+      "they make a lot of money",
+      "they are demanding",
+      "they love to spend money",
+      " they have a strong sense of nationalism"
+    ]
+  },
+  {
+    "id": "quality/20051_7QSETVSE_5",
+    "doc_id": "quality/20051",
+    "dataset": "quality",
+    "question": "What is true about the addresses?",
+    "options": [
+      "Presidents give the same amount of directives to the people during all eras",
+      "Presidents never give directives to the people",
+      "Presidents give more directives to the people as time goes by",
+      "Presidents give fewer directives to the people as time goes by"
+    ]
+  },
+  {
+    "id": "quality/20051_AP3PWHCR_2",
+    "doc_id": "quality/20051",
+    "dataset": "quality",
+    "question": "What stages does the author describe the inaugural addresses going through over time?",
+    "options": [
+      "Modesty, inspirational, executive portrayal",
+      "Flaunting of executive power, modesty, inspiration",
+      "Modesty, inspiration",
+      "Modesty, executive portrayal, inspirational"
+    ]
+  },
+  {
+    "id": "quality/20055_VR0SZT3O_5",
+    "doc_id": "quality/20055",
+    "dataset": "quality",
+    "question": "What is not a lesson the author gleaned from the book?",
+    "options": [
+      "Look on all sides of a discussion",
+      "Extremists are usually the most courageous people",
+      "Innovating is better than criticizing",
+      "Don't misrepresent things or people will stop listening to you"
+    ]
+  },
+  {
+    "id": "quality/20056_H2CYR8K0_1",
+    "doc_id": "quality/20056",
+    "dataset": "quality",
+    "question": "What is true about the subject of the book the author read?",
+    "options": [
+      "He was born crazy but accomplished a lot in life anyway",
+      "He developed mental illness as an adult and never improved",
+      "He pretended to be crazy as an excuse for poor behavior",
+      "He developed mental illness as an adult but later improved"
+    ]
+  },
+  {
+    "id": "quality/20056_IMXXLOR8_8",
+    "doc_id": "quality/20056",
+    "dataset": "quality",
+    "question": "What was an early achievement of the main character the author focuses on?",
+    "options": [
+      "Being invited to serve in the European Union as a mathematician",
+      "Becoming a dean at Princeton",
+      "Teaching at MIT",
+      "Applying an old mathematical concept in a new and exciting way"
+    ]
+  },
+  {
+    "id": "quality/20064_S6NDI1IS_6",
+    "doc_id": "quality/20064",
+    "dataset": "quality",
+    "question": "Who does the critic blame for the quality of this movie?",
+    "options": [
+      "The actors",
+      "The audience",
+      "The director",
+      "The plot"
+    ]
+  },
+  {
+    "id": "quality/20068_KJ4U6NT7_5",
+    "doc_id": "quality/20068",
+    "dataset": "quality",
+    "question": "How do people now feel about keeping all of their natural teeth?",
+    "options": [
+      "Insecure",
+      "Entitled",
+      "No information provided in the article",
+      "Proud"
+    ]
+  },
+  {
+    "id": "quality/20068_RWLK60G7_6",
+    "doc_id": "quality/20068",
+    "dataset": "quality",
+    "question": "Why does the author think people's satisfaction with their own teeth has gone down over time?",
+    "options": [
+      "Dentistry has gotten more expensive and become unaffordable",
+      "Modern dental procedures are more temporary than those of the past",
+      "Younger generations have much higher expectations for dental health ",
+      "The average diet today is higher in sugar and causes more dental decay"
+    ]
+  },
+  {
+    "id": "quality/20073_3CP51ZI3_6",
+    "doc_id": "quality/20073",
+    "dataset": "quality",
+    "question": "Why doesn't Falwell believe that the author could be the Antichrist?",
+    "options": [
+      "The author is not evil",
+      "The Antichrist would not have any doubts",
+      "The author is not a world leader",
+      "The author is not Jewish"
+    ]
+  },
+  {
+    "id": "quality/20073_DXZXSA0V_6",
+    "doc_id": "quality/20073",
+    "dataset": "quality",
+    "question": "According to Hindson, the Antichrist will not be Jewish because",
+    "options": [
+      "The Antichrist will be Atheist. ",
+      "The Antichrist will come from a Christian family. ",
+      "The Antichrist will be a world leader who will make a peace treaty with Israel. ",
+      "The Antichrist will be Muslim."
+    ]
+  },
+  {
+    "id": "quality/20075_99U79EV3_3",
+    "doc_id": "quality/20075",
+    "dataset": "quality",
+    "question": "What other value for scoring the martial arts most highly correlated with the \"Self-Defense\" value",
+    "options": [
+      "Intimidation ",
+      "Degree of Contact",
+      "Coordination and Balance",
+      "Aerobic Workout"
+    ]
+  },
+  {
+    "id": "quality/20077_1BWEF124_7",
+    "doc_id": "quality/20077",
+    "dataset": "quality",
+    "question": "Which of the following did Topsy-Turvy do better than Mr. Death?",
+    "options": [
+      "Exposition",
+      "Narrative tension",
+      "Accuracy of subject matter",
+      "Emotional release"
+    ]
+  },
+  {
+    "id": "quality/20077_ZF5G55FD_4",
+    "doc_id": "quality/20077",
+    "dataset": "quality",
+    "question": "How does the author feel about Topsy-Turvy?",
+    "options": [
+      "It is not worth seeing. ",
+      "It is an offensive movie. ",
+      "It is full of emotion and enjoyable to watch. ",
+      "It is a masterpiece and will be celebrated as a classic for years to come. "
+    ]
+  },
+  {
+    "id": "quality/22073_KJM8YN1V_1",
+    "doc_id": "quality/22073",
+    "dataset": "quality",
+    "question": "Is the main character good at his job?",
+    "options": [
+      "Yes, he will break any rule to fulfill his duties.",
+      "No, he wants to quit.",
+      "No, he spends too much time drinking and messing around.",
+      "Yes, he is both creative and professional."
+    ]
+  },
+  {
+    "id": "quality/22073_KJM8YN1V_8",
+    "doc_id": "quality/22073",
+    "dataset": "quality",
+    "question": "Why did the natives believe the main character was who he said he was?",
+    "options": [
+      "The natives were credulous.",
+      "They did not really believe him.",
+      "The plastiskin made him look like the natives.",
+      "The main character tricked them with technology."
+    ]
+  },
+  {
+    "id": "quality/22102_B6WHC7QX_7",
+    "doc_id": "quality/22102",
+    "dataset": "quality",
+    "question": "What did Kimmy do after getting dressed in the morning?",
+    "options": [
+      "Walked across a river",
+      "Boarded the rocket",
+      "Put some music on the phonograph",
+      "Sat through a press briefing"
+    ]
+  },
+  {
+    "id": "quality/22102_B6WHC7QX_8",
+    "doc_id": "quality/22102",
+    "dataset": "quality",
+    "question": "What is the significance of Kimmy's trip?",
+    "options": [
+      "He will be the first man on Mars",
+      "He will be the first trip to space in two years",
+      "He will finally return home",
+      "He is going to defeat the Plant Men"
+    ]
+  },
+  {
+    "id": "quality/22218_P9A9DKW0_8",
+    "doc_id": "quality/22218",
+    "dataset": "quality",
+    "question": "Why might Mr. Chambers think that the face from his vision from \"behind the curtain\" is evil?",
+    "options": [
+      "He saw it as a representation of the people who hated him",
+      "It was too large in scale for him to comprehend",
+      "It revealed its' evil intentions to Mr. Chambers directly ",
+      "He felt that this new presence was trying to steal reality from humans"
+    ]
+  },
+  {
+    "id": "quality/22218_WHLS3NE4_6",
+    "doc_id": "quality/22218",
+    "dataset": "quality",
+    "question": "How is the other universe taking over Mr. Chambers' universe?",
+    "options": [
+      "Thousands of minds from another universe are working together.",
+      "All of these factors contribute.",
+      "War and plague wiped out billions of people.",
+      "One powerful mind set its sights and machinations on Mr. Chambers' universe."
+    ]
+  },
+  {
+    "id": "quality/22346_DOS3P3V1_8",
+    "doc_id": "quality/22346",
+    "dataset": "quality",
+    "question": "Why are the Tepoktans so interested in space travel?",
+    "options": [
+      "They do not know anything about the stars.",
+      "They want to leave their planet.",
+      "They are interested in what they cannot do.",
+      "They are not interested in space travel."
+    ]
+  },
+  {
+    "id": "quality/22462_BUA2LH2S_2",
+    "doc_id": "quality/22462",
+    "dataset": "quality",
+    "question": "Why did the Moon stations blow up?",
+    "options": [
+      "Reds blew it up",
+      "Accident",
+      "Americans blew it up",
+      "Unclear"
+    ]
+  },
+  {
+    "id": "quality/22462_F944PNS1_1",
+    "doc_id": "quality/22462",
+    "dataset": "quality",
+    "question": "What is Sylvia's relation to Paul?",
+    "options": [
+      "She is his wife",
+      "She is a girl in a magazine",
+      "She is his girlfriend",
+      "She went to the Officers Ball with him once"
+    ]
+  },
+  {
+    "id": "quality/22524_N885O1MX_5",
+    "doc_id": "quality/22524",
+    "dataset": "quality",
+    "question": "What is implied by the whispered conversation between Manto and Palit?",
+    "options": [
+      "They are aliens who are hiding from their own people",
+      "They are planning on abducting one of the students",
+      "They are aliens who are looking to colonize the planet",
+      "They are planning on harming Curt George"
+    ]
+  },
+  {
+    "id": "quality/22524_O8TC9MBX_4",
+    "doc_id": "quality/22524",
+    "dataset": "quality",
+    "question": "Where did the lions come from at the end?",
+    "options": [
+      "They escaped from the zoo.",
+      "There weren't really lions there at all.",
+      "Manto and Palit turned into lions to kill George.",
+      "Manto and Palit accidentally turned into lions."
+    ]
+  },
+  {
+    "id": "quality/22579_U2JO4GD0_1",
+    "doc_id": "quality/22579",
+    "dataset": "quality",
+    "question": "What do the robots want?",
+    "options": [
+      "To sell bread",
+      "To create world peace",
+      "To improve bread chemistry",
+      "To please humans"
+    ]
+  },
+  {
+    "id": "quality/22579_U2JO4GD0_7",
+    "doc_id": "quality/22579",
+    "dataset": "quality",
+    "question": "Which of the following is NOT a process of the walking mills?",
+    "options": [
+      "Baking the bread",
+      "Separating the wheat from the chaff",
+      "Eating the grain",
+      "Shipping the bread"
+    ]
+  },
+  {
+    "id": "quality/22590_L3MXZ6V8_3",
+    "doc_id": "quality/22590",
+    "dataset": "quality",
+    "question": "What is Rathole?",
+    "options": [
+      "A small city of former Spanish slaves who were taken to Venus by the Dutch. ",
+      "A Spanish colony on Venus. ",
+      "Rathole is a derogatory term for slum on Venus. ",
+      "An old colony turned into a small city by Spanish laborers.  "
+    ]
+  },
+  {
+    "id": "quality/22590_LPM54M2U_3",
+    "doc_id": "quality/22590",
+    "dataset": "quality",
+    "question": "What about the settlers at Rathole was off-putting to Jan?",
+    "options": [
+      "They used windmills for power",
+      "They were of Spanish-speaking descent",
+      "They were sick with the Venus Shadow",
+      "They lived underground"
+    ]
+  },
+  {
+    "id": "quality/22867_TJ9SPIHC_2",
+    "doc_id": "quality/22867",
+    "dataset": "quality",
+    "question": "Why were the reports for the Robling company bad?",
+    "options": [
+      "Poor production and no innovation",
+      "Too high of union dues and insurance fees",
+      "Too much spending by the executives",
+      "Walter asking for too high of a salary raise"
+    ]
+  },
+  {
+    "id": "quality/22875_539MKDEK_5",
+    "doc_id": "quality/22875",
+    "dataset": "quality",
+    "question": "Why does Morgan believe Parks?",
+    "options": [
+      "He noticed that there was something odd about him right away. ",
+      "He met someone like Parks before. ",
+      "He wrote a story that predicted Parks' predicament. ",
+      "He doesn't believe him, but plays along to keep Parks calm. "
+    ]
+  },
+  {
+    "id": "quality/22876_RFMXOBNA_2",
+    "doc_id": "quality/22876",
+    "dataset": "quality",
+    "question": "Which word does NOT describe Lord Nehmon’s leadership?",
+    "options": [
+      "Passive",
+      "Resilient",
+      "Gentle",
+      "Ineffective "
+    ]
+  },
+  {
+    "id": "quality/22958_CIJCBUXL_9",
+    "doc_id": "quality/22958",
+    "dataset": "quality",
+    "question": "Why is the CIA interested in following Braun's career?",
+    "options": [
+      "He wants to run for political office. ",
+      "He donates lots of money to charities. ",
+      "He makes deals with the Polish. ",
+      "He is a professional gambler who teeters on the line between legal and illegal work. "
+    ]
+  },
+  {
+    "id": "quality/22966_6AF3S2P3_8",
+    "doc_id": "quality/22966",
+    "dataset": "quality",
+    "question": "What are the inventors of the gadget hoping to achieve with it?",
+    "options": [
+      "Buyers will get other people to buy it. ",
+      "They will get rich from selling the gadget. ",
+      "The gadget will be used in magic shows. ",
+      "Buyers will conduct research with the gadget. "
+    ]
+  },
+  {
+    "id": "quality/22966_9EB51MJE_1",
+    "doc_id": "quality/22966",
+    "dataset": "quality",
+    "question": "Why did all the kids leave the Atomic Wonder Space Wave Trapper?",
+    "options": [
+      "Trains were more interesting",
+      "It was boring",
+      "It was too expensive",
+      "It was held up by string"
+    ]
+  },
+  {
+    "id": "quality/22967_23S4S1XW_7",
+    "doc_id": "quality/22967",
+    "dataset": "quality",
+    "question": "Which of the following best describes the Jeks, Nosurwey, and Lud?",
+    "options": [
+      "Gentle",
+      "Powerful",
+      "Wise",
+      "Grudge-holding"
+    ]
+  },
+  {
+    "id": "quality/23104_4MQFQVNM_1",
+    "doc_id": "quality/23104",
+    "dataset": "quality",
+    "question": "What is the relationship between the humans and the Belphins?",
+    "options": [
+      "The Belphins made the humans their servants. ",
+      "The humans made the Belphins their servants. ",
+      "The Belphins rule over the humans. ",
+      "The humans rule over the Belphins. "
+    ]
+  },
+  {
+    "id": "quality/23160_I33FJB5C_5",
+    "doc_id": "quality/23160",
+    "dataset": "quality",
+    "question": "How do Solomon's flying cars work?",
+    "options": [
+      "We never learn",
+      "Combustion",
+      "Pressure",
+      "Hubcaps"
+    ]
+  },
+  {
+    "id": "quality/23160_KJQ9Z35G_9",
+    "doc_id": "quality/23160",
+    "dataset": "quality",
+    "question": "What happens to Solomon?",
+    "options": [
+      "He is arrested by the patrolmen for dumping junk into space. ",
+      "He sells his business and works for NASA. ",
+      "He becomes famous for being the crazy old man who polluted space. ",
+      "He meets the President and is asked to share his discovery with the Air Force. "
+    ]
+  },
+  {
+    "id": "quality/23563_HRCOMZPJ_9",
+    "doc_id": "quality/23563",
+    "dataset": "quality",
+    "question": "Why was Broom a prisoner?",
+    "options": [
+      "We never find out",
+      "War",
+      "John didn't raise funds for him",
+      "He killed a man"
+    ]
+  },
+  {
+    "id": "quality/24290_66ER3O5Z_6",
+    "doc_id": "quality/24290",
+    "dataset": "quality",
+    "question": "Which of the following best describes Pete?",
+    "options": [
+      "Anxious",
+      "Bold",
+      "Tired",
+      "Confident"
+    ]
+  },
+  {
+    "id": "quality/30029_F5N22U40_4",
+    "doc_id": "quality/30029",
+    "dataset": "quality",
+    "question": "What is the most likely reason for Korvin's solitude in jail?",
+    "options": [
+      "Solitary confinement was part of Korvin's punishment. ",
+      "There weren't any other prisoners in the jail because virtually all of the Tr'en obey the Ruler. Those who don't obey are executed.",
+      "The Tr'en didn't want Korvin to interact with the other Tr'en prisoners because there was a chance that together they might incite an uprising. ",
+      "The Tr'en are so logical and mathematic that they don't see the need for social interaction. "
+    ]
+  },
+  {
+    "id": "quality/30029_XQTTOPHP_4",
+    "doc_id": "quality/30029",
+    "dataset": "quality",
+    "question": "The Tr'en's response to Korvin's behavior can best be categorized as:",
+    "options": [
+      "fight",
+      "flight",
+      "freeze",
+      "appease"
+    ]
+  },
+  {
+    "id": "quality/30035_C0HFCNPI_3",
+    "doc_id": "quality/30035",
+    "dataset": "quality",
+    "question": "Which of the following is not a reason why Dermott makes Casey wear the helmet?",
+    "options": [
+      "He wants to humor the alien while they wait for reinforcements",
+      "He thinks Casey is the smarter of the two officers and will be able to dismantle the helmet",
+      "He believes he is making the most efficient decision to protect the citizens of New York State",
+      "He doesn’t want to wear it himself"
+    ]
+  },
+  {
+    "id": "quality/30035_SLGX7NNR_5",
+    "doc_id": "quality/30035",
+    "dataset": "quality",
+    "question": "How did Dameri Tass communicate in English?",
+    "options": [
+      "He could communicate telepathically",
+      "He never was able to communicate in English",
+      "He used a handheld translation device",
+      "He acquired the knowledge from a human"
+    ]
+  },
+  {
+    "id": "quality/31282_BQYW9TCH_4",
+    "doc_id": "quality/31282",
+    "dataset": "quality",
+    "question": "What is not true about the relationship between Martians and humans?",
+    "options": [
+      "Humans are happy to bring their women to Mars as another manipulation tactic against the race.",
+      "Martians find no value in the things humans do, such as gold and diamonds, making humans feel",
+      "Humans are more interested in giving Martians sugar than they are in any other sort of drug.",
+      "Martians value what humans bring to their planet, including teaching them new ways to do things like conduct business and build structures."
+    ]
+  },
+  {
+    "id": "quality/31599_Z1URZQTV_10",
+    "doc_id": "quality/31599",
+    "dataset": "quality",
+    "question": "In the end,",
+    "options": [
+      "after everyone ends up leaving the trailer court, Charlie finds his way home.",
+      "Roy never hears from Joey and his mom again.",
+      "Doc and Roy stay in touch with Ethel and Joey for many years.",
+      "the stars go back to where they were originally, and it was like the story never happened."
+    ]
+  },
+  {
+    "id": "quality/31736_9W69Z6VQ_5",
+    "doc_id": "quality/31736",
+    "dataset": "quality",
+    "question": "How do Martians tell their stories?",
+    "options": [
+      "Song",
+      "Dreamcasting",
+      "Oral tradition",
+      "Written word"
+    ]
+  },
+  {
+    "id": "quality/31736_TV0CUXDH_10",
+    "doc_id": "quality/31736",
+    "dataset": "quality",
+    "question": "Why did Jarvis Spurling want to kill Gaivir?",
+    "options": [
+      "Gaivir was evading Spurling so that he would not have to return to mars",
+      "Gaivir had imagined Spurling's face on an animal that he had killed in a dreamvision",
+      "Spurling was secretly in love with Silvie and jealous of Gaivir",
+      "Spurling found out about Gaivir's revenge plot"
+    ]
+  },
+  {
+    "id": "quality/32665_BFH6JK2Z_5",
+    "doc_id": "quality/32665",
+    "dataset": "quality",
+    "question": "Who is the oldest character?",
+    "options": [
+      "Farrell",
+      "Stryker",
+      "Pink anglers",
+      "Gibson"
+    ]
+  },
+  {
+    "id": "quality/32665_VRYQXG3Y_10",
+    "doc_id": "quality/32665",
+    "dataset": "quality",
+    "question": "What was the narrative purpose of having Stryker take the sleeping pill?",
+    "options": [
+      "Farrell regularly wakes him by walking around on the ship, and Stryker wanted a good night of sleep.",
+      "Farrell would've tried to ask him questions about the fishermen in the morning had Stryker been awake.",
+      "Taking the pill prevented Stryker from helping Farrell.",
+      "Taking the pill prevented Stryker from helping Marco."
+    ]
+  },
+  {
+    "id": "quality/40965_ZUFZ7UG6_2",
+    "doc_id": "quality/40965",
+    "dataset": "quality",
+    "question": "What best describes the relationship between Ninon and Robert?",
+    "options": [
+      "Neither character knows about or cares for the other too much.",
+      "They're friends with benefits but each wants a more committed relationship with the other person.",
+      "They're lifelong friends who care for each other.",
+      "They become rivals who'll stop at nothing to ensure the other fails to accomplish their goal."
+    ]
+  },
+  {
+    "id": "quality/40965_ZUFZ7UG6_3",
+    "doc_id": "quality/40965",
+    "dataset": "quality",
+    "question": "Is there a romantic connection between Ninon and Robert?",
+    "options": [
+      "Yes. He cares dearly for her and spends his last night with her and she wants him because of the resources and access he can provide for her.",
+      "Not really. Ninon sees him as a pawn to hijack the flight, and if Robert truly loved Ninon he probably wouldn't end up participating in the space travel.",
+      "Somewhat. They both care for each other but in different ways, it's unclear if they would survive a long-term relationship given Robert's space travel.",
+      "No. Robert only went to Ninon for sex before his takeoff, he wouldn't actually leave if he cared about Ninon's wellbeing."
+    ]
+  },
+  {
+    "id": "quality/49897_D53LJ447_3",
+    "doc_id": "quality/49897",
+    "dataset": "quality",
+    "question": "What is Grampa’s claim to fame?",
+    "options": [
+      "Striking radioactive deposits on far flung planets that can be sold back on Earth for a fortune",
+      "Solving all the pircuits he’d ever been challenged with",
+      "Being the first space missionary",
+      "Creating a special piece of machinery for spaceships"
+    ]
+  },
+  {
+    "id": "quality/49897_QQKS0TK3_1",
+    "doc_id": "quality/49897",
+    "dataset": "quality",
+    "question": "Why did Junior land the ship so roughly?",
+    "options": [
+      "He was not skilled at his work",
+      "The planet had a variable gravity field",
+      "He kept his thumb on the on-off button",
+      "He didn't pay attention to the scouting data"
+    ]
+  },
+  {
+    "id": "quality/50818_U50BKW97_5",
+    "doc_id": "quality/50818",
+    "dataset": "quality",
+    "question": "Why does the trader not get any requests for returns?",
+    "options": [
+      "He charges a lot for his wares",
+      "His merchandise is so pleasing",
+      "People don't know how much the items cost",
+      "He only visits each place one time"
+    ]
+  },
+  {
+    "id": "quality/50818_XCIZ1MIT_5",
+    "doc_id": "quality/50818",
+    "dataset": "quality",
+    "question": "How many companions did Manet make with the kit?",
+    "options": [
+      "Two",
+      "He never used the kit",
+      "One",
+      "Three"
+    ]
+  },
+  {
+    "id": "quality/50826_B2WQILEB_2",
+    "doc_id": "quality/50826",
+    "dataset": "quality",
+    "question": "What happened to the little boy’s father?",
+    "options": [
+      "He was killed because he found gold. ",
+      "He was killed for marrying a human.",
+      "He left Mars to go back to Earth.",
+      "He died in the mines."
+    ]
+  },
+  {
+    "id": "quality/50826_K0FBX2G8_2",
+    "doc_id": "quality/50826",
+    "dataset": "quality",
+    "question": "Why does the woman in the shack treat the protagonist poorly?",
+    "options": [
+      "She does not trust him",
+      "He is threatening her",
+      "She thinks he killed her husband",
+      "He is racist against Martians"
+    ]
+  },
+  {
+    "id": "quality/50948_AGIAFP2X_6",
+    "doc_id": "quality/50948",
+    "dataset": "quality",
+    "question": "What was inside the metal box?",
+    "options": [
+      "The story of a war",
+      "The story of the epidemic",
+      "The story of how to avoid the blight",
+      "The story of the blight"
+    ]
+  },
+  {
+    "id": "quality/50948_U9YCQJBR_2",
+    "doc_id": "quality/50948",
+    "dataset": "quality",
+    "question": "What was Albin’s motivation to not turn back on his journey?",
+    "options": [
+      "He thought his life would improve",
+      "He knew he would never be asked to time travel again",
+      "He resented his family and didn’t care about risking his life",
+      "He thought he would die on the return trip by blacking out anyways"
+    ]
+  },
+  {
+    "id": "quality/51027_8PULD7D5_7",
+    "doc_id": "quality/51027",
+    "dataset": "quality",
+    "question": "For humans, what is the most dangerous part of the trip to the moon?",
+    "options": [
+      "Freefall",
+      "Take off",
+      "Landing",
+      "Orbit"
+    ]
+  },
+  {
+    "id": "quality/51126_PGSZW543_1",
+    "doc_id": "quality/51126",
+    "dataset": "quality",
+    "question": "What was the population of the Uxen like among the galaxy?",
+    "options": [
+      "They were far-ranging and colonized many planets",
+      "They mounted expeditions to explore other planets",
+      "The only remaining Uxen were the royal family",
+      "They only existed on one planet"
+    ]
+  },
+  {
+    "id": "quality/51126_PGSZW543_5",
+    "doc_id": "quality/51126",
+    "dataset": "quality",
+    "question": "What did Zen think of the plan the royal father and daughter hatched?",
+    "options": [
+      "He was unhappy when they told him",
+      "He was aware of the plan unfolding the entire time because of his all-knowing",
+      "He thought it was not going to work",
+      "He was pleased he would get to torture people from Earth"
+    ]
+  },
+  {
+    "id": "quality/51150_AP0HI29X_4",
+    "doc_id": "quality/51150",
+    "dataset": "quality",
+    "question": "Why did the boy want to get in a lifeboat?",
+    "options": [
+      "He was curious",
+      "He was trying to get off the ship",
+      "He wanted to hide from his sister",
+      "His sister had been looking for lifeboat 68"
+    ]
+  },
+  {
+    "id": "quality/51150_AP0HI29X_9",
+    "doc_id": "quality/51150",
+    "dataset": "quality",
+    "question": "What happened as a result of going to the geography lecture?",
+    "options": [
+      "Evelyn realized the boy had met a Venusian man",
+      "Evelyn was bored by the talk",
+      "Evelyn decided to find a husband on Venus",
+      "Evelyn learned about food grown on the Macro continent"
+    ]
+  },
+  {
+    "id": "quality/51256_MZNDC998_8",
+    "doc_id": "quality/51256",
+    "dataset": "quality",
+    "question": "What was Colonel James' mission?",
+    "options": [
+      "Impersonate Pashkov to gain information",
+      "Capture Pashkov",
+      "Kill Boris Knackenpast",
+      "Get Boris Knackenpast to Sweden"
+    ]
+  },
+  {
+    "id": "quality/51267_AQABCPUB_6",
+    "doc_id": "quality/51267",
+    "dataset": "quality",
+    "question": "What was the mission of the Gool?",
+    "options": [
+      "Use control of Peter to ship them resources from Earth to sustain their people",
+      "Expand their kind through the universe",
+      "Take control of Earth and move their colony there",
+      "Crumble Earth’s military resources"
+    ]
+  },
+  {
+    "id": "quality/51267_N197XHK2_1",
+    "doc_id": "quality/51267",
+    "dataset": "quality",
+    "question": "Who put Granthan's leg in a walking brace?",
+    "options": [
+      "The med people",
+      "He did it himself",
+      "A colonel",
+      "The first aid cabinet"
+    ]
+  },
+  {
+    "id": "quality/51274_8Q2YNHG5_3",
+    "doc_id": "quality/51274",
+    "dataset": "quality",
+    "question": "What did Maitland's new room not possess?",
+    "options": [
+      "curves",
+      "a glass window",
+      "a push-button door",
+      "metal furniture"
+    ]
+  },
+  {
+    "id": "quality/51274_8Q2YNHG5_5",
+    "doc_id": "quality/51274",
+    "dataset": "quality",
+    "question": "Why did Maitland get excited about being held hostage?",
+    "options": [
+      "He had defeated Swarts' tests",
+      "He thought he could travel to Mars",
+      "He enjoyed living in the small room",
+      "He thought Ingrid was pretty"
+    ]
+  },
+  {
+    "id": "quality/51295_JKASXZ9X_4",
+    "doc_id": "quality/51295",
+    "dataset": "quality",
+    "question": "How was Dan able to explain Wysocki's theorem?",
+    "options": [
+      "He did not explain it",
+      "Dr. Crander told him",
+      "One of his previous memories told him",
+      "He made it up"
+    ]
+  },
+  {
+    "id": "quality/51295_JKASXZ9X_8",
+    "doc_id": "quality/51295",
+    "dataset": "quality",
+    "question": "How do people react to seeing Dan?",
+    "options": [
+      "They are uncomfortable because of his appearance",
+      "They laugh because of his appearance",
+      "Thy are afraid because of his appearance",
+      "They do not have any unusual reaction"
+    ]
+  },
+  {
+    "id": "quality/51320_DIEFXLAR_5",
+    "doc_id": "quality/51320",
+    "dataset": "quality",
+    "question": "What thesis does Charlie present to the Moranites?",
+    "options": [
+      "The Moranites could extend their life span if they cooperated for the exploration",
+      "He is related to them by distant relative\n",
+      "They have the opportunity to advance into a technological age with some of the equipment he has",
+      "They are stranded Earthlings\n"
+    ]
+  },
+  {
+    "id": "quality/51320_DIEFXLAR_6",
+    "doc_id": "quality/51320",
+    "dataset": "quality",
+    "question": "Who lives on the planet being explored?",
+    "options": [
+      "Human-like aliens that camouflage as trees in the jungle",
+      "Aliens of half lizard half human composition",
+      "Human-like aliens",
+      "Earth people colonized the planet and started their own way of life"
+    ]
+  },
+  {
+    "id": "quality/51350_VLBM4QEI_2",
+    "doc_id": "quality/51350",
+    "dataset": "quality",
+    "question": "What does the warden think about the people he puts to sleep?",
+    "options": [
+      "He wishes deeply to go to sleep himself to know what it’s like",
+      "He thinks their sleep removes them from all knowing or pain of the real world",
+      "He feels badly about it, but does not see what else could possibly be done",
+      "He takes pride in feeling that he is serving his community"
+    ]
+  },
+  {
+    "id": "quality/51350_VLBM4QEI_6",
+    "doc_id": "quality/51350",
+    "dataset": "quality",
+    "question": "What does the food the warden eats indicate about his situation?",
+    "options": [
+      "He is likely receiving rations",
+      "He orders food from restaurants outside the prison",
+      "He has luxury food ingredients that a prisoner would not have",
+      "He is dreaming"
+    ]
+  },
+  {
+    "id": "quality/51351_HAZYFZSV_4",
+    "doc_id": "quality/51351",
+    "dataset": "quality",
+    "question": "How did Quade feel about the situation?",
+    "options": [
+      "He was less cautious than others",
+      "He wished he was getting hazard pay",
+      "It was completely unfamiliar to him",
+      "He was more cautious than others"
+    ]
+  },
+  {
+    "id": "quality/51362_RJHWV3IH_5",
+    "doc_id": "quality/51362",
+    "dataset": "quality",
+    "question": "How did Lexington come to create his factory?",
+    "options": [
+      "He inherited the buildings and the base machinery in a windfall",
+      "He converted his factory from an automotive plant",
+      "He started from relatively little and built the operation slowly over time increasing automation capacity",
+      "After he graduated college, he and his business partner created the first factory prototype, but eventually split the business in half and parted ways"
+    ]
+  },
+  {
+    "id": "quality/51395_2PILALCT_5",
+    "doc_id": "quality/51395",
+    "dataset": "quality",
+    "question": "What happened after the native tried to help Lanceford?",
+    "options": [
+      "Lanceford's paralysis went away",
+      "The treatment did not work",
+      "He washed his hands in disgust",
+      "They had a telepathic connection"
+    ]
+  },
+  {
+    "id": "quality/51395_9PYVRG7M_1",
+    "doc_id": "quality/51395",
+    "dataset": "quality",
+    "question": "How did the planet of Niobe compare to others that Earth was exploring?",
+    "options": [
+      "It was be explored as a courtesy to see what could be done to help their planet from spinning into their sun",
+      "It was one of the least interesting to Earth, but was a personal mission for the narrator",
+      "It was one of several planets being considered for colonization",
+      "It was one of the most interesting"
+    ]
+  },
+  {
+    "id": "quality/51413_MS1UBQRG_4",
+    "doc_id": "quality/51413",
+    "dataset": "quality",
+    "question": "How did Skkiru treat the role of beggar in the presence of the Terran visitors?",
+    "options": [
+      "He thought he was above the role, acting as a high priest instead",
+      "He was unsure of how to act as a beggar and refrained from engaging with the Terrans",
+      "He played it convincingly and truthfully",
+      "He undermined the role and gave away the plan"
+    ]
+  },
+  {
+    "id": "quality/51413_MS1UBQRG_5",
+    "doc_id": "quality/51413",
+    "dataset": "quality",
+    "question": "What is the relationship like between Skkiru and Larhgan?",
+    "options": [
+      "They were once married, but it did not work out between them. Skkiru would do anything to regain Larhgan’s love",
+      "Larhgan betrayed Skkiru’s love and she cannot forgive herself for that. She decides to refrain from every marrying again as a punishment for her mistakes",
+      "They were engaged to be married, but circumstances dictated otherwise. They remain in love and think there will never be another for them",
+      "Skkiru created an elaborate scheme for them to marry as high priest and priestess, and Larhgan is unaware of his scheming"
+    ]
+  },
+  {
+    "id": "quality/51436_VJM64720_1",
+    "doc_id": "quality/51436",
+    "dataset": "quality",
+    "question": "How many gifts did Ernie receive above the original suggestion?",
+    "options": [
+      "1 more than the original amount",
+      "6 more than the original amount",
+      "2 more than the original amount",
+      "Double the original amount"
+    ]
+  },
+  {
+    "id": "quality/51461_YZX4JZ16_2",
+    "doc_id": "quality/51461",
+    "dataset": "quality",
+    "question": "What is the Nest built inside of?",
+    "options": [
+      "A train station",
+      "An office building",
+      "It stands alone like a tent",
+      "It’s not known"
+    ]
+  },
+  {
+    "id": "quality/51461_YZX4JZ16_5",
+    "doc_id": "quality/51461",
+    "dataset": "quality",
+    "question": "What is the relationship like between Pa and his son?",
+    "options": [
+      "He encourages him to keep up their lifestyle in the Nest",
+      "He trusts him and tasks him with protecting the family too",
+      "He is not yet sure if his son is ready to care for the family",
+      "They are not as close as they might have been before the hardships of the planet freezing"
+    ]
+  },
+  {
+    "id": "quality/51483_T4WIZ6A8_3",
+    "doc_id": "quality/51483",
+    "dataset": "quality",
+    "question": "How many buildings are on the moon?",
+    "options": [
+      "One",
+      "Two",
+      "None",
+      "Several"
+    ]
+  },
+  {
+    "id": "quality/51605_0HW4DYXI_8",
+    "doc_id": "quality/51605",
+    "dataset": "quality",
+    "question": "What are the mother’s hopes for her son?",
+    "options": [
+      "Singularly revenge of his father’s death",
+      "To not follow her into the way of the Konv",
+      "Revenge, get healthcare training",
+      "To solve time travel, become an engineer"
+    ]
+  },
+  {
+    "id": "quality/51605_E8R4X4OP_5",
+    "doc_id": "quality/51605",
+    "dataset": "quality",
+    "question": "Where did Earl go when he disappeared during college?",
+    "options": [
+      "Stockholm",
+      "Wolf River",
+      "Siam ",
+      "Centaurus"
+    ]
+  },
+  {
+    "id": "quality/51650_B3KKWWD1_3",
+    "doc_id": "quality/51650",
+    "dataset": "quality",
+    "question": "How many different Martian cons did Matheny speak of to Gus?",
+    "options": [
+      "4",
+      "3",
+      "2",
+      "1"
+    ]
+  },
+  {
+    "id": "quality/51650_B3KKWWD1_5",
+    "doc_id": "quality/51650",
+    "dataset": "quality",
+    "question": "Why was the girl interested in Matheny?",
+    "options": [
+      "He was exotic",
+      "He was a college professor",
+      "He had a large expense account",
+      "He fought bushcats barehanded in a canal"
+    ]
+  },
+  {
+    "id": "quality/51687_3JYPCVFP_6",
+    "doc_id": "quality/51687",
+    "dataset": "quality",
+    "question": "Why did the spy enter the Project?",
+    "options": [
+      "He wanted to test human travel safety Outside",
+      "He was mounting a nuclear attack",
+      "He suspected they were going to attack his own Project",
+      "He wanted to gain information about the technologies in the Project"
+    ]
+  },
+  {
+    "id": "quality/51687_XND06EI3_10",
+    "doc_id": "quality/51687",
+    "dataset": "quality",
+    "question": "How did living under a state of siege affect the project inhabitants?",
+    "options": [
+      "They rarely thought about it",
+      "They thought about it daily",
+      "They all had to actively help with vigilance",
+      "They never thought about it"
+    ]
+  },
+  {
+    "id": "quality/51688_5EVPD4SX_3",
+    "doc_id": "quality/51688",
+    "dataset": "quality",
+    "question": "What does Mr. Turner do for a job?",
+    "options": [
+      "He directs war films.",
+      "He is a mechanic. ",
+      "He writes comics.",
+      "He works in advertising. "
+    ]
+  },
+  {
+    "id": "quality/51688_J2Q3XCWR_7",
+    "doc_id": "quality/51688",
+    "dataset": "quality",
+    "question": "What was the protaganists reaction to falling from the fourteenth floor?",
+    "options": [
+      "He was injured and unable to move",
+      "He fled the scene",
+      "He asked the police for help",
+      "He returned to the fourteenth floor to try again"
+    ]
+  },
+  {
+    "id": "quality/52845_91NAQ9LY_7",
+    "doc_id": "quality/52845",
+    "dataset": "quality",
+    "question": "What led to the first person entering their own mind world?",
+    "options": [
+      "A psychologist accidentally entering a patient's mind ",
+      "Nostalgia",
+      "The need to track criminals",
+      "The need to hide from a crime"
+    ]
+  },
+  {
+    "id": "quality/52855_3OS4Y95O_1",
+    "doc_id": "quality/52855",
+    "dataset": "quality",
+    "question": "Why did Kelly hire Dan so quickly?",
+    "options": [
+      "Because of his understanding of time machines.",
+      "Mr. Snithian was desperate to protect his paintings.",
+      "Dan had a great idea for protecting the vault.",
+      "He was willing to work for very little pay."
+    ]
+  },
+  {
+    "id": "quality/52855_MV65I88C_2",
+    "doc_id": "quality/52855",
+    "dataset": "quality",
+    "question": "What choice best describes Dan's feelings toward operating the carrier throughout the article?",
+    "options": [
+      "He was originally confused on how to operate the carrier and still remained unfamiliar with how it worked throughout the article.",
+      "Dan was intrigued by the carrier when he first operated it but gradually began to dislike it the more he used the carrier.",
+      "Dan was originally confused by the machine but became increasingly frustrated with it throughout the rest of the article.",
+      "Dan was nervous to operate the carrier when he first used it, but eventually became confident in controlling it."
+    ]
+  },
+  {
+    "id": "quality/55815_4DJBZQ7I_9",
+    "doc_id": "quality/55815",
+    "dataset": "quality",
+    "question": "Which of the following was not an element of the audition process?",
+    "options": [
+      "People had to improvise in-character to show that they understood their mannerisms and how they'd act in certain situations",
+      "People had to read for the role they chose if their physical appearance matched well with the character",
+      "People had to initially select the specific role they were auditioning for",
+      "People had to read through the entire script within a few days"
+    ]
+  },
+  {
+    "id": "quality/59368_LBNEJQ7W_9",
+    "doc_id": "quality/59368",
+    "dataset": "quality",
+    "question": "How did Dad realize that Mom could read?",
+    "options": [
+      "Mom was able to read the titles and authors of the books",
+      "She was fired from her job for reading",
+      "Dad caught Mom reading in secret",
+      "Mom told him that she could read"
+    ]
+  },
+  {
+    "id": "quality/59368_ZBH0NQ5U_1",
+    "doc_id": "quality/59368",
+    "dataset": "quality",
+    "question": "How does memory erasing work in the story?",
+    "options": [
+      "Reading can only be scrambled in a person’s memory, but not erased",
+      "It is done only to families that abandon their children",
+      "All experiences are completely forgotten for a given time period",
+      "Select memories can be wiped out"
+    ]
+  },
+  {
+    "id": "quality/59679_LHYOIDR5_2",
+    "doc_id": "quality/59679",
+    "dataset": "quality",
+    "question": "How many times was Bob’s machine tested?",
+    "options": [
+      "Never before",
+      "It had been in development for years, so many tests",
+      "At least once before Mr. Partch plugged it in",
+      "It had undergone weeks of testing"
+    ]
+  },
+  {
+    "id": "quality/59679_LHYOIDR5_8",
+    "doc_id": "quality/59679",
+    "dataset": "quality",
+    "question": "When there was music playing on the speakers in the office, what was favored?",
+    "options": [
+      "Popular music",
+      "Classics",
+      "Engine noise",
+      "Talk radio"
+    ]
+  },
+  {
+    "id": "quality/60412_XM0T4STT_1",
+    "doc_id": "quality/60412",
+    "dataset": "quality",
+    "question": "When did the earth earn its new title?",
+    "options": [
+      "When humans from Earth started giving medical care wherever they traveled",
+      "When Earth became known as unrivaled in its development of the biological sciences",
+      "When humans from Earth became known as Galactic Pill Peddlers",
+      "When the first contract was signed"
+    ]
+  },
+  {
+    "id": "quality/60412_XM0T4STT_7",
+    "doc_id": "quality/60412",
+    "dataset": "quality",
+    "question": "How many times did the doctor give the patient aspirin?",
+    "options": [
+      "3",
+      "2",
+      "4",
+      "1"
+    ]
+  },
+  {
+    "id": "quality/60745_RWAY1IZC_7",
+    "doc_id": "quality/60745",
+    "dataset": "quality",
+    "question": "What was Neeshan able to use as a motivation to convince the Free'l to finally learn magic?",
+    "options": [
+      "Dyla melons",
+      "New huts for the Free'l",
+      "Getting rid of Neeshan himself",
+      "Every Free'l getting their own tooter"
+    ]
+  },
+  {
+    "id": "quality/60745_U9M4CL5M_4",
+    "doc_id": "quality/60745",
+    "dataset": "quality",
+    "question": "Neeshan's motivation to teach the Free'l magic is",
+    "options": [
+      "because he sees potential in them.",
+      "because he believes teaching is his calling and if anyone can get through to them, it's him.",
+      "strictly selfish.  ",
+      "because he wants to change their apathetic state of mind."
+    ]
+  },
+  {
+    "id": "quality/60897_628POLKP_5",
+    "doc_id": "quality/60897",
+    "dataset": "quality",
+    "question": "Who ends up being the narrator's worst enemy and why?",
+    "options": [
+      "The high roller is his worst enemy because he exposes their scam.",
+      "He is his own worst enemy because he talks too much.",
+      "Henry is his worst enemy because he lies to the narrator.",
+      "Skippy is his worst enemy because he has no loyalty to anyone, especially those he cannot hear."
+    ]
+  },
+  {
+    "id": "quality/61119_27E8WDJC_4",
+    "doc_id": "quality/61119",
+    "dataset": "quality",
+    "question": "Why did Madison ultimately think gathering the large rock was a bad decision?",
+    "options": [
+      "It would begin to affect his memory later.",
+      "It was too heavy to carry around the city.",
+      "The Professor would eventually use it to prevent him from leaving.",
+      "The gun would have been a better option for self-defense."
+    ]
+  },
+  {
+    "id": "quality/61119_BNH82NAU_1",
+    "doc_id": "quality/61119",
+    "dataset": "quality",
+    "question": "What best describes why Madison's initial feelings towards the Actuarvac were suspicious and skeptical?",
+    "options": [
+      "He felt the Actuarvac will hurt the well-being of Manhattan-Universal Insurance.",
+      "He felt like he might become unemployed because of the Actuarvac.",
+      "He did not think the Actuarvac was competent enough for the job.",
+      "He wanted to continue to be favorited by McCain, but felt his favoritism was at stake because of the Actuarvac."
+    ]
+  },
+  {
+    "id": "quality/61146_76LHD3BB_2",
+    "doc_id": "quality/61146",
+    "dataset": "quality",
+    "question": "Did Retief follow the sealed orders given him by Passwyn?",
+    "options": [
+      "Retief was a skilled but unimaginitive diplomat. His boss, Passwyn, provided the highly specific orders because Retief was not very good at improvising. Therefore, we can infer that Retief would have followed the orders meticulously.",
+      "Since Retief was ordered not to open the sealed packet of orders until he reached Adobe, and he left the ship on a skiff  with only a pistol before he ever got to Adobe. Thus, we can infer that he neither read nor followed the orders.",
+      "Retief knew that there would be at least one or two useful ideas in the packet of orders developed by Headquarters, because the writers had all visited Adobe, and could be considered experts on the planet. Thus, we can infer that he read the orders carefully and followed them as best practices.",
+      "From the unexpected way that Retief reached the surface of Adobe and Retief's obvious penchant for impulsive action, we can infer that although the mission goal was met, the meticulous procedures in the orders were not followed."
+    ]
+  },
+  {
+    "id": "quality/61146_76LHD3BB_3",
+    "doc_id": "quality/61146",
+    "dataset": "quality",
+    "question": "True or False: Flapjacks are native to Adobe.",
+    "options": [
+      "False. The leader of the Flapjacks says that he and his group of followers came from another planet.",
+      "True. Although Retief is surprised that the Flapjacks were not discovered before Terran colonization of the planet began, the Terran instruments simply could not detect them.",
+      "True. \"Flapjack\" is a pejorative name for the group known as the Jaqs, which Passwyn tells Retief is an intelligent indigenous lifeform.",
+      "False. The Flapjacks developed from a biological lab accident on Earth, and were transported to Adobe accidentally."
+    ]
+  },
+  {
+    "id": "quality/61285_D8AIH84L_9",
+    "doc_id": "quality/61285",
+    "dataset": "quality",
+    "question": "What is the style of the Corps' note to the Aga Kaga?",
+    "options": [
+      "Direct",
+      "Bellicose",
+      "Informal",
+      "Verbose"
+    ]
+  },
+  {
+    "id": "quality/61285_XLEJCW65_2",
+    "doc_id": "quality/61285",
+    "dataset": "quality",
+    "question": "What is true of the relationship between the Boyars and the Aga Kagan?",
+    "options": [
+      "They have been at war for thousands of years",
+      "They are newly engaged in violent conflict",
+      "They are ruled by similar systems of governance",
+      "They have never before been at war"
+    ]
+  },
+  {
+    "id": "quality/61430_X9N4VIUX_1",
+    "doc_id": "quality/61430",
+    "dataset": "quality",
+    "question": "Why did the supreme ruler deliver a scroll message to Jorgenson?\n",
+    "options": [
+      "To acquire his lucrative business",
+      "To lure him into an elaborate brainwashing scheme",
+      "To silence his ideas within Thrid society",
+      "To frighten him into behaving as the Thrid did"
+    ]
+  },
+  {
+    "id": "quality/61430_X9N4VIUX_7",
+    "doc_id": "quality/61430",
+    "dataset": "quality",
+    "question": "Why were Jorgenson and Ganti not put to death?",
+    "options": [
+      "It was never ordered",
+      "They had intellectually outsmarted the Thrid by making it seem a mistake to kill them",
+      "They had ally Witnesses in the government that secretly kept them alive",
+      "They proved to be useful in their resourcefulness"
+    ]
+  },
+  {
+    "id": "quality/61434_C4DV5MOT_1",
+    "doc_id": "quality/61434",
+    "dataset": "quality",
+    "question": "What was Qorn before the next to last time he estivated?",
+    "options": [
+      "a verpp",
+      "a rheuk",
+      "a boog",
+      "a qornt"
+    ]
+  },
+  {
+    "id": "quality/61434_C4DV5MOT_6",
+    "doc_id": "quality/61434",
+    "dataset": "quality",
+    "question": "Who would make the least warlike Qornt?",
+    "options": [
+      "A passive Verpp",
+      "A calm Verpp",
+      "An angry Verpp",
+      "A happy Verpp"
+    ]
+  },
+  {
+    "id": "quality/61467_S2P1EICS_1",
+    "doc_id": "quality/61467",
+    "dataset": "quality",
+    "question": "What seems to be the primary benefit of becoming a changeling?",
+    "options": [
+      "Efficient labor and reduced prison sentences.",
+      "Regeneration of bodily organs.",
+      "Extended life expectancy.",
+      "Developing superhuman powers."
+    ]
+  },
+  {
+    "id": "quality/61467_TASABS87_6",
+    "doc_id": "quality/61467",
+    "dataset": "quality",
+    "question": "What would best describe Harriet's attitude towards Dorr?",
+    "options": [
+      "She believes he is not competent to run the Hazeltyne company.",
+      "She is saddened by the way he treats the muck men.",
+      "She gets periodically frustrated with his mannerisms.",
+      "She fears Dorr because he is very powerful over the Hazeltyne company."
+    ]
+  },
+  {
+    "id": "quality/62085_OTOKKIL9_8",
+    "doc_id": "quality/62085",
+    "dataset": "quality",
+    "question": "What is the root of Haller's fear of the music?",
+    "options": [
+      "He is afraid he will be killed.",
+      "He is frightened of Elath Taen.",
+      "He is scared of Martian independence.",
+      "He fears the loss of bodily control."
+    ]
+  },
+  {
+    "id": "quality/62139_V60QHFBZ_7",
+    "doc_id": "quality/62139",
+    "dataset": "quality",
+    "question": "Why was the ship's crew happy about their voyage?",
+    "options": [
+      "They had ten days of free time",
+      "They respected the captain",
+      "They were excited to fight the enemy",
+      "They had a good cook on the ship"
+    ]
+  },
+  {
+    "id": "quality/62261_SJZYUNBJ_3",
+    "doc_id": "quality/62261",
+    "dataset": "quality",
+    "question": "What can be inferred about the size of the ship the characters travelled in?",
+    "options": [
+      "It was very small, only a single person cruiser",
+      "It was relatively small, only large enough for two people",
+      "It was large enough to have held a crew of a dozen",
+      "It was a ship capable of bringing smaller cruisers inside of the cargo bay"
+    ]
+  },
+  {
+    "id": "quality/62261_SJZYUNBJ_7",
+    "doc_id": "quality/62261",
+    "dataset": "quality",
+    "question": "How did Splinter feel about being with Kerry on the turtle-shaped island?",
+    "options": [
+      "Angry with him that they had crashed",
+      "Terrified to be alone with him",
+      "Pitiful that he had broken his arm",
+      "Relieved to have his experience at hand"
+    ]
+  },
+  {
+    "id": "quality/62314_ARZ8DZS1_2",
+    "doc_id": "quality/62314",
+    "dataset": "quality",
+    "question": "What did Koroby think of the vehicle she took to her wedding?",
+    "options": [
+      "It was carved by craftspeople and painted delicately",
+      "It was old and musty",
+      "It smelled beautifully of flower garlands",
+      "It was delightful for her to finally ride in a space ship to her wedding"
+    ]
+  },
+  {
+    "id": "quality/62314_QZHV11CY_8",
+    "doc_id": "quality/62314",
+    "dataset": "quality",
+    "question": "What technology have the people of Venus not developed?",
+    "options": [
+      "Electricity",
+      "Glassmaking",
+      "Creating fire",
+      "Metallurgy"
+    ]
+  },
+  {
+    "id": "quality/62382_0ORSPEA2_2",
+    "doc_id": "quality/62382",
+    "dataset": "quality",
+    "question": "What do the Piruts want with the Ship?",
+    "options": [
+      "To overtake it with the Hans",
+      "The same thing the Hans want with it",
+      "To kidnap the yellow daughter from it",
+      "They are not interested in the Ship, only raiding the Hans"
+    ]
+  },
+  {
+    "id": "quality/62382_O6HCHTPL_1",
+    "doc_id": "quality/62382",
+    "dataset": "quality",
+    "question": "What is not clearly an element of injustice in this story?",
+    "options": [
+      "Heat stones were unfairly distributed",
+      "There was classism",
+      "Kirk's father was harmed",
+      "There was rampant sexism"
+    ]
+  },
+  {
+    "id": "quality/62476_0WTVH8V9_4",
+    "doc_id": "quality/62476",
+    "dataset": "quality",
+    "question": "Why did Andrias feel uncertain?",
+    "options": [
+      "He wasn't sure if people would follow his orders",
+      "He was afraid he might not get the cargo",
+      "He wasn't sure whether Duane had lost his memory or not",
+      "He wondered how deadly Duane was"
+    ]
+  },
+  {
+    "id": "quality/62476_0WTVH8V9_9",
+    "doc_id": "quality/62476",
+    "dataset": "quality",
+    "question": "Why did Duane ring the bell?",
+    "options": [
+      "To call a guard because he was done signing",
+      "To begin his escape plan",
+      "To call help for Andrias",
+      "To signal the course change"
+    ]
+  },
+  {
+    "id": "quality/62498_9BZIZ3SE_2",
+    "doc_id": "quality/62498",
+    "dataset": "quality",
+    "question": "Who is The Pooch?",
+    "options": [
+      "The family dog.",
+      "Dick and Eleanor's child.",
+      "Grampaw Moseley's alter-ego.",
+      "Mom and Pop's youngest child."
+    ]
+  },
+  {
+    "id": "quality/62498_9BZIZ3SE_7",
+    "doc_id": "quality/62498",
+    "dataset": "quality",
+    "question": "What is Pop's ultimate vision for Eros?",
+    "options": [
+      "A big, growing city by the river.",
+      "A land where everyone can become wealthy.",
+      "A port by the delta where space travelers can come to harbor.",
+      "A small settlement where his family can thrive."
+    ]
+  },
+  {
+    "id": "quality/63041_SC73PXBG_2",
+    "doc_id": "quality/63041",
+    "dataset": "quality",
+    "question": "How long have the Venusians and Earth been in conflict?",
+    "options": [
+      "A decade",
+      "Since Earthlings discovered interplanetary travel",
+      "Since Venus was colonized",
+      "A century"
+    ]
+  },
+  {
+    "id": "quality/63041_TFO74FFD_9",
+    "doc_id": "quality/63041",
+    "dataset": "quality",
+    "question": "Which of the following is not a reason why Burnett kills Kriere?",
+    "options": [
+      "He views Kriere as being responsible for the war",
+      "He needs more bodies to fill the ship’s morgue to fulfill his mission",
+      "Kriere is the enemy’s leader, so Burnett thinks that killing him will stop the war",
+      "He wants to kill Kriere before he gets aboard the ship because Lethla will be easier to take down by himself"
+    ]
+  },
+  {
+    "id": "quality/63130_HY86PCEO_1",
+    "doc_id": "quality/63130",
+    "dataset": "quality",
+    "question": "Of the following descriptions, which best describe Meek?",
+    "options": [
+      "nosy and cautious",
+      "confident and handsome",
+      "funny and charismatic",
+      "clumsy and inexperienced"
+    ]
+  },
+  {
+    "id": "quality/63130_PRY03TR7_6",
+    "doc_id": "quality/63130",
+    "dataset": "quality",
+    "question": "What is the relative size of the space bugs?",
+    "options": [
+      "Just too big to fit into the palm of a hand",
+      "Larger than a loaf of bread",
+      "The size of a horse",
+      "About the size of a small beetle"
+    ]
+  },
+  {
+    "id": "quality/63150_2I9H6MLD_1",
+    "doc_id": "quality/63150",
+    "dataset": "quality",
+    "question": "Why did Dennis' girlfriend leave him?",
+    "options": [
+      "She wanted to take a new job",
+      "She was upset about his visit to the chamber",
+      "She was upset he cheated with 5 or 6 women from other planets",
+      "She couldn't compete with his love of space travel"
+    ]
+  },
+  {
+    "id": "quality/63392_KMVGI51I_2",
+    "doc_id": "quality/63392",
+    "dataset": "quality",
+    "question": "Why was Tate likely dejected to learn the truth about Kal-Jmar from the Martian?",
+    "options": [
+      "He learned Kal-Jmar didn’t contain secrets and treasures",
+      "He learned the creatures of Kal-Jmar would kill him instantly",
+      "He learned Kal-Jmar was a fictional place",
+      "He was told the Kal-Jmar dome sensed Earthling DNA and would explode his body on entry"
+    ]
+  },
+  {
+    "id": "quality/63401_ZCP5ZDGL_7",
+    "doc_id": "quality/63401",
+    "dataset": "quality",
+    "question": "What is the most likely reason that Johnathan's ship crashed?",
+    "options": [
+      "Because it was on autopilot and it must've encountered complications that he wasn't able to attend to since he was asleep in his bunk. ",
+      "Because he was so exhausted from flying nonstop, with only a few hours of sleep on autopilot, that he fell asleep at the controls. ",
+      "Because the asteroid unexpectedly swung into the spaceway and the ship was going so fast that he wasn't able to avoid the crash even though he slowed the craft down. ",
+      "Because his jealous co-pilot tampered with the autopilot settings and then feigned spacesick in hopes that Johnathan would crash while on autopilot. \n"
+    ]
+  },
+  {
+    "id": "quality/63401_ZCP5ZDGL_9",
+    "doc_id": "quality/63401",
+    "dataset": "quality",
+    "question": "Johnathan doesn't tell the Interstellar Cosmography Society about the twenty-seven women who are waiting to be rescued because...",
+    "options": [
+      "it is his way to get back at the women for dominating and humiliating him. ",
+      "he wants to keep the women all to himself and enjoy their sexual overtures for the next three years. ",
+      "he realizes that the Interstellar Cosmography Society would take advantage of the women, so he keeps their existence a secret in order to protect them. ",
+      "he realizes that telling them would be futile since the Interstellar Cosmography Society's space cruiser only has space for one more passenger. "
+    ]
+  },
+  {
+    "id": "quality/63473_1VIHQ8TY_3",
+    "doc_id": "quality/63473",
+    "dataset": "quality",
+    "question": "The explorers note the metal band around the city and assume that it is there for defense.  What is ironic about the way they opt to proceed?",
+    "options": [
+      "They decide to leave the city even though the defense mechanism has not worked for millions of years.  Had they gone on, they would have been rich beyond their wildest dreams.",
+      "They do not believe that the defense mechanism will be engaged, so they venture on.",
+      "They feel that even though the city could be defended, they do not feel that it will match the defenses they bring with them, thus proceeding.",
+      "They become afraid that they will be attacked even though this planet has been abandoned for millions of years."
+    ]
+  },
+  {
+    "id": "quality/63473_1VIHQ8TY_5",
+    "doc_id": "quality/63473",
+    "dataset": "quality",
+    "question": "The crew agrees that the city is",
+    "options": [
+      "completely dead and worthless for any sort of exploration.",
+      "a machine of some sort.",
+      "full of magical wonders and they must return to the mother ship to let the others know.",
+      "just a typical city."
+    ]
+  },
+  {
+    "id": "quality/63523_STSHLFEA_10",
+    "doc_id": "quality/63523",
+    "dataset": "quality",
+    "question": "What became of Ro's mother?",
+    "options": [
+      "She is hiding from the Oan in the cliffs. ",
+      "She was killed by the Oan. ",
+      "She was taken hostage by the Oan. ",
+      "The text doesn't tell us what happened to Ro's mother. "
+    ]
+  },
+  {
+    "id": "quality/63616_AZTRNB8D_5",
+    "doc_id": "quality/63616",
+    "dataset": "quality",
+    "question": "Why did the two robots sedate Harper in his room?",
+    "options": [
+      "They were going to put him through an intense fitness, diet, and sleep regimen he had requested.",
+      "They thought he was Jake Ellis.",
+      "They realized he wanted to take advantage of them for his own profit.",
+      "They didn't like him and wanted to scare him."
+    ]
+  },
+  {
+    "id": "quality/63616_MQ1O9T2Q_4",
+    "doc_id": "quality/63616",
+    "dataset": "quality",
+    "question": "Though the robots were the main issue at the hotel, was human error still an issue in Harper's overall stay?",
+    "options": [
+      "Yes, because Harper was continuously bothered by complaining patrons.",
+      "No, because the robots were the ones causing all the issues and complaints.",
+      "No, because humans were not involved in the hotel's main matters.",
+      "Yes, because the human desk clerk had given him the wrong room."
+    ]
+  },
+  {
+    "id": "quality/63633_TE8SMQXZ_7",
+    "doc_id": "quality/63633",
+    "dataset": "quality",
+    "question": "Why did Johnny say Dr. McKittrick wasn't sociable?",
+    "options": [
+      "She was very intelligent",
+      "She wasn't beautiful",
+      "She was young",
+      "She was too focused on her work"
+    ]
+  },
+  {
+    "id": "quality/63645_THY3SLLH_6",
+    "doc_id": "quality/63645",
+    "dataset": "quality",
+    "question": "What did Irgi do to the men in the lab?",
+    "options": [
+      "Vivisected them with rays",
+      "Prepared them for the chamber",
+      "Burned them with fire",
+      "Cut them with sharp lancets"
+    ]
+  },
+  {
+    "id": "quality/63645_THY3SLLH_8",
+    "doc_id": "quality/63645",
+    "dataset": "quality",
+    "question": "What is the most likely reason Irgi was the last of his people?",
+    "options": [
+      "They were killed in an invasion",
+      "They died from a disease caused by a microbe",
+      "They moved to another planet",
+      "They died from cancer"
+    ]
+  },
+  {
+    "id": "quality/63812_DQG6TAWJ_10",
+    "doc_id": "quality/63812",
+    "dataset": "quality",
+    "question": "How are the pirates foiled?",
+    "options": [
+      "They board the Kismet without backups",
+      "They don’t know what Darling actually looks like",
+      "They don’t use their tractor beam to lock onto Kismet",
+      "They don’t know what Darling sounds like"
+    ]
+  },
+  {
+    "id": "quality/63812_G3YOJRZD_9",
+    "doc_id": "quality/63812",
+    "dataset": "quality",
+    "question": "Of the following options, who might enjoy reading this story the most and why?",
+    "options": [
+      "A reader who loves adventure stories and intriguing characters",
+      "A video game player who loves playing space-themed games",
+      "A sci-fi nerd who loves rebellions",
+      "A sci-fi nerd who loves reading stories with unlikable protagonists"
+    ]
+  },
+  {
+    "id": "quality/63833_NVJ3AK4J_4",
+    "doc_id": "quality/63833",
+    "dataset": "quality",
+    "question": "What is interesting about the Aphrodite?",
+    "options": [
+      "It's a brand new ship",
+      "It's an old ship and its predecessors were retired after having successful runs as ships",
+      "It's an old ship and its predecessors previously failed in their missions",
+      "It's an old ship that doesn't work but contains a plethora of interesting data"
+    ]
+  },
+  {
+    "id": "quality/63833_NVJ3AK4J_8",
+    "doc_id": "quality/63833",
+    "dataset": "quality",
+    "question": "Of the following options, who might want to read this passage the most?",
+    "options": [
+      "A sci-fi fan who likes romance-heavy stories",
+      "A sci-fi fan who likes suspense and watching friendships grow",
+      "A fan of fantasy-adventure stories",
+      "A fan of adventure stories where the protagonist has to fit in with a new group"
+    ]
+  },
+  {
+    "id": "quality/63855_OUVVRF81_3",
+    "doc_id": "quality/63855",
+    "dataset": "quality",
+    "question": "What path did the ship Cleopatra take during the story?",
+    "options": [
+      "Cleopatra Fleet Base - Tethys - 40 Eridani C II - hyper-space",
+      "Tethys - Cleopatra Fleet Base - hyper-space - 40 Eridani C II - Mars",
+      "Cleopatra Fleet Base - Tethys - 40 Eridani C II - hyper-space - 40 Eridani C II",
+      "Tethys - Cleopatra Fleet Base - hyper-space - 40 Eridani C II - Tethys"
+    ]
+  },
+  {
+    "id": "quality/63855_OUVVRF81_9",
+    "doc_id": "quality/63855",
+    "dataset": "quality",
+    "question": "What are the directions given to Cleopatra?",
+    "options": [
+      "Travel into previously undiscovered space, then they were redirected into combat",
+      "Only one mission, to go and create a diversion in the war",
+      "Return to Mars for the personnel to board Aphrodite and go to war with the Eridians",
+      "Travel into a parallel universe where the Eridians are attacking other planets"
+    ]
+  },
+  {
+    "id": "quality/63862_XR1KS2MX_1",
+    "doc_id": "quality/63862",
+    "dataset": "quality",
+    "question": "What is Evelyn’s key defense weapon?",
+    "options": [
+      "She carries a concealed laser gun",
+      "Her active communication with the mentors",
+      "She has no way of defending herself since appearing defenseless is an asset to her",
+      "Her weapons are telepathic and magical in nature"
+    ]
+  },
+  {
+    "id": "quality/63862_ZK5EYM9W_8",
+    "doc_id": "quality/63862",
+    "dataset": "quality",
+    "question": "Why don't we see Evelyn interact with more of her people?",
+    "options": [
+      "Most of them are live prisoners",
+      "Most of them escaped to another galaxy",
+      "Most of them were killed",
+      "Most of them don't want to get involved with her adventure"
+    ]
+  },
+  {
+    "id": "quality/63916_MPWP9IG6_8",
+    "doc_id": "quality/63916",
+    "dataset": "quality",
+    "question": "Of the following options, which best summarizes this story?",
+    "options": [
+      "A man enters a club on Venus to enjoy himself at a special demonstration.",
+      "A man enters a club on Venus to discuss business with a few colleagues.",
+      "A man enters a club on Venus to research and participate in a strange form of entertainment.",
+      "A man enters a club on Venus to flirt with a beautiful woman."
+    ]
+  },
+  {
+    "id": "quality/63916_MPWP9IG6_9",
+    "doc_id": "quality/63916",
+    "dataset": "quality",
+    "question": "What is the relationship between Caldwell and Johnson?",
+    "options": [
+      "They're strangers",
+      "They're coworkers",
+      "They're new acquaintances",
+      "They're old friends"
+    ]
+  },
+  {
+    "id": "quality/63936_1LRE5TR5_4",
+    "doc_id": "quality/63936",
+    "dataset": "quality",
+    "question": "Why would it be a bad idea for Westover to disembark the monster when he realized where its next big destination was?",
+    "options": [
+      "He would end up trapped in the desert",
+      "He would be stranded on the island",
+      "He wouldn't be able to reach land",
+      "He would end up nearby a camp of dangerous humans"
+    ]
+  },
+  {
+    "id": "quality/63936_1LRE5TR5_6",
+    "doc_id": "quality/63936",
+    "dataset": "quality",
+    "question": "Based on the information in the passage, will Westover be remembered by other humans, and if he will, what will be his legacy?",
+    "options": [
+      "He'll be remembered as the man who discovered that humans can eat the monsters for sustenance",
+      "He's isolated so he's likely already completely been forgotten (or will be forgotten soon)",
+      "He'll eventually be remembered as the man who first knew the way to destroy the monsters",
+      "He'll be remembered as the man who discovered that humans can live inside the monsters"
+    ]
+  },
+  {
+    "id": "quality/99905_RJIO1V5X_9",
+    "doc_id": "quality/99905",
+    "dataset": "quality",
+    "question": "Which of these is NOT a resting place of a Birmingham Maglev car?",
+    "options": [
+      "Railworld",
+      "Warwickshire",
+      "Derby Research Centre",
+      "National Rail Museum"
+    ]
+  },
+  {
+    "id": "quality/99911_QGCJUM40_10",
+    "doc_id": "quality/99911",
+    "dataset": "quality",
+    "question": "What does the author think to be the immediate next step in the advancing the co-working space?",
+    "options": [
+      "Adding lodging to the co-working spaces",
+      "Adding coffee shops to the co-working space",
+      "Building more co-working spaces in new cities",
+      "Decreasing the price of the co-working rentals"
+    ]
+  },
+  {
+    "id": "quality/99914_0Q5X8VEX_3",
+    "doc_id": "quality/99914",
+    "dataset": "quality",
+    "question": "The author of this piece",
+    "options": [
+      "has radical ideas concerning how the internet should be controlled.",
+      "is warning us against what is, no doubt, going to happen to us as a society if we continue to rely so heavily on it.",
+      "sees a truth that society is too blind to see.",
+      "has an idealized version of what the internet should be like in mind."
+    ]
+  },
+  {
+    "id": "quality/99914_MT4095UT_9",
+    "doc_id": "quality/99914",
+    "dataset": "quality",
+    "question": "How do international governing bodies plan on dealing with the dominance of the internet by a handful of corporations?",
+    "options": [
+      "By censoring the internet in their countries and restricting citizens' access",
+      "By organizing large scale protests such as the Women's March",
+      "By sanctioning the governments of the countries where these corporations are located",
+      "By creating their own domestic versions of the corporations"
+    ]
+  },
+  {
+    "id": "quality/99915_WLTSM0QE_9",
+    "doc_id": "quality/99915",
+    "dataset": "quality",
+    "question": "What is the least valuable native tree in Kumaon?",
+    "options": [
+      "Cedars",
+      "We do not know from the article",
+      "Nettles",
+      "Cypress"
+    ]
+  },
+  {
+    "id": "quality/99916_T5VD7GB9_6",
+    "doc_id": "quality/99916",
+    "dataset": "quality",
+    "question": "What does the author likely think will happen if democracy does not evolve?",
+    "options": [
+      "The article is unclear on this question",
+      "Nothing, the author wants to make a functioning system better",
+      "Dissatisfaction will eventually lead to another age of dictators",
+      "Less people will participate"
+    ]
+  },
+  {
+    "id": "quality/99919_N8V2WS3L_6",
+    "doc_id": "quality/99919",
+    "dataset": "quality",
+    "question": "Who has best used emotion to make positive changes?",
+    "options": [
+      "Jane Austen",
+      "Simon Jenkins",
+      "Donald Trump",
+      "Nicky Morgan"
+    ]
+  },
+  {
+    "id": "quality/99922_ELKW21SF_6",
+    "doc_id": "quality/99922",
+    "dataset": "quality",
+    "question": "Which of the following things does the author likely value most?",
+    "options": [
+      "Technology",
+      "Freedom",
+      "Progress",
+      "Value"
+    ]
+  },
+  {
+    "id": "quality/99922_ELKW21SF_7",
+    "doc_id": "quality/99922",
+    "dataset": "quality",
+    "question": "Which of the following ways fits best with how the author first fell in love with collaborative technology?",
+    "options": [
+      "Text message",
+      "Wikipedia",
+      "Social Media",
+      "Blogs"
+    ]
+  },
+  {
+    "id": "quality/99927_6CQ363XM_10",
+    "doc_id": "quality/99927",
+    "dataset": "quality",
+    "question": "Why are publishers so reluctant to get on board with these OA policies?",
+    "options": [
+      "They prefer to leave those decisions to others.",
+      "They are afraid that they are going to lose funding.",
+      "They fear that they will lose their control over those seeing to have their works published.",
+      "They do not believe that they play any role in the OA policies."
+    ]
+  },
+  {
+    "id": "quality/99929_7KT0XBKY_4",
+    "doc_id": "quality/99929",
+    "dataset": "quality",
+    "question": "Many authors",
+    "options": [
+      "believe that they should be profiting off of OA just as much as the publishers.",
+      "believe that universities and publishers should have to deal with OA.",
+      "don't seem to care about OA at all.",
+      "support OA because they will make more money that way."
+    ]
+  },
+  {
+    "id": "quality/99930_89JAO8MF_3",
+    "doc_id": "quality/99930",
+    "dataset": "quality",
+    "question": "What do answers 4 and 7 have in common?",
+    "options": [
+      "they both discuss the importance of keeping publications low-cost",
+      "they both show how people prefer green OA to TA",
+      "the research being done in both doesn't prove that there are canceled subscriptions",
+      "they both discuss research based on libraries"
+    ]
+  }
+]

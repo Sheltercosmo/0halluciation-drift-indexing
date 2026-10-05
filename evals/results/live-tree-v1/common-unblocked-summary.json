@@ -1,0 +1,134 @@
+{
+  "qasper": {
+    "EEE": {
+      "n": 192,
+      "answer_score": 0.3336818412006189
+    },
+    "EEJ": {
+      "n": 192,
+      "answer_score": 0.42988902893886216
+    },
+    "EJE": {
+      "n": 192,
+      "answer_score": 0.343626801214975
+    },
+    "EJJ": {
+      "n": 192,
+      "answer_score": 0.4342546214664404
+    },
+    "JEE": {
+      "n": 192,
+      "answer_score": 0.34065200834860726
+    },
+    "JEJ": {
+      "n": 192,
+      "answer_score": 0.4351724922445309
+    },
+    "JJE": {
+      "n": 192,
+      "answer_score": 0.34443658586460846
+    },
+    "JJJ": {
+      "n": 192,
+      "answer_score": 0.41801337798990895
+    },
+    "dense_recursive": {
+      "n": 192,
+      "answer_score": 0.4260430665277092
+    },
+    "rrf_recursive": {
+      "n": 192,
+      "answer_score": 0.4472085718156055
+    },
+    "rerank_recursive": {
+      "n": 192,
+      "answer_score": 0.44989721138514216
+    },
+    "dense_semantic": {
+      "n": 192,
+      "answer_score": 0.44928808225980527
+    },
+    "rrf_semantic": {
+      "n": 192,
+      "answer_score": 0.4687666837856745
+    },
+    "rerank_semantic": {
+      "n": 192,
+      "answer_score": 0.44307771943059854
+    },
+    "hybrid_full": {
+      "n": 192,
+      "answer_score": 0.422175820050241
+    },
+    "hybrid_matched": {
+      "n": 192,
+      "answer_score": 0.42563083214458314
+    }
+  },
+  "quality": {
+    "EEE": {
+      "n": 190,
+      "answer_score": 0.042105263157894736
+    },
+    "EEJ": {
+      "n": 190,
+      "answer_score": 0.07894736842105263
+    },
+    "EJE": {
+      "n": 190,
+      "answer_score": 0.05263157894736842
+    },
+    "EJJ": {
+      "n": 190,
+      "answer_score": 0.09473684210526316
+    },
+    "JEE": {
+      "n": 190,
+      "answer_score": 0.042105263157894736
+    },
+    "JEJ": {
+      "n": 190,
+      "answer_score": 0.08421052631578947
+    },
+    "JJE": {
+      "n": 190,
+      "answer_score": 0.042105263157894736
+    },
+    "JJJ": {
+      "n": 190,
+      "answer_score": 0.07368421052631578
+    },
+    "dense_recursive": {
+      "n": 190,
+      "answer_score": 0.33157894736842103
+    },
+    "rrf_recursive": {
+      "n": 190,
+      "answer_score": 0.3105263157894737
+    },
+    "rerank_recursive": {
+      "n": 190,
+      "answer_score": 0.3263157894736842
+    },
+    "dense_semantic": {
+      "n": 190,
+      "answer_score": 0.32105263157894737
+    },
+    "rrf_semantic": {
+      "n": 190,
+      "answer_score": 0.3526315789473684
+    },
+    "rerank_semantic": {
+      "n": 190,
+      "answer_score": 0.3473684210526316
+    },
+    "hybrid_full": {
+      "n": 190,
+      "answer_score": 0.3157894736842105
+    },
+    "hybrid_matched": {
+      "n": 190,
+      "answer_score": 0.3263157894736842
+    }
+  }
+}

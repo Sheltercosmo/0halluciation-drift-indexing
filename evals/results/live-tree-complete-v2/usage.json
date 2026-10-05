@@ -1,0 +1,131 @@
+{
+  "live-tree-v1": {
+    "embedding-audit.jsonl": {
+      "attempts": 5074,
+      "failed_attempts": 348,
+      "stages": {
+        "central-sentences": 1672,
+        "planned-queries": 384,
+        "routing-previews": 3018
+      },
+      "request_seconds": 4640.690144101682,
+      "provider_usage": {
+        "promptTokenCount": 2119515
+      },
+      "root_usage_fields": {
+        "inputs": 112853
+      }
+    },
+    "gemini-audit.jsonl": {
+      "attempts": 4983,
+      "failed_attempts": 30,
+      "stages": {
+        "planner": 384,
+        "ranker": 768,
+        "reader": 3831
+      },
+      "request_seconds": 7923.822625598055,
+      "provider_usage": {
+        "cachedContentTokenCount": 139726,
+        "candidatesTokenCount": 321515,
+        "promptTokenCount": 10948287,
+        "totalTokenCount": 11269802
+      },
+      "root_usage_fields": {}
+    },
+    "jev-audit.jsonl": {
+      "attempts": 12086,
+      "failed_attempts": 1,
+      "stages": {
+        "reranking": 12086
+      },
+      "request_seconds": 4300.18434679904,
+      "provider_usage": {},
+      "root_usage_fields": {
+        "input_tokens": 37603034,
+        "output_tokens": 3570949,
+        "questions": 199857
+      }
+    }
+  },
+  "live-tree-reader-v2": {
+    "gemini-audit.jsonl": {
+      "attempts": 1929,
+      "failed_attempts": 0,
+      "stages": {
+        "mcq-reader-v2": 1929
+      },
+      "request_seconds": 2392.1008905005874,
+      "provider_usage": {
+        "cachedContentTokenCount": 19413,
+        "candidatesTokenCount": 11574,
+        "promptTokenCount": 2817203,
+        "totalTokenCount": 2828777
+      },
+      "root_usage_fields": {}
+    }
+  },
+  "live-tree-bottom-up-v1": {
+    "embedding-audit.jsonl": {
+      "attempts": 66,
+      "failed_attempts": 0,
+      "stages": {
+        "retry-previews": 66
+      },
+      "request_seconds": 47.2495444000233,
+      "provider_usage": {
+        "promptTokenCount": 20491
+      },
+      "root_usage_fields": {
+        "inputs": 737
+      }
+    },
+    "gemini-audit.jsonl": {
+      "attempts": 674,
+      "failed_attempts": 0,
+      "stages": {
+        "reader": 311,
+        "mcq-reader-v2": 363
+      },
+      "request_seconds": 899.0729418011615,
+      "provider_usage": {
+        "candidatesTokenCount": 25718,
+        "promptTokenCount": 656196,
+        "totalTokenCount": 681914
+      },
+      "root_usage_fields": {}
+    },
+    "jev-audit.jsonl": {
+      "attempts": 337,
+      "failed_attempts": 0,
+      "stages": {
+        "reranking": 337
+      },
+      "request_seconds": 114.24691959971096,
+      "provider_usage": {},
+      "root_usage_fields": {
+        "input_tokens": 1556266,
+        "output_tokens": 132189,
+        "questions": 7411
+      }
+    }
+  },
+  "live-tree-ancestor-v1": {
+    "gemini-audit.jsonl": {
+      "attempts": 703,
+      "failed_attempts": 0,
+      "stages": {
+        "reader": 351,
+        "mcq-reader-v2": 352
+      },
+      "request_seconds": 978.8767740997719,
+      "provider_usage": {
+        "cachedContentTokenCount": 8963,
+        "candidatesTokenCount": 29545,
+        "promptTokenCount": 1728114,
+        "totalTokenCount": 1757659
+      },
+      "root_usage_fields": {}
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "numpy": "2.3.5",
+  "tiktoken": "0.12.0",
+  "tokenizer": "cl100k_base",
+  "embedding_inputs_per_minute_scheduled": 2400,
+  "gemini_embedding_quota_reported_inputs_per_minute": 3000,
+  "generation_workers": 8,
+  "embedding_batch_workers": 8,
+  "embedding_batch_size": 64
+}

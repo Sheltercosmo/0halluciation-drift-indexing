@@ -31,18 +31,27 @@ Headings and contents supply the upper structure without model calls. Jev then s
 
 ## Measured performance
 
-The completed comparison below evaluates Jev blocking with its statistical cut rule against recursive and embedding-based semantic chunking pipelines. It motivates a more direct component study: **central sentences, root-to-leaf tree search, and the complete retrieval system**.
+The [live component and system comparison](evals/LIVE_TREE_REPORT.md) is complete: **7,680 scored records across 20 configurations and 384 development questions** from 307 documents. It compares Jev and embedding splits, central sentences and root-to-leaf search in a full eight-arm factorial study, six direct retrieval/reranking pipelines, two independent-path hybrids, and four variants from two failure-driven iterations. QASPER and QuALITY-HARD each contribute 192 questions.
 
-| New comparison | Controlled change |
-| --- | --- |
-| Central sentences | Jev versus embedding centrality on the exact same tree |
-| Tree search | Jev versus embeddings, sharing the LLM proposals, representatives and traversal budgets |
-| Complete systems | Jev indexing and search versus strong direct embedding and reranked RAG pipelines |
-| Hybrid retrieval | Combine Jev tree results with independent direct embedding retrieval over all chunks |
+| Complete system | QASPER answer F1 | QuALITY-HARD accuracy |
+| --- | ---: | ---: |
+| Embedding tree | 33.37 | 43.75% |
+| Jev tree | 41.80 | 45.31% |
+| Embedding tree + retry and topic expansion | 38.35 | 52.08% |
+| **Jev tree + retry and topic expansion** | **48.14** | 54.17% |
+| Embedding tree + successive ancestor expansion | 45.46 | 61.98% |
+| Jev tree + successive ancestor expansion | 42.54 | 63.02% |
+| Jev tree + independent direct dense retrieval | 42.22 | 70.31% |
+| BM25 + dense retrieval, semantic chunks | 46.88 | 69.79% |
+| Generative reranking, recursive chunks | 44.99 | **73.44%** |
 
-The hybrid combines complete retrieval paths; the Jev route itself stays unchanged. Embeddings can recover passages in branches the tree did not visit. These component APIs are implemented and tested offline, but **live benchmark results for the new design are pending**. See the [evaluation protocol](evals/TREE_SYSTEM_PROTOCOL.md) and [API guide](docs/tree-system.md).
+Every arm shares a Gemini 2.5 Flash planner and reader and a 2,048-token final context ceiling. Embedding components use Gemini Embedding 2; decision components use Jev 1.13.0. On the same Jev tree and central sentences, switching from embedding to Jev routing raises QASPER F1 by **7.36 points** (descriptive 95% paired interval: +3.03 to +11.88). Jev central sentences do **not** yet show a clear advantage over embedding centrality. The hybrid combines independent Jev and direct embedding retrieval paths.
 
-### Larger completed comparison
+The experiments exposed empty routes and underfilled contexts. Retrying exhausted routes and expanding through topic parents improves Jev QASPER F1 from **41.80 to 48.14**. Further ancestor expansion recovers more evidence but lowers that answer score, so more context is not uniformly better. **Overall superiority is not established:** the direct reranking baseline remains stronger on QuALITY, and the QASPER advantage over strong baselines is uncertain. No experimental setting replaces the default.
+
+All results, including regressions and the uniformly corrected multiple-choice reader contract, are documented in the [report](evals/LIVE_TREE_REPORT.md). [Predictions and source spans](evals/results/live-tree-complete-v2/scores.json), [90 paired comparisons](evals/results/live-tree-complete-v2/paired-intervals.json), [failure analysis](evals/results/live-tree-complete-v2/failure-comparisons.json), registrations and usage are public. Offline replay verified all 7,680 records. The cumulative Gemini reservation is **$22.95 of $30**, including prior work and conservative allowances. These are exposed development results; validation and test remain unopened. Scores below use a different reader and are not directly comparable.
+
+### Earlier blocking comparison
 
 The completed [384-question comparison](evals/BOUNDED_REPORT.md) evaluates decision-based blocking and its statistical cut rule together, against hybrid retrieval, semantic chunking, and Codex reranking. All methods use the same reader and a 2,048-token source budget. Its questions are now exposed development material. Scores from this larger sample should not be compared directly with the 64-question screen above.
 

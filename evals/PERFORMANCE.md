@@ -1,6 +1,6 @@
 # Best completed performance
 
-This page preserves the earlier flat-reranking development snapshot. It does not measure the new central-sentence, root-to-leaf search or independent-path hybrid design. The [current research protocol](TREE_SYSTEM_PROTOCOL.md) now directs the comparison; no new-system scores are claimed here.
+This page preserves the earlier flat-reranking development snapshot. The [completed live report](LIVE_TREE_REPORT.md) now measures central sentences, root-to-leaf search, independent-path hybrids and two bottom-up retrieval iterations across 20 configurations. It uses a different reader, so its scores should not be compared directly with this historical snapshot.
 
 **Updated 2026-10-05.** The highest completed Jev QASPER answer score is **58.88 F1** on 64 development questions. The larger, separate study reached **89.58% QuALITY-HARD accuracy** on 192 questions. These are different configurations and samples. Neither is a full-benchmark or held-out result.
 

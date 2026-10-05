@@ -1,0 +1,44 @@
+{
+  "gemini": {
+    "attempts": 4983,
+    "failed_attempts": 30,
+    "stages": {
+      "planner": 384,
+      "ranker": 768,
+      "reader": 3831
+    },
+    "recorded_usage": {
+      "promptTokenCount": 10948287,
+      "candidatesTokenCount": 321515,
+      "totalTokenCount": 11269802,
+      "cachedContentTokenCount": 139726
+    },
+    "summed_request_seconds": 7923.822625598055
+  },
+  "embedding": {
+    "attempts": 5074,
+    "failed_attempts": 348,
+    "stages": {
+      "central-sentences": 1672,
+      "planned-queries": 384,
+      "routing-previews": 3018
+    },
+    "recorded_usage": {
+      "promptTokenCount": 2119515
+    },
+    "summed_request_seconds": 4640.690144101682
+  },
+  "jev": {
+    "attempts": 12086,
+    "failed_attempts": 1,
+    "stages": {
+      "reranking": 12086
+    },
+    "recorded_usage": {
+      "input_tokens": 37603034,
+      "output_tokens": 3570949
+    },
+    "summed_request_seconds": 4300.18434679904,
+    "stage_label_note": "The inherited audit label 'reranking' covers representative selection and hierarchical routing; it is not a flat-reranking count."
+  }
+}

@@ -1,0 +1,3005 @@
+[
+  {
+    "id": "qasper/058b6e3fdbb607fa7dbfc688628b3e13e130c35a",
+    "needs": [
+      "Identify if the paper explicitly mentions or discusses any heuristic biases in LSTMs beyond those already presented.",
+      "Determine if the paper describes specific instances or examples of other heuristic biases observed in LSTMs.",
+      "Locate any sections that categorize or list different types of biases found in LSTMs."
+    ]
+  },
+  {
+    "id": "qasper/06d5de706348dbe8c29bfacb68ce65a2c55d0391",
+    "needs": [
+      "Locate descriptions of the 'old method' or 'popular approximation' and any associated computational complexity or performance metrics.",
+      "Identify any comparisons of the 'old method's' complexity with other methods, especially the 'alternative method'.",
+      "Find specific details or formulas that define the 'old method's' operations, from which complexity could be inferred."
+    ]
+  },
+  {
+    "id": "qasper/0a5fd0e5f4ab12be57be20416a5ea7c3db5fb662",
+    "needs": [
+      "Identify specific issues or problems mentioned in relation to out-of-vocabulary (OOV) words.",
+      "Locate explanations or descriptions of how OOV words impact the performance or design of the POS Tagger or Entity Recognizer.",
+      "Determine if any solutions or mitigation strategies for OOV word issues are discussed."
+    ]
+  },
+  {
+    "id": "qasper/0b1b8e1b583242e5be9b7be73160630a0d4a96b2",
+    "needs": [
+      "Identify all image captioning datasets used for training or evaluation.",
+      "Determine if any datasets were specifically created or modified for this work.",
+      "List any external or pre-existing image captioning datasets referenced."
+    ]
+  },
+  {
+    "id": "qasper/0b5a505c1fca92258b9e83f53bb8cfeb81cb655a",
+    "needs": [
+      "Locate a definition or explanation of edge weights.",
+      "Find a description of the properties or characteristics of edge weights.",
+      "Identify the context or role of edge weights within the document's discussion."
+    ]
+  },
+  {
+    "id": "qasper/0b5a7ccf09810ff5a86162d502697d16b3536249",
+    "needs": [
+      "Identify architectural simplifications made.",
+      "Determine if the simplified architecture maintained the same performance.",
+      "Locate details on the original and simplified architectures for comparison."
+    ]
+  },
+  {
+    "id": "qasper/0c7cb3010ed92b8d46583a67e72946a6c0115f1f",
+    "needs": [
+      "Define \"intrinsic geometry\" in the context of learned representations.",
+      "Explain how \"intrinsic geometry\" applies to spaces of learned representations.",
+      "Describe the characteristics or properties of the \"intrinsic geometry of spaces of learned representations\"."
+    ]
+  },
+  {
+    "id": "qasper/0f1f81b6d4aa0da38b4cc8b060926e7df61bb646",
+    "needs": [
+      "Identify the machine learning method or model used for making predictions.",
+      "Determine if different prediction tasks (e.g., script event, stock market) use distinct machine learning methods."
+    ]
+  },
+  {
+    "id": "qasper/0f9678e11079ee9ea1a1ce693f017177dd495ee5",
+    "needs": [
+      "The performance of the model when pretrained on SQuAD.",
+      "The performance of the model when not pretrained on SQuAD."
+    ]
+  },
+  {
+    "id": "qasper/0fe49431db5ffaa24372919daf24d8f84117bfda",
+    "needs": [
+      "Identify the specific dataset(s) used for training or evaluation.",
+      "Determine if multiple datasets are used and for what purpose.",
+      "Locate any mentions of dataset names or descriptions."
+    ]
+  },
+  {
+    "id": "qasper/1002bd01372eba0f3078fb4a951505278ed45f2e",
+    "needs": [
+      "Identify if the paper compares its proposed model against other existing models or baselines.",
+      "Determine if the 'Models' section or 'Experiments' section discusses comparisons with other architectures or approaches."
+    ]
+  },
+  {
+    "id": "qasper/101d7a355e8bf6d1860917876ee0b9971eae7a2f",
+    "needs": [
+      "Identify the languages or datasets used in the experiments or evaluations.",
+      "Determine if the results presented are exclusively based on English data or if other languages are also included."
+    ]
+  },
+  {
+    "id": "qasper/11360385dff0a9d7b8f4b106ba2b7fe15ca90d7c",
+    "needs": [
+      "Identify the baseline system or method used for comparison.",
+      "Determine the performance metrics or characteristics of the baseline.",
+      "Locate any description or definition of 'baseline' within the document."
+    ]
+  },
+  {
+    "id": "qasper/1237b6fcc64b43901415f3ded17cc210a54ab698",
+    "needs": [
+      "Identify the specific dataset(s) used for training or evaluating the KeyVec model.",
+      "Determine if multiple datasets were used and for what purpose each was employed."
+    ]
+  },
+  {
+    "id": "qasper/134a66580c363287ec079f353ead8f770ac6d17b",
+    "needs": [
+      "Identify the specific fine-grained semantic types that are considered or discussed in the document.",
+      "Determine if there are any examples or lists of the fine-grained semantic types provided."
+    ]
+  },
+  {
+    "id": "qasper/143409d16125790c8db9ed38590a0796e0b2b2e2",
+    "needs": [
+      "The dimensions of the embeddings considered in the document.",
+      "The specific embeddings discussed and their corresponding dimensions."
+    ]
+  },
+  {
+    "id": "qasper/157284acedf13377cbc6d58c8f3648d3a62f5db5",
+    "needs": [
+      "Identify any training procedures, beyond the primary one, that were investigated or explored.",
+      "Determine if the document describes alternative training methodologies or variations on the main procedure.",
+      "Look for sections discussing different approaches to training the model or comparative training experiments."
+    ]
+  },
+  {
+    "id": "qasper/15aeda407ae3912419fd89211cdb98989d9cde58",
+    "needs": [
+      "Identify the specific pretrained language representations mentioned in the document.",
+      "Determine if different pretrained language representations are used for various parts of the model or tasks.",
+      "Look for details on how the pretrained language representations are incorporated or fine-tuned."
+    ]
+  },
+  {
+    "id": "qasper/17fd6deb9e10707f9d1b70165dedb045e1889aac",
+    "needs": [
+      "Identify the specific metrics used to evaluate the proposed approach or system.",
+      "Determine how the evaluation metrics are applied or calculated.",
+      "Locate any discussion of the evaluation metrics within the 'Experiments and Results' section."
+    ]
+  },
+  {
+    "id": "qasper/18fbfb1f88c5487f739aceffd23210a7d4057145",
+    "needs": [
+      "Identify the models that were compared in the study.",
+      "Determine the specific models used as baselines or for comparison in each experiment.",
+      "List all models mentioned in the context of comparisons or evaluations."
+    ]
+  },
+  {
+    "id": "qasper/1c0a575e289eb486d3e6375d6f783cc2bf18adf9",
+    "needs": [
+      "The size of the released data set",
+      "The number of items in the released data set",
+      "The dimensions or scale of the released data set"
+    ]
+  },
+  {
+    "id": "qasper/1c8958ec50976a9b1088c51e8f73a767fb3973fa",
+    "needs": [
+      "Identify the specific types of RNN classifiers implemented or discussed in the document.",
+      "Determine if the document details the architecture or configuration of the RNN classifiers used.",
+      "Locate any comparisons or evaluations of different RNN classifiers within the document."
+    ]
+  },
+  {
+    "id": "qasper/1d9d7c96c5e826ac06741eb40e89fca6b4b022bd",
+    "needs": [
+      "Identify any additional evidence sources or types used in the method beyond what's already described.",
+      "Determine how the additional evidence is acquired or generated.",
+      "Explain the purpose or role of the additional evidence in the overall question answering process."
+    ]
+  },
+  {
+    "id": "qasper/1dcfcfa46dbcffc2fc7be92dd57df9620258097b",
+    "needs": [
+      "Locate definitions or explanations of \"complexity\" of entity mentions.",
+      "Locate definitions or explanations of \"confusability\" of entity mentions."
+    ]
+  },
+  {
+    "id": "qasper/1ef6471cc3e1eb10d2e92656c77020ca1612f08e",
+    "needs": [
+      "Locate sections that compare the model's performance metrics (e.g., accuracy, precision, recall) against various baseline models.",
+      "Identify specific baseline models used for comparison and their reported performance values.",
+      "Find explanations or discussions on why the proposed model performs better or worse than the baselines, including any identified strengths or weaknesses."
+    ]
+  },
+  {
+    "id": "qasper/211c242c028b35bb9cbd5e303bb6c750f859fd34",
+    "needs": [
+      "Determine if the reviews contain translations for Catalan.",
+      "Determine if the reviews contain translations for Basque."
+    ]
+  },
+  {
+    "id": "qasper/230f127e83ac62dd65fccf6b1a4960cf0f7316c7",
+    "needs": [
+      "Identify the experimental setup and methodology used to measure the impact of different choices on performance.",
+      "Determine the specific choices or variables being tested in the experiments and how their impact on performance is quantified.",
+      "Locate descriptions of how experimental results are analyzed and compared to assess the impact of different choices."
+    ]
+  },
+  {
+    "id": "qasper/252599e53f52b3375b26d4e8e8b66322a42d2563",
+    "needs": [
+      "Identify any data augmentation techniques applied to the dataset.",
+      "Determine if the paper mentions any specific methods or algorithms used for data augmentation.",
+      "Look for descriptions of how the data was preprocessed or expanded, specifically for augmentation purposes."
+    ]
+  },
+  {
+    "id": "qasper/256dfa501a71d7784520a527f43aec0549b1afea",
+    "needs": [
+      "Identify the best model for sign language recognition.",
+      "Determine the performance metric used for evaluation.",
+      "Find the reported performance value for the best model."
+    ]
+  },
+  {
+    "id": "qasper/267d70d9f3339c56831ea150d2213643fbc5129b",
+    "needs": [
+      "The document should provide details on the performance metrics used to evaluate NJM.",
+      "The document should describe the experimental setup and results for NJM's performance.",
+      "The document should present a summary or conclusion regarding NJM's overall performance."
+    ]
+  },
+  {
+    "id": "qasper/272defe245d1c5c091d3bc51399181da2da5e5f0",
+    "needs": [
+      "Identify the specific knowledge base or data source used for fact retrieval.",
+      "Determine if multiple knowledge bases are used and, if so, which ones.",
+      "Locate any descriptions of how facts are retrieved from the knowledge base."
+    ]
+  },
+  {
+    "id": "qasper/2749fb1725a2c4bdba5848e2fc424a43e7c4be51",
+    "needs": [
+      "The document should describe the process or criteria used to select the trusted, gender-balanced examples.",
+      "The document should explain what constitutes a 'trusted' example in this context.",
+      "The document should detail how gender balance is ensured or measured within the selected examples."
+    ]
+  },
+  {
+    "id": "qasper/28e50459da60ceda49fe1578c12f3f805b288bd0",
+    "needs": [
+      "Performance metrics (e.g., accuracy, F1-score) for the model on English language data.",
+      "Performance metrics for the model on Spanish language data.",
+      "Performance metrics for the model on Arabic language data."
+    ]
+  },
+  {
+    "id": "qasper/29794bda61665a1fbe736111e107fd181eacba1b",
+    "needs": [
+      "Locate the section discussing the origin or source of the data used in the corpus construction.",
+      "Identify specific datasets, platforms, or methods used to collect the raw data for their corpus.",
+      "Determine if the data is newly collected, from existing sources, or a combination, and how it was acquired."
+    ]
+  },
+  {
+    "id": "qasper/2b75df325c98b761faf2fecf6e71ac7366eb15ea",
+    "needs": [
+      "Performance metrics for morphologically impoverished languages",
+      "Performance metrics for morphologically complex languages",
+      "Comparison or discussion of performance differences between the two language types"
+    ]
+  },
+  {
+    "id": "qasper/2ca3ca39d59f448e30be6798514709be7e3c62d8",
+    "needs": [
+      "Identify the specific datasets mentioned for training the model.",
+      "Determine if there are any pre-processing steps or specific versions of the datasets used.",
+      "Look for any mention of how the datasets were split (e.g., training, validation, test)."
+    ]
+  },
+  {
+    "id": "qasper/2ddfb40a9e73f382a2eb641c8e22bbb80cef017b",
+    "needs": [
+      "Identify the datasets used for training or evaluation of the models.",
+      "Determine if specific datasets are mentioned in relation to Multilingual BERT or other models."
+    ]
+  },
+  {
+    "id": "qasper/2f01d3e5120d1fef4b01028536cb5fe0abad1968",
+    "needs": [
+      "Identify the state-of-the-art models used for comparison in the 'Baselines' or 'Baseline Comparison' sections.",
+      "Determine if any other sections, such as 'Related Work' or 'Experiments', mention specific state-of-the-art models used for comparison."
+    ]
+  },
+  {
+    "id": "qasper/2fec84a62b4028bbe6500754d9c058eefbc24d9a",
+    "needs": [
+      "The document should provide specific performance metrics (e.g., accuracy, F1-score) for large state-of-the-art models on the datasets mentioned.",
+      "The document should identify the specific datasets used for evaluating the performance of these models.",
+      "The document should describe the 'large state-of-the-art models' being referred to, including their architectures or key characteristics."
+    ]
+  },
+  {
+    "id": "qasper/3138f916e253abed643d3399aa8a4555b2bd8c0f",
+    "needs": [
+      "Identify the specific empirical comparison methods employed in the study.",
+      "Determine how these methods are applied to evaluate the effectiveness of the proposed interventions.",
+      "Locate descriptions of the experimental setup and evaluation metrics used for empirical comparisons."
+    ]
+  },
+  {
+    "id": "qasper/31e6062ba45d8956791e1b86bad7efcb6d1b191a",
+    "needs": [
+      "Identify the specific word embedding models or techniques mentioned as being used.",
+      "Determine if any pre-trained word embeddings are utilized and their source.",
+      "Look for details on how word embeddings are generated or configured if not pre-trained."
+    ]
+  },
+  {
+    "id": "qasper/338a3758dccfa438a52d173fbe23a165ef74a0f0",
+    "needs": [
+      "Identify the domain of the test set used in the experiments.",
+      "Determine if the test set domain is explicitly stated or implied by the data sources or model settings."
+    ]
+  },
+  {
+    "id": "qasper/3499d5feeb3a45411d8e893516adbdc14e72002a",
+    "needs": [
+      "Locate definitions or explanations of 'reordering' within the paper's context.",
+      "Identify how 'reordering' is described in relation to the translation process or specific models discussed.",
+      "Find examples or descriptions of what 'reordering' entails or aims to achieve in the paper."
+    ]
+  },
+  {
+    "id": "qasper/35c01dc0b50b73ee5ca7491d7d373f6e853933d2",
+    "needs": [
+      "Identify the dataset used for matching text altering attributes to image parts.",
+      "Determine if a specific dataset is mentioned for text-image attribute matching.",
+      "Locate information about the dataset used for text-guided image manipulation, specifically for altering attributes and matching them to image parts."
+    ]
+  },
+  {
+    "id": "qasper/3a01dc85ac983002fd631f1c28fc1cbe16094c24",
+    "needs": [
+      "How commonsense knowledge is represented or encoded for use within an LSTM architecture.",
+      "The specific mechanism or layer within the LSTM that integrates or processes the commonsense information.",
+      "Examples or descriptions of how the integrated commonsense influences the LSTM's learning or output."
+    ]
+  },
+  {
+    "id": "qasper/3a25f82512d56d9e1ffba72f977f515ae3ba3cca",
+    "needs": [
+      "Does the programme plan to gather or collect any large datasets for the Icelandic language?",
+      "Does the programme plan to open source any large datasets for the Icelandic language?",
+      "What specific large datasets, if any, are mentioned in the programme plans for Icelandic language?"
+    ]
+  },
+  {
+    "id": "qasper/3cc0d773085dc175b85955e95911a2cfaab2cdc4",
+    "needs": [
+      "Identify pairs of languages considered similar enough to capture phonetic structure.",
+      "Determine the criteria or metrics used to assess language similarity for phonetic structure capture.",
+      "Locate examples or discussions of specific language pairs where phonetic structure capture is successful due to similarity."
+    ]
+  },
+  {
+    "id": "qasper/3d1ad8a4aaa2653d0095bafba74738bd20795acf",
+    "needs": [
+      "Identify all datasets used in the study.",
+      "Determine if the paper specifies how each dataset was used or processed."
+    ]
+  },
+  {
+    "id": "qasper/3d2b5359259cd3518f361d760bacc49d84c40d82",
+    "needs": [
+      "Compare the performance metrics (e.g., WER) of the single-system to system combination approaches.",
+      "Identify the specific system combination methods or architectures being compared against the single-system.",
+      "Locate any discussion or analysis explaining the reasons for observed performance differences between the single-system and system combination ones."
+    ]
+  },
+  {
+    "id": "qasper/3d662fb442d5fc332194770aac835f401c2148d9",
+    "needs": [
+      "The languages of the datasets used for reporting results.",
+      "Any mention of non-English data or multilingual experiments in the results section.",
+      "The scope of the data used in the experiments and evaluations."
+    ]
+  },
+  {
+    "id": "qasper/3eb107f35f4f5f5f527a93ffb487aa2e3fe51efd",
+    "needs": [
+      "Identify all pretrained embeddings mentioned as being experimented with.",
+      "Determine if different types or configurations of pretrained embeddings were compared.",
+      "Locate any discussion of the specific pretrained embeddings used in the experiments."
+    ]
+  },
+  {
+    "id": "qasper/415014a5bcd83df52c9307ad16fab1f03d80f705",
+    "needs": [
+      "Syntactic features proposed",
+      "Semantic features proposed"
+    ]
+  },
+  {
+    "id": "qasper/430ad71a0fd715a038f3c0fe8d7510e9730fba23",
+    "needs": [
+      "Identify the attention-based NMT methods compared in the study.",
+      "Determine which specific attention-based NMT method was used as a baseline or for comparison."
+    ]
+  },
+  {
+    "id": "qasper/43729be0effb5defc62bae930ceacf7219934f1e",
+    "needs": [
+      "The languages included in the newly created dataset.",
+      "Details about the dataset creation process and its linguistic scope."
+    ]
+  },
+  {
+    "id": "qasper/441be93e2830cc0fc65afad6959db92754c9f5a8",
+    "needs": [
+      "Identify if the document mentions testing against RoBERTa large.",
+      "Determine if the document specifies the version of RoBERTa used for testing."
+    ]
+  },
+  {
+    "id": "qasper/4830459e3d1d204e431025ce7e596ef3f8d757d2",
+    "needs": [
+      "The number of speakers in the dataset",
+      "How the dataset was collected or created",
+      "Any details about the dataset's composition relevant to speaker count"
+    ]
+  },
+  {
+    "id": "qasper/48ff9645a506aa2c17810d2654d1f0f0d9e609ee",
+    "needs": [
+      "Identify the downstream tasks that are analyzed or benchmarked in the experiments section.",
+      "List the specific downstream tasks for which DistilBERT's performance is evaluated.",
+      "Determine which downstream tasks are discussed in the context of the experimental analysis."
+    ]
+  },
+  {
+    "id": "qasper/4a093a9af4903a59057a4372ac1b01603467ca58",
+    "needs": [
+      "The size of the dataset at which the model's performance begins to approach or match the inter-annotator agreement.",
+      "Information on how inter-annotator agreement is measured and reported in the document.",
+      "Any discussion or data points that compare model performance with inter-annotator agreement across different dataset sizes."
+    ]
+  },
+  {
+    "id": "qasper/4dadde7c61230553ef14065edd8c1c7e41b9c329",
+    "needs": [
+      "Previous state-of-the-art methods or models specifically applied to factored datasets.",
+      "Performance metrics or results of previous state-of-the-art methods on factored datasets.",
+      "Any limitations or challenges of previous state-of-the-art methods on factored datasets that the current work aims to address."
+    ]
+  },
+  {
+    "id": "qasper/4e1293592e41646a6f5f0cb00c75ee8de14eb668",
+    "needs": [
+      "Identify examples of common sense questions.",
+      "Determine the characteristics that define a common sense question."
+    ]
+  },
+  {
+    "id": "qasper/50c441a9cc7345a0fa408d1ce2e13f194c1e82a8",
+    "needs": [
+      "Identify the approach described as state-of-the-art or the most advanced in the document.",
+      "Locate descriptions of the proposed or main approach in the document.",
+      "Find any comparisons to other approaches that highlight the superiority or current standing of a particular method."
+    ]
+  },
+  {
+    "id": "qasper/5154f63c50729b8ac04939588c2f5ffeb916e3df",
+    "needs": [
+      "The length of the test dataset for Dutch",
+      "The size of the Dutch test dataset",
+      "The number of samples in the Dutch test dataset"
+    ]
+  },
+  {
+    "id": "qasper/521a3e7300567f6e8e4c531f223dbc9fc306c393",
+    "needs": [
+      "Information on how regularization is applied during fine-tuning.",
+      "Data or results comparing performance with and without regularization during fine-tuning in the target domain.",
+      "Explanation of any observed impact (positive, negative, or neutral) of regularization on target domain performance."
+    ]
+  },
+  {
+    "id": "qasper/5364fe5f256f1263a939e0a199c3708727ad856a",
+    "needs": [
+      "The length or duration of the videos used in the study.",
+      "Any specific timeframes or ranges mentioned for video lengths.",
+      "Details on how video length was determined or measured."
+    ]
+  },
+  {
+    "id": "qasper/53a8c3cf22d6bf6477bc576a85a83d8447ee0484",
+    "needs": [
+      "Identify the NLI (Natural Language Inference) datasets used to enhance the quality of embeddings.",
+      "Determine if any specific NLI data is mentioned in the context of improving embedding quality."
+    ]
+  },
+  {
+    "id": "qasper/57ee20f494d8ce3fae46028c3f3551d180dba3e0",
+    "needs": [
+      "Identify the languages used in the evaluation of the methods.",
+      "Determine if the methods are evaluated on multiple languages or a single language.",
+      "Locate any specific mentions of languages in the experimental setup or results sections."
+    ]
+  },
+  {
+    "id": "qasper/58259f2e22363aab20c448e5dd7b6f432556b32d",
+    "needs": [
+      "The document should describe how the model is interpreted.",
+      "The document should explain the methods or techniques used for model interpretation.",
+      "The document should provide details on what aspects of the model's behavior or output are analyzed for interpretation."
+    ]
+  },
+  {
+    "id": "qasper/58a3cfbbf209174fcffe44ce99840c758b448364",
+    "needs": [
+      "Identify the neural language models that are compared or evaluated in the document.",
+      "Determine which of the compared models are described as 'recent' or state-of-the-art.",
+      "Locate sections or discussions that explicitly list or introduce the models used for comparison."
+    ]
+  },
+  {
+    "id": "qasper/58df55002fbcba76b9aeb2181d78378b8c01a827",
+    "needs": [
+      "Identify the specific architectural components or features of the G-SAT model.",
+      "Locate information detailing the speedup or performance improvements achieved by different parts of the G-SAT architecture.",
+      "Find comparisons of the G-SAT model's speedup against existing approaches, specifying which component contributes most."
+    ]
+  },
+  {
+    "id": "qasper/592df9831692b8fde213257ed1894344da3e0594",
+    "needs": [
+      "Identify sections discussing the difficulty or performance of cross-topic setups.",
+      "Identify sections discussing the difficulty or performance of cross-domain setups.",
+      "Identify sections discussing the difficulty or performance of cross-temporal setups or across annotators."
+    ]
+  },
+  {
+    "id": "qasper/597d3fc9b8c0c036f58cea5b757d0109d5211b2f",
+    "needs": [
+      "Locate the section discussing the measurement of fluency.",
+      "Identify the specific metrics or methods used to quantify fluency.",
+      "Find details on the experimental setup or tools employed for fluency assessment."
+    ]
+  },
+  {
+    "id": "qasper/59f41306383dd6e201bded0f1c7c959ec4f61c5a",
+    "needs": [
+      "Identify any logic rules that ELMo can learn.",
+      "Determine if the document specifies how ELMo learns logic rules.",
+      "Look for examples or descriptions of logic rules learned by ELMo."
+    ]
+  },
+  {
+    "id": "qasper/5a473f86052cf7781dfe40943ddf99bc9fe8a4e4",
+    "needs": [
+      "Identify specific social-network features mentioned in the document.",
+      "Determine how these social-network features are used or applied in the context of cyberbullying classification."
+    ]
+  },
+  {
+    "id": "qasper/5b2839bef513e5d441f0bb8352807f673f4b2070",
+    "needs": [
+      "Identify the specific metrics used to evaluate the sentiment analysis models.",
+      "Determine how these metrics were applied or calculated in the evaluation process."
+    ]
+  },
+  {
+    "id": "qasper/5d5c25d68988fa5effe546507c66997785070573",
+    "needs": [
+      "The document should describe how manually selected features are similar across related applications in different domains.",
+      "The document should provide examples or explanations of feature similarity in cross-domain, related applications.",
+      "The document should discuss methods or metrics for evaluating the similarity of manually selected features across different domains and related applications."
+    ]
+  },
+  {
+    "id": "qasper/5f25b57a1765682331e90a46c592a4cea9e3a336",
+    "needs": [
+      "Determine if face tracking, identification, and localization are considered multimodal inputs within an ML model or system.",
+      "Ascertain if face tracking, identification, and localization are programmed manually (by hand) in an ML model or system."
+    ]
+  },
+  {
+    "id": "qasper/6295951fda0cfa2eb4259d544b00bc7dade7c01e",
+    "needs": [
+      "Identify the specific model architecture used for fine-grained entity typing.",
+      "Determine if the model architecture is described in the 'Method' section, particularly under 'Fine-grained Entity Typing Model'.",
+      "Look for mentions of specific neural network types or architectural components that define the model."
+    ]
+  },
+  {
+    "id": "qasper/63cdac43a643fc1e06da44910458e89b2c7cd921",
+    "needs": [
+      "Describe the process and methods used to gather the data for the dataset.",
+      "Identify the sources from which the data was obtained.",
+      "Explain any specific tools, platforms, or procedures involved in the data collection."
+    ]
+  },
+  {
+    "id": "qasper/65e26b15e087bedb6e8782d91596b35e7454b16b",
+    "needs": [
+      "Determine if the document describes evaluating binary paragraph vectors on any downstream task.",
+      "Identify any specific downstream tasks mentioned in the document where binary paragraph vectors are evaluated.",
+      "Look for results or discussions of performance of binary paragraph vectors on tasks other than their primary training objective."
+    ]
+  },
+  {
+    "id": "qasper/6a20a3220c4edad758b912e2d3e5b99b0b295d96",
+    "needs": [
+      "Identify the methods or criteria used to weigh or compare different statistical models.",
+      "Determine if there are specific metrics or evaluation techniques applied to assess the performance of statistical models.",
+      "Look for descriptions of how the outputs or results from different statistical models are combined or prioritized."
+    ]
+  },
+  {
+    "id": "qasper/6df57a21ca875e63fb39adece6a9ace5bb2b2cfa",
+    "needs": [
+      "Locate descriptions or examples of the labeling scheme used.",
+      "Identify the specific components or structure of the BIO labeling scheme.",
+      "Find details on how the labeling scheme is applied in the context of concept recognition."
+    ]
+  },
+  {
+    "id": "qasper/6e040e80f2da69d50386a90a38ed6d2fa4f77bbd",
+    "needs": [
+      "Identify the specific NER datasets used in the experiments.",
+      "Determine if the paper mentions any particular NER dataset by name.",
+      "Locate information about the datasets used for training and evaluation of the model."
+    ]
+  },
+  {
+    "id": "qasper/70abb108c3170e81f8725ddc1a3f2357be5a4959",
+    "needs": [
+      "The methods or metrics used to measure the usefulness of obtained ontologies.",
+      "How the usefulness of obtained ontologies is compared to domain expert ones."
+    ]
+  },
+  {
+    "id": "qasper/71b07d08fb6ac8732aa4060ae94ec7c0657bb1db",
+    "needs": [
+      "Identify the definition or description of 'baseline' within the document.",
+      "Locate any specific values, models, or methods that are designated as the baseline.",
+      "Determine the context or purpose for which the baseline is established or used."
+    ]
+  },
+  {
+    "id": "qasper/7239c02a0dcc0c3c9d9cddb5e895bcf9cfcefee6",
+    "needs": [
+      "Identify all data sources mentioned for training or evaluating models.",
+      "Determine if any data sources are specifically used for 'unlabelled data' as per the title."
+    ]
+  },
+  {
+    "id": "qasper/72c04eb3fc323c720f7f8da75c70f09a35abf3e6",
+    "needs": [
+      "Locate specific numerical values or descriptions of 'gains' obtained by the authors.",
+      "Identify the context or metrics used to measure these 'gains' (e.g., accuracy, performance improvement).",
+      "Find any comparisons of the obtained 'gains' against baselines or other methods."
+    ]
+  },
+  {
+    "id": "qasper/72dbdd11b655b25b2b254e39689a7d912f334b71",
+    "needs": [
+      "Locate descriptions of how properties are compared and annotated.",
+      "Identify specific annotation schemes or methods used for comparing properties.",
+      "Find examples or explanations of property comparison annotations."
+    ]
+  },
+  {
+    "id": "qasper/7380e62edcb11f728f6d617ee332dc8b5752b185",
+    "needs": [
+      "Identify the specific neural language model architecture mentioned or described in the document.",
+      "Determine if the document explicitly names a particular neural language model architecture used for their work."
+    ]
+  },
+  {
+    "id": "qasper/73a5783cad4ed468a8dbb31b5de2c618ce351ad1",
+    "needs": [
+      "The initial performance metric or baseline before improvement.",
+      "The final performance metric after the improvement.",
+      "The method or calculation used to determine the performance improvement."
+    ]
+  },
+  {
+    "id": "qasper/74fcb741d29892918903702dbb145fef372d1de3",
+    "needs": [
+      "Identify the specific model or models that are trained in the document.",
+      "Determine the purpose or objective of training the identified model(s).",
+      "Locate details about the training process, such as the data used or the training configuration."
+    ]
+  },
+  {
+    "id": "qasper/77a331d4d909d92fab9552b429adde5379b2ae69",
+    "needs": [
+      "Locate performance metrics for the Gated Recurrent Neural Tensor Network.",
+      "Locate performance metrics for the LSTM model.",
+      "Find comparisons or discussions on the significance of performance differences between the two models."
+    ]
+  },
+  {
+    "id": "qasper/78c7318b2218b906a67d8854f3e511034075f79a",
+    "needs": [
+      "Identify the specific dialogue datasets or types of dialogue data used for evaluation in the experiments section.",
+      "Determine if different evaluation tasks (e.g., PersonaChat, Wizard of Wikipedia) utilize distinct dialogue data for evaluation.",
+      "Look for mentions of how the dialogue data for evaluation was collected or generated (e.g., human-model chats, self-chats)."
+    ]
+  },
+  {
+    "id": "qasper/79885526713cc16eb734c88ff1169ae802cad589",
+    "needs": [
+      "Identify how authors evaluate datasets using models trained on different datasets.",
+      "Determine the specific evaluation measures used for datasets when models are trained on different datasets.",
+      "Find details on the experimental setup where models trained on different datasets are used to evaluate datasets."
+    ]
+  },
+  {
+    "id": "qasper/7d539258b948cd5b5ad1230a15e4b739f29ed947",
+    "needs": [
+      "Locate the reported inter-annotator agreement score or metric.",
+      "Identify the methodology used to calculate inter-annotator agreement.",
+      "Determine the specific section or subsection where inter-annotator agreement is discussed."
+    ]
+  },
+  {
+    "id": "qasper/7ef34b4996ada33a4965f164a8f96e20af7470c0",
+    "needs": [
+      "Locate the reported accuracy scores for the proposed model or models.",
+      "Identify the specific accuracy score that is described as 'state of the art' or the highest achieved.",
+      "Determine if there are any comparisons to previous state-of-the-art results and what those results were."
+    ]
+  },
+  {
+    "id": "qasper/7fba61426737394304e307cdc7537225f6253150",
+    "needs": [
+      "Identify the baseline model or method used for comparison.",
+      "Determine the performance metric(s) used to evaluate the baseline.",
+      "Locate the results or performance of the baseline."
+    ]
+  },
+  {
+    "id": "qasper/806fefe0e331ddb3c17245d6a9fa7433798e367f",
+    "needs": [
+      "Identify mentions of online systems within the document.",
+      "Determine if any described systems are currently in existence or operational.",
+      "Extract details about the purpose or function of any identified online systems."
+    ]
+  },
+  {
+    "id": "qasper/8246d1eee1482555d075127ac84f2e1d0781a446",
+    "needs": [
+      "Identify all datasets used in the study.",
+      "Determine how each dataset was utilized or for what purpose.",
+      "Locate any descriptions or characteristics of the datasets mentioned."
+    ]
+  },
+  {
+    "id": "qasper/833d3ae7613500f2867ed8b33d233d71781014e7",
+    "needs": [
+      "Identify specific GAN approaches or models used.",
+      "Identify specific RL approaches or algorithms used."
+    ]
+  },
+  {
+    "id": "qasper/863b3f29f8c59f224b4cbdb5f1097b45a25f1d88",
+    "needs": [
+      "Identify the baseline models used for comparison in the experiments section.",
+      "Determine the specific type or architecture of the baseline models.",
+      "Locate descriptions of the baseline models' characteristics or how they function."
+    ]
+  },
+  {
+    "id": "qasper/8641156c4d67e143ebbabbd79860349242a11451",
+    "needs": [
+      "Identify all European languages mentioned as targets for sentiment classifiers.",
+      "Determine if the document specifies which European languages are included in the Twitter time-ordered data evaluation.",
+      "Locate any explicit lists or descriptions of European languages that are the subject of the sentiment classifier evaluation."
+    ]
+  },
+  {
+    "id": "qasper/864295caceb1e15144c1746ab5671d085d7ff7a1",
+    "needs": [
+      "The performance of the proposed model on knowledge graph completion.",
+      "The performance of state-of-the-art models on knowledge graph completion.",
+      "A comparison or difference in performance between the proposed model and state-of-the-art models on knowledge graph completion."
+    ]
+  },
+  {
+    "id": "qasper/8701ec7345ccc2c35eca4e132a8e16d58585cd63",
+    "needs": [
+      "Identify the language pairs used for evaluation in the experiments section.",
+      "Determine if the evaluation is conducted on multiple language pairs or a single one.",
+      "Locate any specific mentions of language pairs in the 'Experiments' or 'Datasets' sections."
+    ]
+  },
+  {
+    "id": "qasper/87523fb927354ddc8ad1357a81f766b7ea95f53c",
+    "needs": [
+      "Identify the number of annotators involved in the Clotho dataset creation.",
+      "Determine if the number of annotators is explicitly stated or can be inferred from the description of the caption collection process."
+    ]
+  },
+  {
+    "id": "qasper/887d7f3edf37ccc6bf2e755dae418b04d2309686",
+    "needs": [
+      "Identify the specific morphological features used in the models or methods described.",
+      "Determine how morphological features are represented or incorporated into the models.",
+      "Look for discussions comparing the use of morphological features with other types of features or units."
+    ]
+  },
+  {
+    "id": "qasper/8b8adb1d5a1824c8995b3eba668745c44f61c9c6",
+    "needs": [
+      "Identify the language(s) of the data used for the analysis.",
+      "Determine if the analysis is exclusively performed on English data."
+    ]
+  },
+  {
+    "id": "qasper/8cf5abf0126f19253930478b02f0839af28e4093",
+    "needs": [
+      "Identify the specific sentiment features used in the system described.",
+      "Determine how sentiment features are extracted or calculated.",
+      "List any sentiment lexicons or tools utilized for feature generation."
+    ]
+  },
+  {
+    "id": "qasper/8faec509406d33444bd620afc829adc9eae97644",
+    "needs": [
+      "Identify the categories or types of named entities that are analyzed or considered in the study.",
+      "Determine if the document specifies a list of categories used for annotation or analysis of named entities."
+    ]
+  },
+  {
+    "id": "qasper/90829d5fde4f5f0ffc184c5e8fc64c8ac5ece521",
+    "needs": [
+      "Identify the baseline method or system used for comparison.",
+      "Determine the specific metrics or criteria against which the baseline was evaluated.",
+      "Locate the performance results or characteristics of the baseline."
+    ]
+  },
+  {
+    "id": "qasper/9186b2c5b7000ab7f15a46a47da73ea45544bace",
+    "needs": [
+      "How the model's performance is measured or compared against the original recursive training algorithm.",
+      "Specific metrics or criteria used to evaluate the model's performance relative to the original algorithm.",
+      "Any experimental results or comparisons that show how the model performs when evaluated against the original recursive training algorithm."
+    ]
+  },
+  {
+    "id": "qasper/91d4fd5796c13005fe306bcd895caaed7fa77030",
+    "needs": [
+      "Identify the specific tasks or datasets used for training the models described in the paper.",
+      "Determine if the models are trained on single tasks, multiple tasks, or both, and what those tasks are.",
+      "Locate descriptions of the training process and the tasks involved, particularly in sections like 'Sampling & Training' or 'Hyperparameters and Training'."
+    ]
+  },
+  {
+    "id": "qasper/940a16e9db8be5b5f4e67d9c7622b3df99ac10a5",
+    "needs": [
+      "Identify the specific domains or types of content that are the subject of exploration or analysis within the paper.",
+      "Determine if the paper defines or categorizes different domains, and what those categories are.",
+      "Look for sections that explicitly list or describe the domains used in experiments or discussions related to domain shift."
+    ]
+  },
+  {
+    "id": "qasper/95af7aaea3ce9dab4cf64e2229ce9b98381dd050",
+    "needs": [
+      "Information on whether the system was tested on real pharmacologists",
+      "Details about the participants or subjects involved in the testing of the system",
+      "Description of the testing methodology to determine if it involved actual pharmacologists encoding ADR reports"
+    ]
+  },
+  {
+    "id": "qasper/9686f3ff011bc6e3913c329c6a5671932c27e63e",
+    "needs": [
+      "Identify the specific architecture used for the encoder component.",
+      "Determine if the encoder architecture is explicitly named or described in the text.",
+      "Locate any details about the design or type of the encoder architecture."
+    ]
+  },
+  {
+    "id": "qasper/9863f5765ba70f7ff336a580346ef70205abbbd8",
+    "needs": [
+      "Identify the baselines used in the experiments or evaluation.",
+      "Locate descriptions or definitions of the baselines.",
+      "Find the purpose or context for using these baselines."
+    ]
+  },
+  {
+    "id": "qasper/9887ca3d25e2109f41d1da80eeea05c465053fbc",
+    "needs": [
+      "The number of instances, documents, or other primary units in the dataset.",
+      "The size of the dataset in terms of tokens, words, or other linguistic units.",
+      "The number of unique labels, categories, or classes present in the dataset."
+    ]
+  },
+  {
+    "id": "qasper/98c8ed9019e43839ffb53a714bc37fbb1c28fe2c",
+    "needs": [
+      "Information on how speaker reputations are measured or defined in the dataset.",
+      "Details on how speaker reputations are incorporated into the dataset or analysis.",
+      "Explanation of any observed correlations or impacts of speaker reputations on other dataset features or outcomes."
+    ]
+  },
+  {
+    "id": "qasper/99f898eb91538cb82bc9a00892d54ae2a740961e",
+    "needs": [
+      "Identify the specific downstream tasks mentioned or evaluated in the document.",
+      "Determine if the document discusses the application of the learned sentence representations to various downstream tasks.",
+      "Locate any sections that describe experiments or results related to different downstream tasks."
+    ]
+  },
+  {
+    "id": "qasper/9b536f4428206ef7afabc4ff0a2ebcbabd68b985",
+    "needs": [
+      "Identify the methods or techniques used to create adversarial examples.",
+      "Determine the specific steps or processes involved in generating adversarial examples.",
+      "Explain the underlying principles or mechanisms that enable the generation of adversarial examples."
+    ]
+  },
+  {
+    "id": "qasper/9d98975ab0b75640b2c83e29e1438c76a959fbde",
+    "needs": [
+      "The average length of the captions in the vSTS dataset.",
+      "The method used to calculate the average length of captions.",
+      "Any statistics or descriptions of caption lengths."
+    ]
+  },
+  {
+    "id": "qasper/9ec0527bda2c302f4e82949cc0ae7f7769b7bfb8",
+    "needs": [
+      "Locate the definition or explanation of \"domain mismatch\" within the document.",
+      "Identify the context or circumstances under which \"domain mismatch\" is described as occurring.",
+      "Find any examples or specific scenarios provided that illustrate \"domain mismatch\" in the document."
+    ]
+  },
+  {
+    "id": "qasper/a064337bafca8cf01e222950ea97ebc184c47bc0",
+    "needs": [
+      "Identify the specific sociolinguistic variables or phonetic spellings analyzed in the study.",
+      "Determine how the study defines or operationalizes 'sociolinguistic variables' and 'phonetic spellings' within its methodology."
+    ]
+  },
+  {
+    "id": "qasper/a11b5eb928a6db9a0e3bb290ace468ff1685d253",
+    "needs": [
+      "Identify the specific type of annotation performed in the study, as described in sections like \"Crowdsourced Annotation R1\", \"Crowdsourced Annotation R2\", \"Community Annotation R3\", and \"Crowdsourced Annotation R4\".",
+      "Determine the purpose or goal of the annotation process, such as classifying tweets, identifying job-related discourse, or other specific tasks.",
+      "Look for details on what information or features were being annotated within the Twitter data."
+    ]
+  },
+  {
+    "id": "qasper/a3705b53c6710b41154c65327b7bbec175bdfae7",
+    "needs": [
+      "Identify the specific datasets or types of data used for training the machine translation model.",
+      "Determine if the training data is historical documents, modern documents, or a mix, and if any preprocessing is mentioned.",
+      "Look for details on the size, source, or characteristics of the training corpus."
+    ]
+  },
+  {
+    "id": "qasper/a3e7d7389228a197c8c44e0c504a791b60f2c80d",
+    "needs": [
+      "Locate the method or process used to determine the semantic concept label for a given cluster.",
+      "Identify the criteria or rules applied when assigning a semantic concept label to a cluster.",
+      "Find any examples or descriptions of how a cluster's semantic concept label is derived from its contents."
+    ]
+  },
+  {
+    "id": "qasper/a57e266c936e438aeeab5e8d20d9edd1c15a32ee",
+    "needs": [
+      "Familiarity of crowd-sourced annotators with science topics",
+      "Familiarity of expert annotators with science topics"
+    ]
+  },
+  {
+    "id": "qasper/a786cceba4372f6041187c426432853eda03dca6",
+    "needs": [
+      "Identify the most advanced or current techniques, models, or approaches discussed in the document for predicting the role of political trolls in social media.",
+      "Determine if the document explicitly states what constitutes the 'state-of-the-art' in the context of its research area.",
+      "Look for sections that compare the proposed methods with existing or previous state-of-the-art methods to identify the most effective approach."
+    ]
+  },
+  {
+    "id": "qasper/a86758696926f2db71f982dc1a4fa4404988544e",
+    "needs": [
+      "Information on the language pairs used for training and evaluation beyond German-English.",
+      "Details on whether the model or method was tested or evaluated with other language pairs.",
+      "Discussion or mention of the generalizability of the results to other language pairs."
+    ]
+  },
+  {
+    "id": "qasper/a913aa14d4e05cc9d658bf6697fe5b2652589b1b",
+    "needs": [
+      "Identify the specific labeling scheme or schemes used in the document.",
+      "Determine if the document discusses different labeling schemes and compares their usage or effectiveness.",
+      "Look for descriptions or definitions of the labeling scheme(s) to understand their characteristics."
+    ]
+  },
+  {
+    "id": "qasper/aaf2445e78348dba66d7208b7430d25364e11e46",
+    "needs": [
+      "Locate specific numerical values or percentages indicating accuracy before and after an improvement.",
+      "Identify the context or task for which accuracy is being measured and improved.",
+      "Find any comparative statements or tables that quantify the improvement in accuracy."
+    ]
+  },
+  {
+    "id": "qasper/ae7c5cf9c2c121097eb00d389cfd7cc2a5a7d577",
+    "needs": [
+      "Identify the language(s) used in the dataset described in the \"Experimental Setup ::: Dataset:\" section.",
+      "Determine if the dataset is multilingual or monolingual and specify the language(s) if mentioned.",
+      "Look for any explicit statements about the language of the text or questions within the dataset description."
+    ]
+  },
+  {
+    "id": "qasper/b3b9d7c8722e8ec41cbbae40e68458485a5ba25c",
+    "needs": [
+      "Methodology for evaluating speech alignment quality",
+      "Metrics or criteria used to assess speech alignment quality",
+      "Results or findings from the speech alignment quality evaluation"
+    ]
+  },
+  {
+    "id": "qasper/b8bbdc3987bb456739544426c6037c78ede01b77",
+    "needs": [
+      "Does the document compare the proposed system to existing systems?",
+      "What existing systems are mentioned in the document?",
+      "What are the results of the comparison between the proposed system and existing systems?"
+    ]
+  },
+  {
+    "id": "qasper/b968bd264995cd03d7aaad1baba1838c585ec909",
+    "needs": [
+      "Identify factors that contribute to the stability of word embeddings.",
+      "Determine how word properties, data properties, and algorithm properties influence embedding stability.",
+      "Explain the lessons learned regarding what contributes to the stability of an embedding."
+    ]
+  },
+  {
+    "id": "qasper/baad4b6f834d5944f61bd12f30908e3cf3739dcd",
+    "needs": [
+      "Identify all BERT-based models used as baselines for comparison.",
+      "Determine if the document specifies the exact configurations or versions of the BERT-based baselines.",
+      "Look for any mention of other non-BERT baselines to ensure only BERT-based ones are captured."
+    ]
+  },
+  {
+    "id": "qasper/bab4e8881f4d75e266bce6fbfa4c3bcd3eacf30f",
+    "needs": [
+      "Identify models considered state-of-the-art in the document.",
+      "Determine if the document proposes a new state-of-the-art model and describe it."
+    ]
+  },
+  {
+    "id": "qasper/bc8526d4805e2554adb2e9c01736d3f3a3b19895",
+    "needs": [
+      "Identify the baselines used for comparison in the experiments.",
+      "Determine which models or methods were compared against the proposed Sentence Level Recurrent Topic Model."
+    ]
+  },
+  {
+    "id": "qasper/bd3562d2b3c162e9d27404d56b77e15f707d8b0f",
+    "needs": [
+      "Identify the evaluation metrics used in the study.",
+      "Determine if different metrics are used for different models or tasks.",
+      "Locate the section where evaluation metrics are discussed or presented."
+    ]
+  },
+  {
+    "id": "qasper/be632f0246c2e5f049d12e796812f496e083c33e",
+    "needs": [
+      "Identify if the chatbot architecture or models section mentions the use of pretrained word embeddings.",
+      "Determine if BERT or similar pretrained models are explicitly stated as being used for any component of the system."
+    ]
+  },
+  {
+    "id": "qasper/c463136ba9a312a096034c872b5c74b9d58cef95",
+    "needs": [
+      "Identify the specific graph-based features used or considered in the study.",
+      "Determine how these graph-based features are extracted or calculated.",
+      "Understand the purpose or role of these graph-based features in the abusive language detection system."
+    ]
+  },
+  {
+    "id": "qasper/c4c06f36454fbfdc5d218fb84ce74eaf7f78fc98",
+    "needs": [
+      "Locate the section discussing the performance of the three tested languages.",
+      "Identify the specific performance metrics or results for each of the three languages.",
+      "Find any comparative analysis or summary of the performance across the three languages."
+    ]
+  },
+  {
+    "id": "qasper/c5221bb28e58a4f13cf2eccce0e1b1bec7dd3c13",
+    "needs": [
+      "The document needs to specify if the data used or discussed is limited to a particular field of study or area of knowledge.",
+      "The document needs to indicate if the datasets mentioned, such as those in 'Results and Discussion ::: Datasets', are domain-specific or general-purpose."
+    ]
+  },
+  {
+    "id": "qasper/c58ef13abe5fa91a761362ca962d7290312c74e4",
+    "needs": [
+      "Identify the specific aspects or dimensions that are analyzed or considered in the context of hate speech analysis.",
+      "Determine if the document explicitly lists or defines the 'aspects' it focuses on, particularly in relation to multilingual and multi-aspect hate speech.",
+      "Look for sections that detail the methodology or framework used to break down or categorize hate speech, which would reveal the considered aspects."
+    ]
+  },
+  {
+    "id": "qasper/c626637ed14dee3049b87171ddf326115e59d9ee",
+    "needs": [
+      "Locate explanations of how the approach handles domains with limited overlapping utterances.",
+      "Identify specific mechanisms or components designed to address the challenge of few overlapping utterances.",
+      "Find descriptions of the approach's performance or adaptations when applied to domains characterized by a scarcity of overlapping utterances."
+    ]
+  },
+  {
+    "id": "qasper/c635295c2b77aaab28faecca3b5767b0c4ab3728",
+    "needs": [
+      "Identify the CMU WMT2018 tracks where the model did not achieve a first-place ranking.",
+      "Determine the specific rank of the model in each of those identified CMU WMT2018 tracks."
+    ]
+  },
+  {
+    "id": "qasper/c72e05dd41ed5a85335ffeca5a03e71514e60e84",
+    "needs": [
+      "Identify the source or origin of the news texts used in the dataset.",
+      "Determine if the news texts are collected from a specific publication, platform, or type of media.",
+      "Look for details on how the news texts were acquired or gathered for the dataset."
+    ]
+  },
+  {
+    "id": "qasper/c79f168503a60d1b08bb2c9aac124199d210b06d",
+    "needs": [
+      "Identify all downstream tasks mentioned in the paper that are used for evaluation.",
+      "Locate sections discussing the experimental setup or evaluation methodology to find the tasks."
+    ]
+  },
+  {
+    "id": "qasper/c7d3bccee59ab683e6bf047579bc6eab9de9d973",
+    "needs": [
+      "Identify specific deep learning models mentioned for use.",
+      "Determine if any deep learning models are planned for future work."
+    ]
+  },
+  {
+    "id": "qasper/cbb3c1c1e6e1818b6480f929f1c299eaa5ffd07a",
+    "needs": [
+      "Identify specific opportunities or advantages that Semantic Web technologies offer for Machine Translation.",
+      "Locate sections discussing the application of Semantic Web in Machine Translation and the benefits derived from it.",
+      "Find any proposed directions or suggestions for using Semantic Web technologies to improve Machine Translation, focusing on the positive outcomes."
+    ]
+  },
+  {
+    "id": "qasper/cc8b4ed3985f9bfbe1b5d7761b31d9bd6a965444",
+    "needs": [
+      "Locate descriptions of how intent is annotated.",
+      "Find details on the process or scheme used for intent annotation.",
+      "Identify any specific tools, methods, or guidelines mentioned for intent annotation."
+    ]
+  },
+  {
+    "id": "qasper/cef3a26d8b46cd057bcc2abd3d648dc15336a2bf",
+    "needs": [
+      "Identify the definition or explanation of the cold-start problem.",
+      "Determine the context in which the cold-start problem is discussed, particularly in relation to hotel embeddings or recommendations."
+    ]
+  },
+  {
+    "id": "qasper/cfc73e0c82cf1630b923681c450a541a964688b9",
+    "needs": [
+      "Identify how socioeconomic status is defined or measured using Twitter user data.",
+      "Determine the specific Twitter data features or metrics used to operationalize socioeconomic status.",
+      "Look for methods or models that link Twitter user data to socioeconomic status indicators."
+    ]
+  },
+  {
+    "id": "qasper/cfcf94b81589e7da215b4f743a3f8de92a6dda7a",
+    "needs": [
+      "Identify the VQA datasets used for evaluating the task.",
+      "Determine if the paper introduces new VQA datasets for evaluation.",
+      "List all VQA datasets mentioned in the 'Experiments' or 'Datasets' sections."
+    ]
+  },
+  {
+    "id": "qasper/d207f78beb6cd754268881bf575c8f98000667ea",
+    "needs": [
+      "Identify the number of distinct sentiment labels or categories used in the study.",
+      "Determine if the paper explicitly states the set of sentiment labels explored for tweet polarity classification."
+    ]
+  },
+  {
+    "id": "qasper/d20fd6330cb9d03734e2632166d6c8f780359a94",
+    "needs": [
+      "Locate quantitative results or metrics that indicate an improvement margin.",
+      "Identify the specific values or ranges representing the 'improvement' and the 'baseline' or 'original' state to calculate the margin.",
+      "Find any explicit statements or calculations of an 'improvement margin' or 'gain' in performance."
+    ]
+  },
+  {
+    "id": "qasper/d2451d32c5a11a0eb8356a5e9d94a9231b59f198",
+    "needs": [
+      "Information on how edits are distributed across different languages in the dataset.",
+      "Details on the methodology used to collect or filter edits for each language.",
+      "Any statistical analysis or visualization showing the distribution of edits per language."
+    ]
+  },
+  {
+    "id": "qasper/d2f91303cec132750a416192f67c8ac1d3cf6fc0",
+    "needs": [
+      "Identify the section that describes the caching mechanism.",
+      "Explain how the caching mechanism works.",
+      "Describe the purpose or function of the caching mechanism."
+    ]
+  },
+  {
+    "id": "qasper/d323f0d65b57b30ae85fb9f24298927a3d1216e9",
+    "needs": [
+      "Identify the dataset(s) used by the authors for their research.",
+      "Determine if the authors explicitly state that the dataset(s) they used are widely used."
+    ]
+  },
+  {
+    "id": "qasper/d5bce5da746a075421c80abe10c97ad11a96c6cd",
+    "needs": [
+      "Identify all baselines mentioned in the document.",
+      "Determine which of the identified baselines were used for comparison in the study."
+    ]
+  },
+  {
+    "id": "qasper/d9354c0bb32ec037ff2aacfed58d57887a713163",
+    "needs": [
+      "Identify the languages in which user predictions on Twitter are made.",
+      "Determine if the study specifies any language filtering or selection criteria for the input data."
+    ]
+  },
+  {
+    "id": "qasper/da0a2195bbf6736119ff32493898d2aadffcbcb8",
+    "needs": [
+      "Does the paper discuss privacy concerns or implications related to the techniques presented?",
+      "Does the paper mention any ethical considerations or potential misuse of the digital stylometry techniques?",
+      "Does the paper address the impact of these techniques on user privacy or data security?"
+    ]
+  },
+  {
+    "id": "qasper/da2350395867b5fd4dbf968b5a1cd6921ab6dd37",
+    "needs": [
+      "Identify the prior approaches or baseline systems that were compared to in the study.",
+      "Determine the specific models or methods used as a point of comparison.",
+      "Locate descriptions of other approaches mentioned in the context of comparison."
+    ]
+  },
+  {
+    "id": "qasper/da4d07645edaf7494a8cb5216150a00690da01f7",
+    "needs": [
+      "Identify the components or structure that make up the cache.",
+      "Determine if the cache has different layers or parts and what each consists of.",
+      "Look for descriptions of the cache's internal composition or elements."
+    ]
+  },
+  {
+    "id": "qasper/de313b5061fc22e8ffef1706445728de298eae31",
+    "needs": [
+      "Identify the specific source or origin of the data used in the study.",
+      "Determine if the data was collected, generated, or obtained from an existing repository or dataset.",
+      "Locate any descriptions of the data collection methodology or acquisition process."
+    ]
+  },
+  {
+    "id": "qasper/de346decb1fbca8746b72c78ea9d1208902f5e0a",
+    "needs": [
+      "Identify the language(s) in which the research described in the document was published.",
+      "Determine if the document explicitly states the publication language of the Croatian cybernetic machine translation program research."
+    ]
+  },
+  {
+    "id": "qasper/de84972c5d1bbf664d0f8b702fce5f161449ec23",
+    "needs": [
+      "Identify how the text is divided into segments or sections.",
+      "Determine the criteria or method used for segmenting the text."
+    ]
+  },
+  {
+    "id": "qasper/dfaeb8faf04505a4178945c933ba217e472979d8",
+    "needs": [
+      "Locate the section describing the dataset's origin or creation process.",
+      "Identify any external sources, existing datasets, or methods used to compile their dataset.",
+      "Determine if the dataset was newly created, adapted, or a combination of both, and how it was obtained."
+    ]
+  },
+  {
+    "id": "qasper/e25b73f700e8c958b64951f14a71bc60d225125c",
+    "needs": [
+      "Locate the BLEU scores before and after any improvements or changes.",
+      "Identify the specific context or experiment where BLEU scores are discussed and improved.",
+      "Determine the magnitude or percentage of the improvement in the BLEU score."
+    ]
+  },
+  {
+    "id": "qasper/e2a507749a4a3201edd6413c77ad0d4c23e9c6ce",
+    "needs": [
+      "Information on whether the data used in the paper is publicly available or open-sourced.",
+      "Details on data sharing policies or licenses mentioned in the document.",
+      "Any statements regarding the accessibility or distribution of their dataset."
+    ]
+  },
+  {
+    "id": "qasper/e459760879f662b2205cbdc0f5396dbfe41323ae",
+    "needs": [
+      "Identify other tasks besides sentiment classification that are evaluated in the document.",
+      "Locate sections describing experimental setups or evaluations for tasks other than sentiment classification."
+    ]
+  },
+  {
+    "id": "qasper/e5be900e70ea86c019efb06438ba200e11773a7c",
+    "needs": [
+      "Identify the specific training set sizes used for the NMT model.",
+      "Determine if different training set sizes are used for various experiments or components (e.g., ReWE, ReSE, unsupervised NMT).",
+      "Locate any discussion of how training set sizes were selected or if they varied across different datasets."
+    ]
+  },
+  {
+    "id": "qasper/e66a88eecf8d5d093caec1f487603534f88dd7e7",
+    "needs": [
+      "Identify the specific speaker characteristics mentioned in the document.",
+      "Determine how the identified speaker characteristics are used or applied in the proposed approach."
+    ]
+  },
+  {
+    "id": "qasper/e7ce612f53e9be705cdb8daa775eae51778825ef",
+    "needs": [
+      "Information on whether the approach's underlying mechanisms or principles are generalizable to other bias types like racial or ethnic biases.",
+      "Details on any limitations or specific design choices of the approach that might prevent its application to racial or ethnic biases.",
+      "Discussion or examples of how the approach could be adapted or modified to address racial or ethnic biases, if at all."
+    ]
+  },
+  {
+    "id": "qasper/e831ce6c406bf5d1c493162732e1b320abb71b6f",
+    "needs": [
+      "Identify the source or origin of the dataset used.",
+      "Determine how the dataset was collected or compiled.",
+      "Locate any specific names or descriptions of the the dataset's provenance."
+    ]
+  },
+  {
+    "id": "qasper/e862ebfdb1b3425af65fec81c8984edca6f89a76",
+    "needs": [
+      "Locate a definition or explanation of symbolic rewriting.",
+      "Identify the core concepts and principles behind symbolic rewriting.",
+      "Find examples or applications of symbolic rewriting to understand its nature."
+    ]
+  },
+  {
+    "id": "qasper/e8c3f59313df20db0cdd49b84a37c44da849fe17",
+    "needs": [
+      "Identify all models evaluated or tested on the dataset.",
+      "Determine if there are different categories of models (e.g., classical ML, deep learning) and list specific models within each category.",
+      "Locate any mentions of models being applied to or assessed using the OGTD dataset."
+    ]
+  },
+  {
+    "id": "qasper/ecaa10a2d9927fa6ab6a954488f12aa6b42ddc1a",
+    "needs": [
+      "Identify the specific components or techniques within the training framework designed to address or reduce bias patterns.",
+      "Locate explanations of how these components or techniques function to mitigate bias, detailing the mechanism of action.",
+      "Find descriptions of the bias patterns being addressed and how the framework's design directly counters them."
+    ]
+  },
+  {
+    "id": "qasper/ee2c2fb01d67f4c58855bf23186cbd45cecbfa56",
+    "needs": [
+      "Identify the specific weight pruning technique or method employed in the document.",
+      "Determine if the document describes different types of weight pruning and which one is utilized.",
+      "Look for details on how weight pruning is implemented or applied within the context of the document's work."
+    ]
+  },
+  {
+    "id": "qasper/f1d61b44105e651925d02a51e6d7ea10ea28ebd8",
+    "needs": [
+      "The document should describe the criteria or methodology used to select the 50 languages for testing.",
+      "The document should specify where the list of 50 languages is presented or referenced.",
+      "The document should explain if the selection process involved any specific data availability, linguistic diversity, or task relevance considerations."
+    ]
+  },
+  {
+    "id": "qasper/f1f7a040545c9501215d3391e267c7874f9a6004",
+    "needs": [
+      "Identify the dataset used for training or evaluating PAMPO.",
+      "Determine if multiple datasets were used and for what purposes.",
+      "Locate any specific names or descriptions of the datasets."
+    ]
+  },
+  {
+    "id": "qasper/f2b1e87f61c65aaa99bcf9825de11ae237260270",
+    "needs": [
+      "Identify the state-of-the-art baselines mentioned in the document.",
+      "Locate descriptions or explanations of what constitutes a state-of-the-art baseline in the context of the document's domain."
+    ]
+  },
+  {
+    "id": "qasper/f3b4e52ba962a0004064132d123fd9b78d9e12e2",
+    "needs": [
+      "Identify the datasets used for evaluation.",
+      "Determine if there are different datasets for various evaluation aspects or models.",
+      "Locate any specific details or characteristics of the datasets mentioned."
+    ]
+  },
+  {
+    "id": "qasper/f54e19f7ecece1bb0ef3171403ae322ad572ff00",
+    "needs": [
+      "Identify if the experiments involved lexicons.",
+      "Determine if lexicon-based methods were used or compared.",
+      "Look for mentions of lexicon creation, modification, or application in the experimental setup or results."
+    ]
+  },
+  {
+    "id": "qasper/f6346828c2f44529dc307abf04dd246bfeb4a9b2",
+    "needs": [
+      "The document should describe whether different compression methods are compared to determine which one provides the most significant improvements.",
+      "The document should provide details on any evaluation or analysis conducted to assess the gains from various compression methods.",
+      "The document should indicate if there is a section discussing the comparative performance or effectiveness of different compression techniques."
+    ]
+  },
+  {
+    "id": "qasper/f6ba0a5cfd5b35219efe5e52b0a5b86ae85c5abd",
+    "needs": [
+      "The performance of the proposed text denoising models.",
+      "The performance of existing text denoising models.",
+      "A comparison of the performance between the proposed and existing models."
+    ]
+  },
+  {
+    "id": "qasper/f7a27de3eb6447377eb48ef6d2201205ff943751",
+    "needs": [
+      "Identify if the document discusses any metrics used to evaluate stylistic responses.",
+      "Determine if any identified metrics specifically reward 'good' stylistic responses, rather than just measuring style expression.",
+      "Locate sections discussing evaluation metrics for dialogue generation, particularly those related to style or stylistic quality."
+    ]
+  },
+  {
+    "id": "qasper/f88f45ef563ea9e40c5767ab2eaa77f4700f95f8",
+    "needs": [
+      "Identify the models that were compared with the proposed Imagine-Then-Arbitrate Model.",
+      "Determine the specific models or approaches used as baselines for comparison.",
+      "List all models mentioned in the experimental setup or results sections that were part of the comparison."
+    ]
+  },
+  {
+    "id": "qasper/f8edc911f9e16559506f3f4a6bda74cde5301a9a",
+    "needs": [
+      "The performance metrics used to evaluate the models and the baseline.",
+      "The specific results or scores achieved by the Bayesian models.",
+      "The specific results or scores achieved by the baseline model."
+    ]
+  },
+  {
+    "id": "qasper/f8fe4049bea86d0518d1881f32049e60526d0f34",
+    "needs": [
+      "Identify the existing techniques or methods that the authors explicitly state they compare their proposed framework against.",
+      "Determine if the paper describes a comparative analysis section where specific existing techniques are evaluated alongside their own work.",
+      "Look for mentions of baseline models or previous state-of-the-art approaches used for comparison in the introduction, related work, or experimental sections."
+    ]
+  },
+  {
+    "id": "qasper/f94cea545f745994800c1fb4654d64d1384f2c26",
+    "needs": [
+      "Identify if the learning approach described in the methodology is categorized as unsupervised or supervised learning.",
+      "Determine if the classification methods used (e.g., KNN Model) are explicitly stated as supervised or unsupervised.",
+      "Look for descriptions of how the model is trained, specifically if it uses labeled data (supervised) or unlabeled data to find patterns (unsupervised)."
+    ]
+  },
+  {
+    "id": "qasper/fac273ecb3e72f2dc94cdbc797582d7225a8e070",
+    "needs": [
+      "Identify factors or techniques that enhance accuracy in legal question answering.",
+      "Determine specific methods or components used in the system that lead to improved performance.",
+      "Look for experimental results or analyses that attribute accuracy gains to particular elements."
+    ]
+  },
+  {
+    "id": "qasper/fe52b093735bb456d7e699aa9a2b806d2b498ba0",
+    "needs": [
+      "Identify systems described as 'state-of-the-art' or similar in the document.",
+      "Locate descriptions of systems that represent the current leading edge in the field discussed."
+    ]
+  },
+  {
+    "id": "quality/20002_GO5OYJJA_4",
+    "needs": [
+      "Identify the author's main argument or central claim about family love.",
+      "Determine if the author argues for or against limiting love to genetically related individuals.",
+      "Look for statements that summarize the author's overall position on the topic of family love and genetic relationships."
+    ]
+  },
+  {
+    "id": "quality/20002_V4XXHZGB_6",
+    "needs": [
+      "Information explaining how helping siblings succeed biologically can lead to the passing on of shared DNA through their offspring.",
+      "Details on how genetic similarity between siblings might lead to shared biological success.",
+      "Explanation of how helping siblings survive tough experiences could increase an individual's own biological odds of procreating and evolutionary success."
+    ]
+  },
+  {
+    "id": "quality/20006_RQF3XP3W_2",
+    "needs": [
+      "Identify Slate's moral stance on loyalty to Clinton in the scandal, noting if it's consistently good, bad, or context-dependent.",
+      "Determine if the article provides sufficient references to loyalty or lack thereof to draw generalizations about Slate's moral consideration.",
+      "Examine specific instances where loyalty or disloyalty to Clinton is discussed to understand the moral implications Slate assigns to each."
+    ]
+  },
+  {
+    "id": "quality/20007_RZDMZJYW_10",
+    "needs": [
+      "Identify which president(s) had staffers find and bring in women for him.",
+      "Determine if Kennedy had staffers find and bring in women for him.",
+      "Determine if Clinton had staffers find and bring in women for him."
+    ]
+  },
+  {
+    "id": "quality/20007_RZDMZJYW_4",
+    "needs": [
+      "Locate all areas within the White House where the president can meet a woman.",
+      "Identify any restrictions or specific conditions mentioned for presidential meetings with women in different White House locations.",
+      "Determine if any of the options (East Wing, private quarters, Oval Office, bowling alley, office restroom) are explicitly stated as places where the president can meet a woman."
+    ]
+  },
+  {
+    "id": "quality/20008_5QQ88LP2_6",
+    "needs": [
+      "Identify factors listed as being related to the large pool of good athletes.",
+      "Determine which of the provided options (large population, post-colonial era, more literate population, expanding middle class) is NOT listed as a related factor."
+    ]
+  },
+  {
+    "id": "quality/20008_5QQ88LP2_8",
+    "needs": [
+      "Information about how athletic ability changes over time due to innate factors.",
+      "Information about how athletic ability changes over time due to environment.",
+      "Information about how athletic ability changes over time due to natural selection and genetics."
+    ]
+  },
+  {
+    "id": "quality/20020_TRPTAKN4_10",
+    "needs": [
+      "The nature of Monica and Bill's interactions in the musical",
+      "Specific details of Monica's actions towards Bill",
+      "Specific details of Bill's actions towards Monica"
+    ]
+  },
+  {
+    "id": "quality/20020_TRPTAKN4_4",
+    "needs": [
+      "Identify which parties in the story think it's time to move Monica to another office.",
+      "Determine if Betty and Starr, Evelyn and Betty, Starr and Newt, or Newt and Evelyn are the parties who think Monica should move offices."
+    ]
+  },
+  {
+    "id": "quality/20027_2RUIA5TI_1",
+    "needs": [
+      "The specific joke the author makes about his coworkers",
+      "The subject or theme of the joke about coworkers",
+      "How the joke about coworkers relates to writing skills, gender stereotypes, laziness, or alcoholism"
+    ]
+  },
+  {
+    "id": "quality/20027_2RUIA5TI_4",
+    "needs": [
+      "Information about what happened during the experiment regarding the amount of beer each taster had.",
+      "Information about the time tasters spent tasting the beers.",
+      "Information about the order in which tasters tried the beers."
+    ]
+  },
+  {
+    "id": "quality/20029_8FG4YEDB_2",
+    "needs": [
+      "Information on Edward's motivations for revealing details about his childhood.",
+      "Details on any external pressures or reasons Edward might have had to disclose his childhood story.",
+      "Information on whether Edward's decision was influenced by a desire to control the narrative or preempt others."
+    ]
+  },
+  {
+    "id": "quality/20029_XWDXOW34_9",
+    "needs": [
+      "The document needs to describe the outcome or impact of the criticism regarding Said embellishing his upbringing.",
+      "The document needs to explain how the criticism about Said's upbringing affected his career or public perception.",
+      "The document needs to clarify if the criticism was resolved, overcome, or if its effects persisted."
+    ]
+  },
+  {
+    "id": "quality/20031_0W08N5TX_10",
+    "needs": [
+      "The author's personal feelings or opinions regarding the estate tax applied to his father's estate.",
+      "Any specific reasons or justifications the author provides for his feelings about the estate tax.",
+      "The author's perspective on the fairness or impact of the estate tax in the context of his father's life and financial decisions."
+    ]
+  },
+  {
+    "id": "quality/20031_HFEBGS1A_2",
+    "needs": [
+      "Information about the author's financial situation or spending habits.",
+      "Details about the father's savings and their intended or actual recipient.",
+      "Information regarding the author's emotional state concerning his father's absence."
+    ]
+  },
+  {
+    "id": "quality/20041_E0WD00T4_4",
+    "needs": [
+      "The document should explain the Federal Reserve Board's motivations for controlling the unemployment rate.",
+      "The document should describe the relationship between the Federal Reserve Board's control of the unemployment rate and inflation.",
+      "The document should describe the relationship between the Federal Reserve Board's control of the unemployment rate and interest rates."
+    ]
+  },
+  {
+    "id": "quality/20041_L1MZ3RS4_7",
+    "needs": [
+      "Keynes's views on the factors influencing the rate of interest",
+      "Keynes's perspective on the role of the desire to hold cash in determining interest rates",
+      "Keynes's ideas on the relationship between savings, investment, and the rate of interest"
+    ]
+  },
+  {
+    "id": "quality/20044_EBV68EUZ_2",
+    "needs": [
+      "Compare the size of golden age parks to older parks.",
+      "Identify differences in safety or hazards between golden age parks and older parks.",
+      "Describe the intimacy or character of golden age parks versus older parks."
+    ]
+  },
+  {
+    "id": "quality/20044_JOO9J86N_5",
+    "needs": [
+      "Identify all baseball teams mentioned in the article.",
+      "For each identified team, determine if they are playing in a new stadium or presently remodeling an old one at the time of the article."
+    ]
+  },
+  {
+    "id": "quality/20048_2UKOUEKS_3",
+    "needs": [
+      "The author's explicit desires or wishes",
+      "Any mentions of what the author wants to acquire or experience",
+      "Statements indicating the author's preferences or longings"
+    ]
+  },
+  {
+    "id": "quality/20048_2UKOUEKS_5",
+    "needs": [
+      "Information about Belgians' income levels or financial prosperity.",
+      "Details on Belgians' spending habits or their inclination to spend money.",
+      "Evidence regarding Belgians' demanding nature or their level of demandingness."
+    ]
+  },
+  {
+    "id": "quality/20051_7QSETVSE_5",
+    "needs": [
+      "Information on how the number of presidential directives to the people changes over different eras or as time progresses.",
+      "Data comparing the quantity of directives given by presidents to the people across various time periods.",
+      "Evidence indicating whether presidents give directives to the people at all, and if so, how the frequency changes over time."
+    ]
+  },
+  {
+    "id": "quality/20051_AP3PWHCR_2",
+    "needs": [
+      "Identify the stages of inaugural addresses over time as described by the author.",
+      "Determine the sequence of these stages as presented in the text."
+    ]
+  },
+  {
+    "id": "quality/20055_VR0SZT3O_5",
+    "needs": [
+      "Identify lessons the author learned from the book.",
+      "Determine which of the provided options is NOT among the lessons the author learned from the book."
+    ]
+  },
+  {
+    "id": "quality/20056_H2CYR8K0_1",
+    "needs": [
+      "Information about the subject's mental health journey, specifically if it developed in adulthood and if there was any improvement.",
+      "Details on whether the subject was born with a mental illness or developed it later in life.",
+      "Evidence regarding the subject's behavior and any potential pretense of mental illness."
+    ]
+  },
+  {
+    "id": "quality/20056_IMXXLOR8_8",
+    "needs": [
+      "Information about the main character's early achievements or career milestones.",
+      "Details on whether the main character was invited to serve in the European Union as a mathematician, became a dean at Princeton, or taught at MIT early in their career.",
+      "Evidence of the main character applying an old mathematical concept in a new and exciting way as an early achievement."
+    ]
+  },
+  {
+    "id": "quality/20064_S6NDI1IS_6",
+    "needs": [
+      "Identify who the critic explicitly blames for the movie's quality.",
+      "Determine if the critic attributes the movie's quality to the actors, audience, director, or plot.",
+      "Locate any statements where the critic assigns responsibility for the movie's perceived flaws or successes."
+    ]
+  },
+  {
+    "id": "quality/20068_KJ4U6NT7_5",
+    "needs": [
+      "The article's description of current attitudes towards retaining natural teeth",
+      "Any mention of emotions or feelings associated with keeping all natural teeth",
+      "Comparisons of past and present sentiments regarding natural teeth"
+    ]
+  },
+  {
+    "id": "quality/20068_RWLK60G7_6",
+    "needs": [
+      "Information on why people's satisfaction with their teeth has decreased over time.",
+      "Details on whether dentistry costs, procedure longevity, generational expectations, or dietary changes are cited as reasons for decreased satisfaction.",
+      "Comparison of past and present factors influencing dental satisfaction."
+    ]
+  },
+  {
+    "id": "quality/20073_3CP51ZI3_6",
+    "needs": [
+      "Falwell's reasons for not believing the author is the Antichrist",
+      "Falwell's criteria or characteristics for identifying the Antichrist",
+      "Falwell's specific statements or arguments regarding the author's suitability as the Antichrist"
+    ]
+  },
+  {
+    "id": "quality/20073_DXZXSA0V_6",
+    "needs": [
+      "Hindson's reasoning for the Antichrist not being Jewish",
+      "Hindson's description of the Antichrist's background or origin",
+      "Hindson's view on the Antichrist's religious affiliation"
+    ]
+  },
+  {
+    "id": "quality/20075_99U79EV3_3",
+    "needs": [
+      "Identify the correlation between \"Self-Defense\" and \"Intimidation\" in martial arts scoring.",
+      "Identify the correlation between \"Self-Defense\" and \"Degree of Contact\" in martial arts scoring.",
+      "Identify the correlation between \"Self-Defense\" and \"Coordination and Balance\" in martial arts scoring."
+    ]
+  },
+  {
+    "id": "quality/20077_1BWEF124_7",
+    "needs": [
+      "Compare Topsy-Turvy's and Mr. Death's exposition to determine which was better.",
+      "Compare Topsy-Turvy's and Mr. Death's narrative tension to determine which was better.",
+      "Compare Topsy-Turvy's and Mr. Death's accuracy of subject matter to determine which was better."
+    ]
+  },
+  {
+    "id": "quality/20077_ZF5G55FD_4",
+    "needs": [
+      "The author's overall sentiment or opinion regarding the movie Topsy-Turvy.",
+      "Specific descriptions or evaluations of Topsy-Turvy's emotional content and watchability.",
+      "Any statements comparing Topsy-Turvy to other films or discussing its lasting impact and classic status."
+    ]
+  },
+  {
+    "id": "quality/22073_KJM8YN1V_1",
+    "needs": [
+      "Information describing the main character's job performance and adherence to rules.",
+      "Details about the main character's desire to quit or his professional dedication.",
+      "Evidence of the main character's habits, such as drinking or messing around, and their impact on his job."
+    ]
+  },
+  {
+    "id": "quality/22073_KJM8YN1V_8",
+    "needs": [
+      "Information about why the natives believed the main character's identity claim.",
+      "Details on whether the main character's appearance (e.g., plastiskin) influenced the natives' belief.",
+      "Evidence of the main character using technology or tricks to convince the natives."
+    ]
+  },
+  {
+    "id": "quality/22102_B6WHC7QX_7",
+    "needs": [
+      "What action did Kimmy take immediately after getting dressed in the morning?",
+      "What activities did Kimmy engage in that morning, and in what sequence?",
+      "Is there any mention of Kimmy walking across a river, boarding a rocket, putting on music, or attending a press briefing after getting dressed?"
+    ]
+  },
+  {
+    "id": "quality/22102_B6WHC7QX_8",
+    "needs": [
+      "The purpose or goal of Kimmy's trip",
+      "The timing of Kimmy's trip relative to other space trips or events",
+      "Kimmy's origin and destination to determine if he is returning home"
+    ]
+  },
+  {
+    "id": "quality/22218_P9A9DKW0_8",
+    "needs": [
+      "Information describing the face Mr. Chambers saw and his immediate reactions or interpretations of it.",
+      "Details about the face's actions, expressions, or any communicated intentions that Mr. Chambers perceived as evil.",
+      "Explanations of Mr. Chambers's feelings or thoughts regarding the face's nature or its potential impact on him or humanity."
+    ]
+  },
+  {
+    "id": "quality/22218_WHLS3NE4_6",
+    "needs": [
+      "Identify the specific mechanisms or entities through which the other universe is exerting influence or control over Mr. Chambers' universe.",
+      "Determine if the takeover involves a collective effort of many minds, a singular powerful mind, or other large-scale destructive events like war and plague.",
+      "Look for descriptions of the process or stages of the takeover, including any mention of how it began or is progressing."
+    ]
+  },
+  {
+    "id": "quality/22346_DOS3P3V1_8",
+    "needs": [
+      "The document needs to explain why the Tepoktans are interested in space travel.",
+      "The document needs to explain the Tepoktans' knowledge or lack thereof regarding the stars.",
+      "The document needs to describe the Tepoktans' feelings or motivations about leaving their planet."
+    ]
+  },
+  {
+    "id": "quality/22462_BUA2LH2S_2",
+    "needs": [
+      "The cause of the Moon stations' explosion",
+      "Details about any involvement of 'Reds' in the explosion",
+      "Details about any involvement of 'Americans' in the explosion"
+    ]
+  },
+  {
+    "id": "quality/22462_F944PNS1_1",
+    "needs": [
+      "Sylvia's relationship to Paul",
+      "Details about Sylvia's identity and activities related to Paul",
+      "Information about Paul's romantic or social partners"
+    ]
+  },
+  {
+    "id": "quality/22524_N885O1MX_5",
+    "needs": [
+      "The content of the whispered conversation between Manto and Palit.",
+      "The context or circumstances surrounding Manto and Palit's whispered conversation.",
+      "Any actions or behaviors of Manto and Palit immediately before or after the whispered conversation."
+    ]
+  },
+  {
+    "id": "quality/22524_O8TC9MBX_4",
+    "needs": [
+      "Information about the origin of the lions at the end of the story.",
+      "Details on whether Manto and Palit transformed into lions, and if so, the circumstances of their transformation.",
+      "Evidence indicating if the lions were real or an illusion, or if they escaped from a zoo."
+    ]
+  },
+  {
+    "id": "quality/22579_U2JO4GD0_1",
+    "needs": [
+      "The robots' primary objective or goal",
+      "Any motivations or desires the robots express",
+      "The robots' specific actions or intentions related to bread, world peace, or human satisfaction"
+    ]
+  },
+  {
+    "id": "quality/22579_U2JO4GD0_7",
+    "needs": [
+      "Identify the processes involved in the walking mills.",
+      "Determine which of the provided options is not a process of the walking mills."
+    ]
+  },
+  {
+    "id": "quality/22590_L3MXZ6V8_3",
+    "needs": [
+      "Locate descriptions or definitions of \"Rathole\" in the document.",
+      "Identify any information about Rathole's origin, such as whether it was a colony, a city, or a derogatory term, and its inhabitants or status.",
+      "Find details that differentiate between Rathole being a city of former Spanish slaves, a Spanish colony, a derogatory term for a slum, or an old colony turned into a city by Spanish laborers."
+    ]
+  },
+  {
+    "id": "quality/22590_LPM54M2U_3",
+    "needs": [
+      "Information describing Jan's observations or feelings about the settlers at Rathole.",
+      "Details about the characteristics of the settlers at Rathole, such as their power source, ethnicity, health, or living situation.",
+      "Any specific reasons Jan found the settlers at Rathole off-putting, and what those reasons were."
+    ]
+  },
+  {
+    "id": "quality/22867_TJ9SPIHC_2",
+    "needs": [
+      "Information on the Robling company's production and innovation to determine if they were poor.",
+      "Details on union dues, insurance fees, executive spending, or Walter's salary raise at Robling company."
+    ]
+  },
+  {
+    "id": "quality/22875_539MKDEK_5",
+    "needs": [
+      "The reason Morgan believes Parks.",
+      "The reason Morgan does not believe Parks, but plays along to keep him calm.",
+      "The reason Morgan noticed something odd about Parks right away."
+    ]
+  },
+  {
+    "id": "quality/22876_RFMXOBNA_2",
+    "needs": [
+      "Information describing Lord Nehmon's leadership style and actions",
+      "Details about Lord Nehmon's effectiveness or ineffectiveness as a leader",
+      "Descriptions of Lord Nehmon's resilience or lack thereof"
+    ]
+  },
+  {
+    "id": "quality/22958_CIJCBUXL_9",
+    "needs": [
+      "Information about Braun's activities or affiliations that would attract the CIA's attention.",
+      "Details on any specific deals Braun has made with the Polish.",
+      "Information about Braun's gambling activities and their legality."
+    ]
+  },
+  {
+    "id": "quality/22966_6AF3S2P3_8",
+    "needs": [
+      "Identify the inventors' stated goals or aspirations for the gadget's impact or use.",
+      "Determine if the inventors express any financial motivations or expectations of wealth from the gadget's sales.",
+      "Look for any mention of the gadget's intended application in magic shows or for research purposes."
+    ]
+  },
+  {
+    "id": "quality/22966_9EB51MJE_1",
+    "needs": [
+      "The document should provide reasons why the kids left the Atomic Wonder Space Wave Trapper.",
+      "The document should explain what made the Atomic Wonder Space Wave Trapper boring, if applicable.",
+      "The document should mention if the Atomic Wonder Space Wave Trapper was held up by string and if that was a reason for kids leaving."
+    ]
+  },
+  {
+    "id": "quality/22967_23S4S1XW_7",
+    "needs": [
+      "The document needs to describe the Jeks, Nosurwey, and Lud to determine if they are gentle, powerful, wise, or grudge-holding.",
+      "The document needs to provide details about the Jeks, Nosurwey, and Lud's characteristics, actions, or reputation to distinguish between the options.",
+      "The document needs to offer specific examples or descriptions of the Jeks, Nosurwey, and Lud's nature to identify the best descriptor among the choices."
+    ]
+  },
+  {
+    "id": "quality/23104_4MQFQVNM_1",
+    "needs": [
+      "The document needs to describe the nature of the relationship between humans and Belphins.",
+      "The document needs to specify if humans or Belphins hold a position of servitude or dominance over the other.",
+      "The document needs to clarify who, if anyone, rules over the other group: humans or Belphins."
+    ]
+  },
+  {
+    "id": "quality/23160_I33FJB5C_5",
+    "needs": [
+      "The document describes how Solomon's flying cars work.",
+      "The document states that Solomon's flying cars work using combustion, pressure, or hubcaps."
+    ]
+  },
+  {
+    "id": "quality/23160_KJQ9Z35G_9",
+    "needs": [
+      "What is Solomon's fate or outcome?",
+      "Does Solomon get arrested, sell his business, become famous, or meet the President?",
+      "What are the consequences of Solomon's actions or discoveries?"
+    ]
+  },
+  {
+    "id": "quality/23563_HRCOMZPJ_9",
+    "needs": [
+      "The reason Broom was imprisoned",
+      "Details about John's involvement with Broom's funds",
+      "Information about Broom killing a man"
+    ]
+  },
+  {
+    "id": "quality/24290_66ER3O5Z_6",
+    "needs": [
+      "Information describing Pete's personality traits or emotional state.",
+      "Details about Pete's actions, reactions, or dialogue that reveal his character.",
+      "Any descriptions of Pete's demeanor or physical state that suggest his disposition."
+    ]
+  },
+  {
+    "id": "quality/30029_F5N22U40_4",
+    "needs": [
+      "Information about the Tr'en justice system and common punishments, specifically if solitary confinement is a standard practice or a specific part of Korvin's sentence.",
+      "Details on the general population of Tr'en prisoners, including their numbers, reasons for incarceration, and the typical fate of those who disobey the Ruler.",
+      "Explanation of the Tr'en's social behavior, their views on social interaction, and any specific concerns about prisoners inciting uprisings."
+    ]
+  },
+  {
+    "id": "quality/30029_XQTTOPHP_4",
+    "needs": [
+      "The Tr'en's actions or reactions towards Korvin's behavior.",
+      "Descriptions of the Tr'en's emotional state or physical responses when interacting with Korvin.",
+      "Any statements or descriptions that categorize the Tr'en's overall strategy or approach in dealing with Korvin."
+    ]
+  },
+  {
+    "id": "quality/30035_C0HFCNPI_3",
+    "needs": [
+      "Reasons Dermott makes Casey wear the helmet",
+      "Dermott's thoughts on Casey's intelligence and ability to dismantle the helmet",
+      "Dermott's motivations for protecting New York State citizens"
+    ]
+  },
+  {
+    "id": "quality/30035_SLGX7NNR_5",
+    "needs": [
+      "How Dameri Tass communicated in English",
+      "Whether Dameri Tass ever communicated in English",
+      "If Dameri Tass used a device or acquired knowledge to communicate in English"
+    ]
+  },
+  {
+    "id": "quality/31282_BQYW9TCH_4",
+    "needs": [
+      "Identify what humans bring to Mars and how Martians react to these things, including any new ways of doing things or items like gold, diamonds, or sugar.",
+      "Determine if humans bring women to Mars as a manipulation tactic and how Martians perceive this.",
+      "Ascertain human interest in providing Martians with sugar versus other drugs."
+    ]
+  },
+  {
+    "id": "quality/31599_Z1URZQTV_10",
+    "needs": [
+      "What happens to Charlie at the end of the story?",
+      "What is the final outcome for Roy, Joey, Ethel, and Doc?",
+      "What is the ultimate state of the stars or the overall situation at the story's conclusion?"
+    ]
+  },
+  {
+    "id": "quality/31736_9W69Z6VQ_5",
+    "needs": [
+      "Information on how Martians tell stories",
+      "Details on Martian storytelling methods, such as song, dreamcasting, oral tradition, or written word",
+      "Comparison of different storytelling methods used by Martians"
+    ]
+  },
+  {
+    "id": "quality/31736_TV0CUXDH_10",
+    "needs": [
+      "Information about Jarvis Spurling's motivations or reasons for wanting to kill Gaivir.",
+      "Details regarding any conflict, past events, or relationships between Jarvis Spurling and Gaivir.",
+      "Evidence supporting or refuting each of the provided options (A, B, C, D) as the cause of Spurling's desire to kill Gaivir."
+    ]
+  },
+  {
+    "id": "quality/32665_BFH6JK2Z_5",
+    "needs": [
+      "Find the age of Farrell.",
+      "Find the age of Stryker.",
+      "Find the age of Pink anglers and Gibson."
+    ]
+  },
+  {
+    "id": "quality/32665_VRYQXG3Y_10",
+    "needs": [
+      "Identify the immediate consequences of Stryker taking the sleeping pill.",
+      "Determine what events or interactions were prevented or altered due to Stryker being asleep.",
+      "Locate any stated reasons or motivations for Stryker taking the sleeping pill."
+    ]
+  },
+  {
+    "id": "quality/40965_ZUFZ7UG6_2",
+    "needs": [
+      "The document needs to describe the nature of the relationship between Ninon and Robert, including their interactions and feelings towards each other.",
+      "The document needs to provide details about the history of their relationship, such as how long they have known each other and if their relationship has evolved over time.",
+      "The document needs to indicate if there is any conflict or rivalry between Ninon and Robert, or if they support each other's goals."
+    ]
+  },
+  {
+    "id": "quality/40965_ZUFZ7UG6_3",
+    "needs": [
+      "Evidence describing the nature of Ninon and Robert's relationship, including their feelings and motivations for each other.",
+      "Information about Robert's decision to participate in space travel and how it relates to his feelings for Ninon.",
+      "Details on Ninon's intentions and whether she views Robert as a means to an end (e.g., for resources, access, or to hijack a flight)."
+    ]
+  },
+  {
+    "id": "quality/49897_D53LJ447_3",
+    "needs": [
+      "Information about Grampa's notable achievements or reputation",
+      "Details on Grampa's involvement with radioactive deposits, circuits, space missions, or spaceship machinery",
+      "Any specific events or accomplishments that led to Grampa's fame"
+    ]
+  },
+  {
+    "id": "quality/49897_QQKS0TK3_1",
+    "needs": [
+      "Information about Junior's piloting skills or experience.",
+      "Details about the planet's gravity field characteristics.",
+      "Information regarding Junior's actions with the on-off button during landing and its effect on the landing."
+    ]
+  },
+  {
+    "id": "quality/50818_U50BKW97_5",
+    "needs": [
+      "The document needs to explain why the trader does not receive return requests.",
+      "The document needs to explain if the merchandise is pleasing or if the trader charges a lot for his wares.",
+      "The document needs to explain if people know the cost of items or if the trader only visits each place once."
+    ]
+  },
+  {
+    "id": "quality/50818_XCIZ1MIT_5",
+    "needs": [
+      "The number of companions Manet made with the kit",
+      "Whether Manet used the kit at all"
+    ]
+  },
+  {
+    "id": "quality/50826_B2WQILEB_2",
+    "needs": [
+      "What happened to the little boy's father?",
+      "Was the little boy's father killed for finding gold, marrying a human, or dying in the mines?",
+      "Did the little boy's father leave Mars to go back to Earth?"
+    ]
+  },
+  {
+    "id": "quality/50826_K0FBX2G8_2",
+    "needs": [
+      "The reason for the woman's poor treatment of the protagonist",
+      "Details about the woman's husband and his fate",
+      "Information on the protagonist's actions or words towards the woman"
+    ]
+  },
+  {
+    "id": "quality/50948_AGIAFP2X_6",
+    "needs": [
+      "The document needs to describe what was inside the metal box.",
+      "The document needs to describe the contents of the metal box, specifically if it was a story about a war, an epidemic, how to avoid a blight, or the blight itself."
+    ]
+  },
+  {
+    "id": "quality/50948_U9YCQJBR_2",
+    "needs": [
+      "Albin's thoughts or feelings about his life improving if he continued his journey",
+      "Albin's thoughts or feelings about the likelihood of being asked to time travel again if he returned",
+      "Albin's feelings towards his family and his willingness to risk his life on the journey"
+    ]
+  },
+  {
+    "id": "quality/51027_8PULD7D5_7",
+    "needs": [
+      "Identify the phases of a human trip to the moon.",
+      "Determine the risks associated with each phase of a human trip to the moon.",
+      "Compare the danger levels of freefall, take off, landing, and orbit for humans during a moon trip."
+    ]
+  },
+  {
+    "id": "quality/51126_PGSZW543_1",
+    "needs": [
+      "The document needs to describe the Uxen population's distribution across the galaxy.",
+      "The document needs to specify if the Uxen colonized multiple planets, explored others, or were limited to one planet.",
+      "The document needs to indicate if the Uxen population was widespread, limited to a single planet, or reduced to only the royal family."
+    ]
+  },
+  {
+    "id": "quality/51126_PGSZW543_5",
+    "needs": [
+      "Zen's reaction to the royal father and daughter's plan",
+      "Zen's awareness of the plan as it developed",
+      "Zen's opinion on the plan's potential for success"
+    ]
+  },
+  {
+    "id": "quality/51150_AP0HI29X_4",
+    "needs": [
+      "The reason the boy wanted to get in a lifeboat",
+      "The boy's motivation for getting into a lifeboat",
+      "The boy's objective in seeking a lifeboat"
+    ]
+  },
+  {
+    "id": "quality/51150_AP0HI29X_9",
+    "needs": [
+      "What happened to Evelyn as a result of going to the geography lecture?",
+      "What was Evelyn's reaction to the geography lecture?",
+      "What did Evelyn learn or decide after the geography lecture?"
+    ]
+  },
+  {
+    "id": "quality/51256_MZNDC998_8",
+    "needs": [
+      "What was Colonel James' objective or task?",
+      "What was Colonel James instructed to do regarding Pashkov?",
+      "What was Colonel James' role concerning Boris Knackenpast?"
+    ]
+  },
+  {
+    "id": "quality/51267_AQABCPUB_6",
+    "needs": [
+      "The Gool's mission regarding Peter and resource shipment from Earth",
+      "The Gool's mission concerning expansion throughout the universe",
+      "The Gool's mission to take control of Earth and relocate their colony there"
+    ]
+  },
+  {
+    "id": "quality/51267_N197XHK2_1",
+    "needs": [
+      "Identify who put Granthan's leg in a walking brace.",
+      "Determine if Granthan put the brace on himself.",
+      "Ascertain if 'the med people', 'a colonel', or 'the first aid cabinet' were involved in putting on the brace."
+    ]
+  },
+  {
+    "id": "quality/51274_8Q2YNHG5_3",
+    "needs": [
+      "Identify features present in Maitland's new room.",
+      "Determine which of the listed options (curves, a glass window, a push-button door, metal furniture) are explicitly stated as not being present in Maitland's new room."
+    ]
+  },
+  {
+    "id": "quality/51274_8Q2YNHG5_5",
+    "needs": [
+      "The reason Maitland got excited about being held hostage",
+      "Maitland's thoughts or feelings about being held hostage",
+      "Any specific events or conditions that led to Maitland's excitement during the hostage situation"
+    ]
+  },
+  {
+    "id": "quality/51295_JKASXZ9X_4",
+    "needs": [
+      "Information describing how Dan explained Wysocki's theorem",
+      "Details about whether Dr. Crander told Dan about Wysocki's theorem",
+      "Information on whether Dan's previous memories helped him explain Wysocki's theorem"
+    ]
+  },
+  {
+    "id": "quality/51295_JKASXZ9X_8",
+    "needs": [
+      "The document needs to describe how people react to seeing Dan.",
+      "The document needs to describe Dan's appearance.",
+      "The document needs to explain if people's reactions are due to Dan's appearance."
+    ]
+  },
+  {
+    "id": "quality/51320_DIEFXLAR_5",
+    "needs": [
+      "Identify the thesis Charlie presents to the Moranites.",
+      "Determine if Charlie proposes extending life span through cooperation for exploration.",
+      "Ascertain if Charlie suggests the Moranites can advance technologically with his equipment."
+    ]
+  },
+  {
+    "id": "quality/51320_DIEFXLAR_6",
+    "needs": [
+      "Identify the inhabitants of the planet being explored.",
+      "Determine if the inhabitants are human-like aliens, lizard-human aliens, or Earth people.",
+      "Ascertain if any inhabitants have unique characteristics like camouflage or a specific way of life."
+    ]
+  },
+  {
+    "id": "quality/51350_VLBM4QEI_2",
+    "needs": [
+      "The warden's thoughts or feelings about the people he puts to sleep",
+      "The warden's perspective on the state of people after he puts them to sleep",
+      "Any expressions of regret, pride, or desire to experience the sleep himself from the warden"
+    ]
+  },
+  {
+    "id": "quality/51350_VLBM4QEI_6",
+    "needs": [
+      "The document needs to describe the food the warden eats.",
+      "The document needs to describe the warden's situation.",
+      "The document needs to describe the food available to prisoners."
+    ]
+  },
+  {
+    "id": "quality/51351_HAZYFZSV_4",
+    "needs": [
+      "The document needs to describe Quade's feelings or reactions to the situation.",
+      "The document needs to provide details about Quade's level of caution compared to others.",
+      "The document needs to indicate if the situation was familiar or unfamiliar to Quade."
+    ]
+  },
+  {
+    "id": "quality/51362_RJHWV3IH_5",
+    "needs": [
+      "Information on how Lexington acquired or established his factory, including any initial resources or inheritance.",
+      "Details on whether Lexington's factory was converted from an existing plant, such as an automotive one.",
+      "Description of Lexington's factory development, focusing on whether it was built slowly over time with increasing automation or started as a prototype with a business partner."
+    ]
+  },
+  {
+    "id": "quality/51395_2PILALCT_5",
+    "needs": [
+      "What was the immediate outcome or consequence of the native's attempt to help Lanceford?",
+      "Did Lanceford's condition improve, worsen, or remain unchanged after the native's intervention?",
+      "What was Lanceford's reaction or the native's reaction immediately following the attempted help?"
+    ]
+  },
+  {
+    "id": "quality/51395_9PYVRG7M_1",
+    "needs": [
+      "Compare Niobe to other planets Earth was exploring in terms of interest or importance.",
+      "Determine if Niobe was being explored as a courtesy to prevent it from spinning into its sun.",
+      "Ascertain if Niobe was among planets considered for colonization or if it was a personal mission for the narrator."
+    ]
+  },
+  {
+    "id": "quality/51413_MS1UBQRG_4",
+    "needs": [
+      "How Skkiru acted as a beggar when Terran visitors were present",
+      "Skkiru's attitude towards the role of beggar in front of Terran visitors",
+      "Whether Skkiru's portrayal of a beggar was convincing or if he deviated from the role"
+    ]
+  },
+  {
+    "id": "quality/51413_MS1UBQRG_5",
+    "needs": [
+      "The document needs to describe the past and present relationship between Skkiru and Larhgan, including any romantic involvement, marriage, engagement, or betrayal.",
+      "The document needs to explain Skkiru's feelings and actions towards Larhgan, specifically if Skkiru wants to regain Larhgan's love or is scheming.",
+      "The document needs to explain Larhgan's feelings and actions towards Skkiru, including any awareness of schemes, forgiveness, or decisions about future marriage."
+    ]
+  },
+  {
+    "id": "quality/51436_VJM64720_1",
+    "needs": [
+      "The original suggested number of gifts for Ernie.",
+      "The actual number of gifts Ernie received."
+    ]
+  },
+  {
+    "id": "quality/51461_YZX4JZ16_2",
+    "needs": [
+      "Locate descriptions of the Nest's surroundings or its structural support.",
+      "Identify any mention of the Nest being a standalone structure or part of a larger building.",
+      "Find information that specifies the type of building or environment the Nest is situated within."
+    ]
+  },
+  {
+    "id": "quality/51461_YZX4JZ16_5",
+    "needs": [
+      "The nature of Pa's interactions and conversations with his son.",
+      "Pa's expressed feelings or thoughts about his son's capabilities or readiness to protect the family.",
+      "Any descriptions of their past relationship compared to their current one, especially in the context of the planet's freezing."
+    ]
+  },
+  {
+    "id": "quality/51483_T4WIZ6A8_3",
+    "needs": [
+      "The number of buildings on the moon.",
+      "Information about any structures or buildings constructed on the moon.",
+      "Details on human or robotic construction activities on the moon."
+    ]
+  },
+  {
+    "id": "quality/51605_0HW4DYXI_8",
+    "needs": [
+      "The mother's hopes for her son",
+      "The mother's hopes for her son regarding revenge, healthcare training, time travel, or engineering",
+      "The mother's hopes for her son regarding following her into the way of the Konv"
+    ]
+  },
+  {
+    "id": "quality/51605_E8R4X4OP_5",
+    "needs": [
+      "Locate where Earl went when he disappeared during college.",
+      "Identify the specific location Earl traveled to after his disappearance from college.",
+      "Determine the destination Earl went to upon his disappearance from college."
+    ]
+  },
+  {
+    "id": "quality/51650_B3KKWWD1_3",
+    "needs": [
+      "Identify all instances where Matheny discusses Martian cons with Gus.",
+      "Count the number of distinct Martian cons Matheny mentions to Gus.",
+      "Determine if any mentioned cons are duplicates or refer to the same con."
+    ]
+  },
+  {
+    "id": "quality/51650_B3KKWWD1_5",
+    "needs": [
+      "Information describing Matheny's background or characteristics that made him appealing to the girl.",
+      "Details about Matheny's profession, financial status, or unusual experiences that might attract the girl's interest.",
+      "Any specific reasons or events mentioned that explain the girl's interest in Matheny."
+    ]
+  },
+  {
+    "id": "quality/51687_3JYPCVFP_6",
+    "needs": [
+      "The spy's motivations for entering the Project",
+      "Information about the spy's objectives related to human travel safety, nuclear attack, or gathering intelligence on technologies",
+      "Details on whether the spy suspected an attack on his own Project"
+    ]
+  },
+  {
+    "id": "quality/51687_XND06EI3_10",
+    "needs": [
+      "Information describing the frequency or intensity with which project inhabitants considered or were affected by the state of siege.",
+      "Details on whether project inhabitants were required to actively participate in vigilance or other duties due to the state of siege.",
+      "Any descriptions of the general impact or daily experiences of project inhabitants living under a state of siege."
+    ]
+  },
+  {
+    "id": "quality/51688_5EVPD4SX_3",
+    "needs": [
+      "Mr. Turner's occupation or job title",
+      "Details about Mr. Turner's work activities or responsibilities",
+      "Information that distinguishes Mr. Turner's job from directing war films, being a mechanic, writing comics, or working in advertising"
+    ]
+  },
+  {
+    "id": "quality/51688_J2Q3XCWR_7",
+    "needs": [
+      "The protagonist's physical and emotional state immediately after falling from the fourteenth floor.",
+      "Any actions or decisions made by the protagonist following the fall.",
+      "Whether the protagonist sought assistance or attempted to return to the fourteenth floor."
+    ]
+  },
+  {
+    "id": "quality/52845_91NAQ9LY_7",
+    "needs": [
+      "Identify the event or circumstance that directly resulted in the first individual entering their own mind world.",
+      "Determine if a psychologist's accidental entry into a patient's mind was the cause.",
+      "Ascertain if nostalgia, the need to track criminals, or the need to hide from a crime led to the first entry into a mind world."
+    ]
+  },
+  {
+    "id": "quality/52855_3OS4Y95O_1",
+    "needs": [
+      "Information about Kelly's reasons for hiring Dan quickly",
+      "Details on Dan's qualifications or proposals that impressed Kelly",
+      "Context regarding the urgency or specific problem Kelly needed to solve"
+    ]
+  },
+  {
+    "id": "quality/52855_MV65I88C_2",
+    "needs": [
+      "Dan's initial feelings and understanding of operating the carrier.",
+      "How Dan's feelings and understanding of operating the carrier evolve throughout the article.",
+      "Specific instances or descriptions of Dan's emotional state and proficiency with the carrier at different points in the article."
+    ]
+  },
+  {
+    "id": "quality/55815_4DJBZQ7I_9",
+    "needs": [
+      "Information about the elements of the audition process",
+      "Details on what was required of people during the audition process",
+      "Information on what was NOT an element of the audition process"
+    ]
+  },
+  {
+    "id": "quality/59368_LBNEJQ7W_9",
+    "needs": [
+      "Information describing how Dad realized Mom could read",
+      "Details about Mom's actions or statements that revealed her ability to read to Dad",
+      "Any events or observations by Dad that led him to conclude Mom could read"
+    ]
+  },
+  {
+    "id": "quality/59368_ZBH0NQ5U_1",
+    "needs": [
+      "The process of memory erasing in the story",
+      "The scope and limitations of memory erasing",
+      "The specific conditions or circumstances under which memory erasing is performed"
+    ]
+  },
+  {
+    "id": "quality/59679_LHYOIDR5_2",
+    "needs": [
+      "The number of times Bob's machine was tested",
+      "The duration or frequency of testing for Bob's machine",
+      "Any mention of prior testing of Bob's machine before Mr. Partch plugged it in"
+    ]
+  },
+  {
+    "id": "quality/59679_LHYOIDR5_8",
+    "needs": [
+      "Identify what type of music or audio was favored when music was playing on the office speakers.",
+      "Determine if popular music, classics, engine noise, or talk radio was preferred when music was playing."
+    ]
+  },
+  {
+    "id": "quality/60412_XM0T4STT_1",
+    "needs": [
+      "The document needs to specify when the Earth earned its new title.",
+      "The document needs to explain what event or achievement led to Earth earning its new title.",
+      "The document needs to clarify if the new title is related to medical care, biological sciences, or a signed contract."
+    ]
+  },
+  {
+    "id": "quality/60412_XM0T4STT_7",
+    "needs": [
+      "The number of times aspirin was administered to the patient.",
+      "The dosage and frequency of aspirin prescribed or given to the patient.",
+      "Any records of aspirin administration events, including dates and quantities."
+    ]
+  },
+  {
+    "id": "quality/60745_RWAY1IZC_7",
+    "needs": [
+      "Identify what Neeshan offered or used as leverage to convince the Free'l to learn magic.",
+      "Determine if Dyla melons, new huts, Neeshan's departure, or individual tooters were the specific motivation for the Free'l to learn magic."
+    ]
+  },
+  {
+    "id": "quality/60745_U9M4CL5M_4",
+    "needs": [
+      "Neeshan's reasons or motivations for teaching the Free'l magic.",
+      "Information about Neeshan's beliefs regarding his calling or ability to teach the Free'l.",
+      "Details on whether Neeshan's motivations are selfish or aimed at changing the Free'l's state of mind."
+    ]
+  },
+  {
+    "id": "quality/60897_628POLKP_5",
+    "needs": [
+      "Identify who the narrator considers their worst enemy.",
+      "Determine the specific reasons or actions that lead the narrator to identify this individual as their worst enemy."
+    ]
+  },
+  {
+    "id": "quality/61119_27E8WDJC_4",
+    "needs": [
+      "Identify Madison's reasons for regretting gathering the large rock.",
+      "Determine if the rock's weight was a factor in Madison's regret.",
+      "Ascertain if the Professor's potential use of the rock was a concern for Madison."
+    ]
+  },
+  {
+    "id": "quality/61119_BNH82NAU_1",
+    "needs": [
+      "Information describing Madison's initial feelings towards the Actuarvac and the reasons for those feelings.",
+      "Details about Madison's concerns regarding the Actuarvac's impact on Manhattan-Universal Insurance, his employment, or his standing with McCain.",
+      "Evidence evaluating the Actuarvac's perceived competence and Madison's opinion on it."
+    ]
+  },
+  {
+    "id": "quality/61146_76LHD3BB_2",
+    "needs": [
+      "Information on whether Retief opened the sealed orders given by Passwyn.",
+      "Details on Retief's actions and how they align with or deviate from the sealed orders.",
+      "Evidence of Retief's general character regarding following orders versus improvising."
+    ]
+  },
+  {
+    "id": "quality/61146_76LHD3BB_3",
+    "needs": [
+      "Locate information about the Flapjacks' origin or native planet.",
+      "Determine if the Flapjacks are an indigenous lifeform on Adobe.",
+      "Find details about how the Flapjacks arrived on Adobe, if not native."
+    ]
+  },
+  {
+    "id": "quality/61285_D8AIH84L_9",
+    "needs": [
+      "The note's tone and language to determine if it is direct, bellicose, informal, or verbose.",
+      "Descriptions of the Corps' communication style with the Aga Kaga.",
+      "Any characterizations or examples of the note's content or delivery that indicate its style."
+    ]
+  },
+  {
+    "id": "quality/61285_XLEJCW65_2",
+    "needs": [
+      "The document needs to describe the history of conflict or peace between the Boyars and the Aga Kagan.",
+      "The document needs to describe the current state of the relationship between the Boyars and the Aga Kagan, specifically if there is recent or ongoing violent conflict.",
+      "The document needs to describe the systems of governance for both the Boyars and the Aga Kagan to determine if they are similar."
+    ]
+  },
+  {
+    "id": "quality/61430_X9N4VIUX_1",
+    "needs": [
+      "The reason the supreme ruler delivered a scroll message to Jorgenson",
+      "Information about the supreme ruler's intentions regarding Jorgenson's business, ideas, or behavior",
+      "Details on any brainwashing schemes or attempts to silence/frighten Jorgenson"
+    ]
+  },
+  {
+    "id": "quality/61430_X9N4VIUX_7",
+    "needs": [
+      "Information on whether the execution of Jorgenson and Ganti was ordered or not.",
+      "Details on any intellectual strategies used by Jorgenson and Ganti to avoid execution by the Thrid.",
+      "Evidence of government allies or secret interventions that prevented Jorgenson and Ganti's death."
+    ]
+  },
+  {
+    "id": "quality/61434_C4DV5MOT_1",
+    "needs": [
+      "Identify the next to last time Qorn estivated.",
+      "Determine what Qorn was immediately before that specific estivation event."
+    ]
+  },
+  {
+    "id": "quality/61434_C4DV5MOT_6",
+    "needs": [
+      "Identify characteristics of a Qornt that make it warlike.",
+      "Determine how different emotional states (passive, calm, angry, happy) of a Verpp influence its warlike nature when it is a Qornt.",
+      "Compare the warlike tendencies of a Qornt based on whether it is a passive, calm, angry, or happy Verpp."
+    ]
+  },
+  {
+    "id": "quality/61467_S2P1EICS_1",
+    "needs": [
+      "Identify the primary benefit of becoming a changeling.",
+      "Determine if efficient labor and reduced prison sentences are a benefit of becoming a changeling.",
+      "Determine if regeneration of bodily organs, extended life expectancy, or developing superhuman powers are benefits of becoming a changeling."
+    ]
+  },
+  {
+    "id": "quality/61467_TASABS87_6",
+    "needs": [
+      "Harriet's direct statements or actions regarding Dorr's competence to run the Hazeltyne company.",
+      "Harriet's emotional responses or statements concerning Dorr's treatment of the muck men.",
+      "Descriptions of Harriet's reactions to Dorr's mannerisms, specifically indicating periodic frustration."
+    ]
+  },
+  {
+    "id": "quality/62085_OTOKKIL9_8",
+    "needs": [
+      "Information about Haller's fear of the music and its specific cause",
+      "Details on what Haller is afraid of losing control over, if applicable",
+      "Any connection between Haller's fear of the music and Elath Taen, being killed, or Martian independence"
+    ]
+  },
+  {
+    "id": "quality/62139_V60QHFBZ_7",
+    "needs": [
+      "Information about the crew's free time during the voyage",
+      "Details on the crew's respect for the captain",
+      "Information about the crew's excitement to fight the enemy"
+    ]
+  },
+  {
+    "id": "quality/62261_SJZYUNBJ_3",
+    "needs": [
+      "Information describing the ship's capacity or the number of people it could hold.",
+      "Details about the ship's internal structure or features that indicate its size, such as cargo bays or multiple decks.",
+      "Any comparisons made between the ship and other vessels, or descriptions of its overall dimensions."
+    ]
+  },
+  {
+    "id": "quality/62261_SJZYUNBJ_7",
+    "needs": [
+      "The document needs to describe Splinter's feelings or emotions about being with Kerry on the turtle-shaped island.",
+      "The document needs to provide details about Splinter's thoughts or reactions regarding Kerry's presence and experience on the island.",
+      "The document needs to explain the circumstances of Splinter and Kerry being on the island, including any crash or injuries, and Splinter's response to these events."
+    ]
+  },
+  {
+    "id": "quality/62314_ARZ8DZS1_2",
+    "needs": [
+      "Koroby's description or thoughts about the vehicle she took to her wedding",
+      "Details about the vehicle's appearance, smell, age, or general condition",
+      "Any mention of the vehicle being a spaceship, old, carved, painted, or smelling of flowers"
+    ]
+  },
+  {
+    "id": "quality/62314_QZHV11CY_8",
+    "needs": [
+      "Information about technologies developed by the people of Venus.",
+      "Details on whether the people of Venus have developed electricity, glassmaking, creating fire, or metallurgy.",
+      "Any mention of technologies that the people of Venus have not developed."
+    ]
+  },
+  {
+    "id": "quality/62382_0ORSPEA2_2",
+    "needs": [
+      "The Piruts' intentions regarding the Ship",
+      "The Hans' intentions regarding the Ship",
+      "Whether the Piruts are interested in the Ship or only raiding the Hans"
+    ]
+  },
+  {
+    "id": "quality/62382_O6HCHTPL_1",
+    "needs": [
+      "Information about the distribution of heat stones and whether it was unfair.",
+      "Details on the presence and impact of classism in the story.",
+      "Information regarding harm to Kirk's father and its connection to injustice."
+    ]
+  },
+  {
+    "id": "quality/62476_0WTVH8V9_4",
+    "needs": [
+      "The reason for Andrias's uncertainty",
+      "Andrias's thoughts or feelings about people following his orders",
+      "Andrias's concerns about getting the cargo or Duane's memory or deadliness"
+    ]
+  },
+  {
+    "id": "quality/62476_0WTVH8V9_9",
+    "needs": [
+      "The reason Duane rang the bell",
+      "The context or situation immediately before Duane rang the bell",
+      "Duane's intentions or motivations for ringing the bell"
+    ]
+  },
+  {
+    "id": "quality/62498_9BZIZ3SE_2",
+    "needs": [
+      "Identify who The Pooch is in relation to the characters or setting.",
+      "Determine if The Pooch is a pet, a child of specific characters, or an alter-ego.",
+      "Distinguish between the different familial or personal relationships proposed for The Pooch."
+    ]
+  },
+  {
+    "id": "quality/62498_9BZIZ3SE_7",
+    "needs": [
+      "Pop's vision for Eros",
+      "Pop's plans for Eros's development",
+      "Pop's goals for Eros's future"
+    ]
+  },
+  {
+    "id": "quality/63041_SC73PXBG_2",
+    "needs": [
+      "The duration of the conflict between Venusians and Earth, or the specific start date of the conflict.",
+      "The date or event when Earthlings discovered interplanetary travel.",
+      "The date or event when Venus was colonized."
+    ]
+  },
+  {
+    "id": "quality/63041_TFO74FFD_9",
+    "needs": [
+      "Identify reasons Burnett kills Kriere.",
+      "Determine if Burnett needs more bodies for the morgue to fulfill his mission.",
+      "Ascertain if Burnett kills Kriere to prevent him from boarding the ship and to make Lethla easier to defeat."
+    ]
+  },
+  {
+    "id": "quality/63130_HY86PCEO_1",
+    "needs": [
+      "Information describing Meek's personality and actions to determine if he is nosy and cautious.",
+      "Information describing Meek's personality and actions to determine if he is confident and handsome, funny and charismatic, or clumsy and inexperienced."
+    ]
+  },
+  {
+    "id": "quality/63130_PRY03TR7_6",
+    "needs": [
+      "The document needs to specify the size of the space bugs.",
+      "The document needs to compare the space bugs' size to common objects or animals to determine their relative size.",
+      "The document needs to provide details that distinguish between the given size options for the space bugs."
+    ]
+  },
+  {
+    "id": "quality/63150_2I9H6MLD_1",
+    "needs": [
+      "The reason Dennis' girlfriend left him",
+      "Details about Dennis' visit to the chamber and its impact on his girlfriend",
+      "Information about Dennis cheating with women from other planets and his girlfriend's reaction"
+    ]
+  },
+  {
+    "id": "quality/63392_KMVGI51I_2",
+    "needs": [
+      "Information about what Kal-Jmar is and what Tate believed it to be.",
+      "Details about the truth the Martian revealed to Tate regarding Kal-Jmar.",
+      "Tate's reaction or feelings after learning the truth about Kal-Jmar."
+    ]
+  },
+  {
+    "id": "quality/63401_ZCP5ZDGL_7",
+    "needs": [
+      "Information about Johnathan's ship's operational status (autopilot or manual control) and his state (asleep or awake) at the time of the crash.",
+      "Details regarding any external factors like asteroids or internal sabotage by a co-pilot that could have caused the crash.",
+      "Evidence describing Johnathan's level of fatigue and its potential impact on his ability to control the ship."
+    ]
+  },
+  {
+    "id": "quality/63401_ZCP5ZDGL_9",
+    "needs": [
+      "The reason Johnathan doesn't tell the Interstellar Cosmography Society about the women.",
+      "Johnathan's motivations or feelings towards the women.",
+      "Johnathan's assessment of the Interstellar Cosmography Society's capacity or intentions regarding the women."
+    ]
+  },
+  {
+    "id": "quality/63473_1VIHQ8TY_3",
+    "needs": [
+      "Information about the explorers' decision to proceed or retreat and their reasoning.",
+      "Details about the actual purpose or state of the metal band and its defensive capabilities.",
+      "Information on the history or current status of the planet regarding abandonment or activity."
+    ]
+  },
+  {
+    "id": "quality/63473_1VIHQ8TY_5",
+    "needs": [
+      "The crew's assessment of the city's state regarding life and exploration potential.",
+      "The crew's observations and conclusions about the city's nature, specifically if it's a machine or typical.",
+      "The crew's reaction to the city, including any magical wonders or plans to return to the mother ship."
+    ]
+  },
+  {
+    "id": "quality/63523_STSHLFEA_10",
+    "needs": [
+      "What happened to Ro's mother?",
+      "Was Ro's mother killed, taken hostage, or hiding from the Oan?",
+      "Does the text explicitly state what became of Ro's mother?"
+    ]
+  },
+  {
+    "id": "quality/63616_AZTRNB8D_5",
+    "needs": [
+      "The reason the robots sedated Harper.",
+      "What Harper had requested from the robots.",
+      "Whether the robots mistook Harper for Jake Ellis."
+    ]
+  },
+  {
+    "id": "quality/63616_MQ1O9T2Q_4",
+    "needs": [
+      "Information on whether human error contributed to issues during Harper's stay, specifically if a human desk clerk gave him the wrong room.",
+      "Details on whether Harper was bothered by complaining patrons, and if this constitutes human error affecting his stay.",
+      "Information on the extent of human involvement in the hotel's main matters and if human actions or inactions were an issue."
+    ]
+  },
+  {
+    "id": "quality/63633_TE8SMQXZ_7",
+    "needs": [
+      "The reason Johnny said Dr. McKittrick wasn't sociable.",
+      "Information about Dr. McKittrick's intelligence, beauty, age, or work focus as it relates to her sociability."
+    ]
+  },
+  {
+    "id": "quality/63645_THY3SLLH_6",
+    "needs": [
+      "What actions Irgi performed on the men in the lab",
+      "The method or instrument Irgi used to affect the men in the lab",
+      "The purpose or outcome of Irgi's actions on the men in the lab"
+    ]
+  },
+  {
+    "id": "quality/63645_THY3SLLH_8",
+    "needs": [
+      "Information about the cause of death or disappearance of Irgi's people",
+      "Details on any invasions, diseases, migrations, or specific illnesses that affected Irgi's people",
+      "Contextual information explaining why Irgi was the sole survivor"
+    ]
+  },
+  {
+    "id": "quality/63812_DQG6TAWJ_10",
+    "needs": [
+      "Information describing how the pirates' plan or actions are thwarted or fail.",
+      "Details about the pirates' knowledge or lack thereof regarding Darling's appearance or voice.",
+      "Information about whether the pirates used a tractor beam or had backups when boarding the Kismet."
+    ]
+  },
+  {
+    "id": "quality/63812_G3YOJRZD_9",
+    "needs": [
+      "Information about the story's genre, themes, and plot to determine if it involves adventure, intriguing characters, space themes, or rebellions.",
+      "Details about the protagonist's personality and actions to assess if they are unlikable.",
+      "Descriptions of the story's overall tone and style to match it with reader preferences for adventure, space games, or sci-fi rebellion narratives."
+    ]
+  },
+  {
+    "id": "quality/63833_NVJ3AK4J_4",
+    "needs": [
+      "Information about the Aphrodite's age and operational status.",
+      "Details on the success or failure of the Aphrodite's predecessor ships.",
+      "Information regarding any data or unique characteristics of the Aphrodite if it is an old, non-working ship."
+    ]
+  },
+  {
+    "id": "quality/63833_NVJ3AK4J_8",
+    "needs": [
+      "Information about the genre and subgenres of the passage, such as sci-fi, fantasy, romance, adventure, or suspense.",
+      "Details on the main themes and plot elements, specifically if they involve romance, suspense, growing friendships, or a protagonist fitting into a new group.",
+      "Descriptions of the overall tone and focus of the story to determine its primary appeal to different types of readers."
+    ]
+  },
+  {
+    "id": "quality/63855_OUVVRF81_3",
+    "needs": [
+      "The sequence of locations the ship Cleopatra visited.",
+      "The starting point of the ship Cleopatra's journey.",
+      "The final destination of the ship Cleopatra's journey."
+    ]
+  },
+  {
+    "id": "quality/63855_OUVVRF81_9",
+    "needs": [
+      "The directions given to Cleopatra",
+      "The mission given to Cleopatra",
+      "The destination and purpose of Cleopatra's mission"
+    ]
+  },
+  {
+    "id": "quality/63862_XR1KS2MX_1",
+    "needs": [
+      "Identify Evelyn's primary method or tool for defense.",
+      "Determine if Evelyn's defenseless appearance is a strategic asset.",
+      "Ascertain if Evelyn uses telepathic, magical, or concealed laser weapons."
+    ]
+  },
+  {
+    "id": "quality/63862_ZK5EYM9W_8",
+    "needs": [
+      "The document needs to explain why Evelyn doesn't interact with more of her people.",
+      "The document needs to provide information about the current status or whereabouts of Evelyn's people.",
+      "The document needs to clarify if Evelyn's people are prisoners, escaped, killed, or unwilling to interact with her."
+    ]
+  },
+  {
+    "id": "quality/63916_MPWP9IG6_8",
+    "needs": [
+      "Information about the man's purpose for entering the club on Venus.",
+      "Details about what the man does or experiences inside the club.",
+      "Any descriptions of special demonstrations, business discussions, research/entertainment, or interactions with a woman within the club."
+    ]
+  },
+  {
+    "id": "quality/63916_MPWP9IG6_9",
+    "needs": [
+      "The document needs to describe the nature of the relationship between Caldwell and Johnson.",
+      "The document needs to provide details about how Caldwell and Johnson interact or know each other.",
+      "The document needs to indicate the duration or history of Caldwell and Johnson's relationship."
+    ]
+  },
+  {
+    "id": "quality/63936_1LRE5TR5_4",
+    "needs": [
+      "Identify the monster's next big destination.",
+      "Determine the consequences of disembarking the monster at its next big destination.",
+      "Explain why disembarking at the next big destination would be a bad idea for Westover."
+    ]
+  },
+  {
+    "id": "quality/63936_1LRE5TR5_6",
+    "needs": [
+      "Determine if the passage indicates Westover will be remembered by other humans.",
+      "If Westover will be remembered, identify the specific achievement or characteristic for which he will be known by other humans."
+    ]
+  },
+  {
+    "id": "quality/99905_RJIO1V5X_9",
+    "needs": [
+      "Locate mentions of Birmingham Maglev cars and their resting places.",
+      "Identify if Railworld, Warwickshire, Derby Research Centre, or National Rail Museum are listed as resting places for Birmingham Maglev cars.",
+      "Determine which of the listed locations is explicitly stated NOT to be a resting place, or is not mentioned as one, for a Birmingham Maglev car."
+    ]
+  },
+  {
+    "id": "quality/99911_QGCJUM40_10",
+    "needs": [
+      "Information on the author's proposed immediate next step for co-working space advancement",
+      "Details on whether adding lodging, coffee shops, or building new spaces is the immediate next step",
+      "Information on whether decreasing rental prices is considered the immediate next step"
+    ]
+  },
+  {
+    "id": "quality/99914_0Q5X8VEX_3",
+    "needs": [
+      "Information about the author's stance on internet control, specifically if their ideas are radical.",
+      "Details on whether the author is issuing a warning about societal consequences of internet reliance.",
+      "Evidence of the author's perspective on a 'truth' that society is 'blind' to, or an idealized vision of the internet."
+    ]
+  },
+  {
+    "id": "quality/99914_MT4095UT_9",
+    "needs": [
+      "Information on how international governing bodies plan to address the dominance of the internet by a few corporations.",
+      "Details on specific strategies or actions international governing bodies are considering or implementing to deal with corporate internet dominance.",
+      "Explanations of the different approaches international governing bodies might take to counter the dominance of the internet by a handful of corporations."
+    ]
+  },
+  {
+    "id": "quality/99915_WLTSM0QE_9",
+    "needs": [
+      "Identify the native trees in Kumaon and their respective values.",
+      "Determine which of the identified native trees has the lowest value."
+    ]
+  },
+  {
+    "id": "quality/99916_T5VD7GB9_6",
+    "needs": [
+      "Information about the consequences of democracy not evolving",
+      "The author's opinion or prediction regarding the future of democracy if it remains stagnant",
+      "Details on potential negative outcomes like dissatisfaction, dictatorships, or decreased participation if democracy fails to evolve"
+    ]
+  },
+  {
+    "id": "quality/99919_N8V2WS3L_6",
+    "needs": [
+      "Information about how Jane Austen used emotion to make positive changes.",
+      "Information about how Simon Jenkins used emotion to make positive changes.",
+      "Information about how Donald Trump used emotion to make positive changes."
+    ]
+  },
+  {
+    "id": "quality/99922_ELKW21SF_6",
+    "needs": [
+      "Information about what the author values or prioritizes among technology, freedom, progress, and value.",
+      "Statements or arguments that indicate the author's highest regard or importance placed on one of the listed options.",
+      "Comparisons or discussions where the author explicitly or implicitly ranks the importance of technology, freedom, progress, and value."
+    ]
+  },
+  {
+    "id": "quality/99922_ELKW21SF_7",
+    "needs": [
+      "Locate the section where the author describes their initial experience or first encounter with collaborative technology.",
+      "Identify the specific type of collaborative technology that the author mentions as their first love or the one that initiated their interest.",
+      "Distinguish between text messages, Wikipedia, social media, and blogs in the author's description of their first experience with collaborative technology."
+    ]
+  },
+  {
+    "id": "quality/99927_6CQ363XM_10",
+    "needs": [
+      "Information on publishers' reasons for reluctance towards OA policies.",
+      "Details on whether publishers fear losing funding due to OA policies.",
+      "Information on whether publishers fear losing control over publications due to OA policies."
+    ]
+  },
+  {
+    "id": "quality/99929_7KT0XBKY_4",
+    "needs": [
+      "Identify authors' beliefs about profiting from OA relative to publishers.",
+      "Determine authors' attitudes towards OA, specifically if they care or are indifferent.",
+      "Ascertain if authors support OA due to potential for increased earnings."
+    ]
+  },
+  {
+    "id": "quality/99930_89JAO8MF_3",
+    "needs": [
+      "Identify the main topic or argument of answer 4.",
+      "Identify the main topic or argument of answer 7.",
+      "Compare the identified topics or arguments of answer 4 and answer 7 to find commonalities."
+    ]
+  }
+]

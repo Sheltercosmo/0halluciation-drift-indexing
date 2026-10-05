@@ -1,0 +1,2162 @@
+[
+  {
+    "factor": "split",
+    "candidate": "JEE",
+    "baseline": "EEE",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.006970167147988393,
+        "ci95": [
+          -0.0133044571651544,
+          0.027456705037882577
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.00879323850752422,
+        "ci95": [
+          -0.03901546072974644,
+          0.01936747062461346
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.006970167147988393,
+        "ci95": [
+          -0.0133044571651544,
+          0.027456705037882577
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.00879323850752422,
+        "ci95": [
+          -0.03901546072974644,
+          0.01936747062461346
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "split",
+    "candidate": "JEE",
+    "baseline": "EEE",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.0,
+        "ci95": [
+          -0.02577319587628866,
+          0.026041666666666668
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.0,
+        "ci95": [
+          -0.025906735751295335,
+          0.02631578947368421
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "split",
+    "candidate": "JEJ",
+    "baseline": "EEJ",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.005283463305668792,
+        "ci95": [
+          -0.014944345136079522,
+          0.02648241302892915
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.0043852813852813845,
+        "ci95": [
+          -0.03816666666666666,
+          0.027904761904761908
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.005283463305668792,
+        "ci95": [
+          -0.014944345136079522,
+          0.02648241302892915
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.0043852813852813845,
+        "ci95": [
+          -0.03816666666666666,
+          0.027904761904761908
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "split",
+    "candidate": "JEJ",
+    "baseline": "EEJ",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.005208333333333333,
+        "ci95": [
+          -0.026881720430107527,
+          0.04145077720207254
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.005263157894736842,
+        "ci95": [
+          -0.02717762532668092,
+          0.041884816753926704
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "split",
+    "candidate": "JJE",
+    "baseline": "EJE",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.0008097846496334261,
+        "ci95": [
+          -0.009940509305642827,
+          0.01152653799388191
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.016825396825396823,
+        "ci95": [
+          -0.041207936507936506,
+          0.002666666666666667
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.0008097846496334261,
+        "ci95": [
+          -0.009940509305642827,
+          0.01152653799388191
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.016825396825396823,
+        "ci95": [
+          -0.041207936507936506,
+          0.002666666666666667
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "split",
+    "candidate": "JJE",
+    "baseline": "EJE",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.010416666666666666,
+        "ci95": [
+          -0.03626943005181347,
+          0.015306122448979591
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.010526315789473684,
+        "ci95": [
+          -0.03664921465968586,
+          0.015463917525773196
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "split",
+    "candidate": "JJJ",
+    "baseline": "EJJ",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.016241243476531397,
+        "ci95": [
+          -0.04235801431544617,
+          0.008021896319382606
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.005572047000618429,
+        "ci95": [
+          -0.023477891156462583,
+          0.0360482374768089
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.016241243476531397,
+        "ci95": [
+          -0.04235801431544617,
+          0.008021896319382606
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.005572047000618429,
+        "ci95": [
+          -0.023477891156462583,
+          0.0360482374768089
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "split",
+    "candidate": "JJJ",
+    "baseline": "EJJ",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.020833333333333332,
+        "ci95": [
+          -0.058823529411764705,
+          0.016042780748663103
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.021052631578947368,
+        "ci95": [
+          -0.0594072785656944,
+          0.016216216216216217
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "representative",
+    "candidate": "EJE",
+    "baseline": "EEE",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.009944960014356118,
+        "ci95": [
+          -0.0141584799261308,
+          0.03571412711896409
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.011332611832611835,
+        "ci95": [
+          -0.028463765203050922,
+          0.05210442176870748
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.009944960014356118,
+        "ci95": [
+          -0.0141584799261308,
+          0.03571412711896409
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.011332611832611835,
+        "ci95": [
+          -0.028463765203050922,
+          0.05210442176870748
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "representative",
+    "candidate": "EJE",
+    "baseline": "EEE",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.010416666666666666,
+        "ci95": [
+          -0.026455026455026454,
+          0.045454545454545456
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.010526315789473684,
+        "ci95": [
+          -0.026737967914438502,
+          0.04591836734693878
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "representative",
+    "candidate": "EJJ",
+    "baseline": "EEJ",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.0043655925275782395,
+        "ci95": [
+          -0.022321310506387613,
+          0.03230424163318939
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.0036354359925788522,
+        "ci95": [
+          -0.038830017006802726,
+          0.044446173469387756
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.0043655925275782395,
+        "ci95": [
+          -0.022321310506387613,
+          0.03230424163318939
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.0036354359925788522,
+        "ci95": [
+          -0.038830017006802726,
+          0.044446173469387756
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "representative",
+    "candidate": "EJJ",
+    "baseline": "EEJ",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.015625,
+        "ci95": [
+          -0.026881720430107527,
+          0.05970352044127187
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.015789473684210527,
+        "ci95": [
+          -0.02717391304347826,
+          0.06044372294372288
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "representative",
+    "candidate": "JJE",
+    "baseline": "JEE",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.0037845775160011523,
+        "ci95": [
+          -0.02034278684565747,
+          0.029286345155780283
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.0033004535147392313,
+        "ci95": [
+          -0.035084637188208624,
+          0.04176473922902493
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.0037845775160011523,
+        "ci95": [
+          -0.02034278684565747,
+          0.029286345155780283
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.0033004535147392313,
+        "ci95": [
+          -0.035084637188208624,
+          0.04176473922902493
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "representative",
+    "candidate": "JJE",
+    "baseline": "JEE",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.0,
+        "ci95": [
+          -0.029850746268656716,
+          0.030460737594530142
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.0,
+        "ci95": [
+          -0.03015075376884422,
+          0.03076923076923077
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "representative",
+    "candidate": "JJJ",
+    "baseline": "JEJ",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.01715911425462195,
+        "ci95": [
+          -0.04885777333473468,
+          0.013095106658553016
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.013592764378478667,
+        "ci95": [
+          -0.026368058132343847,
+          0.05295007730364873
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.01715911425462195,
+        "ci95": [
+          -0.04885777333473468,
+          0.013095106658553016
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.013592764378478667,
+        "ci95": [
+          -0.026368058132343847,
+          0.05295007730364873
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "representative",
+    "candidate": "JJJ",
+    "baseline": "JEJ",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.010416666666666666,
+        "ci95": [
+          -0.0427807486631016,
+          0.021052631578947368
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.010526315789473684,
+        "ci95": [
+          -0.043243243243243246,
+          0.02127659574468085
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "router",
+    "candidate": "EEJ",
+    "baseline": "EEE",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.09620718773824326,
+        "ci95": [
+          0.052357545811047214,
+          0.14132170192717003
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.20207204700061843,
+        "ci95": [
+          0.1352175247371676,
+          0.2669372990105133
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.09620718773824326,
+        "ci95": [
+          0.052357545811047214,
+          0.14132170192717003
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.20207204700061843,
+        "ci95": [
+          0.1352175247371676,
+          0.2669372990105133
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "router",
+    "candidate": "EEJ",
+    "baseline": "EEE",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.036458333333333336,
+        "ci95": [
+          -0.010101010101010102,
+          0.08152173913043478
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.03684210526315789,
+        "ci95": [
+          -0.010205389848246989,
+          0.08241758241758242
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "router",
+    "candidate": "EJJ",
+    "baseline": "EJE",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.09062782025146536,
+        "ci95": [
+          0.045685686607603845,
+          0.13776467548970595
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.19437487116058544,
+        "ci95": [
+          0.1243637755102041,
+          0.26227688878581734
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.09062782025146536,
+        "ci95": [
+          0.045685686607603845,
+          0.13776467548970595
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.19437487116058544,
+        "ci95": [
+          0.1243637755102041,
+          0.26227688878581734
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "router",
+    "candidate": "EJJ",
+    "baseline": "EJE",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.041666666666666664,
+        "ci95": [
+          0.005208333333333333,
+          0.07921184975640416
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.042105263157894736,
+        "ci95": [
+          0.005262468999724442,
+          0.08
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "router",
+    "candidate": "JEJ",
+    "baseline": "JEE",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.09452048389592364,
+        "ci95": [
+          0.05132959510007277,
+          0.14063701076127477
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.2064800041228613,
+        "ci95": [
+          0.14235953153988867,
+          0.2698505256648113
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.09452048389592364,
+        "ci95": [
+          0.05132959510007277,
+          0.14063701076127477
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.2064800041228613,
+        "ci95": [
+          0.14235953153988867,
+          0.2698505256648113
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "router",
+    "candidate": "JEJ",
+    "baseline": "JEE",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.041666666666666664,
+        "ci95": [
+          0.010526315789473684,
+          0.0748663101604278
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.042105263157894736,
+        "ci95": [
+          0.0106951871657754,
+          0.07567567567567568
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "router",
+    "candidate": "JJJ",
+    "baseline": "JJE",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.07357679212530054,
+        "ci95": [
+          0.030264728902437553,
+          0.11876020246585152
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.21677231498660068,
+        "ci95": [
+          0.1511638991960421,
+          0.28286956555349413
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.07357679212530054,
+        "ci95": [
+          0.030264728902437553,
+          0.11876020246585152
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.21677231498660068,
+        "ci95": [
+          0.1511638991960421,
+          0.28286956555349413
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "router",
+    "candidate": "JJJ",
+    "baseline": "JJE",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.03125,
+        "ci95": [
+          -0.010526315789473684,
+          0.07500672043010742
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.031578947368421054,
+        "ci95": [
+          -0.010639720104676299,
+          0.07608695652173914
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "system",
+    "candidate": "JJJ",
+    "baseline": "EEE",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.08433153678929008,
+        "ci95": [
+          0.03960252651609917,
+          0.1304388607027463
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.21127952999381572,
+        "ci95": [
+          0.14113557513914657,
+          0.27928373531230666
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.08433153678929008,
+        "ci95": [
+          0.03960252651609917,
+          0.1304388607027463
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.21127952999381572,
+        "ci95": [
+          0.14113557513914657,
+          0.27928373531230666
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "system",
+    "candidate": "JJJ",
+    "baseline": "EEE",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.03125,
+        "ci95": [
+          -0.010362694300518135,
+          0.07614213197969544
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.031578947368421054,
+        "ci95": [
+          -0.010471204188481676,
+          0.07731958762886598
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "system",
+    "candidate": "JJJ",
+    "baseline": "dense_recursive",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.00802968853780023,
+        "ci95": [
+          -0.06041771653430899,
+          0.045689730830636446
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.31354673104673103,
+        "ci95": [
+          -0.37457896151467585,
+          -0.2541630456844743
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.00802968853780023,
+        "ci95": [
+          -0.06041771653430899,
+          0.045689730830636446
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.31354673104673103,
+        "ci95": [
+          -0.37457896151467585,
+          -0.2541630456844743
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "system",
+    "candidate": "JJJ",
+    "baseline": "dense_recursive",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.2552083333333333,
+        "ci95": [
+          -0.32653061224489793,
+          -0.18556701030927836
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.2578947368421053,
+        "ci95": [
+          -0.32989690721649484,
+          -0.18716577540106952
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "system",
+    "candidate": "JJJ",
+    "baseline": "rrf_recursive",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.029195193825696564,
+        "ci95": [
+          -0.07774839644602993,
+          0.020423265822999522
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.2913587285730143,
+        "ci95": [
+          -0.3555498979195408,
+          -0.2256585920032349
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.029195193825696564,
+        "ci95": [
+          -0.07774839644602993,
+          0.020423265822999522
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.2913587285730143,
+        "ci95": [
+          -0.3555498979195408,
+          -0.2256585920032349
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "system",
+    "candidate": "JJJ",
+    "baseline": "rrf_recursive",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.234375,
+        "ci95": [
+          -0.30481751336898394,
+          -0.1641025641025641
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.23684210526315788,
+        "ci95": [
+          -0.3081081081081081,
+          -0.1657754010695187
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "system",
+    "candidate": "JJJ",
+    "baseline": "rerank_recursive",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.03188383339523319,
+        "ci95": [
+          -0.08518338099557722,
+          0.020611027879946137
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.3530365269650984,
+        "ci95": [
+          -0.41469700577200574,
+          -0.29244752212073644
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.03188383339523319,
+        "ci95": [
+          -0.08518338099557722,
+          0.020611027879946137
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.3530365269650984,
+        "ci95": [
+          -0.41469700577200574,
+          -0.29244752212073644
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "system",
+    "candidate": "JJJ",
+    "baseline": "rerank_recursive",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.25,
+        "ci95": [
+          -0.32663565351510027,
+          -0.17391304347826086
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.25263157894736843,
+        "ci95": [
+          -0.32989690721649484,
+          -0.17552506032024576
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "system",
+    "candidate": "JJJ",
+    "baseline": "dense_semantic",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.03127470426989631,
+        "ci95": [
+          -0.08283046016218097,
+          0.021220004726873472
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.3146317650603365,
+        "ci95": [
+          -0.3756450886415173,
+          -0.25363156922442637
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.03127470426989631,
+        "ci95": [
+          -0.08283046016218097,
+          0.021220004726873472
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.3146317650603365,
+        "ci95": [
+          -0.3756450886415173,
+          -0.25363156922442637
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "system",
+    "candidate": "JJJ",
+    "baseline": "dense_semantic",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.25,
+        "ci95": [
+          -0.31794871794871793,
+          -0.17976807836358408
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.24736842105263157,
+        "ci95": [
+          -0.3163265306122449,
+          -0.17679558011049723
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "system",
+    "candidate": "JJJ",
+    "baseline": "rrf_semantic",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.050753305795765515,
+        "ci95": [
+          -0.09662302330501556,
+          -0.002931685308128701
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.3083315176886606,
+        "ci95": [
+          -0.3701260001902859,
+          -0.2454542861900005
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.050753305795765515,
+        "ci95": [
+          -0.09662302330501556,
+          -0.002931685308128701
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.3083315176886606,
+        "ci95": [
+          -0.3701260001902859,
+          -0.2454542861900005
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "system",
+    "candidate": "JJJ",
+    "baseline": "rrf_semantic",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.2760416666666667,
+        "ci95": [
+          -0.3435897435897436,
+          -0.20833333333333334
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.2789473684210526,
+        "ci95": [
+          -0.3473684210526316,
+          -0.21052631578947367
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "system",
+    "candidate": "JJJ",
+    "baseline": "rerank_semantic",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.025064341440689576,
+        "ci95": [
+          -0.07242818360441783,
+          0.023910893037125926
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.3527508126793841,
+        "ci95": [
+          -0.4160398777809492,
+          -0.29068114564007425
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.025064341440689576,
+        "ci95": [
+          -0.07242818360441783,
+          0.023910893037125926
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.3527508126793841,
+        "ci95": [
+          -0.4160398777809492,
+          -0.29068114564007425
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "system",
+    "candidate": "JJJ",
+    "baseline": "rerank_semantic",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.2760416666666667,
+        "ci95": [
+          -0.34517766497461927,
+          -0.20967741935483872
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.2736842105263158,
+        "ci95": [
+          -0.34375,
+          -0.20634920634920634
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "hybrid",
+    "candidate": "hybrid_matched",
+    "baseline": "JJJ",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.007617454154674161,
+        "ci95": [
+          -0.04404223987286199,
+          0.05800475266251512
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.31640387390387387,
+        "ci95": [
+          0.25733521894771894,
+          0.3770028576582149
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.007617454154674161,
+        "ci95": [
+          -0.04404223987286199,
+          0.05800475266251512
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.31640387390387387,
+        "ci95": [
+          0.25733521894771894,
+          0.3770028576582149
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "hybrid",
+    "candidate": "hybrid_matched",
+    "baseline": "JJJ",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.25,
+        "ci95": [
+          0.18041237113402062,
+          0.32142857142857145
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.25263157894736843,
+        "ci95": [
+          0.1823197226058932,
+          0.3248762690355329
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "hybrid",
+    "candidate": "hybrid_matched",
+    "baseline": "dense_recursive",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.0004122343831260678,
+        "ci95": [
+          -0.01590642203168547,
+          0.014980596720069463
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.002857142857142857,
+        "ci95": [
+          0.0,
+          0.008571428571428572
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.0004122343831260678,
+        "ci95": [
+          -0.01590642203168547,
+          0.014980596720069463
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.002857142857142857,
+        "ci95": [
+          0.0,
+          0.008571428571428572
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "hybrid",
+    "candidate": "hybrid_matched",
+    "baseline": "dense_recursive",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.005208333333333333,
+        "ci95": [
+          -0.016216216216216217,
+          0.0
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.005263157894736842,
+        "ci95": [
+          -0.01639344262295082,
+          0.0
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "hybrid",
+    "candidate": "hybrid_matched",
+    "baseline": "rerank_recursive",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.024266379240559032,
+        "ci95": [
+          -0.061363337739590275,
+          0.012710527464843595
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.03663265306122449,
+        "ci95": [
+          -0.06663520408163265,
+          -0.010408163265306124
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.024266379240559032,
+        "ci95": [
+          -0.061363337739590275,
+          0.012710527464843595
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.03663265306122449,
+        "ci95": [
+          -0.06663520408163265,
+          -0.010408163265306124
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "hybrid",
+    "candidate": "hybrid_matched",
+    "baseline": "rerank_recursive",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.0,
+        "ci95": [
+          -0.05759162303664921,
+          0.0582010582010582
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.0,
+        "ci95": [
+          -0.05789473684210526,
+          0.058823529411764705
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "hybrid",
+    "candidate": "hybrid_matched",
+    "baseline": "rerank_semantic",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.017446887286015417,
+        "ci95": [
+          -0.058537550836580604,
+          0.023431870459245517
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.03634693877551021,
+        "ci95": [
+          -0.06767346938775509,
+          -0.007346428571428578
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.017446887286015417,
+        "ci95": [
+          -0.058537550836580604,
+          0.023431870459245517
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.03634693877551021,
+        "ci95": [
+          -0.06767346938775509,
+          -0.007346428571428578
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "hybrid",
+    "candidate": "hybrid_matched",
+    "baseline": "rerank_semantic",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.026041666666666668,
+        "ci95": [
+          -0.09278350515463918,
+          0.041237113402061855
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.021052631578947368,
+        "ci95": [
+          -0.08808290155440414,
+          0.0463977618716948
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "hybrid",
+    "candidate": "hybrid_full",
+    "baseline": "JJJ",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.004162442060332015,
+        "ci95": [
+          -0.045407132601217336,
+          0.05258878479866087
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.31926101676101676,
+        "ci95": [
+          0.26222119547119543,
+          0.37828442172906457
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.004162442060332015,
+        "ci95": [
+          -0.045407132601217336,
+          0.05258878479866087
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.31926101676101676,
+        "ci95": [
+          0.26222119547119543,
+          0.37828442172906457
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "hybrid",
+    "candidate": "hybrid_full",
+    "baseline": "JJJ",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": 0.23958333333333334,
+        "ci95": [
+          0.1675386025991974,
+          0.3128205128205128
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": 0.24210526315789474,
+        "ci95": [
+          0.1693121693121693,
+          0.3163265306122449
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "hybrid",
+    "candidate": "hybrid_full",
+    "baseline": "dense_recursive",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.003867246477468215,
+        "ci95": [
+          -0.029517981019071056,
+          0.02218894591824675
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.005714285714285714,
+        "ci95": [
+          -0.008571428571428572,
+          0.02
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.003867246477468215,
+        "ci95": [
+          -0.029517981019071056,
+          0.02218894591824675
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": 0.005714285714285714,
+        "ci95": [
+          -0.008571428571428572,
+          0.02
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "hybrid",
+    "candidate": "hybrid_full",
+    "baseline": "dense_recursive",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.015625,
+        "ci95": [
+          -0.043478260869565216,
+          0.010309278350515464
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.015789473684210527,
+        "ci95": [
+          -0.04371584699453552,
+          0.010416666666666666
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "hybrid",
+    "candidate": "hybrid_full",
+    "baseline": "rerank_recursive",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.027721391334901185,
+        "ci95": [
+          -0.062266624392562184,
+          0.004369260730886138
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.033775510204081635,
+        "ci95": [
+          -0.06255612244897958,
+          -0.00806122448979592
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.027721391334901185,
+        "ci95": [
+          -0.062266624392562184,
+          0.004369260730886138
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.033775510204081635,
+        "ci95": [
+          -0.06255612244897958,
+          -0.00806122448979592
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "hybrid",
+    "candidate": "hybrid_full",
+    "baseline": "rerank_recursive",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.010416666666666666,
+        "ci95": [
+          -0.06878306878306878,
+          0.047872340425531915
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.010526315789473684,
+        "ci95": [
+          -0.06951871657754011,
+          0.04838709677419355
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "hybrid",
+    "candidate": "hybrid_full",
+    "baseline": "rerank_semantic",
+    "dataset": "qasper",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.020901899380357563,
+        "ci95": [
+          -0.05973403668937404,
+          0.01640750054060497
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.03348979591836735,
+        "ci95": [
+          -0.06418367346938776,
+          -0.004712755102040838
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.020901899380357563,
+        "ci95": [
+          -0.05973403668937404,
+          0.01640750054060497
+        ],
+        "documents": 192,
+        "questions": 192,
+        "replicates": 10000
+      },
+      "evidence_recall": {
+        "difference": -0.03348979591836735,
+        "ci95": [
+          -0.06418367346938776,
+          -0.004712755102040838
+        ],
+        "documents": 175,
+        "questions": 175,
+        "replicates": 10000
+      }
+    }
+  },
+  {
+    "factor": "hybrid",
+    "candidate": "hybrid_full",
+    "baseline": "rerank_semantic",
+    "dataset": "quality",
+    "metrics": {
+      "answer_score": {
+        "difference": -0.036458333333333336,
+        "ci95": [
+          -0.10638837887460849,
+          0.03553299492385787
+        ],
+        "documents": 115,
+        "questions": 192,
+        "replicates": 10000
+      }
+    },
+    "common_unblocked_metrics": {
+      "answer_score": {
+        "difference": -0.031578947368421054,
+        "ci95": [
+          -0.10160427807486631,
+          0.03783783783783784
+        ],
+        "documents": 115,
+        "questions": 190,
+        "replicates": 10000
+      }
+    }
+  }
+]

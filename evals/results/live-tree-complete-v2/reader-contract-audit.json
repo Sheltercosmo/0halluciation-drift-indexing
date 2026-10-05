@@ -1,0 +1,26 @@
+{
+  "original_quality_non_letter_answers": {
+    "EEE": 176,
+    "JJE": 178,
+    "rerank_recursive": 103,
+    "dense_semantic": 94,
+    "hybrid_full": 101,
+    "EJE": 176,
+    "JEE": 180,
+    "rrf_semantic": 94,
+    "EEJ": 167,
+    "EJJ": 160,
+    "JEJ": 168,
+    "JJJ": 171,
+    "dense_recursive": 98,
+    "hybrid_matched": 99,
+    "rrf_recursive": 95,
+    "rerank_semantic": 95
+  },
+  "corrected_quality_non_letter_answers": 0,
+  "qaspar_answers_unchanged": true,
+  "blocked_questions": [
+    "quality/50818_U50BKW97_5",
+    "quality/51605_E8R4X4OP_5"
+  ]
+}

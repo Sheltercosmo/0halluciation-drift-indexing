@@ -1,0 +1,52 @@
+{
+  "status": "complete_development_only",
+  "predictions": 6144,
+  "central_sentence_agreement": {
+    "E/section/nodes": 6913,
+    "E/section/same_sentence": 2486,
+    "E/section/matched_candidates": 38629,
+    "E/paragraph/nodes": 24176,
+    "E/paragraph/same_sentence": 12976,
+    "E/paragraph/matched_candidates": 74340,
+    "J/section/nodes": 9682,
+    "J/section/same_sentence": 4170,
+    "J/section/matched_candidates": 45316,
+    "J/paragraph/nodes": 24176,
+    "J/paragraph/same_sentence": 12976,
+    "J/paragraph/matched_candidates": 74340
+  },
+  "identical_context_audit": {
+    "identical_context_pairs": 4519
+  },
+  "normalized_ranker_responses": 24,
+  "reader_identity_repairs": 6,
+  "failure_statuses": {
+    "blocked_by_reader": 6
+  },
+  "questions_with_any_reader_failure": [
+    "quality/50818_U50BKW97_5",
+    "quality/51605_E8R4X4OP_5"
+  ],
+  "failed_predictions": 6,
+  "registered_methods": [
+    "EEE",
+    "EEJ",
+    "EJE",
+    "EJJ",
+    "JEE",
+    "JEJ",
+    "JJE",
+    "JJJ",
+    "dense_recursive",
+    "rrf_recursive",
+    "rerank_recursive",
+    "dense_semantic",
+    "rrf_semantic",
+    "rerank_semantic",
+    "hybrid_full",
+    "hybrid_matched"
+  ],
+  "intervals": "Descriptive paired document bootstrap, 10,000 replicates; no confirmatory multiplicity-adjusted claim",
+  "unopened_validation_questions": 1425,
+  "unopened_test_questions": 1559
+}
