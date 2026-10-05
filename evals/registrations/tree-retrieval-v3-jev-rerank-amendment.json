@@ -1,0 +1,50 @@
+{
+  "version": "tree-retrieval-v3-jev-rerank-controls",
+  "created_at": "2026-10-05T09:53:52.347558+00:00",
+  "base_registration_sha256": "7b97dbbf69871ebd2b1c381c106c0decb71cf62b44415de2141a819c918d5b77",
+  "stage": "validation indexing/planning, no held-out scores inspected",
+  "reason": "User requested Jev reranking as a same-pool model control.",
+  "additional_methods": [
+    "qwen_jev_rerank",
+    "bge_jev_rerank",
+    "gemini_jev_rerank"
+  ],
+  "candidate_count": 30,
+  "sources": {
+    "scripts/retrieval_v3_jev_controls.py": "432cd7ba4ba065ff7711c0cb1e5cea39e552259120f93801ce1c81404cf0f43e",
+    "scripts/retrieval_v3_statistics.py": "5e12281c01cd05b059e968238d060d888000b7282468eceb3812e8fcac2eb825"
+  },
+  "query_policy": {
+    "qwen_jev_rerank": "original question, matching native Qwen baseline",
+    "bge_jev_rerank": "original question, matching native BGE baseline",
+    "gemini_jev_rerank": "same shared evidence needs, fused with RRF60"
+  },
+  "input_policy": "same dense top-30 IDs, native heading plus complete source paragraphs, no central-sentence restriction",
+  "output_policy": "whole original paragraphs, common rank and source-token limits",
+  "paired_reranker_contrasts": [
+    [
+      "qwen_rerank",
+      "qwen_jev_rerank"
+    ],
+    [
+      "bge_rerank",
+      "bge_jev_rerank"
+    ]
+  ],
+  "final_system_contrasts_added": [
+    [
+      "selected",
+      "qwen_jev_rerank"
+    ],
+    [
+      "selected",
+      "bge_jev_rerank"
+    ],
+    [
+      "selected",
+      "gemini_jev_rerank"
+    ]
+  ],
+  "statistics": "Holm family of 10 final-system contrasts; separate Holm family of 2 native same-pool reranker contrasts; original 12 component contrasts unchanged",
+  "unchanged": "original eight arms, JJJ/hybrid selection, primary metric, data assignment and hyperparameters"
+}

@@ -25,7 +25,7 @@ The private `output/research-budget.json` tracks cumulative request reservations
 
 ## Frozen execution
 
-The published registration was produced after the fixed development pilot and before validation access. On the original research allocation:
+The published registration was produced after the fixed development pilot and before validation access. Its private working copy is `output/retrieval-v3-confirmatory/registration.json`; on a clean reproduction, copy the public registration there after restoring the matching split allocation. On the original research allocation:
 
 ```sh
 python scripts/retrieval_v3_gate.py open-validation
@@ -34,10 +34,13 @@ python scripts/retrieval_v3.py plans --output output/retrieval-v3-confirmatory/v
 python scripts/retrieval_v3.py retrieve --output output/retrieval-v3-confirmatory/validation
 python scripts/retrieval_v3.py qwen --output output/retrieval-v3-confirmatory/validation
 python scripts/retrieval_v3_bge.py output/retrieval-v3-confirmatory/validation
-python scripts/retrieval_v3_gate.py open-test
+python scripts/retrieval_v3_jev_controls.py run --output output/retrieval-v3-confirmatory/validation
+python scripts/retrieval_v3_jev_controls.py open-test
 ```
 
-The last command verifies all question/method identities and whole-paragraph packs, recomputes validation scores, freezes the selected JJJ/hybrid system and then releases test inputs. Run the same five inference stages with `test` in place of `validation`. Checkpointed outputs and provider caches allow interrupted stages to resume. A failed stage must be completed or reported incomplete; it does not permit dropping questions.
+The amended run also requires the published `tree-retrieval-v3-jev-rerank-amendment.json` as `output/retrieval-v3-confirmatory/jev-rerank-amendment.json` and the matching amended run manifest. The original registration and access markers remain preserved; the amendment records that no held-out outcomes had been inspected. Do not rerun the original `amend` command to invent the original timestamp.
+
+The last command verifies all question/method identities, identical dense candidate pools and whole-paragraph packs, recomputes validation scores, freezes the selected JJJ/hybrid system and then releases test inputs. Run the same six inference stages with `test` in place of `validation`. Checkpointed outputs and provider caches allow interrupted stages to resume. A failed stage must be completed or reported incomplete; it does not permit dropping questions.
 
 ```sh
 python scripts/analyze_retrieval_v3.py output/retrieval-v3-confirmatory/test

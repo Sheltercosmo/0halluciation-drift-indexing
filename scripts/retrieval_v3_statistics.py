@@ -54,15 +54,18 @@ def contrast(sums,counts,boot,coefficients,seed=20261005,draws=10000):
 
 
 def run(out):
-    from scripts.retrieval_v3_gate import checked,validate_predictions,RUN
+    from scripts.retrieval_v3_gate import validate_predictions,RUN
+    from scripts.retrieval_v3_jev_controls import checked,verify_pools
     reg,_=checked();manifest=read_json(out/'manifest.json')
     if manifest['partition'] not in ('validation','test'):raise ValueError('Confirmatory partitions only')
     validate_predictions(out,reg['methods'])
+    verify_pools(out)
     rows=read_json(out/'aligned-scores.json');methods=reg['methods']
     summary=read_json(out/'aligned-summary.json')
     winner=read_json(RUN/'frozen-winner.json')['winner'] if manifest['partition']=='test' else None
     result={'partition':manifest['partition'],'registration_sha256':sha(RUN/'registration.json'),
         'scores_sha256':sha(out/'aligned-scores.json'),'statistics_source_sha256':sha(Path(__file__)),
+        'amendment_sha256':reg['amendment_sha256'],
         'draws':10000,'seed':reg['statistics_seed'],'cluster':'document','mean':'question-weighted',
         'interval':'95% marginal percentile bootstrap; not simultaneous intervals',
         'population':summary['population'],'selected_system':winner,'metrics':{}}
@@ -73,6 +76,7 @@ def run(out):
             for i,m in enumerate(methods)}}
         if metric!='recall@5':continue
         families={'components':[(a+' -> '+b,a,b) for a,b in reg['component_contrasts']]}
+        families['reranker_contrasts']=[(a+' -> '+b,a,b) for a,b in reg['paired_reranker_contrasts']]
         if winner:families['system_contrasts']=[(winner+' vs '+b,b,winner) for a,b in reg['final_system_contrasts']]
         for family,pairs in families.items():
             records=[]

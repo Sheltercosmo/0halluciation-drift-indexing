@@ -1,4 +1,5 @@
-# GPU inference used torch 2.8.0+cu128 from the official PyTorch CUDA 12.8 index.
+# GPU inference environment; torch 2.8.0+cu128 from the official CUDA 12.8 index.
+# API inference/statistics used numpy 2.3.5 from requirements-bounded.txt separately.
 torch==2.8.0
 transformers==4.55.2
 numpy==2.5.3
