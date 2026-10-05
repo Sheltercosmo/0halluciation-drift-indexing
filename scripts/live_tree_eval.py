@@ -51,7 +51,7 @@ def tree(doc, groups, partition):
             for i, (a, b) in enumerate(sentence_spans(source, Block('paragraph', unit['start'], unit['end']))):
                 paragraph.children.append(Node(f'{paragraph.node_id}s{i}', 'sentence', source[a:b], a, b))
     result = DocumentIndex(source, doc['id'], root, {'source_sha256': hashlib.sha256(source.encode()).hexdigest(),
-                           'partition': partition, 'structure': 'dataset-native headings and paragraph offsets'}, [])
+                           'partition': partition, 'config': {}, 'structure': 'dataset-native headings and paragraph offsets'}, [])
     return DocumentIndex.from_dict(result.to_dict())
 
 
@@ -154,7 +154,8 @@ def parallel(function, items, workers, stage):
                 future.result()
             except Exception as exc:
                 errors.append(type(exc).__name__ + ': ' + str(exc)[:160])
-            print(json.dumps({'stage': stage, 'completed': done, 'total': len(items), 'failures': len(errors)}), flush=True)
+            print(json.dumps({'stage': stage, 'completed': done, 'total': len(items), 'failures': len(errors),
+                              'last_error': errors[-1] if errors else None}), flush=True)
         if errors:
             raise RuntimeError(str(Counter(errors)))
 

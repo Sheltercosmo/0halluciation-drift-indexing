@@ -5,6 +5,8 @@ from pathlib import Path
 from scripts.bounded_clients import save
 from scripts.live_tree_clients import LiveBudget
 from scripts.live_tree_eval import tree
+from zero_index.index import reselect_representatives
+from zero_index.embeddings import CentroidRepresentatives
 
 
 class LiveEvaluationTests(unittest.TestCase):
@@ -30,6 +32,9 @@ class LiveEvaluationTests(unittest.TestCase):
         index = tree({'id': 'test', 'title': 'Paper', 'text': source, 'units': units}, [[units[0]], [units[1]]], 'J')
         self.assertEqual([(n.start, n.end) for n in index.root.walk() if n.kind == 'paragraph'], [(0, 25), (27, len(source))])
         self.assertTrue(all(source[n.start:n.end] == n.title for n in index.root.walk() if n.kind == 'sentence'))
+        selected = reselect_representatives(index, CentroidRepresentatives(lambda text: [1., 2.], model_name='fixture'), sentence_budget=8)
+        self.assertEqual(selected.metadata['config']['sentence_budget'], 8)
+        self.assertTrue(all(n.central is not None for n in selected.root.walk() if n.kind == 'paragraph'))
 
 
 if __name__ == '__main__':
