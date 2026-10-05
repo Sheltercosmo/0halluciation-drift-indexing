@@ -1,0 +1,37 @@
+{
+  "status": "offline_adapter_checks_passed_not_qa_performance",
+  "external_model_calls": 0,
+  "upstream_commit": "7da1d48a7e1d7dec61a63c9d9aae84e2dfaa5767",
+  "runtime": {
+    "numpy": "1.26.3",
+    "scipy": "1.12.0",
+    "scikit-learn": "1.4.2",
+    "umap-learn": "0.5.5",
+    "numba": "0.60.0",
+    "llvmlite": "0.43.0",
+    "pynndescent": "0.5.12",
+    "tiktoken": "0.12.0",
+    "openai": "1.3.3",
+    "tenacity": "8.2.3"
+  },
+  "fixture": {
+    "source_tokens": 2232,
+    "leaves": 24,
+    "nodes": 28,
+    "layers": 1,
+    "tree_sha256": "6538a178fd42ba0dfc8654baa5be8a75ea468cfac9dfd46da9f75ee925a6690d"
+  },
+  "checks": [
+    "all upstream source blobs verified",
+    "real upstream UMAP/GMM and tree builder exercised",
+    "fixed-seed tree reproduced",
+    "JSON topology replay exact",
+    "collapsed ranking matches upstream",
+    "rendered source budget enforced",
+    "default unaudited providers rejected"
+  ],
+  "synthetic_callback_invocations": {
+    "embedding": 59,
+    "summary": 8
+  }
+}

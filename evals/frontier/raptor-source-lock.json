@@ -1,0 +1,82 @@
+{
+  "upstream": "https://github.com/parthsarthi03/raptor",
+  "commit": "7da1d48a7e1d7dec61a63c9d9aae84e2dfaa5767",
+  "license": "MIT",
+  "files": [
+    {
+      "path": "LICENSE.txt",
+      "bytes": 1068,
+      "git_blob_sha1": "b90653954ac8ace32167fc2cf349ea23f158c370"
+    },
+    {
+      "path": "raptor/EmbeddingModels.py",
+      "bytes": 1123,
+      "git_blob_sha1": "0163474ed03bb1063cb45b0b9ebb0d11ba4113c5"
+    },
+    {
+      "path": "raptor/FaissRetriever.py",
+      "bytes": 7232,
+      "git_blob_sha1": "908d1e2e2f998486952e1e5a3396468b1deb983d"
+    },
+    {
+      "path": "raptor/QAModels.py",
+      "bytes": 6737,
+      "git_blob_sha1": "7050321fd8e8bfdffef1892ecaa91868c202e1c8"
+    },
+    {
+      "path": "raptor/RetrievalAugmentation.py",
+      "bytes": 11669,
+      "git_blob_sha1": "275ec439872ee2d566903d29a6102eb6ef7b30a8"
+    },
+    {
+      "path": "raptor/Retrievers.py",
+      "bytes": 164,
+      "git_blob_sha1": "c9af8ce17d2c4899a4d93466ac2a2a74a720713f"
+    },
+    {
+      "path": "raptor/SummarizationModels.py",
+      "bytes": 2253,
+      "git_blob_sha1": "3b4532098f2f85496dcb8f5f2f5bee4e2e2cdda6"
+    },
+    {
+      "path": "raptor/__init__.py",
+      "bytes": 901,
+      "git_blob_sha1": "79e15740ee12f453fdfc0d2083410da2b6f29568"
+    },
+    {
+      "path": "raptor/cluster_tree_builder.py",
+      "bytes": 5340,
+      "git_blob_sha1": "c41e22a1ff5d92d3b5c1ee9313cbe4810829a576"
+    },
+    {
+      "path": "raptor/cluster_utils.py",
+      "bytes": 6407,
+      "git_blob_sha1": "9b87384806d383944c1ed4e1290d13d8785dbb6a"
+    },
+    {
+      "path": "raptor/tree_builder.py",
+      "bytes": 13993,
+      "git_blob_sha1": "4da1826aa046f1ead1102fa5ae82f891ac8dcd72"
+    },
+    {
+      "path": "raptor/tree_retriever.py",
+      "bytes": 11265,
+      "git_blob_sha1": "d7501cfe15ba8d24a4010cd9fd4230c652b48f59"
+    },
+    {
+      "path": "raptor/tree_structures.py",
+      "bytes": 719,
+      "git_blob_sha1": "681b06ef759b9195610c62ea3dc8cc274c99f2ca"
+    },
+    {
+      "path": "raptor/utils.py",
+      "bytes": 7092,
+      "git_blob_sha1": "e6c5cc6aa5c68ba18e48471c18b79a13d8c0734b"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 175,
+      "git_blob_sha1": "31285a7ece1bb73fc1e67f35ca54ed44f03978aa"
+    }
+  ]
+}

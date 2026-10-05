@@ -71,3 +71,9 @@ The batch prompts included other cases whose contexts differed. This audit canno
 The [isolated-reader rerun](isolated-reader-manifest.json) keeps all five retrieval configurations and all 128 questions, submits **one case per reader call**, and shares one prediction whenever case ID, query and context are identical across methods. Its 640 method/question predictions require **488 distinct calls**. It keeps the same Codex reader model and instruction and makes no new indexing, reranking or Gemini calls. It removes batch coupling and matched-context resampling; a single draw still leaves uncertainty for genuinely different contexts.
 
 Successful development screening still requires broader development testing, selection on registered validation candidates, a published-method comparator, and one final untouched test. No candidate has been promoted to the production default.
+
+## Holdout protection and published comparator preparation
+
+The holdout gate now requires a registration saved before validation, complete predictions for every registered method/question/reader replicate, and a winner recomputed from answers with the hashed evaluator. It rejects status-only claims, missing or duplicated predictions, changed registrations and changed frozen artifacts. Failed predictions count as zero. The expanded test suite passes 108 tests, including eight validation-gate checks; reconstructing the splits still reproduces every assignment and prepared data hash. The real validation and test opening commands have not been run.
+
+The [RAPTOR adapter](../../RAPTOR_BASELINE.md) now runs pinned upstream clustering, tree construction and collapsed retrieval with explicit model callbacks. Its offline integration check passes without model calls, including fixed-seed reproduction and the actual rendered context budget. Live model adapters and measured QA comparisons remain pending; this is implementation evidence, not a performance result.

@@ -1,0 +1,26 @@
+name: Verify RAPTOR adapter
+on:
+  push:
+    paths:
+      - "scripts/raptor_adapter.py"
+      - "scripts/fetch_raptor.py"
+      - "scripts/verify_raptor_adapter.py"
+      - "evals/frontier/raptor-source-lock.json"
+      - "evals/requirements-raptor*.txt"
+      - ".github/workflows/verify-raptor.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      NUMBA_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -r evals/requirements-raptor-lock.txt
+      - run: python scripts/fetch_raptor.py
+      - run: python scripts/verify_raptor_adapter.py

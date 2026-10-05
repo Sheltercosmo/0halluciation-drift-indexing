@@ -159,23 +159,15 @@ def prepare(data, output, public):
 
 def open_test(output, frozen):
     """Register irreversible exposure; changed configs may never reuse this test."""
+    from scripts.validation_gate import verify_winner, write_once
     manifest = read_json(output / 'manifest.json')
-    config = read_json(frozen)
-    if config.get('status') != 'selected_after_registered_validation' or not config.get('source_hashes') or not config.get('baselines'):
-        raise ValueError('Test requires a complete frozen winner and baseline registration')
-    for name, expected in config['source_hashes'].items():
-        path = (ROOT / name).resolve()
-        if not path.is_relative_to(ROOT) or sha(path) != expected:
-            raise ValueError('Frozen implementation mismatch: ' + name)
-    for name, expected in manifest['data_hashes'].items():
-        if sha(output / name) != expected:
-            raise ValueError('Prepared split changed: ' + name)
+    config = verify_winner(output, frozen)
     record = {'frozen_configuration_sha256': sha(frozen), 'registry_sha256': manifest['registry_sha256'],
+              'registration_sha256': config['registration_sha256'],
+              'validation_predictions_sha256': config['validation_predictions_sha256'],
               'status': 'test_opened_no_further_tuning'}
     marker = output / 'test-opened.json'
-    if marker.exists() and read_json(marker) != record:
-        raise ValueError('Test already opened for a different configuration; it is spent')
-    save(marker, record)
+    write_once(marker, record)
     return output / 'test'
 
 
