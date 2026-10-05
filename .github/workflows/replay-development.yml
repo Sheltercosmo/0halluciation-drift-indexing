@@ -21,4 +21,4 @@ jobs:
       - run: python -m pip install -r evals/requirements-bounded.txt
       - run: python scripts/fetch_bounded_data.py
       - run: python evals/results/bounded-v1/source/scripts/bounded_eval.py prepare --data output/frontier-data --output output/bounded-replay
-      - run: python scripts/replay_development_results.py --data output/bounded-replay
+      - run: python scripts/replay_development_results.py --data output/bounded-replay --results evals/results/pool-screen-v1 evals/results/closed-book-v1 evals/results/context-trial-v1

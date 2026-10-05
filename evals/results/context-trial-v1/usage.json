@@ -1,0 +1,12 @@
+{
+  "codex_calls": 32,
+  "statuses": {
+    "ok": 32
+  },
+  "reader_batch_jobs": 34,
+  "cache_hits": 2,
+  "reported_input_tokens": 1047417,
+  "reported_output_tokens": 11505,
+  "new_gemini_calls": 0,
+  "new_jev_calls": 0
+}

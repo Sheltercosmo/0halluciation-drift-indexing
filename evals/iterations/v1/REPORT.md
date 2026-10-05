@@ -1,6 +1,6 @@
 # Improvement log: development screens, not held-out results
 
-The improvement goal is active. **Frontier performance has not been established.** Validation and test are still locked. The prior and sudden-drop rule have not been tested separately.
+The improvement goal is active. **Frontier performance has not been established.** Validation and test are still locked. The prior and sudden-drop rule have not been tested separately. The screens below exposed substantial reader variability for identical per-question contexts in different batches; answer deltas should not be attributed solely to retrieval. An isolated-reader rerun is registered to repair that comparison.
 
 ## Data separation
 
@@ -45,11 +45,29 @@ The pool screen made 99 Codex attempts (97 successful, 2 rejected) and 137 Jev r
 
 Artifacts: [scores](../../results/pool-screen-v1/scores.json), [summary](../../results/pool-screen-v1/summary.json), [paired intervals](../../results/pool-screen-v1/paired-intervals.json), [repair record](../../results/pool-screen-v1/ranking-repair.json), [usage](../../results/pool-screen-v1/usage.json), and [no-source control](../../results/closed-book-v1/summary.json).
 
-## Next registered experiments
+## Follow-up context experiments
 
 Two context-selection changes are prepared on the same development screen, before their reader predictions:
 
 1. Combine the original hybrid rank (weight 0.25) and Jev relevance rank (0.75), using RRF constant 60. In an offline development sweep, hybrid weights 0.25 / 0.50 / 0.75 produced QASPER evidence recall 90.56 / 89.22 / 83.34. Only the 0.25 candidate proceeds to reader testing; this selection is development tuning.
 2. Read selected fragments bottom-up into their existing decision-defined topic parent when at least two children are selected, coverage is sufficient and the full parent fits the same final token limit. This follows HiChunk's auto-merge retrieval idea, not its trained chunker. Offline adaptive/0.4/0.6 coverage trials all left QASPER recall at 90.56; reader testing will check whether complete narrative context helps QuALITY.
 
-Neither trial changes topic-cut probabilities or uses an LLM during indexing. Their predictions will be reported whether favorable or unfavorable. Successful screening still requires broader development testing, selection on registered validation candidates, a published-method comparator, and one final untouched test.
+Neither trial changes topic-cut probabilities or uses an LLM during indexing. Both completed all 256 expected predictions, using 32 new reader calls and two exact-batch cache hits.
+
+| Context policy | QASPER answer F1 | QASPER evidence recall | QuALITY-HARD accuracy |
+| --- | ---: | ---: | ---: |
+| Expanded pool, relevance order | 55.72 | 90.56 | 87.50 |
+| Rank fusion | 56.37 | 90.56 | 84.38 |
+| Topic-parent expansion | 53.09 | 90.56 | 89.06 |
+
+Neither follow-up is a clear improvement across both tasks. [All predictions](../../results/context-trial-v1/scores.json) and [usage](../../results/context-trial-v1/usage.json) are retained. No new Gemini or Jev calls were needed.
+
+## Reader variability changes the next step
+
+For rank fusion, 27 QASPER questions received exactly the same individual source context as the expanded-pool run; **14 nevertheless changed answer score**. For parent expansion, **19 of 46** such questions changed score. QuALITY had 0 of 25 and 1 of 39 score changes respectively. See the [exact-context audit](../../results/context-trial-v1/reader-variability.json).
+
+The batch prompts included other cases whose contexts differed. This audit cannot separate stochastic generation from cross-case batch interference; either can contaminate a small retrieval comparison. Evidence recall is computed from deterministic source spans and is unaffected by this reader issue. Historical outputs are preserved, but their answer deltas are provisional development observations.
+
+The [isolated-reader rerun](isolated-reader-manifest.json) keeps all five retrieval configurations and all 128 questions, submits **one case per reader call**, and shares one prediction whenever case ID, query and context are identical across methods. Its 640 method/question predictions require **488 distinct calls**. It keeps the same Codex reader model and instruction and makes no new indexing, reranking or Gemini calls. It removes batch coupling and matched-context resampling; a single draw still leaves uncertainty for genuinely different contexts.
+
+Successful development screening still requires broader development testing, selection on registered validation candidates, a published-method comparator, and one final untouched test. No candidate has been promoted to the production default.

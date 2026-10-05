@@ -1,0 +1,825 @@
+[
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "01e2d0153bf8f3336cf7c8b515fdf369ae981c72b6a359058796710cedb313c6",
+    "case_ids": [
+      "qasper/0c7cb3010ed92b8d46583a67e72946a6c0115f1f",
+      "qasper/101d7a355e8bf6d1860917876ee0b9971eae7a2f",
+      "qasper/1237b6fcc64b43901415f3ded17cc210a54ab698",
+      "qasper/15aeda407ae3912419fd89211cdb98989d9cde58",
+      "qasper/18fbfb1f88c5487f739aceffd23210a7d4057145",
+      "qasper/1c8958ec50976a9b1088c51e8f73a767fb3973fa",
+      "qasper/1d9d7c96c5e826ac06741eb40e89fca6b4b022bd",
+      "qasper/256dfa501a71d7784520a527f43aec0549b1afea"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 32923,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 631,
+      "reasoning_output_tokens": 34
+    },
+    "seconds": 24.032913199975155
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "fc4cf142df0c02dd3360bc0dff2d4b20d044d481b71a7a9afb816089ed957563",
+    "case_ids": [
+      "qasper/0c7cb3010ed92b8d46583a67e72946a6c0115f1f",
+      "qasper/101d7a355e8bf6d1860917876ee0b9971eae7a2f",
+      "qasper/1237b6fcc64b43901415f3ded17cc210a54ab698",
+      "qasper/15aeda407ae3912419fd89211cdb98989d9cde58",
+      "qasper/18fbfb1f88c5487f739aceffd23210a7d4057145",
+      "qasper/1c8958ec50976a9b1088c51e8f73a767fb3973fa",
+      "qasper/1d9d7c96c5e826ac06741eb40e89fca6b4b022bd",
+      "qasper/256dfa501a71d7784520a527f43aec0549b1afea"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 32848,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 636,
+      "reasoning_output_tokens": 37
+    },
+    "seconds": 24.43643860000884
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "958050f759e3fb0ccb96a3e2b1cf19fc7844ce3d476cfcffa599e355fbf6eb3b",
+    "case_ids": [
+      "qasper/267d70d9f3339c56831ea150d2213643fbc5129b",
+      "qasper/28e50459da60ceda49fe1578c12f3f805b288bd0",
+      "qasper/29794bda61665a1fbe736111e107fd181eacba1b",
+      "qasper/2b75df325c98b761faf2fecf6e71ac7366eb15ea",
+      "qasper/3499d5feeb3a45411d8e893516adbdc14e72002a",
+      "qasper/35c01dc0b50b73ee5ca7491d7d373f6e853933d2",
+      "qasper/3d662fb442d5fc332194770aac835f401c2148d9",
+      "qasper/441be93e2830cc0fc65afad6959db92754c9f5a8"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 32983,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 527,
+      "reasoning_output_tokens": 56
+    },
+    "seconds": 22.28826569998637
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "8565627ca3176e3a0415e8d47d4717499067ab38ccc33a9e8bf91e1cae77bf29",
+    "case_ids": [
+      "qasper/267d70d9f3339c56831ea150d2213643fbc5129b",
+      "qasper/28e50459da60ceda49fe1578c12f3f805b288bd0",
+      "qasper/29794bda61665a1fbe736111e107fd181eacba1b",
+      "qasper/2b75df325c98b761faf2fecf6e71ac7366eb15ea",
+      "qasper/3499d5feeb3a45411d8e893516adbdc14e72002a",
+      "qasper/35c01dc0b50b73ee5ca7491d7d373f6e853933d2",
+      "qasper/3d662fb442d5fc332194770aac835f401c2148d9",
+      "qasper/441be93e2830cc0fc65afad6959db92754c9f5a8"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 32981,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 553,
+      "reasoning_output_tokens": 59
+    },
+    "seconds": 22.436319400032517
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "640e1050d9e21da3abb2c5ab19257bd4fbf03699c83195dac190740be45afb47",
+    "case_ids": [
+      "qasper/5154f63c50729b8ac04939588c2f5ffeb916e3df",
+      "qasper/57ee20f494d8ce3fae46028c3f3551d180dba3e0",
+      "qasper/58a3cfbbf209174fcffe44ce99840c758b448364",
+      "qasper/58df55002fbcba76b9aeb2181d78378b8c01a827",
+      "qasper/5a473f86052cf7781dfe40943ddf99bc9fe8a4e4",
+      "qasper/5f25b57a1765682331e90a46c592a4cea9e3a336",
+      "qasper/65e26b15e087bedb6e8782d91596b35e7454b16b",
+      "qasper/6a20a3220c4edad758b912e2d3e5b99b0b295d96"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 32949,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 477,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 21.80202130001271
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "98cc3c7b275d48bacf32fb5cc9fe72c4396089347b8a31299de3a3414b558401",
+    "case_ids": [
+      "qasper/5154f63c50729b8ac04939588c2f5ffeb916e3df",
+      "qasper/57ee20f494d8ce3fae46028c3f3551d180dba3e0",
+      "qasper/58a3cfbbf209174fcffe44ce99840c758b448364",
+      "qasper/58df55002fbcba76b9aeb2181d78378b8c01a827",
+      "qasper/5a473f86052cf7781dfe40943ddf99bc9fe8a4e4",
+      "qasper/5f25b57a1765682331e90a46c592a4cea9e3a336",
+      "qasper/65e26b15e087bedb6e8782d91596b35e7454b16b",
+      "qasper/6a20a3220c4edad758b912e2d3e5b99b0b295d96"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 32984,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 481,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 23.064607199979946
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "f32f6b59dba2f30836074feb9b6064a3de6eda157686bc9ff8579676400b7893",
+    "case_ids": [
+      "qasper/71b07d08fb6ac8732aa4060ae94ec7c0657bb1db",
+      "qasper/7239c02a0dcc0c3c9d9cddb5e895bcf9cfcefee6",
+      "qasper/72c04eb3fc323c720f7f8da75c70f09a35abf3e6",
+      "qasper/72dbdd11b655b25b2b254e39689a7d912f334b71",
+      "qasper/7d539258b948cd5b5ad1230a15e4b739f29ed947",
+      "qasper/7ef34b4996ada33a4965f164a8f96e20af7470c0",
+      "qasper/806fefe0e331ddb3c17245d6a9fa7433798e367f",
+      "qasper/8641156c4d67e143ebbabbd79860349242a11451"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 32897,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 560,
+      "reasoning_output_tokens": 38
+    },
+    "seconds": 22.44212719995994
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "f1d55743b85b8a7f80b654e649f8f25b442b38b01a24cf0a9dac0fd3b4debb64",
+    "case_ids": [
+      "qasper/71b07d08fb6ac8732aa4060ae94ec7c0657bb1db",
+      "qasper/7239c02a0dcc0c3c9d9cddb5e895bcf9cfcefee6",
+      "qasper/72c04eb3fc323c720f7f8da75c70f09a35abf3e6",
+      "qasper/72dbdd11b655b25b2b254e39689a7d912f334b71",
+      "qasper/7d539258b948cd5b5ad1230a15e4b739f29ed947",
+      "qasper/7ef34b4996ada33a4965f164a8f96e20af7470c0",
+      "qasper/806fefe0e331ddb3c17245d6a9fa7433798e367f",
+      "qasper/8641156c4d67e143ebbabbd79860349242a11451"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 32892,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 591,
+      "reasoning_output_tokens": 59
+    },
+    "seconds": 23.607836699986365
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "8e765630e20d9c07e5c644f4a805477f4677f1d50122d36935198caa5c6ee2c5",
+    "case_ids": [
+      "qasper/8701ec7345ccc2c35eca4e132a8e16d58585cd63",
+      "qasper/887d7f3edf37ccc6bf2e755dae418b04d2309686",
+      "qasper/90829d5fde4f5f0ffc184c5e8fc64c8ac5ece521",
+      "qasper/91d4fd5796c13005fe306bcd895caaed7fa77030",
+      "qasper/98c8ed9019e43839ffb53a714bc37fbb1c28fe2c",
+      "qasper/99f898eb91538cb82bc9a00892d54ae2a740961e",
+      "qasper/a3e7d7389228a197c8c44e0c504a791b60f2c80d",
+      "qasper/a86758696926f2db71f982dc1a4fa4404988544e"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 32607,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 584,
+      "reasoning_output_tokens": 62
+    },
+    "seconds": 22.321977000043262
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "fab3d561f63dca7523bf8531fe9eea99a3ab65754ec73c3afd4aad0c50f6d3c4",
+    "case_ids": [
+      "qasper/8701ec7345ccc2c35eca4e132a8e16d58585cd63",
+      "qasper/887d7f3edf37ccc6bf2e755dae418b04d2309686",
+      "qasper/90829d5fde4f5f0ffc184c5e8fc64c8ac5ece521",
+      "qasper/91d4fd5796c13005fe306bcd895caaed7fa77030",
+      "qasper/98c8ed9019e43839ffb53a714bc37fbb1c28fe2c",
+      "qasper/99f898eb91538cb82bc9a00892d54ae2a740961e",
+      "qasper/a3e7d7389228a197c8c44e0c504a791b60f2c80d",
+      "qasper/a86758696926f2db71f982dc1a4fa4404988544e"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 32629,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 584,
+      "reasoning_output_tokens": 47
+    },
+    "seconds": 21.9676767999772
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "78421330708e86fa5586ae37ade3d3858f0c4beb293a6f88ed7570fa83e5941a",
+    "case_ids": [
+      "qasper/ae7c5cf9c2c121097eb00d389cfd7cc2a5a7d577",
+      "qasper/bd3562d2b3c162e9d27404d56b77e15f707d8b0f",
+      "qasper/be632f0246c2e5f049d12e796812f496e083c33e",
+      "qasper/c463136ba9a312a096034c872b5c74b9d58cef95",
+      "qasper/c5221bb28e58a4f13cf2eccce0e1b1bec7dd3c13",
+      "qasper/c626637ed14dee3049b87171ddf326115e59d9ee",
+      "qasper/cbb3c1c1e6e1818b6480f929f1c299eaa5ffd07a",
+      "qasper/cc8b4ed3985f9bfbe1b5d7761b31d9bd6a965444"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 32800,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 541,
+      "reasoning_output_tokens": 34
+    },
+    "seconds": 22.33432470000116
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "1bbdee08c7018745c4705b76582a41a1c578b181c3da2a518adb17c3226d0e34",
+    "case_ids": [
+      "qasper/ae7c5cf9c2c121097eb00d389cfd7cc2a5a7d577",
+      "qasper/bd3562d2b3c162e9d27404d56b77e15f707d8b0f",
+      "qasper/be632f0246c2e5f049d12e796812f496e083c33e",
+      "qasper/c463136ba9a312a096034c872b5c74b9d58cef95",
+      "qasper/c5221bb28e58a4f13cf2eccce0e1b1bec7dd3c13",
+      "qasper/c626637ed14dee3049b87171ddf326115e59d9ee",
+      "qasper/cbb3c1c1e6e1818b6480f929f1c299eaa5ffd07a",
+      "qasper/cc8b4ed3985f9bfbe1b5d7761b31d9bd6a965444"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 32803,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 531,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 22.69949899998028
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "3a1edff00c127448fbbbf07a70ba8e78a6cd785a8fa5219a5265dbc9ebcb771b",
+    "case_ids": [
+      "qasper/cef3a26d8b46cd057bcc2abd3d648dc15336a2bf",
+      "qasper/cfcf94b81589e7da215b4f743a3f8de92a6dda7a",
+      "qasper/d20fd6330cb9d03734e2632166d6c8f780359a94",
+      "qasper/d2451d32c5a11a0eb8356a5e9d94a9231b59f198",
+      "qasper/d2f91303cec132750a416192f67c8ac1d3cf6fc0",
+      "qasper/d323f0d65b57b30ae85fb9f24298927a3d1216e9",
+      "qasper/d5bce5da746a075421c80abe10c97ad11a96c6cd",
+      "qasper/d9354c0bb32ec037ff2aacfed58d57887a713163"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 32810,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 462,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 18.561155900009908
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "6f165ae329d2363883ef922c6308a055129547df60e496071a77c3625a40f07b",
+    "case_ids": [
+      "qasper/cef3a26d8b46cd057bcc2abd3d648dc15336a2bf",
+      "qasper/cfcf94b81589e7da215b4f743a3f8de92a6dda7a",
+      "qasper/d20fd6330cb9d03734e2632166d6c8f780359a94",
+      "qasper/d2451d32c5a11a0eb8356a5e9d94a9231b59f198",
+      "qasper/d2f91303cec132750a416192f67c8ac1d3cf6fc0",
+      "qasper/d323f0d65b57b30ae85fb9f24298927a3d1216e9",
+      "qasper/d5bce5da746a075421c80abe10c97ad11a96c6cd",
+      "qasper/d9354c0bb32ec037ff2aacfed58d57887a713163"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 32832,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 459,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 18.85122389998287
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "315a76f0e60194f5a9441fb5b14d2a9f317daf283b42c18939ea6dccab7649a0",
+    "case_ids": [
+      "qasper/da0a2195bbf6736119ff32493898d2aadffcbcb8",
+      "qasper/da4d07645edaf7494a8cb5216150a00690da01f7",
+      "qasper/e2a507749a4a3201edd6413c77ad0d4c23e9c6ce",
+      "qasper/e459760879f662b2205cbdc0f5396dbfe41323ae",
+      "qasper/e831ce6c406bf5d1c493162732e1b320abb71b6f",
+      "qasper/ee2c2fb01d67f4c58855bf23186cbd45cecbfa56",
+      "qasper/f6346828c2f44529dc307abf04dd246bfeb4a9b2",
+      "qasper/fac273ecb3e72f2dc94cdbc797582d7225a8e070"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 32947,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 440,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 18.52728979999665
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "8f4777ba659f2be01af400d2b1b266dc8116c5d4c559ad3ad36f53b2ea2cf7b9",
+    "case_ids": [
+      "qasper/da0a2195bbf6736119ff32493898d2aadffcbcb8",
+      "qasper/da4d07645edaf7494a8cb5216150a00690da01f7",
+      "qasper/e2a507749a4a3201edd6413c77ad0d4c23e9c6ce",
+      "qasper/e459760879f662b2205cbdc0f5396dbfe41323ae",
+      "qasper/e831ce6c406bf5d1c493162732e1b320abb71b6f",
+      "qasper/ee2c2fb01d67f4c58855bf23186cbd45cecbfa56",
+      "qasper/f6346828c2f44529dc307abf04dd246bfeb4a9b2",
+      "qasper/fac273ecb3e72f2dc94cdbc797582d7225a8e070"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 32957,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 476,
+      "reasoning_output_tokens": 30
+    },
+    "seconds": 19.35156779998215
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "b0023b666b0c4b5918e848e565fa773c92d70a336ed226a773c3f0cc5917b76f",
+    "case_ids": [
+      "quality/20002_GO5OYJJA_4",
+      "quality/20020_TRPTAKN4_10",
+      "quality/20027_2RUIA5TI_1",
+      "quality/20031_0W08N5TX_10",
+      "quality/20041_E0WD00T4_4",
+      "quality/20055_VR0SZT3O_5",
+      "quality/20056_IMXXLOR8_8",
+      "quality/20068_RWLK60G7_6"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 33206,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 167,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 10.345312400022522
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "9d92e0604da0b1c4e2704ed5dbfdb5f2bb7ef39112f771722f2b500a4589fb7b",
+    "case_ids": [
+      "quality/20002_GO5OYJJA_4",
+      "quality/20020_TRPTAKN4_10",
+      "quality/20027_2RUIA5TI_1",
+      "quality/20031_0W08N5TX_10",
+      "quality/20041_E0WD00T4_4",
+      "quality/20055_VR0SZT3O_5",
+      "quality/20056_IMXXLOR8_8",
+      "quality/20068_RWLK60G7_6"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 33297,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 167,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 12.97100550000323
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "28a416675c363d1d6a700d101fdcd9ec455abbfc45567bfb2d4707963c9f5f52",
+    "case_ids": [
+      "quality/20020_TRPTAKN4_4",
+      "quality/22073_KJM8YN1V_8",
+      "quality/22346_DOS3P3V1_8",
+      "quality/22590_L3MXZ6V8_3",
+      "quality/22876_RFMXOBNA_2",
+      "quality/22958_CIJCBUXL_9",
+      "quality/22967_23S4S1XW_7",
+      "quality/23104_4MQFQVNM_1"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 33998,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 206,
+      "reasoning_output_tokens": 36
+    },
+    "seconds": 11.423132699972484
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "883515cc02e13b97b389ecc408722ad7827582d6073d788db8a9c0225e6dbd69",
+    "case_ids": [
+      "quality/20020_TRPTAKN4_4",
+      "quality/22073_KJM8YN1V_8",
+      "quality/22346_DOS3P3V1_8",
+      "quality/22590_L3MXZ6V8_3",
+      "quality/22876_RFMXOBNA_2",
+      "quality/22958_CIJCBUXL_9",
+      "quality/22967_23S4S1XW_7",
+      "quality/23104_4MQFQVNM_1"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 34037,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 198,
+      "reasoning_output_tokens": 28
+    },
+    "seconds": 10.505120699992403
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "ba44d7afd50a439885bf64de56f7fa1f6619c924c7caf168fabfdd9115b72981",
+    "case_ids": [
+      "quality/23160_I33FJB5C_5",
+      "quality/30035_C0HFCNPI_3",
+      "quality/31282_BQYW9TCH_4",
+      "quality/31736_9W69Z6VQ_5",
+      "quality/40965_ZUFZ7UG6_2",
+      "quality/50818_U50BKW97_5",
+      "quality/50948_U9YCQJBR_2",
+      "quality/51126_PGSZW543_1"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 33978,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 166,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 10.396353200019803
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "5131677920c0b0ff1c1c60de873d037fa2e261b22721a81f01de48550a4cf6ad",
+    "case_ids": [
+      "quality/23160_I33FJB5C_5",
+      "quality/30035_C0HFCNPI_3",
+      "quality/31282_BQYW9TCH_4",
+      "quality/31736_9W69Z6VQ_5",
+      "quality/40965_ZUFZ7UG6_2",
+      "quality/50818_U50BKW97_5",
+      "quality/50948_U9YCQJBR_2",
+      "quality/51126_PGSZW543_1"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 33900,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 166,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 11.429246699961368
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "90399a278890ada0c661a96d5f845c4a8c36bcf4b1b414c866aefabc53c9471c",
+    "case_ids": [
+      "quality/30035_SLGX7NNR_5",
+      "quality/31736_TV0CUXDH_10",
+      "quality/51126_PGSZW543_5",
+      "quality/51256_MZNDC998_8",
+      "quality/51274_8Q2YNHG5_3",
+      "quality/51295_JKASXZ9X_8",
+      "quality/51350_VLBM4QEI_2",
+      "quality/51395_2PILALCT_5"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 34080,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 190,
+      "reasoning_output_tokens": 24
+    },
+    "seconds": 13.679509500041604
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "2bb318673fb44f95cc64199ae992f6ac76687deddf1b6682ee1d058e028268da",
+    "case_ids": [
+      "quality/30035_SLGX7NNR_5",
+      "quality/31736_TV0CUXDH_10",
+      "quality/51126_PGSZW543_5",
+      "quality/51256_MZNDC998_8",
+      "quality/51274_8Q2YNHG5_3",
+      "quality/51295_JKASXZ9X_8",
+      "quality/51350_VLBM4QEI_2",
+      "quality/51395_2PILALCT_5"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 34060,
+      "cached_input_tokens": 0,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 199,
+      "reasoning_output_tokens": 33
+    },
+    "seconds": 10.744703499949537
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "070601638681e278fd9de9c6063bda14ef01273ce2c86cbbd6f754624a69dbe8",
+    "case_ids": [
+      "quality/51350_VLBM4QEI_6",
+      "quality/51395_9PYVRG7M_1",
+      "quality/51461_YZX4JZ16_5",
+      "quality/51483_T4WIZ6A8_3",
+      "quality/51605_E8R4X4OP_5",
+      "quality/51650_B3KKWWD1_3",
+      "quality/51687_3JYPCVFP_6",
+      "quality/52845_91NAQ9LY_7"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 33813,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 234,
+      "reasoning_output_tokens": 61
+    },
+    "seconds": 12.11742999998387
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "8480c64f539a64f83eb9ccbf1a6fba399e97ea280b008245fb4760d6d522196a",
+    "case_ids": [
+      "quality/51350_VLBM4QEI_6",
+      "quality/51395_9PYVRG7M_1",
+      "quality/51461_YZX4JZ16_5",
+      "quality/51483_T4WIZ6A8_3",
+      "quality/51605_E8R4X4OP_5",
+      "quality/51650_B3KKWWD1_3",
+      "quality/51687_3JYPCVFP_6",
+      "quality/52845_91NAQ9LY_7"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 33787,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 275,
+      "reasoning_output_tokens": 102
+    },
+    "seconds": 18.947252799989656
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "b407b21b1a9ebe16462c0559944e1ac8236ed1e0567ff5985c21d7ba2d465f67",
+    "case_ids": [
+      "quality/52855_MV65I88C_2",
+      "quality/59368_LBNEJQ7W_9",
+      "quality/60412_XM0T4STT_7",
+      "quality/60745_U9M4CL5M_4",
+      "quality/61146_76LHD3BB_3",
+      "quality/61434_C4DV5MOT_1",
+      "quality/61467_TASABS87_6",
+      "quality/62261_SJZYUNBJ_3"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 34361,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 215,
+      "reasoning_output_tokens": 46
+    },
+    "seconds": 11.845688299974427
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "9c63b87d597e08fadf274341d2be7224590abc7593df1a45f9e7a0fdae719872",
+    "case_ids": [
+      "quality/52855_MV65I88C_2",
+      "quality/59368_LBNEJQ7W_9",
+      "quality/60412_XM0T4STT_7",
+      "quality/60745_U9M4CL5M_4",
+      "quality/61146_76LHD3BB_3",
+      "quality/61434_C4DV5MOT_1",
+      "quality/61467_TASABS87_6",
+      "quality/62261_SJZYUNBJ_3"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 34390,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 167,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 11.428734000015538
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "b7eea4d926ddf8e5d34e661eed6303e933d5f0e00d8e067391c5d5d22367bbc5",
+    "case_ids": [
+      "quality/62261_SJZYUNBJ_7",
+      "quality/63130_PRY03TR7_6",
+      "quality/63150_2I9H6MLD_1",
+      "quality/63401_ZCP5ZDGL_7",
+      "quality/63473_1VIHQ8TY_3",
+      "quality/63812_DQG6TAWJ_10",
+      "quality/63833_NVJ3AK4J_8",
+      "quality/63855_OUVVRF81_3"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 34415,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 212,
+      "reasoning_output_tokens": 44
+    },
+    "seconds": 11.786099300021306
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "7266225f6bc813b2e48e997bcd9906206ebcb4cdc27ce22f959f60733b91dcff",
+    "case_ids": [
+      "quality/63812_G3YOJRZD_9",
+      "quality/63862_ZK5EYM9W_8",
+      "quality/63936_1LRE5TR5_4",
+      "quality/99911_QGCJUM40_10",
+      "quality/99914_0Q5X8VEX_3",
+      "quality/99916_T5VD7GB9_6",
+      "quality/99919_N8V2WS3L_6"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 30975,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 187,
+      "reasoning_output_tokens": 34
+    },
+    "seconds": 13.090408799995203
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "325ff4a8269035b089798d1a2dffb79ea78a3955d7736c627b98282083a9a06b",
+    "case_ids": [
+      "quality/63812_G3YOJRZD_9",
+      "quality/63862_ZK5EYM9W_8",
+      "quality/63936_1LRE5TR5_4",
+      "quality/99911_QGCJUM40_10",
+      "quality/99914_0Q5X8VEX_3",
+      "quality/99916_T5VD7GB9_6",
+      "quality/99919_N8V2WS3L_6"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 31105,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 188,
+      "reasoning_output_tokens": 35
+    },
+    "seconds": 12.371945100021549
+  },
+  {
+    "stage": "reader",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "low",
+    "request_sha256": "e73146f2357317811b8c55c5ae0da313d4bb24c43f9563060eb257ffd555c6ab",
+    "case_ids": [
+      "quality/63936_1LRE5TR5_6"
+    ],
+    "status": "ok",
+    "tool_items": 0,
+    "usage": {
+      "input_tokens": 18173,
+      "cached_input_tokens": 14848,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 35,
+      "reasoning_output_tokens": 0
+    },
+    "seconds": 7.326473699999042
+  }
+]

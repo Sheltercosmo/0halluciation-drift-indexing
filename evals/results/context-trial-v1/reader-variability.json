@@ -1,0 +1,22 @@
+{
+  "jev_fusion_025/qasper": {
+    "same_own_context": 27,
+    "changed_answer": 17,
+    "changed_answer_score": 14
+  },
+  "jev_fusion_025/quality": {
+    "same_own_context": 25,
+    "changed_answer": 0,
+    "changed_answer_score": 0
+  },
+  "jev_topic_merge/qasper": {
+    "same_own_context": 46,
+    "changed_answer": 22,
+    "changed_answer_score": 19
+  },
+  "jev_topic_merge/quality": {
+    "same_own_context": 39,
+    "changed_answer": 1,
+    "changed_answer_score": 1
+  }
+}
