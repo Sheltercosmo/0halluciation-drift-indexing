@@ -14,7 +14,7 @@ Our index is a pure decision model based method with **0 LLM and optional embedd
 
 <p align="center">
   <a href="#quick-start">Quick start</a> ·
-  <a href="evals/BOUNDED_REPORT.md">Measured results</a> ·
+  <a href="#measured-performance">Measured results</a> ·
   <a href="docs/algorithm.md">Algorithm</a> ·
   <a href="#parallel-processing-optimization">Parallel processing</a> ·
   <a href="docs/retrieval.md">Retrieval</a> ·
@@ -29,9 +29,28 @@ Headings and contents supply the upper structure without model calls. Jev then s
 
 ![Indexing and retrieval pipeline](assets/pipeline.svg)
 
-## Measured, with limits
+## Measured performance
 
-The completed [384-question comparison](evals/BOUNDED_REPORT.md) evaluates decision-based blocking and its statistical cut rule together, against hybrid retrieval, semantic chunking, and Codex reranking. All methods use the same reader and a 2,048-token source budget.
+Our highest observed **QASPER answer F1 is 56.37** with Jev rank fusion on 64 development questions. Expanded Jev retrieval reaches **90.56% evidence recall** on the 58 questions with reference evidence. In the larger completed study, the original Jev pipeline scores **89.58% QuALITY-HARD accuracy** on 192 questions. These results belong to the configurations and samples below; they are not a combined score for one configuration.
+
+### Latest development results
+
+The following configurations use the same 64 questions per benchmark, an 8,192-token candidate pool and a 2,048-token final source budget. The reader is Codex; embeddings are enabled, and Jev indexing uses no generative LLM calls. All answer predictions are complete.
+
+| Configuration | QASPER answer F1, 64 questions | Evidence recall, 58 questions | QuALITY-HARD accuracy, 64 questions |
+| --- | ---: | ---: | ---: |
+| Jev + expanded candidate pool | 55.72 | **90.56%** | 87.50% |
+| **Jev + rank fusion** | **56.37** | **90.56%** | 84.38% |
+| Jev + topic-parent expansion | 53.09 | **90.56%** | **89.06%** |
+| Hybrid + Codex reranking, expanded pool | 53.78 | 91.35% | 90.63% |
+
+Expanding Jev's pool raised evidence recall from **82.18% to 90.56%** on this same sample: +8.37 points, with a descriptive 95% document-bootstrap interval of +3.08 to +14.78. The original 12-candidate Jev pipeline scored 52.64 answer F1 and 89.06% QuALITY-HARD accuracy. Rank fusion produced the highest QASPER answer score but reduced QuALITY accuracy, so no experimental configuration has replaced the default.
+
+**These are development results; answer-score comparisons are provisional.** The reader audit found different answer scores for identical individual contexts presented in different batches. Evidence recall is computed from source spans and is unaffected by that reader variability. A [registered rerun](evals/iterations/v1/isolated-reader-manifest.json) uses one question per reader call and reuses identical-context predictions across methods. It is still in progress. [Read the analysis and uncertainty](evals/iterations/v1/REPORT.md) · [Pool results](evals/results/pool-screen-v1/summary.json) · [Context results](evals/results/context-trial-v1/summary.json)
+
+### Larger completed comparison
+
+The completed [384-question comparison](evals/BOUNDED_REPORT.md) evaluates decision-based blocking and its statistical cut rule together, against hybrid retrieval, semantic chunking, and Codex reranking. All methods use the same reader and a 2,048-token source budget. Its questions are now exposed development material. Scores from this larger sample should not be compared directly with the 64-question screen above.
 
 | Pipeline | QuALITY-HARD accuracy, 192 questions | QASPER answer F1, 192 questions |
 | --- | ---: | ---: |
@@ -45,6 +64,8 @@ The completed [384-question comparison](evals/BOUNDED_REPORT.md) evaluates decis
 Iterative improvement is tracked in the [development log](evals/iterations/v1/REPORT.md), including failed hypotheses and uncertainty. The [split protocol](evals/ITERATION_PROTOCOL.md) reserves **1,425 validation questions and 1,559 untouched test questions**, grouped by document. Development gains are not presented as held-out or frontier results.
 
 The sample covers 307 documents and deliberately emphasizes hard and multi-evidence questions. It is not a full-benchmark result. The [research audit](evals/FRONTIER_EVALUATION.md) documents larger prepared datasets and possible follow-up comparisons.
+
+### Earlier pilots
 
 A frozen live pilot on **six synthetic documents and 24 questions** produced these results:
 
