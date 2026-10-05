@@ -1,54 +1,67 @@
-# Iterative improvement with an untouched test set
+# Development, validation and test for evidence retrieval
 
-Started 2026-10-05. The objective is a statistically supported improvement over strong, reproducible RAG systems. No result currently establishes frontier performance. The prior and sudden-drop rule remain one blocking method; there is no separate prior ablation.
+Updated 2026-10-05. The active design is [tree-retrieval-v3](TREE_SYSTEM_PROTOCOL.md): all eight split / central-sentence selection / search combinations, global embedding search across tree depths, and Jev exploration of promising nodes from root to leaves. Retrieval of source evidence is the primary outcome. The statistical prior and drop rule remain one splitting method.
 
-**Research direction updated 2026-10-05:** the next study compares Jev and embeddings for central sentences on fixed partitions, root-to-leaf routing under shared LLM proposals, and complete systems. The hybrid combines Jev tree retrieval with independent direct embedding retrieval. See the [component and system protocol](TREE_SYSTEM_PROTOCOL.md). The earlier flat-reranking screen remains historical development evidence; it is no longer the central research comparison. The split and holdout safeguards below remain in force.
+**Status:** existing document assignments remain authoritative and held-out outcomes remain unopened. The current Python gate implements the earlier answer-based experiment. It must be extended and verified for this retrieval design before opening validation; changing this document does not change the executable gate.
 
-## Separate development, validation and test by document
+## Preserve document-disjoint assignments
 
-The published bounded-v1 questions and their entire documents are **exposed development data**. Their original benchmark split names do not make them held out after failure analysis. QASPER training papers are additional development material. All QuALITY development articles are also development material, including questions not selected in bounded-v1.
+The published bounded-v1 questions and their documents are exposed development data. Their original benchmark split names do not make them held out after failure analysis. Additional QASPER training papers are development material. All QuALITY development articles are also development material.
 
-The new assignment uses seed 20261005 and canonical document IDs, normalized text hashes and normalized titles to keep matching documents together. A duplicate of an exposed/development document is excluded from validation and test. When a duplicate spans validation and test, it stays in validation. Identical generic questions about different papers do not themselves imply duplicate documents. This prevents the detectable overlap checked here; it cannot establish that foundation models never saw these public benchmarks during pretraining.
+The existing assignment uses seed 20261005, canonical document IDs, normalized text hashes and normalized titles. Documents matching development material are excluded from validation/test; validation duplicates take precedence over test. Keep the registry and source checksums unchanged. These checks establish detectable document separation, not absence of public benchmark material from model pretraining.
 
-| Benchmark release | Development | Validation | Locked test |
+| Dataset | Development questions | Validation questions | Locked test questions |
 | --- | --- | --- | --- |
-| QASPER v0.3 | Training release and the 192 previously evaluated test papers | Official development release | Remaining official test papers, excluding exposed/duplicate documents |
-| QuALITY v1.0.1 HARD | Official development articles | 50 deterministically selected training articles | Remaining 100 training articles, after duplicate exclusion |
+| QASPER | 3,316 | 1,005 | 728 |
+| QuALITY-HARD | 1,065 | 420 | 831 |
 
-The QuALITY split is a **custom document-held-out split**, not its hidden-label official test or a leaderboard submission. Public manifests record every assignment and source checksum. The split script reads labels only to serialize and hash gold files; it prints no held-out questions, labels, examples or outcome statistics. Test gold is separate from model inputs.
+QASPER development combines training with exposed test papers; validation uses the official development release; locked test uses remaining unexposed test papers after duplicate removal. QuALITY uses a custom document-held-out allocation and has no equivalent paragraph evidence labels. It is reserved for optional downstream QA, not the retrieval selection objective.
 
-Development is available for unrestricted error inspection and iteration. A fixed development screening subset contains up to 64 questions per benchmark from bounded-v1, selected by seeded ID hash before new predictions. The first candidate change expands the reranking pool using a common source-token cap rather than 12 chunks; all compared pipelines receive the same cap. Changes are evaluated on all screening cases, not just previous failures. Promising changes then run on all exposed questions.
+HotpotQA sentence selection and BRIGHT-Pro corpus retrieval require their own frozen task/split registrations. A supplied-candidate task and a full-corpus task must not be pooled into one retrieval score.
 
-Validation is for selecting frozen candidates, not inspecting individual failures. Before accessing it, register at most three candidate configurations and a deterministic selection rule. Report every candidate and aggregate scores, including regressions. Pick the highest average standardized improvement in QASPER answer F1 and QuALITY-HARD accuracy over the strongest matched baseline; break ties by lower query usage, then configuration hash. Do not add candidates in response to validation outcomes. A later research round needs a new untouched validation/test allocation.
+## Develop and freeze the complete comparison
 
-The validation gate saves an immutable registration before returning validation paths. It freezes one to three candidate configurations, required baselines, the reader and context budget, reader replicate count, evidence-recall margin, implementation hashes and the selection rule. A published-method baseline must identify its upstream commit and frozen adapter. The original Jev pipeline is a required regression control.
+Inspect failures and tune only on development. Use document-grouped development folds. Record the sampled parameter configurations and tuning allowance before each sweep; keep all outcomes. Software pilots establish correctness and timing, not benchmark superiority.
 
-The test-opening gate requires complete validation predictions for every registered method, question and reader replicate. It recomputes QASPER F1 with the hashed official evaluator and QuALITY accuracy from recorded answers, counts failed predictions as zero, and verifies the selected method. Caller-provided aggregate scores and a claimed completion status are insufficient. Both primary scores use the same 0–1 scale for selection; the mean improvement over the strongest registered baseline on each benchmark determines the winner. Ties use lower mean query model tokens, then configuration hash. Query tokens include retrieval and reader input/output tokens, including failed attempts; indexing usage is reported separately.
+The factorial study contains all eight EEE/EJE/EEJ/EJJ/JEE/JJE/JEJ/JJJ arms. Freeze shared stage settings and retain every arm as a fixed component comparator. Separately register at most three tuned complete-system finalists, including the independent-path hybrid where applicable. Register the required published baselines with upstream commits, model revisions and adapter hashes.
 
-The gate records test access before returning paths. Resumes must use exactly the same frozen bytes, complete validation artifacts and implementation. No test failure inspection or tuning occurs until all registered predictions and the final report are complete. Once opened, this test is spent for subsequent method development; an unsuccessful result does not authorize retuning and calling it held out again. This is an auditable workflow guard, not operating-system access control: prepared files remain readable, and the public preregistration must establish chronology independently.
+Before validation, freeze:
 
-Run `python scripts/validation_gate.py open-validation --registration <registered.json>` only after publishing the registration. Once every validation prediction is present, `python scripts/validation_gate.py freeze-winner --predictions <predictions.json>` produces the frozen winner. `python scripts/iteration_splits.py open-test --frozen output/improvement-v1/frozen-winner.json` verifies that selection again. These commands have not been run on the real held-out partitions.
+- Data registry, implementation and source hashes, source-ID mapping and scorer version.
+- All eight component arms, required baselines and up to three selectable system finalists.
+- Query planner, shared requests, failure fallback and generation settings.
+- Source-access policy, global embedding search settings, Jev frontier/acceptance settings, and final extraction/packing policies.
+- Primary retrieval score, denominators, acceptable-reference handling, secondary metrics, planned contrasts and tie-breaks.
+- Output limits, resource limits, failure/truncation accounting and latency measurement procedure.
 
-## Comparisons and success criterion
+The proposed selection rule is highest mean QASPER evidence F1 for up to five original paragraphs among the selectable system finalists. Break exact ties by lower mean standalone retrieval model tokens, then configuration hash; publish actual latency and other work separately. All finalists use the same tokenizer and usage accounting. Empty-evidence cases are reported separately from evidence-bearing retrieval; answerability conventions and failure handling must be frozen before labels are scored.
 
-Keep one reader model/prompt, source parsing, final context limit and scoring implementation across pipelines. Indexing remains independent of questions and gold labels. Record candidate-token exposure separately from final reader tokens, as well as candidate counts, reranking calls, preprocessing calls, latency and failures. Improvements may change retrieval, but their extra query compute must be explicit. Include the original Jev pipeline to measure regression.
+Validation selects among already registered finalists. Do not inspect its individual failures, change candidates or retune thresholds after seeing aggregate outcomes. The fixed eight component arms are all retained regardless of validation ranking.
 
-Required controls are hybrid retrieval with recursive and semantic chunking and a strong generative reranker. Before a frontier claim, also reproduce at least one applicable published open-source retrieval algorithm, pin its code and dependencies, check adapter fidelity, and use matched data/reader/budgets. A paper-inspired implementation is labeled as such, not presented as the paper's complete system. Full-context reading can be an additional diagnostic but has a different context budget.
+## Retrieval gate requirements
 
-Relevant primary sources checked on 2026-10-05:
+Extend the gate to accept fixed component arms separately from selectable finalists and to require retrieval predictions without requiring reader answers. It must verify complete coverage for all registered questions and methods before scoring, with explicit failure records, source IDs/spans, pre-packing ranks, delivered evidence and standalone usage.
 
-- [HiChunk / HiCBench](https://github.com/TencentCloudADP/hichunk): hierarchical chunking and automatic parent merging. Its README still has empty model/data links and requires a locally supplied trained checkpoint. Audit release availability before claiming a reproduction.
-- [RAPTOR](https://github.com/parthsarthi03/raptor): recursive clustering and abstractive summaries; retain model and summarization-cost differences in any adapted comparison.
-- [SARA](https://github.com/Ahren09/SARA): trained compression/projector and reader adapters, requiring a different model interface; not a plug-in comparator for the identical Codex reader.
-- [VecTree-RAG](https://arxiv.org/abs/2607.23006): its QASPER headline is model-judged correctness, not official token F1. Do not compare its 0.800 directly with our F1.
-- [QASPER](https://huggingface.co/datasets/allenai/qasper) and [QuALITY](https://github.com/nyu-mll/quality) provide the open data and annotations used here.
+Use the hashed evidence scorer to recompute primary validation scores from predictions; never trust caller-supplied aggregates. Freeze selection deterministically, recording its evidence and hashes. The test gate must verify the selected configuration and the complete validation artifacts before releasing test paths.
 
-The planned confirmatory primary outcomes are official QASPER answer token F1 and QuALITY-HARD accuracy, reported separately. Use whole-document paired bootstrap intervals and document-level paired randomization tests, with Holm correction across all registered superiority comparisons. A substantive target is at least **2 points improvement** and adjusted p < .05 on both benchmarks against each required strong baseline, without a material evidence-recall regression. Evidence recall/F1, invalid answers and abstention behavior remain secondary outcomes. Fix any non-inferiority margin, number of reader replicates and final baseline list before opening validation. No pooled leaderboard or SOTA claim follows merely from beating our earlier implementation.
+Do not run the existing answer-based `open-validation` or `freeze-winner` workflow for this study until these changes and checks are implemented. Existing test-access protections and document assignments still apply. Registration is an auditable workflow control, not filesystem access control.
 
-This target is an objective, not a guaranteed outcome. If a fixed confirmatory test fails, publish that result and continue only on newly designated data. Never repeatedly inspect test results until significance appears.
+Test is opened once after final freezing. No test failure inspection or tuning occurs until all registered predictions and reporting are complete. Once exposed, it is spent for later development; a subsequent research round needs new untouched evaluation data.
 
-## Cost and records
+## Scoring and claims
 
-Reuse content-addressed embeddings, indices and unchanged predictions. Gemini's existing $30 total cap continues across iterations; initialize the research ledger with the prior $5.410937 conservative reservation. Reserve before every attempted request, including retries. Codex uses the user's existing account allowance; record calls and tokens and stop on provider limits. Jev calls and decisions are counted separately.
+Primary: QASPER evidence F1 for up to five ranked original paragraphs, with precision, recall and complete-support recovery reported separately. Preserve alternative valid evidence sets rather than treating every annotator's evidence as jointly required. Keep evidence-bearing and empty/unanswerable strata separate and report their counts. Failed predictions remain in the corresponding denominator.
 
-Every iteration records its hypothesis, frozen configuration, input IDs, source hashes, observed failures, all scores and the decision to accept or reject it. Frozen historical runs are never rewritten. Regression tests verify source offsets, complete paragraph coverage, token budgets, split isolation, deterministic resumes and budget enforcement; they do not substitute for measured benchmark gains.
+Secondary: retrieval at other paragraph counts, delivered evidence under 512/1,024/2,048 source-token caps, supporting-fact accuracy on sentence-labeled data, corpus ranking metrics on the corpus track, and quality-versus-work curves. A sentence's membership in a gold paragraph does not establish that it is supporting evidence.
+
+Use paired bootstrap confidence intervals clustered by document. Pre-register primary component contrasts and system comparisons, with multiplicity adjustment within the declared families. Estimate detectable effect sizes from development and available document counts before claiming the test can establish a small gain. Practical gain targets and any efficiency noninferiority margin must be fixed before validation; they must not be selected after inspecting test outcomes.
+
+Report every frozen arm and losses. Compare complete systems on the same source collection and output limits, retaining upstream architectures and recording indexing/query work. A corpus method using an embedding first stage is reported as a composite method. A same-pool reranker win is not a full-corpus retrieval win.
+
+Answer generation is optional after retrieval configurations are frozen and uses the same reader and output policy across systems. It does not select the primary retrieval winner. No frontier claim follows solely from improvement over the old implementation or one local baseline.
+
+## Reproducibility and public reporting
+
+Reuse only exact content-addressed inputs and compatible model outputs. Each run records configuration, code/data/model hashes, question IDs, source spans, traces, failures, metrics and actual usage. Software tests verify index independence, non-central evidence access, global embedding eligibility, Jev branch retention, token packing and complete resumes.
+
+Keep historical registrations and scores immutable. Public reports identify the dataset scope, methods, metrics, uncertainty and implementation limits. Private operational ledgers and personal spending details do not belong in the scientific narrative.
