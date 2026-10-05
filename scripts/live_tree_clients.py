@@ -4,10 +4,40 @@ import os
 from pathlib import Path
 import threading
 import time
+from concurrent.futures import ThreadPoolExecutor
+from contextlib import ExitStack
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
-from scripts.bounded_clients import Audit, Budget, Codex, path_lock, save, signature, validate_answers, validate_rankings
+from scripts.bounded_clients import Audit, Budget, Codex, Embeddings, path_lock, save, signature, validate_answers, validate_rankings
+
+
+class LiveEmbeddings(Embeddings):
+    """Same ordered 64-input requests, with at most eight independent batches in flight."""
+    def __init__(self, output, budget):
+        super().__init__(output, budget)
+        self.pool = ThreadPoolExecutor(max_workers=8)
+
+    def embed(self, texts, stage):
+        import numpy as np
+        paths = {s: self.cache / (signature({'model': self.model, 'dimensions': 768, 'text': s}) + '.json') for s in texts}
+        # Lock individual keys in stable order. Concurrent questions sharing one document
+        # cannot send duplicate embeddings, while unrelated documents can make progress.
+        with ExitStack() as stack:
+            for path in sorted(set(paths.values())):
+                stack.enter_context(path_lock(path))
+            missing = [s for s, path in paths.items() if not path.exists()]
+            jobs = [self.pool.submit(Embeddings.embed.__wrapped__, self, missing[i:i+64], stage)
+                    for i in range(0, len(missing), 64)]
+            failures = []
+            for job in jobs:
+                try:
+                    job.result()
+                except Exception as error:
+                    failures.append(error)
+            if failures:
+                raise failures[0]
+            return np.asarray([json.loads(paths[s].read_text(encoding='utf-8')) for s in texts])
 
 
 class LiveBudget(Budget):

@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from scripts.bounded_clients import Embeddings, save, signature
 from scripts.bounded_eval import Jev, bm25, covered_paragraphs, query_text, read_json, sections, sha, tokenizer
-from scripts.live_tree_clients import Gemini, LiveBudget
+from scripts.live_tree_clients import Gemini, LiveBudget, LiveEmbeddings
 from scripts.planned_evidence_trial import PLAN_INSTRUCTION, PLAN_SCHEMA, validate_plan
 from zero_index.context import candidate_pool
 from zero_index.embeddings import CentroidRepresentatives
@@ -165,7 +165,7 @@ def run(output, stage, workers=8):
     cases, docs = read_json(output / 'cases.json'), read_json(OLD / 'documents.json')
     budget = LiveBudget(ROOT / 'output/research-budget.json')
     enc = tokenizer(); count = lambda s: len(enc.encode(s, disallowed_special=()))
-    embed = Embeddings(output, budget)
+    embed = LiveEmbeddings(output, budget)
     embed.cache = OLD / 'embedding-cache'  # Exact content-addressed cache; new calls have this run's audit.
     llm = Gemini(output, budget)
 

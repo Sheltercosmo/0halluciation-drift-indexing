@@ -1,15 +1,48 @@
 import tempfile
 import unittest
+import json
+import io
+import threading
+import time
+from concurrent.futures import ThreadPoolExecutor
+from unittest.mock import patch
 from pathlib import Path
 
 from scripts.bounded_clients import save
-from scripts.live_tree_clients import LiveBudget
+from scripts.live_tree_clients import LiveBudget, LiveEmbeddings
 from scripts.live_tree_eval import tree
 from zero_index.index import reselect_representatives
 from zero_index.embeddings import CentroidRepresentatives
 
 
 class LiveEvaluationTests(unittest.TestCase):
+    def test_concurrent_embedding_requests_deduplicate_shared_texts(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            budget = LiveBudget(root / 'budget.json')
+            client = LiveEmbeddings(root, budget)
+            seen, active, peak = [], 0, 0
+            lock = threading.Lock()
+            def respond(request, timeout):
+                nonlocal active, peak
+                body = json.loads(request.data)
+                texts = [r['content']['parts'][0]['text'] for r in body['requests']]
+                with lock:
+                    active += 1; peak = max(peak, active); seen.extend(texts)
+                time.sleep(.02)
+                with lock: active -= 1
+                return io.BytesIO(json.dumps({'embeddings': [{'values': [1.] + [0.] * 767} for _ in texts]}).encode())
+            texts = [f'text {i}' for i in range(128)]
+            with patch.dict('os.environ', {'GEMINI_API_KEY': 'test'}), patch.object(client, 'count_tokens', return_value=128), patch('scripts.bounded_clients.urlopen', side_effect=respond):
+                with ThreadPoolExecutor(max_workers=2) as pool:
+                    jobs = [pool.submit(client.embed, texts, 'fixture') for _ in range(2)]
+                    values = [job.result() for job in jobs]
+            client.pool.shutdown()
+            self.assertEqual(sorted(seen), sorted(texts))
+            self.assertEqual(values[0].shape, (128, 768))
+            self.assertTrue((values[0] == values[1]).all())
+            self.assertGreater(peak, 1)
+
     def test_generation_and_embedding_share_one_hard_dollar_cap(self):
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / 'budget.json'

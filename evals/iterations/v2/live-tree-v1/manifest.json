@@ -25,8 +25,8 @@
   "documents_sha256": "874f82d9eaf3d353a2fe5afffa287041358ad0a50b0af27ad862be5bc96af103",
   "registry_sha256": "b10aef13e1129db5453d2702d0970913a4d5333873702fb7c1db26942e6f65a9",
   "source_hashes": {
-    "scripts/live_tree_eval.py": "07e6c5309dd1ed9860388c55ec8153b2c98e32c86f28bed5bd1f59805e92f9c9",
-    "scripts/live_tree_clients.py": "76a70507e9b32994a54ac1688230e868ec09522c3591d127309a6e9386a50083",
+    "scripts/live_tree_eval.py": "09176a461d694dae492d06c5c898b7041398cd086e3871d06c87121291b02d80",
+    "scripts/live_tree_clients.py": "79322ccbbea2f18b5fde16441fbcaefa543fc5183c0ae5cfcf219a3f06feb773",
     "scripts/bounded_clients.py": "169e72258a8d495bd5e7ddf514779bb6155f37c448a889f87f3bf3491225b3d5",
     "scripts/bounded_eval.py": "6bc9a4938a83fbc4b4915fd56fdb4667d499ed39cb2144471d2afff37f8ba981",
     "scripts/planned_evidence_trial.py": "28e0dd96eb0dbdc0eda6a6731a9562f069733eda6af28b0eef63989543628625",
@@ -737,6 +737,11 @@
     {
       "reason": "Canonical benchmark trees omitted required config metadata; fixed before any representative output or routing inference. Plans and embeddings unchanged. Added immediate worker error reporting.",
       "original_registration_commit": "c851761438d9588de70117e65979e83c0888a0db",
+      "model_or_hyperparameter_changes": false
+    },
+    {
+      "reason": "Replace cache-wide embedding serialization with stable per-text locks and at most eight concurrent independent 64-input requests. Model, request grouping, vectors, data and method settings unchanged.",
+      "prior_registration_commit": "0ed328fb56cf333f43a545de8c78800796f8126b",
       "model_or_hyperparameter_changes": false
     }
   ]
