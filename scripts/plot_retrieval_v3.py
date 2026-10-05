@@ -1,19 +1,21 @@
-"""Plot complete registered test results using the published cluster intervals."""
+"""Plot a complete partition using its published document-cluster intervals."""
+import argparse
 import json
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
 
 
-def plot():
+def plot(partition='test'):
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     from matplotlib.ticker import PercentFormatter
-    source=ROOT/'evals/results/tree-retrieval-v3/test'
+    source=ROOT/'evals/results/tree-retrieval-v3'/partition
     stats=json.loads((source/'statistics.json').read_text(encoding='utf-8'))
     catalog=json.loads((source/'catalog.json').read_text(encoding='utf-8'))
-    assert catalog['questions']==728 and len(catalog['methods'])==18
+    assert catalog['questions']=={'validation':1005,'test':728}[partition] and len(catalog['methods'])==18
+    assert stats['partition']==catalog['partition']==partition
     primary=stats['metrics']['recall@5'];methods=primary['methods']
     assert set(methods)==set(catalog['methods'])
     names={'JJJ':'Jev split / central / tree search','hybrid':'Jev tree + independent dense',
@@ -42,15 +44,19 @@ def plot():
         ax.set_xlabel('Evidence paragraph recall@5')
         ax.set_title('Crossed components' if panel==0 else 'Complete systems and controls',loc='left',pad=22,fontweight='bold')
     fig.suptitle('Evidence paragraph retrieval',x=.055,y=.975,ha='left',fontsize=23,fontweight='bold',color='#263d31')
-    fig.text(.055,.922,f"Locked QASPER test · {primary['questions']} eligible questions across {primary['documents']} papers · whole-paragraph outputs",fontsize=12,color='#53645b')
+    label='Locked QASPER test' if partition=='test' else 'QASPER validation — test results pending'
+    fig.text(.055,.922,f"{label} · {primary['questions']} eligible questions across {primary['documents']} papers · whole-paragraph outputs",fontsize=12,color='#53645b')
     fig.text(.055,.045,'Letters: split / central-sentence selection / search.  E = embedding; J = Jev.\nWhiskers: 95% document-cluster bootstrap intervals. Retrieval inside the supplied paper.',fontsize=10,color='#53645b')
     fig.subplots_adjust(left=.055,right=.97,bottom=.14,top=.83,wspace=.95)
     destination=ROOT/'assets/figures';destination.mkdir(parents=True,exist_ok=True)
     for extension in ('svg','png'):
-        path=destination/('tree-retrieval-v3-test.'+extension)
+        path=destination/('tree-retrieval-v3-'+partition+'.'+extension)
         fig.savefig(path,dpi=220,facecolor='white',metadata={'Creator':'0halluciation drift indexing'})
         print(path)
     plt.close(fig)
 
 
-if __name__=='__main__':plot()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--partition',choices=('validation','test'),default='test')
+    plot(parser.parse_args().partition)

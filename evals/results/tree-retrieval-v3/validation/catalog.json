@@ -1,0 +1,53 @@
+{
+  "partition": "validation",
+  "questions": 1005,
+  "documents": 281,
+  "methods": [
+    "EEE",
+    "EEJ",
+    "EJE",
+    "EJJ",
+    "JEE",
+    "JEJ",
+    "JJE",
+    "JJJ",
+    "gemini_dense",
+    "bm25_dense_rrf",
+    "hybrid",
+    "qwen_dense",
+    "qwen_rerank",
+    "bge_dense",
+    "bge_rerank",
+    "qwen_jev_rerank",
+    "bge_jev_rerank",
+    "gemini_jev_rerank"
+  ],
+  "question_records": 1005,
+  "method_predictions": 18090,
+  "registration_sha256": "7b97dbbf69871ebd2b1c381c106c0decb71cf62b44415de2141a819c918d5b77",
+  "amendment_sha256": "18361cf3c82a75791b694e782ce625f11542f091a1e9748667296a853df57b74",
+  "files": {
+    "aligned-summary.json": {
+      "sha256": "acd0757ccfa5dc8766d299b04f93c9287660e4b1d2b60f93b9d71191e2d85ed6",
+      "bytes": 27597
+    },
+    "manifest.json": {
+      "sha256": "f1ca6b4ca742f6286c232a5a5097a9fe2828dcf6e54f29c853ca456c2f0d4edc",
+      "bytes": 5885
+    },
+    "predictions.jsonl.gz": {
+      "sha256": "c96070d538d61ff3cfd1ad2e8309158977b5fc446ba58e5649265acba0bdffd7",
+      "bytes": 3170077
+    },
+    "scores.jsonl.gz": {
+      "sha256": "af2b3df1352414959e2b033d826f156c9f1dbd0a85c5e484e3717e68ac35c972",
+      "bytes": 511143
+    },
+    "statistics.json": {
+      "sha256": "11e88af0b4138c685ebceef5fffa413c81a21b57a32688e9078be4b8755e641e",
+      "bytes": 36805
+    }
+  },
+  "scope": "whole original paragraphs inside the supplied QASPER paper",
+  "source_inputs": "prepared document-disjoint allocation; input hashes and source code are in manifest.json"
+}

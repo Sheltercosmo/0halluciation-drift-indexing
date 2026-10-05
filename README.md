@@ -33,7 +33,20 @@ Headings and contents supply the upper structure without model calls. Jev then s
 
 The [registered paragraph-retrieval comparison](evals/TREE_SYSTEM_PROTOCOL.md) tests all eight combinations of **topic splitting / central-sentence selection / search**, using either embeddings or Jev. Embeddings search globally across depths; Jev evaluates promising branches from root to paragraphs. Every method returns whole original paragraphs, including methods that find evidence through a sentence match.
 
-The implementation and [registration](evals/registrations/tree-retrieval-v3.json) are frozen, with a [pre-outcome amendment](evals/registrations/tree-retrieval-v3-jev-rerank-amendment.json) adding Jev reranker controls. The validation allocation contains **1,005 questions from 281 papers**, with a separate **728-question test allocation**. Execution is incomplete; held-out results have not been released. The 18 methods include direct Gemini retrieval followed by Jev reranking, published Qwen/BGE pipelines and an independent Jev-plus-dense hybrid. The direct-Gemini-plus-Jev control helps isolate tree exploration from Jev's paragraph relevance judgments. The primary metric is evidence paragraph recall@5, with complete evidence recovery and F1 alongside it. No generated-answer reader is used.
+The [completed validation comparison](evals/RETRIEVAL_V3_VALIDATION.md) covers **1,005 questions from 281 papers and all 18 methods**. The primary metric, evidence paragraph recall@5, uses the **864 questions with fully aligned paragraph evidence**. Complete evidence recovery, F1 and equal-token-budget results are also reported. No generated-answer reader is used.
+
+| System | Validation recall@5 | 95% document-cluster interval |
+| --- | ---: | ---: |
+| Jev split / central sentences / tree search (JJJ) | 82.21% | 79.65–84.70% |
+| Direct Gemini dense retrieval | 73.91% | 71.01–76.77% |
+| Direct Gemini dense retrieval + Jev reranking | 82.72% | 80.11–85.25% |
+| JJJ + independent Gemini dense retrieval | 82.08% | 79.46–84.60% |
+
+The matched comparisons show validation gains from Jev search and reranking, but no significant improvement from replacing embedding-based splitting or central-sentence selection. **Validation does not establish that the tree outperforms direct Gemini retrieval with Jev reranking.** The full report includes every crossed configuration, native Qwen/BGE baselines and Jev reranker replacements on identical candidate pools.
+
+The independent hybrid is useful at a larger reading budget: its validation recall at **2,048 source tokens is 95.77%**, compared with 85.75% for JJJ and 95.29% for direct Gemini + Jev. These are secondary, whole-paragraph budget results.
+
+The implementation and [registration](evals/registrations/tree-retrieval-v3.json) remain frozen, including the [pre-outcome amendment](evals/registrations/tree-retrieval-v3-jev-rerank-amendment.json). Validation selected JJJ over the hybrid under the registered rule. The separate **728-question test is incomplete**, so these validation results are not final test performance.
 
 This is a within-document QASPER study: every system receives the same paper. It does not establish full-corpus or frontier superiority. The small development pilot calibrates software and settings; its scores are not presented as held-out performance.
 
