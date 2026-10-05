@@ -1,0 +1,8 @@
+{
+  "questions": 728,
+  "methods": 18,
+  "predictions": 13104,
+  "verified_traces": 2912,
+  "manifest_sha256": "1ddcf779686a730f91b8b98c291f3f817f7a782e60511c8265932e144bcf7ebc",
+  "status": "complete"
+}

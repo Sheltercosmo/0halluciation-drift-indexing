@@ -1,0 +1,11 @@
+{
+  "questions": 728,
+  "expected_questions": 728,
+  "status": "complete",
+  "unchanged_native_predictions": 2912,
+  "verified_tree_traces": 2912,
+  "document_disjoint": true,
+  "original_allocation_preserved": true,
+  "gold_read": false,
+  "manifest_sha256": "1ddcf779686a730f91b8b98c291f3f817f7a782e60511c8265932e144bcf7ebc"
+}

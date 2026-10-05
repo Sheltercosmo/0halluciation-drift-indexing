@@ -1,0 +1,65 @@
+{
+  "version": "tree-retrieval-v4",
+  "partition": "test",
+  "questions": 728,
+  "documents": 224,
+  "methods": [
+    "EEE",
+    "EEJ",
+    "EJE",
+    "EJJ",
+    "JEE",
+    "JEJ",
+    "JJE",
+    "JJJ",
+    "gemini_dense",
+    "bm25_dense_rrf",
+    "hybrid",
+    "qwen_dense",
+    "qwen_rerank",
+    "bge_dense",
+    "bge_rerank",
+    "qwen_jev_rerank",
+    "bge_jev_rerank",
+    "gemini_jev_rerank"
+  ],
+  "predictions": 13104,
+  "files": {
+    "aligned-summary.json": {
+      "sha256": "bcc6adb4885358530a5d0b6215e4913de625c6f571cdbe28f5098f68d4c1dfe9",
+      "bytes": 25956
+    },
+    "conformance.json": {
+      "sha256": "bb3f8d79604193729d99089a71ee54c2bd7aa54b3ea1ac2fe447d331e86d8b85",
+      "bytes": 204
+    },
+    "development-ranking-grid.json": {
+      "sha256": "6081b25763c518edc9a8240277fd2f13e242c7b40e6e664d44cd8a7083156f1b",
+      "bytes": 1636
+    },
+    "execution-runtime.json": {
+      "sha256": "b489c84be48e35a4cfe78e952b58631be6ec27c7824172cb822e1ba09f6778d8",
+      "bytes": 328
+    },
+    "independent-audit.json": {
+      "sha256": "b2514d6683a114cd74ec56613e2c42ab1d8914d330cae26d7b020a09cfc26c22",
+      "bytes": 329
+    },
+    "manifest.json": {
+      "sha256": "1ddcf779686a730f91b8b98c291f3f817f7a782e60511c8265932e144bcf7ebc",
+      "bytes": 575926
+    },
+    "predictions.jsonl.gz": {
+      "sha256": "971ed81d35f9e7aec6c2a4cb3dd53f771eeaaad8cb7f16dc07f98f1a77d8b78b",
+      "bytes": 3786984
+    },
+    "scores.jsonl.gz": {
+      "sha256": "0019521ffdad9d2f649cdeb1875e7f8b6e3ba3a8e752966f5576c8d9c7d987eb",
+      "bytes": 358956
+    },
+    "statistics.json": {
+      "sha256": "08d2ffb4eb9e8de770440ead24ef6d0e1dc477fb55a7d8d2618d11c5f9f234db",
+      "bytes": 38889
+    }
+  }
+}

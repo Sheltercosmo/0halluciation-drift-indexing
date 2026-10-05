@@ -41,7 +41,7 @@ def plot():
         ax.set_title('Crossed components' if panel==0 else 'Complete systems and controls',loc='left',pad=22,fontweight='bold')
     fig.suptitle('Evidence paragraph retrieval',x=.055,y=.975,ha='left',fontsize=23,fontweight='bold',color='#263d31')
     fig.text(.055,.922,f"Repaired v4 test · {primary['questions']} eligible questions across {primary['documents']} papers · whole paragraphs",fontsize=12,color='#53645b')
-    fig.text(.055,.042,'E/J letters: splitting / central selection / search. Whiskers: 95% document-cluster intervals.\nCommon final rule: 25% Jev evidence score + 75% candidate-rank prior. Native Qwen/BGE controls are unchanged.',fontsize=10,color='#53645b')
+    fig.text(.055,.042,'E/J letters: splitting / central selection / search. Whiskers: 95% document-cluster intervals.\nJev-ranking rule: 25% evidence score + 75% candidate-rank prior. Native Qwen/BGE controls are unchanged.',fontsize=10,color='#53645b')
     fig.subplots_adjust(left=.055,right=.97,bottom=.14,top=.83,wspace=.95)
     dest=ROOT/'assets/figures';dest.mkdir(exist_ok=True,parents=True)
     for ext in ('svg','png'):

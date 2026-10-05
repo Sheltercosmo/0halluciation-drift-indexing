@@ -48,8 +48,15 @@ def publish():
         'files':{p.name:{'sha256':sha(p),'bytes':p.stat().st_size} for p in sorted(destination.iterdir()) if p.name!='catalog.json'}})
     primary=stats['metrics']['recall@5'];r=primary['methods']
     metric=lambda key,m:stats['metrics'][key]['methods'][m]['mean']
+    search_pairs=[row for row in stats['components'] if row['negative'][:2]==row['positive'][:2]]
+    significant=sum(row['p_holm']<.05 for row in search_pairs)
+    direct_comparison=next(row for row in stats['systems'] if row['negative']=='gemini_jev_rerank')
+    interpretation=(f"Jev search has higher recall in all four matched configurations; {significant} of four comparisons passes the prespecified 12-test Holm correction. "
+        f"JJJ's {100*direct_comparison['delta']:.2f}-point difference from direct Gemini + Jev ranking is not statistically significant "
+        f"(adjusted p = {direct_comparison['p_holm']:.3f}). The hybrid has the highest observed recall, {pct(r['hybrid']['mean'])}%; JJJ remains the prespecified primary system.")
     lines=['# Repaired paragraph retrieval comparison','',
         f"Version 4 evaluates **{len(cases):,} questions from {len(docs):,} QASPER papers**, with all **18 methods** completed. The primary evidence-retrieval metric uses **{primary['questions']:,} questions from {primary['documents']:,} papers** with at least one fully aligned, nonempty paragraph reference. No answer-generation reader is used.",'',
+        interpretation,'',
         'Every result returns whole original paragraphs. The eight crossed configurations, hybrid and Jev-reranked dense controls share the same final rule: the complete original question, complete candidate paragraphs, at most 30 candidates, and five returned paragraphs for the primary score. Final scores combine 25% Jev direct-evidence probability with 75% normalized candidate-rank prior. Central sentences guide navigation; they do not replace the source paragraphs.','',
         'For candidate position i starting at zero in a pool of n paragraphs, the final score is `0.25 * Jev probability + 0.75 * (1 - i / max(1, n - 1))`. Ties preserve candidate order. This is a retrieval pipeline comparison, not a claim that pure Jev scores alone outperform every native reranker.','',
         '![Evidence paragraph retrieval with document-cluster confidence intervals](../assets/figures/tree-retrieval-v4-test.svg)','',
@@ -99,6 +106,7 @@ def publish():
         a,b=prefix+'E',prefix+'J';measured.append(f"| {label} | {a}: {pct(r[a]['mean'])}% | {b}: {pct(r[b]['mean'])}% | {100*(r[b]['mean']-r[a]['mean']):+.2f} points |")
     average=stats['factor_effects']['search']
     measured+=['',f"The average matched search effect is **{effect(average)} percentage points** (95% document-cluster interval). The full report provides each conditional comparison, adjusted significance tests, complete evidence recovery, equal-token-budget metrics, and native Qwen/BGE baselines with Jev replacements on identical candidate pools.",'',
+        interpretation,'',
         'This is evidence retrieval within the same supplied paper. It does not establish full-corpus or frontier superiority. Development and earlier validation informed engineering repairs; the repaired implementation was frozen before test outcomes were opened. Unchanged native baselines reuse their saved predictions.','',
         'The [historical v3 validation](evals/RETRIEVAL_V3_VALIDATION.md) found a 7.19–8.64-point benefit from Jev search in its original pipeline. V4 adds a common final reranker and structural repairs, so the two versions are separate comparisons. Earlier [blocking](evals/BOUNDED_REPORT.md) and [tree](evals/LIVE_TREE_REPORT.md) studies remain available.','']
     p=ROOT/'README.md';text=p.read_text(encoding='utf-8');a=text.index('## Measured performance');b=text.index('## Quick start',a)

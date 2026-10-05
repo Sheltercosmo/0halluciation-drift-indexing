@@ -1,0 +1,6 @@
+{
+  "wrapper_sha256": "05cb97ad53f497760eec702c7dce7e1ca823e4b08bb73c6be148bc2edb2f5a70",
+  "inference_sources_and_settings": "unchanged; validated against frozen manifest",
+  "operation": "bounded retries of identical atomic file replacement on Windows sharing/access errors",
+  "provider_requests_retried_by_wrapper": false
+}
