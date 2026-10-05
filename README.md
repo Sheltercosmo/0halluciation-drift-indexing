@@ -31,90 +31,13 @@ Headings and contents supply the upper structure without model calls. Jev then s
 
 ## Measured performance
 
-The [exploratory component and system comparison](evals/LIVE_TREE_REPORT.md) contains **7,680 scored records across 20 configurations and 384 development questions** from 307 documents. It compares Jev and embedding splits, central sentences and root-to-leaf search in an eight-arm factorial study, six generic direct retrieval/reranking pipelines, two independent-path hybrids, and four context-expansion variants. It does not yet evaluate the intended top-3 confidence-pruned search, query-selected sentence output, or published competing retrieval systems. Evidence-paragraph recovery is the primary indexing measure; downstream answer scores are secondary diagnostics in the report.
+The [registered paragraph-retrieval comparison](evals/TREE_SYSTEM_PROTOCOL.md) tests all eight combinations of **topic splitting / central-sentence selection / search**, using either embeddings or Jev. Embeddings search globally across depths; Jev evaluates promising branches from root to paragraphs. Every method returns whole original paragraphs, including methods that find evidence through a sentence match.
 
-| Complete system | QASPER evidence-paragraph recall |
-| --- | ---: |
-| Embedding tree | 33.55% |
-| Jev tree | 54.68% |
-| Embedding tree + retry and topic expansion | 51.11% |
-| Jev tree + retry and topic expansion | 70.90% |
-| Embedding tree + successive ancestor expansion | 76.04% |
-| Jev tree + successive ancestor expansion | 81.88% |
-| Jev tree + independent direct dense retrieval | 86.61% |
-| BM25 + dense retrieval, semantic chunks | 85.51% |
-| Generative reranking, recursive chunks | 89.98% |
+The implementation and [registration](evals/registrations/tree-retrieval-v3.json) are frozen. Validation is running on **1,005 questions from 281 papers**, with a separate **728-question test allocation**. The 15 methods include published Qwen and BGE dense/reranking pipelines, direct Gemini embeddings and an independent Jev-plus-dense hybrid. The primary metric is evidence paragraph recall@5, with complete evidence recovery and F1 reported alongside it. No generated-answer reader is used.
 
-Recall is measured over 175 QASPER questions with annotated evidence and counts fully delivered source paragraphs. Every arm shares a Gemini 2.5 Flash planner and reader and a 2,048-token final context ceiling; actual context lengths differ. Embedding components use Gemini Embedding 2; decision components use Jev 1.13.0. On the same Jev tree and central sentences, switching from embedding to Jev routing raises evidence recall by **21.68 points** (descriptive 95% paired interval: +15.12 to +28.29). Jev central sentences do **not** yet show a clear advantage over embedding centrality. The hybrid combines independent Jev and direct embedding retrieval paths.
+This is a within-document QASPER study: every system receives the same paper. It does not establish full-corpus or frontier superiority. The small development pilot calibrates software and settings; its scores are not presented as held-out performance.
 
-The experiments exposed empty routes and underfilled contexts. Retrying exhausted routes and expanding through topic parents raises Jev evidence recall from **54.68% to 70.90%**; successive ancestor expansion reaches **81.88%**. These figures measure evidence coverage, not precision or answer correctness. **Overall superiority is not established:** direct retrieval pipelines still recover more annotated evidence in this experiment. No experimental setting replaces the default.
-
-The [report](evals/LIVE_TREE_REPORT.md) documents the measured algorithms, controls and limitations. [Predictions and source spans](evals/results/live-tree-complete-v2/scores.json), [90 paired comparisons](evals/results/live-tree-complete-v2/paired-intervals.json) and reproducibility records are available. Offline replay verified all 7,680 records. These are exposed development results; validation and test remain unopened. Scores below use a different reader and are not directly comparable.
-
-### Earlier blocking comparison
-
-The completed [384-question comparison](evals/BOUNDED_REPORT.md) evaluates decision-based blocking and its statistical cut rule together, against hybrid retrieval, semantic chunking, and Codex reranking. All methods use the same reader and a 2,048-token source budget. Its questions are now exposed development material. Scores from this larger sample should not be compared directly with the 64-question screen above.
-
-| Pipeline | QuALITY-HARD accuracy, 192 questions | QASPER answer F1, 192 questions |
-| --- | ---: | ---: |
-| Hybrid + paragraph packing | 86.98% | 46.42 |
-| Hybrid + semantic chunking | 90.10% | 47.83 |
-| Hybrid + Codex reranking | **90.63%** | **49.77** |
-| **Jev blocking + reranking** | **89.58%** | **49.63** |
-
-**This run does not establish superiority over its comparison pipelines.** Jev's answer-score intervals against Codex reranking include zero, and its QASPER evidence recall was lower: 84.60% versus 88.71%. The [full report](evals/BOUNDED_REPORT.md) publishes all 1,536 predictions, paired intervals, failures and usage. Scores and source contexts replay without model calls; reading and generative reranking used Codex.
-
-Iterative improvement is tracked in the [development log](evals/iterations/v1/REPORT.md), including failed hypotheses and uncertainty. The [split protocol](evals/ITERATION_PROTOCOL.md) reserves **1,425 validation questions and 1,559 untouched test questions**, grouped by document. Development gains are not presented as held-out or frontier results.
-
-The sample covers 307 documents and deliberately emphasizes hard and multi-evidence questions. It is not a full-benchmark result. The [research audit](evals/FRONTIER_EVALUATION.md) documents larger prepared datasets and possible follow-up comparisons.
-
-<details>
-<summary>Historical flat-reranking development results</summary>
-
-Our best completed results are summarized below. **All are development results**, with embeddings enabled and no generative LLM calls during Jev indexing. Each row identifies its configuration and sample; the scores do not describe one combined configuration.
-
-| Measurement | Best completed Jev result | Configuration and sample |
-| --- | ---: | --- |
-| QASPER answer F1 | **58.88** | Rank fusion; 64 questions, isolated reader |
-| QASPER evidence recall | **90.56%** | Expanded pool, fusion and parent expansion; 58 eligible questions |
-| QuALITY-HARD accuracy | **89.58%** | Original pipeline; separate 192-question study |
-
-[Read the performance snapshot and reproduce the scores →](evals/PERFORMANCE.md)
-
-![Completed development comparison: Jev rank fusion scores 58.88 QASPER F1 and 85.94 percent QuALITY-HARD accuracy; expanded Codex reranking scores 55.49 and 85.94 on the same 64 questions per benchmark.](assets/development-results.svg)
-
-### Historical reranking screen
-
-The completed isolated-reader comparison uses the same 64 questions per benchmark and a 2,048-token final source budget. Expanded configurations receive an 8,192-token candidate pool; the original Jev control keeps its 12-candidate cap. Codex reads one question per call, with one shared prediction for identical question/context inputs across methods. Embeddings are enabled, and Jev indexing uses no generative LLM calls. All 640 method/question predictions are complete.
-
-| Configuration | QASPER answer F1, 64 questions | Evidence recall, 58 questions | QuALITY-HARD accuracy, 64 questions |
-| --- | ---: | ---: | ---: |
-| Original Jev, 12 candidates | 51.08 | 82.18% | 87.50% |
-| Jev + expanded candidate pool | 58.55 | **90.56%** | 85.94% |
-| **Jev + rank fusion** | **58.88** | **90.56%** | 85.94% |
-| Jev + topic-parent expansion | 58.40 | **90.56%** | 85.94% |
-| Hybrid + Codex reranking, expanded pool | 55.49 | 91.35% | 85.94% |
-
-Expanding Jev's pool raised evidence recall from **82.18% to 90.56%** on this same sample: +8.37 points, with a descriptive 95% document-bootstrap interval of +3.08 to +14.78. QASPER answer F1 increased by 7.46 points (+1.79 to +14.18), while QuALITY accuracy fell by 1.56 points (−8.33 to +5.00). No experimental configuration has replaced the default.
-
-**These are development results, and superiority over the strongest baseline is not established.** Rank fusion's advantage over the expanded Codex reranker is 3.39 QASPER F1 points, with a descriptive 95% interval of −0.10 to +8.20; their QuALITY accuracy is tied. This [registered rerun](evals/iterations/v1/isolated-reader-manifest.json) replaces the earlier batched-reader comparison as the current development evidence. It removes cross-question batch coupling and identical-context resampling, but uses only one reader draw per distinct input. Historical results remain in the [development log](evals/iterations/v1/REPORT.md#isolated-reader-results). [All predictions](evals/results/isolated-reader-v1/scores.json) · [Summary](evals/results/isolated-reader-v1/summary.json) · [Paired intervals](evals/results/isolated-reader-v1/paired-intervals.json)
-
-</details>
-
-### Earlier pilots
-
-A frozen live pilot on **six synthetic documents and 24 questions** produced these results:
-
-| Measurement | Baseline | Jev method |
-| --- | ---: | ---: |
-| Boundary F1 | 0.727, fixed two-paragraph chunks | **0.800** |
-| Paragraph representative agreement | 12/36, first sentence | **31/36** |
-| Retrieval hit@1 on the same Jev tree | 15/24, BM25-style ranking | **24/24** |
-| Requests for six representative questions | 6, serial | **1, batched** |
-
-Jev still made **five extra topic cuts**. The labels are assistant-authored, every document has only 18 sentence candidates, and the pilot does not evaluate an LLM’s final answers or compare against PageIndex. Read the [full report](evals/REPORT.md) for failures, baselines, uncertainty, usage, batching score differences, and reproducible decision replay.
-
-A separate **public SciFact check** used existing rationale annotations: Jev achieved **11/12 hit@1**, versus **7/12** for BM25-style ranking, with five improvements and one regression. Each query was given its evidence abstract and four lexical distractors (35–86 sentences), so this evaluates reranking within a supplied pool, not open-corpus retrieval. [Read the public-data report →](evals/SCIFACT_REPORT.md)
+Earlier studies remain available in the [historical tree report](evals/LIVE_TREE_REPORT.md), [blocking comparison](evals/BOUNDED_REPORT.md) and [development log](evals/iterations/v1/REPORT.md). They used different search procedures or answer metrics and cannot be substituted for the current comparison.
 
 ## Quick start
 

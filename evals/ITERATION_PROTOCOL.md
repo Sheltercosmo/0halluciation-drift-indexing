@@ -2,7 +2,7 @@
 
 Updated 2026-10-05. The active design is [tree-retrieval-v3](TREE_SYSTEM_PROTOCOL.md): all eight split / central-sentence selection / search combinations, global embedding search across tree depths, and Jev exploration of promising nodes from root to leaves. Retrieval of source evidence is the primary outcome. The statistical prior and drop rule remain one splitting method.
 
-**Status:** existing document assignments remain authoritative and held-out outcomes remain unopened. The current Python gate implements the earlier answer-based experiment. It must be extended and verified for this retrieval design before opening validation; changing this document does not change the executable gate.
+**Status:** the retrieval implementation and [registration](registrations/tree-retrieval-v3.json) were published before validation access. Validation is now running; test remains locked. `scripts/retrieval_v3_gate.py` implements the paragraph-only gate; the older answer-based gate remains historical.
 
 ## Preserve document-disjoint assignments
 
@@ -21,7 +21,7 @@ HotpotQA sentence selection and BRIGHT-Pro corpus retrieval require their own fr
 
 ## Develop and freeze the complete comparison
 
-Inspect failures and tune only on development. Use document-grouped development folds. Record the sampled parameter configurations and tuning allowance before each sweep; keep all outcomes. Software pilots establish correctness and timing, not benchmark superiority.
+Inspect failures and tune only on development. For this revision, use the fixed 16-document pilot and six recorded search settings; no held-out outcome enters calibration. Record the sampled parameter configurations and tuning allowance before each sweep; keep all outcomes. Software pilots establish correctness and timing, not benchmark superiority.
 
 The factorial study contains all eight EEE/EJE/EEJ/EJJ/JEE/JJE/JEJ/JJJ arms. Freeze shared stage settings and retain every arm as a fixed component comparator. Separately register at most three tuned complete-system finalists, including the independent-path hybrid where applicable. Register the required published baselines with upstream commits, model revisions and adapter hashes.
 
@@ -34,13 +34,13 @@ Before validation, freeze:
 - Primary retrieval score, denominators, acceptable-reference handling, secondary metrics, planned contrasts and tie-breaks.
 - Output limits, resource limits, failure/truncation accounting and latency measurement procedure.
 
-The proposed selection rule is highest mean QASPER evidence F1 for up to five original paragraphs among the selectable system finalists. Break exact ties by lower mean standalone retrieval model tokens, then configuration hash; publish actual latency and other work separately. All finalists use the same tokenizer and usage accounting. Empty-evidence cases are reported separately from evidence-bearing retrieval; answerability conventions and failure handling must be frozen before labels are scored.
+The frozen selection rule is highest aligned paragraph recall@5 among JJJ and the independent hybrid, then complete@5, then F1@5, then method ID. Return whole source paragraphs under common paragraph/token allowances. Empty/unanswerable references are excluded from evidence-bearing primary scoring. Exact or unambiguous whitespace-normalized evidence must map completely to at least one acceptable nonempty annotation; report excluded annotations and raw official string F1 separately.
 
 Validation selects among already registered finalists. Do not inspect its individual failures, change candidates or retune thresholds after seeing aggregate outcomes. The fixed eight component arms are all retained regardless of validation ranking.
 
 ## Retrieval gate requirements
 
-Extend the gate to accept fixed component arms separately from selectable finalists and to require retrieval predictions without requiring reader answers. It must verify complete coverage for all registered questions and methods before scoring, with explicit failure records, source IDs/spans, pre-packing ranks, delivered evidence and standalone usage.
+The dedicated retrieval gate accepts fixed component arms separately from selectable finalists and requires retrieval predictions without reader answers. It must verify complete coverage for all registered questions and methods before scoring, with explicit failure records, source IDs/spans, pre-packing ranks, delivered evidence and whole-paragraph packing. Standalone latency remains a separate measurement; shared experiment-cache timings cannot establish a speed advantage.
 
 Use the hashed evidence scorer to recompute primary validation scores from predictions; never trust caller-supplied aggregates. Freeze selection deterministically, recording its evidence and hashes. The test gate must verify the selected configuration and the complete validation artifacts before releasing test paths.
 

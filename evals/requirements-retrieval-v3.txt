@@ -1,0 +1,7 @@
+# GPU inference used torch 2.8.0+cu128 from the official PyTorch CUDA 12.8 index.
+torch==2.8.0
+transformers==4.55.2
+numpy==2.5.3
+tiktoken==0.12.0
+huggingface-hub==0.34.4
+safetensors==0.6.2
