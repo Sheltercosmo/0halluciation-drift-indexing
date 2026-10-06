@@ -31,31 +31,26 @@ Headings and contents supply the upper structure without model calls. Jev then s
 
 ## Measured performance
 
-The [completed v4 comparison](evals/RETRIEVAL_V4_REPORT.md) tests **18 methods on 728 questions from 224 held-out QASPER papers**. Evidence paragraph recall@5 is scored on **640 questions with fully aligned evidence**. Every method returns whole original paragraphs; no generated-answer reader is used.
+**The standard method is Jev traversal + pairwise ranking + shared-context selection.** On the same **640 historical QASPER questions with aligned evidence**, full Jev reaches **91.45% evidence Recall@5** and the independent Jev + direct-embedding hybrid reaches **92.44%**. All 728 questions from 224 papers have predictions; every output contains whole source paragraphs.
 
-| System | Evidence recall@5 | 95% document-cluster interval |
+| System | Evidence Recall@5 | 95% document-cluster interval |
 | --- | ---: | ---: |
-| Jev splitting, central sentences and tree search | 87.56% | 84.83–90.16% |
-| Independent Jev tree + direct Gemini retrieval | 89.51% | 86.97–91.88% |
+| Full Jev — shared context (standard) | 91.45% | 89.31–93.48% |
+| Jev + independent direct embeddings — shared context (standard) | 92.44% | 90.28–94.43% |
+| Full Jev — traversal + pairwise ranking | 90.80% | 88.77–92.76% |
+| Hybrid — traversal + pairwise ranking | 91.51% | 89.55–93.41% |
 | Gemini Embedding 2, direct paragraphs | 80.78% | 77.91–83.60% |
-| Direct Gemini + Jev reranking | 86.87% | 84.54–89.17% |
+| Direct Gemini + Jev v4 reranking | 86.87% | 84.54–89.17% |
 
-The crossed experiment varies **topic splitting / central-sentence selection / search** between embeddings (E) and Jev (J). Central sentences are navigation cues, with full paragraphs available throughout. Embeddings search globally across depths; Jev explores promising branches from root to paragraphs. All eight configurations use the same final ranking rule: 25% Jev direct-evidence score and 75% normalized candidate-rank prior, selected on development samples.
+Full Jev progresses from **87.56% → 90.80% → 91.45%**, and hybrid from **89.51% → 91.51% → 92.44%**: v4, improved traversal with pairwise ranking, then shared-context selection. Unchanged baselines reuse their saved predictions. [Full comparison, complete evidence recovery and paired tests →](evals/RETRIEVAL_STANDARD_REPORT.md)
 
-| Fixed splitting / central sentences | Global embedding search + Jev final ranking | Jev tree search + Jev final ranking | Recall difference |
-| --- | ---: | ---: | ---: |
-| Embedding / Embedding | EEE: 83.86% | EEJ: 87.87% | +4.00 points |
-| Embedding / Jev | EJE: 83.42% | EJJ: 88.61% | +5.19 points |
-| Jev / Embedding | JEE: 84.44% | JEJ: 87.45% | +3.02 points |
-| Jev / Jev | JJE: 83.42% | JJJ: 87.56% | +4.14 points |
+Jev selects five paragraphs while considering a shared packet of promising targets and local source context. All five positions can change. The original question governs evidence selection; useful corroboration is retained. **There is no Bayesian ranking prior or weighted candidate-position score.** [Standard configuration](configs/retrieval-standard.json) · [Standard retrieval entrypoint](docs/retrieval-standard.md)
 
-The average matched search effect is **+4.09 [+1.26, +6.98] percentage points** (95% document-cluster interval). The full report provides each conditional comparison, adjusted significance tests, complete evidence recovery, equal-token-budget metrics, and native Qwen/BGE baselines with Jev replacements on identical candidate pools.
+These historical questions have been inspected; the results are not untouched confirmation or proof of frontier superiority. The small shared-context gains over pairwise ranking are not statistically established. The report includes paired intervals and regressions.
 
-Jev search has higher recall in all four matched configurations; 1 of four comparisons passes the prespecified 12-test Holm correction. JJJ's 0.69-point difference from direct Gemini + Jev ranking is not statistically significant (adjusted p = 0.624). The hybrid has the highest observed recall, 89.51%; JJJ remains the prespecified primary system.
+The [historical eight-way v4 experiment](evals/RETRIEVAL_V4_REPORT.md) found higher recall for Jev tree search in all four matched splitting/central-sentence configurations. Its average matched search effect was **+4.09 percentage points [95% CI: +1.26, +6.98]**; one conditional comparison passed the prespecified 12-test Holm correction. Its final selector differs from the current standard.
 
-This is evidence retrieval within the same supplied paper. It does not establish full-corpus or frontier superiority. Development and earlier validation informed engineering repairs; the repaired implementation was frozen before test outcomes were opened. Unchanged native baselines reuse their saved predictions.
-
-The [historical v3 validation](evals/RETRIEVAL_V3_VALIDATION.md) found a 7.19–8.64-point benefit from Jev search in its original pipeline. V4 adds a common final reranker and structural repairs, so the two versions are separate comparisons. Earlier [blocking](evals/BOUNDED_REPORT.md) and [tree](evals/LIVE_TREE_REPORT.md) studies remain available.
+Earlier [v3 validation](evals/RETRIEVAL_V3_VALIDATION.md), [blocking comparisons](evals/BOUNDED_REPORT.md) and [tree evaluations](evals/LIVE_TREE_REPORT.md) remain available.
 
 ## Quick start
 

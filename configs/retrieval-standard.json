@@ -1,0 +1,18 @@
+{
+  "policy": "jev-shared-context-v1",
+  "entrypoint": "scripts.retrieval_standard.retrieve_standard",
+  "selection_entrypoint": "scripts.retrieval_standard.select_standard_evidence",
+  "model": "jev-1.13.0",
+  "tree_search": {"beam": 5, "acceptance": 0.2, "refine_below": 0.85, "max_decisions": 4096, "deferred_search_fraction": 0.25},
+  "pairwise_candidates": 30,
+  "shared_targets": 12,
+  "shared_context": true,
+  "expand_targets": false,
+  "output_paragraphs": 5,
+  "orders": ["source", "reverse source"],
+  "aggregation": "mean",
+  "tie_break": "earlier pairwise rank",
+  "ranking_prior": false,
+  "hybrid": "independent direct embedding hits fused with Jev candidates before the same final selector",
+  "evaluation": "728 historical questions; 640 eligible evidence references; previously inspected, not untouched confirmation"
+}

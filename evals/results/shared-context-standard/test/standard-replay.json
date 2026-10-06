@@ -1,0 +1,9 @@
+{
+  "matched": 1456,
+  "expected": 1456,
+  "passed": true,
+  "new_model_calls": 0,
+  "budget_unchanged": true,
+  "decisions": "Exact native routing cache; input-keyed saved pairwise/shared scores",
+  "source_sha256": "c1a8de498bc35f8f1d5c7f6dd196ffc45caa02bbf1be7c1722ace8015c62760c"
+}
