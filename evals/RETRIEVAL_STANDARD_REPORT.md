@@ -2,6 +2,8 @@
 
 **The retained standard is Jev traversal, bidirectional pairwise ranking and shared-context evidence selection.** It reaches **91.45% full-Jev Recall@5 and 92.44% hybrid Recall@5** on the same 640 historical questions with aligned evidence references.
 
+**Configuration note:** these measurements use **JJJ indexing**, retained in [`retrieval-jjj-measured.json`](../configs/retrieval-jjj-measured.json). The configurable adapter now defaults to **EEJ** with the same improved retrieval stages. This report and its archived scores are not measurements of that new EEJ combination. See the [adapter controls](../docs/retrieval-standard.md) and [historical EEJ/JJJ comparison](RETRIEVAL_V4_REPORT.md).
+
 All 728 questions from 224 QASPER papers have predictions for both systems. The primary evidence population contains 640 questions from 217 papers. Every result returns up to five whole original paragraphs. No generated-answer reader is used.
 
 ## Comparable progression

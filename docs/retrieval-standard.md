@@ -1,56 +1,105 @@
-# Standard evidence retrieval
+# Configurable evidence retrieval
 
-The standard is **Jev traversal, bidirectional pairwise ranking and shared-context selection**. The retained measured version achieves 91.45% full-Jev evidence Recall@5 and 92.44% hybrid Recall@5 on 640 eligible historical QASPER questions. The [comparison report](../evals/RETRIEVAL_STANDARD_REPORT.md) gives the full population, uncertainty and limitations.
+**EEJ is the deployment default:** embeddings split topic blocks and select central sentences; Jev explores the tree, reranks complete paragraphs, and selects evidence in shared context. Letters always mean **splitting / central sentences / search**. JJJ remains available for indexing without embeddings. EJJ and JEJ let you change one indexing component at a time.
 
-The authoritative policy is [retrieval-standard.json](../configs/retrieval-standard.json). The implementation is [`scripts/retrieval_standard.py`](../scripts/retrieval_standard.py). Later experimental selection methods are separate from this entrypoint.
+The [earlier controlled comparison](../evals/RETRIEVAL_V4_REPORT.md) measured EEJ at **87.87%** and JJJ at **87.56%** Recall@5 with its common final selector. EEJ avoids Jev decisions in both indexing stages. The later shared-context scores, **91.45% JJJ** and **92.44% JJJ + direct embeddings**, remain historical JJJ measurements; EEJ with the later improvements has not been evaluated. We do not transfer those scores to the new default or claim a measured end-to-end cost reduction.
 
-## How it retrieves evidence
+## One adapter for indexing and retrieval
 
-1. Use the Jev split/central-sentence index and native heading hierarchy. A query-time LLM proposes evidence needs; the original question is also a routing request.
-2. Jev evaluates children of promising nodes from root to paragraphs. The measured beam is five, acceptance threshold 0.2, and global routing ceiling 4,096 decisions. Accepted deferred branches receive up to 25% additional decisions relative to the initial traversal, within that global ceiling.
-3. Full Jev uses tree candidates. The hybrid fuses them with an independent direct-embedding ranking. Embedding retrieval does not navigate the tree.
-4. Compare the first 30 candidate paragraphs with Jev in both orientations. Consistent preferences contribute a win and conflicting preferences tie. Read complete source paragraphs, not only central sentences.
-5. Assemble the first 12 pairwise-ranked paragraphs as selectable targets. A shared packet includes complete targets, nearby source introductions, preceding/following paragraphs, headings and source links. Context supports interpretation; only the 12 targets are eligible to be returned.
-6. Jev scores every target while viewing the shared packet in source order and reverse source order. Average the two scores and return the top five complete paragraphs. Exact ties retain earlier pairwise order.
-
-Jev evaluates useful evidence for the original question, not answerability. Useful corroboration and restatements are not penalized for overlap. There is no Bayesian or weighted position prior in ranking. The statistical prior remains confined to topic-boundary detection during indexing.
-
-## Use the standard pipeline
-
-Run from the repository root. Supply the prepared source document, matching Jev index, evidence needs and the three Jev callbacks:
+Run from the repository checkout. The [configuration](../configs/retrieval-standard.json) is executable input, with validated fields and JSON round-tripping. [`RetrievalConfig`](../zero_index/configuration.py) is also exported by the installed `zero_index` package. The complete pipeline adapter currently lives in [`scripts/retrieval_standard.py`](../scripts/retrieval_standard.py).
 
 ```python
-from scripts.retrieval_standard import retrieve_standard, make_standard_clients
+from dataclasses import replace
+from pathlib import Path
+from zero_index import RetrievalConfig
+from scripts.retrieval_standard import RetrievalAdapter, make_standard_clients
 
-# cache is a pathlib.Path; budget exposes reserve("jev_calls", questions=...).
-# The evaluation's RetrievalBudget can supply that accounting interface.
+config = RetrievalConfig.load("configs/retrieval-standard.json")  # EEJ
+config = config.with_search(beam=3, acceptance=0.25, max_decisions=2048)
+config = replace(config, deferred_search_fraction=0.2,
+                 pairwise_candidates=20, shared_targets=10)
+config.save("my-retrieval.json")
+
+cache = Path("output/my-cache")
+cache.mkdir(parents=True, exist_ok=True)
+# budget is your accounting object; reserve("jev_calls", questions=n) must
+# enforce your request/decision allowance. The evaluation's RetrievalBudget
+# implements that interface. This factory reads TYPESAFE_API_KEY.
 router, pairwise, shared = make_standard_clients(cache, budget)
 
-result = retrieve_standard(
-    document, index, question, evidence_needs,
-    router.route_content,
-    pairwise.compare,
-    shared.score_pool,
+adapter = RetrievalAdapter(
+    config=config,
+    embed=embedding_client.embed,
+    embedding_model="your-embedding-model-and-version",
+    route=router.route_content,
+    compare=pairwise.compare,
+    select=shared.score_pool,
 )
-
+index = adapter.build_index(document)  # embeddings only with EEJ
+result = adapter.retrieve(document, index, question, evidence_needs)
 evidence_paragraph_ids = result["selected"]
 ```
 
-The document uses the evaluation adapter's `title`, `text` and `units` fields; each unit has a paragraph number, section, heading and exact start/end offsets. `index.source` must equal `document["text"]`. `scripts.bounded_eval.build_document` constructs this representation from native sections. Paragraph IDs are `p0`, `p1`, and so on.
+`embed(texts, purpose)` must return one finite, nonzero vector per text, in input order; vectors are normalized by the adapter. `purpose` is `splitting` or `central-sentences`. Adapt your embedding SDK to this small interface and handle its batching, caching and billing limit there. The historical paragraph prefix is configurable as `indexing.paragraph_embedding_prefix`; set it to `""` when your embedding provider supplies its own task instruction. Central sentences are embedded without that prefix. No provider or model is silently substituted.
 
-For the hybrid, pass `dense_ranking=paragraph_ids` from an independent embedding retriever over those same original paragraphs. The measured run used the saved direct Gemini hit list, with at most 80 hits, before fusion and the common top-30 pairwise stage. Omitting that argument selects full Jev.
+`document` has `id`, `title`, `text` and `units`. Each unit has a sequential `paragraph` number, a native `section` number, `heading`, and exact `start`/`end` character offsets. Section occurrences have distinct IDs. `scripts.bounded_eval.build_document(id, title, [(heading, paragraphs), ...])` constructs this representation. Use `A ::: B` for native nested heading paths. Paragraph IDs stay `p0`, `p1`, and so on; paragraphs are returned whole.
 
-`make_standard_clients` reads `TYPESAFE_API_KEY` from the environment and uses separate adapters for routing, pair comparison and shared selection. These callbacks incur Jev API usage. Set an explicit budget through the supplied accounting object. Source text and paragraph boundaries remain intact.
+To use JJJ, load [`retrieval-jjj-measured.json`](../configs/retrieval-jjj-measured.json) and pass an explicit Jev indexing scorer as `jev=`. `router` from the factory also implements that interface. No embedding callback is required for JJJ. Changing splitting or central-sentence controls requires rebuilding the index. The adapter rejects mismatched index factors and recorded indexing settings before making retrieval calls.
 
-If upstream pairwise ranking is already cached, call `select_standard_evidence(document, question, pairwise_ranking, shared.score_pool)`. This reuses the retained standard selector without rerunning traversal, embeddings or pairwise decisions.
+For the **hybrid**, pass `dense_ranking=paragraph_ids` to `adapter.retrieve`. This is an independent direct embedding ranking over the same source paragraphs, fused with Jev candidates before the common final selector. It does not change tree routing. `dense_candidates=null` preserves the supplied ranking, as in the retained historical pipeline; an explicit integer caps it before fusion. Unknown or duplicate IDs are rejected before any Jev retrieval call.
 
-## Verification
+## Search effort
+
+```python
+config = RetrievalConfig.for_effort("low")        # default variant remains EEJ
+config = RetrievalConfig.for_effort("standard")   # retained search/selection settings
+config = RetrievalConfig.for_effort("high", variant="JJJ")
+```
+
+| Preset | Beam per need/layer | Routing decision ceiling | Deferred allowance | Pairwise candidates | Shared targets | Output paragraphs |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| low | 3 | 1,024 | 10% | 16 | 8 | 5 |
+| standard | 5 | 4,096 | 25% | 30 | 12 | 5 |
+| high | 8 | 8,192 | 50% | 40 | 16 | 5 |
+
+These presets are resource choices, **not validated accuracy tiers**. Every preset retains accepted-branch revisiting, bidirectional pairwise comparisons, shared source context, and both presentation orders. More effort does not guarantee better retrieval.
+
+`search.max_decisions` covers the initial and deferred traversal together, across all search needs. Deferred work receives at most `ceil(deferred_search_fraction × initial_decisions)` within that ceiling. A complete next layer can exceed the remaining allowance; the search then stops and records truncation instead of exceeding the cap. `search.beam` restricts internal nodes, not paragraph leaves.
+
+Pairwise work can dominate query cost: comparing `n` paragraphs in both orientations uses `n × (n − 1)` decisions, followed by at most `2 × shared_targets` shared decisions. With 30 candidates this is 870 pairwise decisions; 16 candidates use 240. `config.decision_ceiling()` reports a query bound of routing + pairwise + shared decisions. It excludes indexing, embedding calls, planning, retries and provider billing. **Decisions are not HTTP requests or dollars**; enforce those limits in the provider/accounting adapters separately.
+
+## Decision boundaries and other controls
+
+| Setting | Default | Effect |
+| --- | ---: | --- |
+| `search.acceptance` | 0.2 | Minimum Jev score for keeping an internal branch. Paragraph evidence is not discarded by this threshold. |
+| `search.refine_below` | 0.85 | Open additional source cues and rescore uncertain internal nodes before pruning, within the routing budget. Must be at least acceptance. |
+| `search.child_cues` | 6 | Child representative cues shown on upper-node cards. |
+| `search.extra_sentences` | 8 | Additional outside-in sentences in detailed source cards. |
+| `pairwise_threshold` | 0.5 | A wins only if `P(A > B) > threshold` and `P(B > A) < 1 − threshold`; uncertainty or orientation disagreement ties. Range 0.5–1. |
+| `shared_targets` | 12 | Eligible targets in the shared source packet. Context paragraphs help interpretation but do not become extra output slots. |
+| `output_paragraphs` | 5 | Whole paragraphs selected. Require output ≤ shared targets ≤ pairwise candidates. Changing this changes the evaluation's @k. |
+| `dense_candidates` | `null` | Optional cap on direct embedding hits before hybrid fusion. `null` preserves all supplied hits; final Jev work is still bounded by pairwise/shared limits. |
+| `indexing.embedding_split_quantile` | 0.85 | E splitting cuts when adjacent-paragraph cosine distance exceeds this quantile within a native heading. Higher values usually produce fewer cuts; ties do not cut. |
+| `indexing.same_topic_prior` | 0.7 | J splitting's explicit same-topic prior. |
+| `indexing.posterior_cutoff` | 0.5 | J splitting requires adjusted same-topic probability at or below this value. |
+| `indexing.minimum_drop` | 0.2 | J splitting also requires a probability drop at least this large. |
+| `indexing.sentence_budget` | 8 | Outside-in central-sentence candidates per target; `null` searches all. |
+| `indexing.sentence_stop_threshold` | `null` | Optional early stop, for example 0.9, after a candidate wave reaches this score. |
+
+The prior, cutoff and drop apply only to **J splitting**. E splitting uses the distance quantile. Embedding centrality and Jev decision scores are different quantities; the same early-stop value is not a calibrated equivalence. Embedding centrality still needs all source-sentence vectors for its centroid even when candidate scoring stops early. A finite candidate budget can miss a better central sentence.
+
+`indexing.probability_reference_prior` defaults to 0.5 and specifies the reference-prior assumption for J splitting's probability adjustment. None of these settings becomes a Bayesian ranking prior. Final selection keeps the original question, whole paragraphs, source links, forward/reverse source presentations, mean score aggregation, and earlier pairwise order only for exact ties. Overlap is not penalized and Jev does not classify answerability.
+
+## Results and reproducibility
+
+Every retrieval result includes `variant`, the full effective `configuration`, its fingerprint, source-backed selections, and traversal/selection traces. Unknown configuration keys fail explicitly. Indexes record their factors, indexing controls, embedding identity, boundaries and central-sentence provenance.
+
+The [historical score archive](../evals/RETRIEVAL_STANDARD_REPORT.md) and its frozen source snapshots are unchanged. Use `MEASURED_JJJ_CONFIG` or `retrieval-jjj-measured.json` to replay that pipeline. Do not label a tuned or EEJ run with the historical JJJ scores.
 
 ```sh
 python -m unittest discover -s tests -v
 python scripts/replay_standard_results.py
 ```
 
-The archive checker uses saved source packets and decisions to reconstruct every final selection, verifies all 18 historical baseline rows are unchanged, and reproduces aggregate evidence scores. The standard entrypoint was also replayed through traversal, pairwise ranking and shared selection for all 1,456 full-Jev/hybrid predictions without new inference; every stage matched the retained run.
-
-These are previously inspected historical questions, not untouched confirmation. Shared-context selection has higher observed aggregate scores than its pairwise controls, but those incremental gains are not statistically established. The standard is the retained measured policy, not a guarantee of optimal evidence or error-free retrieval.
+The archive checker reconstructs all 1,456 saved selections and verifies unchanged baselines and aggregate scores without inference. These historical questions were previously inspected; they are not untouched confirmation. The small shared-context gains over pairwise controls are not statistically established.

@@ -25,24 +25,28 @@ Our index is a pure decision model based method with **0 LLM and optional embedd
 
 Headings and contents supply the upper structure without model calls. Jev then selects representative sentences directly from each topic block and paragraph using parallel outside-in search. The resulting content tree supports retrieval-augmented generation (RAG): an LLM proposes the content it needs, Jev searches from the root to sentence leaves, and the reader opens the selected source passages. The contribution is how topic blocks are formed; the tree is how those blocks are organized for retrieval.
 
+**The configurable retrieval adapter defaults to EEJ:** embedding-based splitting and central sentences, followed by Jev tree search, pairwise ranking and shared-context evidence selection. This avoids Jev calls during indexing while retaining the improved retrieval stages. Choose **JJJ** for the full decision-model indexing method. [Configuration and effort controls →](docs/retrieval-standard.md)
+
 “0 LLM” means no **generative LLM calls during indexing**. Jev is a learned decision model; the query-time LLM is separate. The project name expresses the aim of source-grounded retrieval, not a guarantee of error-free decisions or answers.
 
 ![Indexing and retrieval pipeline](assets/pipeline.svg)
 
 ## Measured performance
 
-**The standard method is Jev traversal + pairwise ranking + shared-context selection.** On the same **640 historical QASPER questions with aligned evidence**, full Jev reaches **91.45% evidence Recall@5** and the independent Jev + direct-embedding hybrid reaches **92.44%**. All 728 questions from 224 papers have predictions; every output contains whole source paragraphs.
+**The retained retrieval structure is Jev traversal + pairwise ranking + shared-context selection.** Its measured **JJJ** configuration reaches **91.45% evidence Recall@5**, and JJJ + independent direct embeddings reaches **92.44%**, on the same **640 historical QASPER questions with aligned evidence**. All 728 questions from 224 papers have predictions; every output contains whole source paragraphs.
 
 | System | Evidence Recall@5 | 95% document-cluster interval |
 | --- | ---: | ---: |
-| Full Jev — shared context (standard) | 91.45% | 89.31–93.48% |
-| Jev + independent direct embeddings — shared context (standard) | 92.44% | 90.28–94.43% |
+| JJJ — shared context | 91.45% | 89.31–93.48% |
+| JJJ + independent direct embeddings — shared context | 92.44% | 90.28–94.43% |
 | Full Jev — traversal + pairwise ranking | 90.80% | 88.77–92.76% |
 | Hybrid — traversal + pairwise ranking | 91.51% | 89.55–93.41% |
 | Gemini Embedding 2, direct paragraphs | 80.78% | 77.91–83.60% |
 | Direct Gemini + Jev v4 reranking | 86.87% | 84.54–89.17% |
 
 Full Jev progresses from **87.56% → 90.80% → 91.45%**, and hybrid from **89.51% → 91.51% → 92.44%**: v4, improved traversal with pairwise ranking, then shared-context selection. Unchanged baselines reuse their saved predictions. [Full comparison, complete evidence recovery and paired tests →](evals/RETRIEVAL_STANDARD_REPORT.md)
+
+The earlier controlled v4 comparison measured **EEJ at 87.87% versus JJJ at 87.56%** with the same final reranker. EEJ is now the practical deployment default; **EEJ with the later shared-context improvements has not yet been measured**. The JJJ scores above are preserved under an [explicit measured configuration](configs/retrieval-jjj-measured.json).
 
 Jev selects five paragraphs while considering a shared packet of promising targets and local source context. All five positions can change. The original question governs evidence selection; useful corroboration is retained. **There is no Bayesian ranking prior or weighted candidate-position score.** [Standard configuration](configs/retrieval-standard.json) · [Standard retrieval entrypoint](docs/retrieval-standard.md)
 
@@ -53,6 +57,20 @@ The [historical eight-way v4 experiment](evals/RETRIEVAL_V4_REPORT.md) found hig
 Earlier [v3 validation](evals/RETRIEVAL_V3_VALIDATION.md), [blocking comparisons](evals/BOUNDED_REPORT.md) and [tree evaluations](evals/LIVE_TREE_REPORT.md) remain available.
 
 ## Quick start
+
+For the standard evidence pipeline, use the [configurable adapter](docs/retrieval-standard.md):
+
+```python
+from dataclasses import replace
+from zero_index import RetrievalConfig
+
+config = RetrievalConfig.for_effort("standard")  # EEJ; low/high also available
+config = config.with_search(beam=3, acceptance=0.25, max_decisions=2048)
+config = replace(config, pairwise_candidates=20, shared_targets=10)
+config.save("my-retrieval.json")
+```
+
+The [adapter example](docs/retrieval-standard.md#one-adapter-for-indexing-and-retrieval) connects your embedding provider and Jev callbacks. It exposes splitting thresholds, central-sentence budgets/early stopping, branch acceptance, search effort and final candidate counts. Output remains five whole paragraphs by default. The commands below demonstrate the earlier lexical/leaf-first APIs.
 
 Python 3.10+. The runtime has **no third-party dependencies**. Run from the repository root, or install with `python -m pip install -e .` to enable `zero-index`.
 
@@ -75,7 +93,7 @@ These commands send source text to [TypeSafe’s decision API](https://docs.type
 
 ## Methodology: how we create the content tree
 
-The index is built from the document's existing structure and exact source text. Topic blocking is driven by Jev decisions and an explicit statistical prior.
+The index is built from the document's existing structure and exact source text. The steps below describe **JJJ**, where topic blocking uses Jev decisions and an explicit statistical prior. The default **EEJ adapter** substitutes an adjacent-embedding-distance quantile for splitting and embedding centroid scores for central sentences; headings, source paragraphs and the improved Jev retrieval stages stay intact.
 
 1. **Separate titles and contents.** Parse headings, heading levels and contents links without Jev or an LLM. Headings form the upper tree and act as hard boundaries. Recognized contents entries become navigation links to those headings.
 2. **Create paragraph blocks.** Split content on paragraph boundaries within each heading. Preserve original text, source offsets and line references; keep fenced code intact.

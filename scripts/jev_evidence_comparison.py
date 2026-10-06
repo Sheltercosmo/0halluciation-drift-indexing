@@ -5,6 +5,7 @@ question as answerable. Pairwise comparisons are oriented both ways, scored
 independently in parallel, and aggregated with order-conflict ties (PRP).
 """
 from itertools import combinations
+import math
 from scripts.bounded_clients import signature
 from scripts.bounded_eval import Jev
 from scripts.jev_scoped_client import ScopedEvidenceJev
@@ -83,7 +84,9 @@ def whole_paragraph_cards(doc, ranking, limit=30):
     return cards
 
 
-def pairwise_rerank(doc, question, ranking, compare, limit=30):
+def pairwise_rerank(doc, question, ranking, compare, limit=30, *, threshold=0.5):
+    if type(threshold) not in (int, float) or not math.isfinite(threshold) or not 0.5 <= threshold <= 1:
+        raise ValueError('Pairwise threshold must be finite in [0.5, 1]')
     cards = whole_paragraph_cards(doc, ranking, limit)
     edges = list(combinations(range(len(cards)), 2))
     oriented = [pair for i,j in edges for pair in ((cards[i], cards[j]), (cards[j], cards[i]))]
@@ -92,7 +95,7 @@ def pairwise_rerank(doc, question, ranking, compare, limit=30):
     for e,(i,j) in enumerate(edges):
         ab, ba = values[2*e:2*e+2]
         # Both orientations must agree; conflicts, equality and uncertainty tie.
-        w = 1. if ab > .5 and ba < .5 else 0. if ab < .5 and ba > .5 else .5
+        w = 1. if ab > threshold and ba < 1-threshold else 0. if ab < 1-threshold and ba > threshold else .5
         wins[i] += w
         wins[j] += 1-w
         trace.append({'a': cards[i]['node_id'], 'b': cards[j]['node_id'],

@@ -5,6 +5,7 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
 from copy import deepcopy
 from scripts.jev_joint_evidence import joint_select
 from scripts.retrieval_standard import STANDARD_POLICY
+from zero_index.configuration import RetrievalConfig, MEASURED_JJJ_CONFIG
 DEST=ROOT/'evals/results/shared-context-standard/test'
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def rows(p):
@@ -16,8 +17,10 @@ def replay():
     catalog=read(DEST/'catalog.json');manifest=read(DEST/'manifest.json');stats=read(DEST/'statistics.json')
     for name,h in catalog['files'].items():check(hashlib.sha256((DEST/name).read_bytes()).hexdigest()==h,'Changed archive: '+name)
     check(STANDARD_POLICY==manifest['policy'],'Standard policy drifted from retained measured version')
-    config=read(ROOT/'configs/retrieval-standard.json')
-    check(config['policy']==STANDARD_POLICY['name'] and config['shared_context'] and not config['expand_targets'],'Incorrect default configuration')
+    check(RetrievalConfig.load(ROOT/'configs/retrieval-jjj-measured.json')==MEASURED_JJJ_CONFIG,
+          'Historical JJJ configuration changed')
+    check(RetrievalConfig.load(ROOT/'configs/retrieval-standard.json')==RetrievalConfig(),
+          'Incorrect EEJ deployment default')
     check(stats['manifest_sha256']==hashlib.sha256((DEST/'manifest.json').read_bytes()).hexdigest(),'Statistics provenance mismatch')
     source_rows=rows(DEST/'runtime-sources.jsonl.gz')
     for source in source_rows:

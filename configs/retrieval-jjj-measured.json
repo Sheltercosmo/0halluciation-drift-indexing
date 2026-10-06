@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "variant": "EEJ",
+  "variant": "JJJ",
   "indexing": {
     "same_topic_prior": 0.7,
     "posterior_cutoff": 0.5,
