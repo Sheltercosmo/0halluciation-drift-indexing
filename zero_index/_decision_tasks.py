@@ -80,4 +80,3 @@ def score_pool(self,question,packet,targets):
         return state,questions
     keys=[('joint-evidence-set-1',context_key,pid) for pid in targets]
     return self._batch(keys,dict(zip(keys,targets)),payload)
-
