@@ -9,6 +9,8 @@ from .ranking import LexicalReranker, find
 from .structure import HeadingHint
 from .separation import normalized_separation
 from .configuration import IndexingConfig, RetrievalConfig, SearchConfig
+from .standard import RetrievalAdapter
+from .documents import document_from_text, load_document
 from .hybrid_retrieval import EmbeddingPassageRetriever, fuse_retrieval_paths, tree_passages
 from .tree_search import (EmbeddingTreeRouter, TreeSearchConfig,
                          pack_tree_context, propose_needs, search_tree)
@@ -20,5 +22,6 @@ __all__ = [
     "EmbeddingPassageRetriever", "fuse_retrieval_paths", "tree_passages",
     "normalized_separation",
     "IndexingConfig", "RetrievalConfig", "SearchConfig",
+    "RetrievalAdapter", "document_from_text", "load_document",
     "pack_tree_context", "propose_needs", "reselect_representatives", "search_tree",
 ]

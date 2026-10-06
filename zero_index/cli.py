@@ -10,8 +10,10 @@ from .structure import HeadingHint
 
 
 def main() -> None:
+    from .application import register_commands, run_command
     parser = argparse.ArgumentParser(description="Build and inspect a source-backed content tree")
     commands = parser.add_subparsers(dest="command", required=True)
+    register_commands(commands)
     build = commands.add_parser("build")
     build.add_argument("input", type=Path)
     build.add_argument("-o", "--output", type=Path, required=True)
@@ -49,6 +51,9 @@ def main() -> None:
             command.add_argument("node_id", nargs="?", default="root")
     args = parser.parse_args()
     try:
+        if args.command in ("init", "index", "search"):
+            run_command(args)
+            return
         if args.command == "build":
             if args.input.resolve() == args.output.resolve():
                 raise ValueError("Output must differ from input")
@@ -82,7 +87,7 @@ def main() -> None:
         else:
             result = index.decisions if args.command == "trace" else getattr(index, args.command)(args.node_id)
         print(json.dumps(result, ensure_ascii=False, indent=2))
-    except (OSError, ValueError, RuntimeError, KeyError, TypeError) as exc:
+    except (OSError, ValueError, RuntimeError, KeyError, TypeError, ImportError) as exc:
         parser.exit(2, f"error: {exc}\n")
 
 

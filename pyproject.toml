@@ -19,6 +19,9 @@ classifiers = [
   "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
 
+[project.optional-dependencies]
+local = ["sentence-transformers>=3.0"]
+
 [project.urls]
 Repository = "https://github.com/Sheltercosmo/0halluciation-drift-indexing"
 Documentation = "https://github.com/Sheltercosmo/0halluciation-drift-indexing#readme"

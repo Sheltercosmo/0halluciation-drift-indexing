@@ -6,45 +6,37 @@ The [earlier controlled comparison](../evals/RETRIEVAL_V4_REPORT.md) measured EE
 
 ## One adapter for indexing and retrieval
 
-Run from the repository checkout. The [configuration](../configs/retrieval-standard.json) is executable input, with validated fields and JSON round-tripping. [`RetrievalConfig`](../zero_index/configuration.py) is also exported by the installed `zero_index` package. The complete pipeline adapter currently lives in [`scripts/retrieval_standard.py`](../scripts/retrieval_standard.py).
+Install with `python -m pip install .` from the checkout, then import the complete pipeline from `zero_index`. See the [local/API quick start](local-and-api.md) for installed CLI commands and all provider choices. The [configuration](../configs/retrieval-standard.json) is executable input, with validated fields and JSON round-tripping.
 
 ```python
 from dataclasses import replace
-from pathlib import Path
-from zero_index import RetrievalConfig
-from scripts.retrieval_standard import RetrievalAdapter, make_standard_clients
+from zero_index import RetrievalAdapter, RetrievalConfig, load_document
+from zero_index.providers import OllamaEmbeddings, JevAPI
 
 config = RetrievalConfig.load("configs/retrieval-standard.json")  # EEJ
 config = config.with_search(beam=3, acceptance=0.25, max_decisions=2048)
-config = replace(config, deferred_search_fraction=0.2,
+config = replace(config, indexing=replace(config.indexing, paragraph_embedding_prefix=""),
                  pairwise_candidates=20, shared_targets=10)
 config.save("my-retrieval.json")
 
-cache = Path("output/my-cache")
-cache.mkdir(parents=True, exist_ok=True)
-# budget is your accounting object; reserve("jev_calls", questions=n) must
-# enforce your request/decision allowance. The evaluation's RetrievalBudget
-# implements that interface. This factory reads TYPESAFE_API_KEY.
-router, pairwise, shared = make_standard_clients(cache, budget)
-
-adapter = RetrievalAdapter(
+adapter = RetrievalAdapter.from_models(
+    OllamaEmbeddings("embeddinggemma"),
+    JevAPI(api_key_env="TYPESAFE_API_KEY"),
     config=config,
-    embed=embedding_client.embed,
-    embedding_model="your-embedding-model-and-version",
-    route=router.route_content,
-    compare=pairwise.compare,
-    select=shared.score_pool,
 )
-index = adapter.build_index(document)  # embeddings only with EEJ
+document = load_document("document.md")
+index = adapter.build_index(document)
 result = adapter.retrieve(document, index, question, evidence_needs)
-evidence_paragraph_ids = result["selected"]
+evidence_paragraphs = result["paragraphs"]
 ```
+
+The lower-level callback constructor remains available for custom task APIs. The implementation is [`zero_index/standard.py`](../zero_index/standard.py); the older `scripts.retrieval_standard` imports are retained for experiment compatibility.
 
 `embed(texts, purpose)` must return one finite, nonzero vector per text, in input order; vectors are normalized by the adapter. `purpose` is `splitting` or `central-sentences`. Adapt your embedding SDK to this small interface and handle its batching, caching and billing limit there. The historical paragraph prefix is configurable as `indexing.paragraph_embedding_prefix`; set it to `""` when your embedding provider supplies its own task instruction. Central sentences are embedded without that prefix. No provider or model is silently substituted.
 
-`document` has `id`, `title`, `text` and `units`. Each unit has a sequential `paragraph` number, a native `section` number, `heading`, and exact `start`/`end` character offsets. Section occurrences have distinct IDs. `scripts.bounded_eval.build_document(id, title, [(heading, paragraphs), ...])` constructs this representation. Use `A ::: B` for native nested heading paths. Paragraph IDs stay `p0`, `p1`, and so on; paragraphs are returned whole.
+`document` has `id`, `title`, `text` and `units`. Each unit has a sequential `paragraph` number, a native `section` number, `heading`, and exact `start`/`end` character offsets. Section occurrences have distinct IDs. `zero_index.documents.build_document(id, title, [(heading, paragraphs), ...])` constructs this representation. Use `A ::: B` for native nested heading paths. Paragraph IDs stay `p0`, `p1`, and so on; paragraphs are returned whole.
 
-To use JJJ, load [`retrieval-jjj-measured.json`](../configs/retrieval-jjj-measured.json) and pass an explicit Jev indexing scorer as `jev=`. `router` from the factory also implements that interface. No embedding callback is required for JJJ. Changing splitting or central-sentence controls requires rebuilding the index. The adapter rejects mismatched index factors and recorded indexing settings before making retrieval calls.
+To use JJJ, load [`retrieval-jjj-measured.json`](../configs/retrieval-jjj-measured.json) and pass a decision backend to `RetrievalAdapter.from_models`. The lower-level constructor accepts an explicit indexing scorer as `jev=`. No embedding callback is required for JJJ. Changing splitting or central-sentence controls requires rebuilding the index. The adapter rejects mismatched index factors and recorded indexing settings before making retrieval calls.
 
 For the **hybrid**, pass `dense_ranking=paragraph_ids` to `adapter.retrieve`. This is an independent direct embedding ranking over the same source paragraphs, fused with Jev candidates before the common final selector. It does not change tree routing. `dense_candidates=null` preserves the supplied ranking, as in the retained historical pipeline; an explicit integer caps it before fusion. Unknown or duplicate IDs are rejected before any Jev retrieval call.
 

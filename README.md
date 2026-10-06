@@ -58,38 +58,37 @@ Earlier [v3 validation](evals/RETRIEVAL_V3_VALIDATION.md), [blocking comparisons
 
 ## Quick start
 
-For the standard evidence pipeline, use the [configurable adapter](docs/retrieval-standard.md):
-
-```python
-from dataclasses import replace
-from zero_index import RetrievalConfig
-
-config = RetrievalConfig.for_effort("standard")  # EEJ; low/high also available
-config = config.with_search(beam=3, acceptance=0.25, max_decisions=2048)
-config = replace(config, pairwise_candidates=20, shared_targets=10)
-config.save("my-retrieval.json")
-```
-
-The [adapter example](docs/retrieval-standard.md#one-adapter-for-indexing-and-retrieval) connects your embedding provider and Jev callbacks. It exposes splitting thresholds, central-sentence budgets/early stopping, branch acceptance, search effort and final candidate counts. Output remains five whole paragraphs by default. The commands below demonstrate the earlier lexical/leaf-first APIs.
-
-Python 3.10+. The runtime has **no third-party dependencies**. Run from the repository root, or install with `python -m pip install -e .` to enable `zero-index`.
+Python 3.10+. Install the complete runtime locally:
 
 ```sh
-# Offline example: no key, model, or embedding required.
-python -m zero_index build examples/structured.md -o output/tree.json
-python -m zero_index outline output/tree.json
-python -m zero_index find output/tree.json "visitor opening and closing times"
-python -m examples.bottom_up
+git clone https://github.com/Sheltercosmo/0halluciation-drift-indexing.git
+cd 0halluciation-drift-indexing
+python -m venv .venv
+# macOS/Linux: source .venv/bin/activate
+# Windows PowerShell: .\.venv\Scripts\Activate.ps1
+python -m pip install .
 ```
 
-The default scorer and reranker are explicitly labeled lexical baselines. To use Jev, set `TYPESAFE_API_KEY` in your environment and run:
+For fully local models, install and start [Ollama](https://ollama.com/download) v0.35.0 or newer, then:
 
 ```sh
-python -m zero_index build examples/structured.md --scorer jev --provider typesafe --max-calls 100 -o output/jev-tree.json
-python -m zero_index find output/jev-tree.json "visitor opening and closing times" --reranker jev --provider typesafe --max-calls 20
+ollama pull embeddinggemma
+ollama pull nimble
+zero-index init -o local.json
+zero-index index examples/structured.md --config local.json -o document.index.json
+zero-index search document.index.json "What are the visitor opening times?" --config local.json
 ```
 
-These commands send source text to [TypeSafe’s decision API](https://docs.typesafe.ai/api) and incur usage. The native adapter pins `jev-1.13.0`. OpenRouter is also supported: use `--provider openrouter` with `OPENROUTER_API_KEY`; its default model is `typesafe/jev-1.13`. Keys are never stored in the tree, and provider errors stop the operation.
+This runs **EEJ** and returns whole evidence paragraphs with source offsets. Edit `local.json` to change search effort, thresholds, model names and endpoints. Add `--hybrid` to search to include independent direct embedding retrieval. An application or LLM can supply additional search needs with repeatable `--need` arguments. The local decision endpoint uses scoring models such as Nimble; see [Ollama's decision setup](https://docs.ollama.com/capabilities/decision).
+
+**Mix local and API providers independently:** Ollama, compatible embedding APIs, Sentence Transformers, hosted Jev, compatible decision servers, or your own Python model/SDK callbacks. The installed package exposes `RetrievalAdapter.from_models(...)`; the base HTTP runtime has no third-party dependencies. [Local/API setup and Python examples →](docs/local-and-api.md) · [All retrieval controls →](docs/retrieval-standard.md)
+
+For a no-model installation check, the earlier lexical demo is still available:
+
+```sh
+zero-index build examples/structured.md -o output/lexical-tree.json
+zero-index find output/lexical-tree.json "visitor opening and closing times"
+```
 
 ## Methodology: how we create the content tree
 
